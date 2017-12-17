@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsqlpars
+Description: libsqlpars, SQL parser library
+Version: 0.0.1
+Libs: -L${libdir} -lsqlpars
+Cflags: -I${includedir}

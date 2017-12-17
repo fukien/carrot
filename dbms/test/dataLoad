@@ -1,0 +1,63 @@
+#include"test.h"
+#include<iostream>
+#include<string>
+#include<fstream>
+#include<sstream>
+#include<vector>
+
+//using namespace std;
+
+void Test::open(char * filename){
+    ifstream myfile(filename);
+     //myfile.open(filename);
+    //file=myfile;
+    cout<<myfile<<endl;
+}
+vector<string>Test::findNext(){
+    vector<string> mp;
+    string line;
+    if(file){
+            cout<<"begin read"<<endl;
+        while(getline((file),line)){
+                cout<<line<<endl;
+            int startpos=0;
+            for(int i=0;i<line.length();i++){
+                if(line[i]=='|'){
+                    mp.push_back(line.substr(startpos,i-1));
+                    startpos=i+1;
+                }
+            }
+        }
+    }
+    return mp;
+
+}
+void Test::close(){
+    cout<<"begin close"<<endl;
+    (file).close();
+//delete file;
+}
+
+int main(){
+    cout<<"read the file now"<<endl;
+    char filename[]="supplier.tbl";
+    ifstream file(filename);
+    cout<<file<<endl;
+    string s;
+    if(file){
+        while(getline(file,s)){
+            cout<<s<<endl;
+        }
+    }
+   /* Test *myfile=new Test();
+    myfile->open(filename);
+    vector<string>dp;
+    //while(true){
+        dp=myfile->findNext();
+        for(int i=0;i<dp.size();i++){
+            cout<<dp[i];
+        }
+        cout<<endl;
+//}*/
+}
+

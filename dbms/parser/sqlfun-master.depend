@@ -1,0 +1,117 @@
+# depslib dependency file v1.0
+1513214883 source:/home/hagen/下载/sqlfun-master/main.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	"sql.tab.h"
+	"sql-parser.h"
+
+1513213508 /home/hagen/下载/sqlfun-master/sql.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<inttypes.h>
+	<stdarg.h>
+	<string.h>
+	"sql.tab.h"
+	"sql-parser.h"
+	<unistd.h>
+
+1513211617 /home/hagen/下载/sqlfun-master/sql.tab.h
+
+1513211754 /home/hagen/下载/sqlfun-master/sql-parser.h
+
+1513214073 source:/home/hagen/下载/sqlfun-master/sql.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<inttypes.h>
+	<stdarg.h>
+	<string.h>
+	"sql.tab.h"
+	"sql-parser.h"
+	<unistd.h>
+
+1513211617 source:/home/hagen/下载/sqlfun-master/sql.tab.c
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	"sql.lex.h"
+	"sql-parser.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+
+1513213352 /home/hagen/下载/sqlfun-master/sql.lex.h
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<inttypes.h>
+	<unistd.h>
+
+1469918117 source:/home/hagen/下载/sqlfun-master/exec.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"sql.tab.h"
+	"sql-parser.h"
+
+1469918117 source:/home/huangwentao/WorkSpaces/dbms/sqlfun-master/exec.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"sql.tab.h"
+	"sql-parser.h"
+
+1513211617 /home/huangwentao/WorkSpaces/dbms/sqlfun-master/sql.tab.h
+
+1513211754 /home/huangwentao/WorkSpaces/dbms/sqlfun-master/sql-parser.h
+
+1513215097 source:/home/huangwentao/WorkSpaces/dbms/sqlfun-master/main.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	"sql.tab.h"
+	"sql-parser.h"
+
+1513214073 source:/home/huangwentao/WorkSpaces/dbms/sqlfun-master/sql.c
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<inttypes.h>
+	<stdarg.h>
+	<string.h>
+	"sql.tab.h"
+	"sql-parser.h"
+	<unistd.h>
+
+1513211617 source:/home/huangwentao/WorkSpaces/dbms/sqlfun-master/sql.tab.c
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	"sql.lex.h"
+	"sql-parser.h"
+	<stddef.h>
+	<libintl.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	<stdlib.h>
+	<stdio.h>
+
+1513213352 /home/huangwentao/WorkSpaces/dbms/sqlfun-master/sql.lex.h
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<inttypes.h>
+	<unistd.h>
+
