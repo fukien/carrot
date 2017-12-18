@@ -18,6 +18,7 @@ public:
     void findNextTuple(Tuple* tuple,Tuple* tuple2);
     Addr insertTuple(Tuple* tuple);
     bool deleteTuple(Tuple* tuple);
+    Addr flushTuple(Tuple* tuple);
 protected:
     void initRootPage();
 private:

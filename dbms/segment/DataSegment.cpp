@@ -160,7 +160,9 @@ Addr DataSegment::insertTuple(Tuple* tuple)
     {
         Addr addr = 0;
         addr = freePageAddr;
-        if(addr<=0)directory->findFreeSapceBlock(SegmentType::DataSeg);
+        if(addr<=0){
+                addr = directory->findFreeSapceBlock(SegmentType::DataSeg);
+        }
         if(addr<=0)
         {
             addr = directory->allocateBlock(SegmentType::DataSeg,PageStatus::EmptyPage);
@@ -210,6 +212,18 @@ Addr DataSegment::insertTuple(Tuple* tuple)
 
     }
 }
+Addr DataSegment::flushTuple(Tuple* tuple)
+{
+        Addr addr = tuple->tupleAddr;
+        BufferFrame* frame = manager->requestPageForWrite(addr,false);
+        Page* page = frame->page;
+        short written = TableUtil::writeTuple(page->data+PAGE_OFFSET(addr),tuple,meta);
+        frame->edit = true;
+        manager->finishWrite(frame);
+        return tuple->tupleAddr;
+}
+
+
 bool DataSegment::deleteTuple(Tuple* tuple)
 {
     Addr addr = tuple->tupleAddr;
@@ -219,6 +233,10 @@ bool DataSegment::deleteTuple(Tuple* tuple)
         BufferFrame* frame = manager->requestPageForWrite(addr,false);
         PageUtil* util = manager->getPageUtil();
         bool suc = util->freeSpace(*frame->page,offset,tupleSize);
+        for(int i = 0; i<tupleSize; i++)
+        {
+           frame->page->data[offset+i]=0u;
+        }
         frame->edit = true;
         if(!suc)
         {

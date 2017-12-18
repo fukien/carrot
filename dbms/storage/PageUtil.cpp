@@ -81,6 +81,13 @@ Addr PageUtil::allocSpace(Page& page,int len)
     }
     return -1;
 }
+static void printUsedByteList(Page* page)
+{
+    for(int i =0;i<page->usedLen;i++)
+    {
+        printf("addr = %llx len=%d\n",page->usedByteList[i].addr,page->usedByteList[i].len);
+    }
+}
 void PageUtil::listMove(int k,int offset,bool forward,Page& page)
 {
     if(forward)
@@ -106,6 +113,8 @@ void PageUtil::listMove(int k,int offset,bool forward,Page& page)
 //TODO : 删除一个区间，跨越多个连续的list
 bool PageUtil::freeSpace(Page& page,PageAddr addr,int len)
 {
+    //printf("before");
+    //printUsedByteList(&page);
     int k = 0;
     int pos =0;
     int length =0;
@@ -129,22 +138,23 @@ bool PageUtil::freeSpace(Page& page,PageAddr addr,int len)
             break;
         }
     }
+    bool dflag;
     if(k<page.usedLen)
     {
         if(addr==pos && len<length)
         {
             page.usedByteList[k].addr=pos+len;
             page.usedByteList[k].len = length-len;
-            return true;
+            dflag = true;
         }else if(addr>pos&& pos+length==addr+len)
         {
             page.usedByteList[k].addr=pos;
             page.usedByteList[k].len = length-len;
-            return true;
+            dflag = true;
         }else if(addr==pos&& pos+length==addr+len)
         {
             listMove(k,1,false,page);
-            return true;
+            dflag = true;
         }else if(addr>pos && pos+length>addr+len)
         {
             page.usedByteList[k].addr=pos;
@@ -152,9 +162,12 @@ bool PageUtil::freeSpace(Page& page,PageAddr addr,int len)
             listMove(k+1,1,true,page);
             page.usedByteList[k+1].addr=addr+len;
             page.usedByteList[k+1].len = pos+length-(addr+len);
-            return true;
+            dflag = true;
         }
+            //printf("after");
         page.usedByte-=len;
+            //printUsedByteList(&page);
+        return dflag;
     }
     // 如果没找到，一定有k=pageUsedLen,循环不会进入
     /*
@@ -169,6 +182,7 @@ bool PageUtil::freeSpace(Page& page,PageAddr addr,int len)
         page.usedByte-=length;
         return true;
     }*/
+
     return false;
 }
 void PageUtil::buildUsedByteList(Byte* iter,Page& page)
@@ -218,7 +232,7 @@ void PageUtil::readPage(Addr pageNo,Page& page)
 void PageUtil::buildPageUsedByteMap(Page& page)
 {
     //clear the map
-    for(int i=PAGE_HEAD_LEN;i<PAGE_HEAD_BODY;i++)
+    for(int i=PAGE_META_HEAD;i<PAGE_HEAD_BODY;i++)
     {
         page.data[i]=0u;
     }

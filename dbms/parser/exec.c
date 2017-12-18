@@ -291,6 +291,7 @@ void sqlp_def_col(struct psql_state *pstate, int flags, const char *name)
 void sqlp_delete(struct psql_state *pstate, int opts, const char *name)
 {
     queryTree.query_type = 5;
+    strcpy(dw.tableName, name);
 	printf("exec DELETE %d %s\n", opts, name);
 }
 
@@ -317,6 +318,27 @@ void sqlp_enum_val(struct psql_state *pstate, const char *val)
 
 void sqlp_expr_cmp(struct psql_state *pstate, int comp)
 {
+    char cmp[64];
+    strcpy(cmp,"CMP");
+    switch (comp)
+    {
+    case 1:
+        strcat(cmp,"<");
+        break;
+    case 2:
+        strcat(cmp,">");
+        break;
+    case 3:
+        strcat(cmp,"!");
+        break;
+    case 4:
+        strcat(cmp,"=");
+        break;
+    }
+
+    strcpy(dw.where[dw.whereCursor],cmp);
+    dw.whereCursor++;
+
 	printf("exec CMP %d\n", comp);
 }
 
@@ -332,6 +354,9 @@ void sqlp_expr_is_in(struct psql_state *pstate, int val)
 
 void sqlp_expr_op(struct psql_state *pstate, enum sqlp_expr_ops op)
 {
+    strcpy(dw.where[dw.whereCursor], op_names[op]);
+    dw.whereCursor++;
+
 	printf("exec EXPR-OP %s\n", op_names[op]);
 }
 
@@ -349,6 +374,10 @@ void sqlp_float(struct psql_state *pstate, float val)
 {
     ttit.floatField[ttit.floatNum] = val;
     ttit.floatNum++;
+
+    sprintf(dw.where[dw.whereCursor], "%f",val);
+    dw.whereCursor ++;
+
 	printf("exec FLOAT %g\n", val);
 }
 
@@ -437,6 +466,9 @@ void sqlp_limit(struct psql_state *pstate, int two_expr)
 
 void sqlp_name(struct psql_state *pstate, const char *name)
 {
+    strcpy(dw.where[dw.whereCursor], name);
+    dw.whereCursor++;
+
 	printf("exec NAME %s\n", name);
 }
 
@@ -449,7 +481,12 @@ void sqlp_number(struct psql_state *pstate, int val)
 {
     ttit.intField[ttit.intNum] = val;
     ttit.intNum++;
-	printf("exec INT/NUMBER %d\n", val);
+
+    sprintf(dw.where[dw.whereCursor],"%d", val);
+    dw.whereCursor++;
+
+
+    printf("exec INT/NUMBER %d\n", val);
 }
 
 void sqlp_order_by(struct psql_state *pstate, int n_list)
@@ -512,6 +549,10 @@ void sqlp_string(struct psql_state *pstate, const char *str)
     //printf("ORIGINAL\t%s\n", str);
     //printf("NOW\t%s\n",ttit.stringField[ttit.stringNum]);
     ttit.stringNum++;
+
+    removeFirstAndLast(dw.where[dw.whereCursor],str);
+    dw.whereCursor++;
+
 	printf("exec STRING %s\n", str);
 }
 
@@ -571,6 +612,9 @@ void sqlp_values(struct psql_state *pstate, int n_vals)
 
 void sqlp_where(struct psql_state *pstate)
 {
+    strcpy(dw.where[dw.whereCursor], "WHERE");
+    dw.whereCursor++;
+
 	printf("exec WHERE\n");
 }
 

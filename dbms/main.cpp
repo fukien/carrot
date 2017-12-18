@@ -34,6 +34,7 @@ extern currentTableFp ctfp; //当DROP,UPDATE,SELECT一个表时，用来记录�
 extern int currentTableListNum;// 现有表的数量
 extern fromList currentTableList[MAX_TABLE_LIST]; // 当前所有表的列表
 extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
+extern deleteWhere dw;// 记录delete语句的where
 
 map<int, char*> err_reason;// 全局错误号信息反馈
 /**********************************************************
@@ -74,7 +75,8 @@ static void err_id_initialize()
     err_reason[-17] = "INSERT FAILED!\t SOME STRING LENGTH DON'T MATCH THE FIELD LENGTH!!!";
     err_reason[-18] = "INSERT FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-21] = "UPDATE FAILED!";
-    err_reason[-26] = "DELETE FAILED!";
+    err_reason[-26] = "DELETE FAILED!\t TABLE NOT FOUND!!!";
+    err_reason[-27] = "DELETE FAILED!\t TABLE FOUND BUT NOT EVEN A SINGLE TUPLE!!!";
 }
 int currentTableCount() //获取当前工作路径下的表的数量
  {
@@ -105,6 +107,7 @@ void iniQuery()
     memset(&queryTree,0,sizeof(queryTree)); // 清空查询树
     memset(&ctfp,0,sizeof(ctfp));//清空当前表的指针
     memset(&ttit,0,sizeof(ttit));//清空当前临时元组，为下一次插入作准备
+    memset(&dw,0,sizeof(dw));// 清空delete的where
     mfListCursor = 0; //置0当前MF属性的游标
     mfcListCursor = 0;//置0当前MFC属性的游标
 //    currentTableCursor = 0;
@@ -146,6 +149,12 @@ void doQuery()
         case 4://update
             break;
         case 5://delete
+            {
+                DeleteExecutor*de = new DeleteExecutor();
+                de->execute(queryTree);
+                cout<<err_reason[de->getStatus()]<<endl;
+                delete de;
+            }
             break;
         case 6://select
             break;

@@ -37,6 +37,7 @@ public:
         Addr insertTuple(Tuple* tuple);
         bool deleteTuple(Tuple* tuple);
         void close();
+        Addr flushTuple(Tuple *tuple);
         ~Table();
     private:
         BufferStrategy* strategy;

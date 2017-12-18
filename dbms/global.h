@@ -15,5 +15,5 @@
 currentTableFp ctfp;//当DROP,UPDATE,SELECT一个表时，用来记录当前表的文件指针。
 fromList currentTableList[MAX_TABLE_LIST]; // 当前所有表的列表
 tempTuple ttit; // temp tuple to insert, 临时元组，即将插入
-
+deleteWhere dw;// 记录delete语句的where
 #endif // GLOBAL_H_INCLUDED

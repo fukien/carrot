@@ -8,6 +8,7 @@ public:
     DeleteExecutor();
     ~DeleteExecutor();
     int execute(query_tree qt);
+    int deleteAll(char *tableName);
     void setStatus(int a);
     int getStatus();
     void setChdNum(int a);

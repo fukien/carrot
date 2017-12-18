@@ -18,7 +18,8 @@
  extern currentTableFp ctfp; //当DROP,UPDATE,SELECT一个表时，用来记录当前表的文件指针。
  extern int currentTableListNum;// 已有表的数量
  extern fromList currentTableList[MAX_TABLE_LIST]; // 当前所有表的列表
-extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
+ extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
+ extern deleteWhere dw;// 记录delete语句的where
 
 class QueryExecutor
 {

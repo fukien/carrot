@@ -258,6 +258,7 @@ int readdb()
     table = 0;
      //string filename="";
 }
+
 int writedb()
 {
         char s[] = "data/supplier.db";

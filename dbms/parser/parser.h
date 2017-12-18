@@ -9,6 +9,8 @@
 #define MAX_TABLE_NAME_LEN_PARSER 64
 #define MAX_TYPE_FILED_NUM 64
 #define MAX_CHAR_VARCHAR_LENGTH 64
+#define MAX_WHERE_ITEM_NUM 64
+#define MAX_WHERE_ITEM_LENGTH 64
 /*
 typedef struct create_drop_select{
     int status;
@@ -45,7 +47,7 @@ typedef struct fromList{
      3  insert
      4  update
      5  delete
-     6  select
+     6  selectfromListNum
     ***********************************************/
 typedef struct query_tree{
     int query_type;
@@ -70,16 +72,19 @@ typedef struct tempTuple{
 } tempTuple;
 
 
-typedef struct whereCondition{
-    fromList tabelList[MAX_FROM_LIST];
-}whereCondition;
+typedef struct deleteWhere{
+    char tableName[MAX_TABLE_NAME_LEN_PARSER];
+    char field[MAX_TYPE_FILED_NUM][MAX_FIELD_NAME_LEN];
+    //运算符: 0DEFAULT, 1ADD, 2SUB, 3MUL, 4DIV 5MOD
+    int optType[MAX_TYPE_FILED_NUM];
+    //比较符： 0 DEFAULT, 1<, 2>, 3 !=, 4=
+    int cmpType[MAX_TYPE_FILED_NUM];
+    //逻辑符: 0 DEFAULT,1AND, 2OR
+    int logicType[MAX_TYPE_FILED_NUM];
 
-typedef struct deleteFromTable{
-    fromList table;
-    meta_field_char cmp_mfc_list[MAX_MFC_LIST];
-    meta_field  cmp_mf_list[MAX_MF_LIST];
-}deleteFromTable;
-
+    char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];//where子句
+    int whereCursor;//where子句的游标
+}deleteWhere;
 #endif // PARSER
 
 

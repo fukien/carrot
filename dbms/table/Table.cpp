@@ -124,7 +124,10 @@ Addr Table::insertTuple(Tuple* tuple){
 bool Table::deleteTuple(Tuple* tuple){
     return dataseg->deleteTuple(tuple);
 }
-
+Addr Table::flushTuple(Tuple* tuple)
+{
+    return dataseg->flushTuple(tuple);
+}
 void Table::close(){
     if(indexseg!=0)
     {
