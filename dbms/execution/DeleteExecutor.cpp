@@ -36,7 +36,7 @@ int DeleteExecutor::getChdNum()
 
 int DeleteExecutor::deleteAll(char * tableName)
 {
-    Addr tempTupleAddr;
+    Addr tempTupleAddr = 0u;
     char dir[64];
     strcpy(dir,QueryExecutor::workDir);
     strcat(dir,tableName);
@@ -56,6 +56,8 @@ int DeleteExecutor::deleteAll(char * tableName)
     table->findFirstTuple(tuple);
     if(tuple->tupleAddr == tempTupleAddr)
         {
+            table->releaseEmptyTuple(tuple);
+            table->close();
             setStatus(-27); // NOT A TUPLE LEFT
             return getStatus();
         }
@@ -74,7 +76,6 @@ int DeleteExecutor::deleteAll(char * tableName)
 
 int DeleteExecutor::execute(query_tree qt)
 {
-    cout<<dw.tableName<<"\n"<<endl;
     if(dw.whereCursor == 0)
     {
         return deleteAll(dw.tableName); //全删
