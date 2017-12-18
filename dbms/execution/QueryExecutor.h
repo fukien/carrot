@@ -6,6 +6,8 @@
 #include "../table/Table.h"
 #include "../table/meta.h"
 #include "../util/DataUtil.h"
+#include "../SPJ/SPJ.h"
+#include "../SPJ/Selection.h"
 
  using namespace std;
  extern query_tree queryTree;// 全局查询树

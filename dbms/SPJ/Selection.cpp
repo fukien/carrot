@@ -456,3 +456,38 @@ void Selection::initSelection(SPJ*spj,Condition condition[] ,int conditionLen){
             this->conditionLen=conditionLen;
 }
 
+void Selection::spjForUpdateOne(SPJItem * item)
+{
+
+}
+
+void Selection::spjForDeleteOne(SPJItem * item)
+{
+            Tuple *tuple=this->table->buildEmptyTuple();
+            table->findFirstTuple(tuple);
+            this->currentTuple=tuple;
+            if(tuple->tupleAddr!=0)
+            {
+                while(checkItem(tuple)!=true)
+                {
+                    Addr oldaddr=this->currentTuple->tupleAddr;
+                    table->findNextTuple(this->currentTuple,tuple);
+                    if(oldaddr==tuple->tupleAddr||tuple->tupleAddr==0)
+                    {
+                        break;
+                    }
+                //table->releaseEmptyTuple(this->currentTuple);
+//                char*str=new char[1000];
+//                DataUtil::toString(str,tuple->column[1].data,DataTypeFlag::VARCHAR);
+//                printf("%s\n",str);
+                }
+
+                if(checkItem(tuple)==true)
+                {
+                         fillItem(item,tuple);
+                         table->deleteTuple(tuple);
+                         //this->currentTuple=tuple;
+                }
+        }
+            //table->releaseEmptyTuple(tuple);
+}

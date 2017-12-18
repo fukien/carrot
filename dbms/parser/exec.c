@@ -338,6 +338,16 @@ void sqlp_expr_cmp(struct psql_state *pstate, int comp)
         strcat(cmp,"=");
         dw.type[dw.whereCursor] = 15;
         break;
+    case 24:
+        strcat(cmp, "<=");
+        dw.type[dw.whereCursor] = 24;
+        break;
+    case 25:
+        strcat(cmp, ">=");
+        dw.type[dw.whereCursor] = 25;
+        break;
+    default:
+        break;
     }
 
     strcpy(dw.where[dw.whereCursor],cmp);

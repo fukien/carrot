@@ -94,7 +94,8 @@ typedef struct deleteWhere{
     9-AND, 10-OR, 11- WHERE(END), 12-SMALLERTHAN,
     13- GREATERTHAN, 14-NOTEQUAL, 15-EQUAL, 16-NEG,
     17-XOR, 18-NOT, 19-LIKE, 20-EXISTS,
-    21-IN_SELECT, 22-BETWEEN, 23-IS_NULL, 24-REGEX
+    21-IN_SELECT, 22-BETWEEN, 23-IS_NULL, 24-SMALLER_OR_EQUAL,
+    25_GREATER_OR_EQUAL
     ********************************************************/
         int type[MAX_WHERE_ITEM_LENGTH];
 

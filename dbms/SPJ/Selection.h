@@ -5,8 +5,9 @@
 #include <string>
 #include<map>
 typedef struct {
-    Byte conditionType;//value or column
+    Byte conditionType;//value or column    value-1 column-2
     string filedName;
+    //Condition condition;
     void*value;
     Byte  compare;
     Byte DataType;
@@ -21,6 +22,12 @@ static const Byte   EQUAL=0;
 static const Byte  GREATEREQUAL=4;
 static const Byte  LESSEQUAL=5;
 static const Byte  NOTEQUAL=1;
+static const Byte  ADD = 6;
+static const Byte  SUB = 7;
+static const Byte  MUL = 8;
+static const Byte  DIV = 9;
+static const Byte MOD = 10;
+static const Byte NEG = 11;
 public :
       static bool Compare(void*value1,void*value2,Byte cmpType,int dataType,int len){
             Byte*data1=new Byte[len];
@@ -103,6 +110,8 @@ public:
     void fillItem(SPJItem*item,SPJItem* sourceItem);
      IndexIterator*getIndexIterator(IndexMetaItem item,vector<Condition>conditionlist,IndexSegment*indexSegment);
      void destroy();
+    void spjForUpdateOne(SPJItem * item);
+    void spjForDeleteOne(SPJItem * item);
 private:
         Byte initialType;//
         Tuple*currentTuple;//now the tuple

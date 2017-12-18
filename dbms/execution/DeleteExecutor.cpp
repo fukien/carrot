@@ -1,6 +1,7 @@
 #include "DeleteExecutor.h"
 #include <iostream>
 
+
 DeleteExecutor::DeleteExecutor()
 {
         chdNum = 0;
@@ -34,21 +35,9 @@ int DeleteExecutor::getChdNum()
     return chdNum;
 }
 
-int DeleteExecutor::deleteAll(char * tableName)
+int DeleteExecutor::deleteAll(char * dir)
 {
     Addr tempTupleAddr = 0u;
-    char dir[64];
-    strcpy(dir,QueryExecutor::workDir);
-    strcat(dir,tableName);
-    strcat(dir,".tb");
-
-    FILE *f = fopen(dir,"r");
-    if(f == NULL)
-        {
-            setStatus(-26);  // TABLE NOT FOUND
-            return getStatus();
-        }
-
     Table* table = new Table();
     table->open(dir,false);
     TableMeta * meta = table->getTableMeta();
@@ -74,17 +63,84 @@ int DeleteExecutor::deleteAll(char * tableName)
     return getStatus();
 }
 
+void DeleteExecutor::decorate(Condition * cond, char * dir)
+{
+    switch(sdType.top())
+    {
+    case 0:
+        cond->conditionType = 2; // COLUMN
+        cond->value = sd.top();
+        cond->len = sizeof(sd.top());
+        Table * table = new Table();
+        table->open(dir,false);
+        TableMeta * meta = table->getTableMeta();
+        //TODO FIND DATA TYPE FOR THE COLUMN IN THE META FROM TABLE
+
+        sd.pop();
+        sdType.pop();
+        cond->filedName = sd.top();
+        sd.pop();
+        sdType.pop();
+    }
+}
+
+void DeleteExecutor::parse(char * dir)
+{
+        for(int i = 0; i < dw.whereCursor; i++)
+        {
+            if(dw.type[i] == 0)
+                {
+                    sd.push(dw.where[i]);
+                    sdType.push(dw.type[i]);
+                }
+                else if(dw.type[1] < 4)
+                    {
+                        sd.push(dw.where[i]);
+                        sdType.push(dw.type[i]);
+                    }
+                else if(((dw.type[i] >= 12) && (dw.type[i] <=15)) || ((dw.type[i] >=24) && (dw.type[i] <= 25))||dw.type[i] == 9)
+                    {
+                        Condition *cond;
+                        switch(dw.type[i])
+                        {
+                        case 12:
+                            cond->compare = CompareType::LESS;
+                            decorate(cond, dir);
+                        }
+                    }
+        }
+}
+
 int DeleteExecutor::execute(query_tree qt)
 {
+
+    char dir[64];
+    strcpy(dir,QueryExecutor::workDir);
+    strcat(dir,dw.tableName);
+    strcat(dir,".tb");
+    FILE *f = fopen(dir,"r");
+    if(f == NULL)
+        {
+            setStatus(-26);  // TABLE NOT FOUND
+            return getStatus();
+        }
+
     if(dw.whereCursor == 0)
     {
-        return deleteAll(dw.tableName); //全删
+        return deleteAll(dir); //全删
     }
 
+    parse(dir);
+/*
     for(int i = 0; i < dw.whereCursor; i++)
         {
             cout<<dw.where[i]<<endl;
         }
+*/
+
     setStatus(1);
     return getStatus();
 }
+
+
+

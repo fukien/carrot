@@ -520,15 +520,17 @@
 1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/execution/CreateExecutor.h
 	"QueryExecutor.h"
 
-1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/execution/QueryExecutor.h
+1513613133 /home/huangwentao/WorkSpaces/carrots/dbms/execution/QueryExecutor.h
 	<map>
 	"../common.h"
 	"../parser/parser.h"
 	"../table/Table.h"
 	"../table/meta.h"
 	"../util/DataUtil.h"
+	"../SPJ/SPJ.h"
+	"../SPJ/Selection.h"
 
-1513610929 /home/huangwentao/WorkSpaces/carrots/dbms/parser/parser.h
+1513613069 /home/huangwentao/WorkSpaces/carrots/dbms/parser/parser.h
 	"../common.h"
 
 1513603351 /home/huangwentao/WorkSpaces/carrots/dbms/table/Table.h
@@ -597,12 +599,13 @@
 	"../table/meta.h"
 	"../table/TableUtil.h"
 
-1513609458 source:/home/huangwentao/WorkSpaces/carrots/dbms/execution/DeleteExecutor.cpp
+1513619505 source:/home/huangwentao/WorkSpaces/carrots/dbms/execution/DeleteExecutor.cpp
 	"DeleteExecutor.h"
 	<iostream>
 
-1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/execution/DeleteExecutor.h
+1513619148 /home/huangwentao/WorkSpaces/carrots/dbms/execution/DeleteExecutor.h
 	"QueryExecutor.h"
+	<stack>
 
 1513603330 source:/home/huangwentao/WorkSpaces/carrots/dbms/execution/DropExecutor.cpp
 	"DropExecutor.h"
@@ -686,7 +689,7 @@
 
 1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/parser/sql-parser.h
 
-1513610927 source:/home/huangwentao/WorkSpaces/carrots/dbms/parser/exec.c
+1513613080 source:/home/huangwentao/WorkSpaces/carrots/dbms/parser/exec.c
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
@@ -774,7 +777,7 @@
 	<string>
 	<map>
 
-1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/SPJ/SPJ.h
+1513612891 /home/huangwentao/WorkSpaces/carrots/dbms/SPJ/SPJ.h
 	"../common.h"
 	"../buffer/BufferManager.h"
 	"../table/meta.h"
@@ -784,7 +787,7 @@
 	"../index/Index.h"
 	<string>
 
-1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/SPJ/Selection.h
+1513618142 /home/huangwentao/WorkSpaces/carrots/dbms/SPJ/Selection.h
 	"SPJ.h"
 	"../util/DataUtil.h"
 	<string>
@@ -800,7 +803,7 @@
 	<string>
 	<map>
 
-1513603330 source:/home/huangwentao/WorkSpaces/carrots/dbms/SPJ/Selection.cpp
+1513614723 source:/home/huangwentao/WorkSpaces/carrots/dbms/SPJ/Selection.cpp
 	"Selection.h"
 	<cstdio>
 	<limits>
