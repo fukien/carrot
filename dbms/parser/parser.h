@@ -45,7 +45,7 @@ typedef struct fromList{
      3  insert
      4  update
      5  delete
-     6  selectfromListNum
+     6  select
     ***********************************************/
 typedef struct query_tree{
     int query_type;

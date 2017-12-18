@@ -455,3 +455,4 @@ void Selection::initSelection(SPJ*spj,Condition condition[] ,int conditionLen){
             this->condition=condition;
             this->conditionLen=conditionLen;
 }
+
