@@ -455,9 +455,11 @@ void Selection::initSelection(SPJ*spj,Condition condition[] ,int conditionLen){
             this->conditionLen=conditionLen;
 }
 
-void Selection::spjForUpdateOne(SPJItem * item)
+void Selection::spjForUpdateOne(SPJItem * item, char * fieldName, int intValue, float floatValue, char* str, int flag)
 {
+            TableMeta *meta = table->getTableMeta();
             Tuple *tuple=this->table->buildEmptyTuple();
+            //Tuple * toFill = this->table->buildEmptyTuple();
             table->findFirstTuple(tuple);
             this->currentTuple=tuple;
             Addr oldAddr=0u;
@@ -466,12 +468,34 @@ void Selection::spjForUpdateOne(SPJItem * item)
                 {
                      if(checkItem(tuple)==true)
                     {
-                         //fillItem(item,tuple);
-
-                         table->deleteTuple(tuple);
+                        //toFIll = tuple;
+                        for(int i = 0; i < meta->fieldNum; i ++)
+                            {
+                                if(strcmp(fieldName, tuple->column[i].field->fname)==0)
+                                {
+                                    switch(flag)
+                                    {
+                                    case 0:// INTEGER
+                                        TableUtil::writeColumn(&intValue,&tuple->column[i]);
+                                        break;
+                                    case 1:// FLOAT
+                                        TableUtil::writeColumn(&floatValue,&tuple->column[i]);
+                                        break;
+                                    case 2:// STRING
+                                        TableUtil::writeColumn(str,&tuple->column[i]);
+                                        break;
+                                    default:
+                                        break;
+                                    }
+                                   break;
+                                }
+                            }
+                            table->flushTuple(tuple);
+                        /*******************************************
+                        TODO
+                    ******************************************/
                          this->currentTuple=tuple;
                     }
-
                     oldAddr=this->currentTuple->tupleAddr;
                     table->findNextTuple(this->currentTuple,tuple);
                 }
@@ -480,6 +504,7 @@ void Selection::spjForUpdateOne(SPJItem * item)
 
 void Selection::spjForDeleteOne(SPJItem * item)
 {
+
             Tuple *tuple=this->table->buildEmptyTuple();
             table->findFirstTuple(tuple);
             this->currentTuple=tuple;
@@ -489,7 +514,7 @@ void Selection::spjForDeleteOne(SPJItem * item)
                 {
                      if(checkItem(tuple)==true)
                     {
-                         //fillItem(item,tuple);
+                        //fillItem(item,tuple);
                          table->deleteTuple(tuple);
                          this->currentTuple=tuple;
                     }

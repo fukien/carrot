@@ -111,7 +111,7 @@ public:
     void fillItem(SPJItem*item,SPJItem* sourceItem);
      IndexIterator*getIndexIterator(IndexMetaItem item,vector<Condition>conditionlist,IndexSegment*indexSegment);
      void destroy();
-    void spjForUpdateOne(SPJItem * item);//ACTUALLY IT'S FOR ALL
+    void spjForUpdateOne(SPJItem * item, char * fieldName, int intValue, float floatValue, char* str, int flag);//ACTUALLY IT'S FOR ALL
     void spjForDeleteOne(SPJItem * item); //ACTUALLY IT'S FOR ALL
 private:
         Byte initialType;//
