@@ -111,8 +111,8 @@ public:
     void fillItem(SPJItem*item,SPJItem* sourceItem);
      IndexIterator*getIndexIterator(IndexMetaItem item,vector<Condition>conditionlist,IndexSegment*indexSegment);
      void destroy();
-    void spjForUpdateOne(SPJItem * item);
-    void spjForDeleteOne(SPJItem * item);
+    void spjForUpdateOne(SPJItem * item);//ACTUALLY IT'S FOR ALL
+    void spjForDeleteOne(SPJItem * item); //ACTUALLY IT'S FOR ALL
 private:
         Byte initialType;//
         Tuple*currentTuple;//now the tuple

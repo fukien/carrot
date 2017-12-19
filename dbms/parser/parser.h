@@ -111,10 +111,14 @@ typedef struct updateWhere{
     13- GREATERTHAN, 14-NOTEQUAL, 15-EQUAL, 16-NEG,
     17-XOR, 18-NOT, 19-LIKE, 20-EXISTS,
     21-IN_SELECT, 22-BETWEEN, 23-IS_NULL, 24-SMALLER_OR_EQUAL,
-    25_GREATER_OR_EQUAL
+    25_GREATER_OR_EQUAL, 26- ASSIGN
     ********************************************************/
     int type[MAX_WHERE_ITEM_LENGTH];
     int whereCursor;//where子句的游标
+    int ass;//ASSIGNED 1, NOT ASSIGNED 0
+    char assWhere[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];// FOR ASSIGN
+    int assType[MAX_WHERE_ITEM_NUM];
+    int assCursor;
 }updateWhere;
 
 typedef struct selectWhere{

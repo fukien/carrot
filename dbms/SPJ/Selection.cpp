@@ -457,7 +457,25 @@ void Selection::initSelection(SPJ*spj,Condition condition[] ,int conditionLen){
 
 void Selection::spjForUpdateOne(SPJItem * item)
 {
+            Tuple *tuple=this->table->buildEmptyTuple();
+            table->findFirstTuple(tuple);
+            this->currentTuple=tuple;
+            Addr oldAddr=0u;
+            //printf("%llx\t%llx\n", oldAddr, tuple->tupleAddr);
+             while(oldAddr!=tuple->tupleAddr&&tuple->tupleAddr!=0)
+                {
+                     if(checkItem(tuple)==true)
+                    {
+                         //fillItem(item,tuple);
 
+                         table->deleteTuple(tuple);
+                         this->currentTuple=tuple;
+                    }
+
+                    oldAddr=this->currentTuple->tupleAddr;
+                    table->findNextTuple(this->currentTuple,tuple);
+                }
+            //table->releaseEmptyTuple(tuple);
 }
 
 void Selection::spjForDeleteOne(SPJItem * item)

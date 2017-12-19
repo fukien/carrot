@@ -532,7 +532,7 @@
 	"../SPJ/Join.h"
 	"../SPJ/Projection.h"
 
-1513656275 /home/huangwentao/WorkSpaces/carrots/dbms/parser/parser.h
+1513700529 /home/huangwentao/WorkSpaces/carrots/dbms/parser/parser.h
 	"../common.h"
 
 1513603351 /home/huangwentao/WorkSpaces/carrots/dbms/table/Table.h
@@ -634,8 +634,9 @@
 1513603330 source:/home/huangwentao/WorkSpaces/carrots/dbms/execution/UpdateExecutor.cpp
 	"UpdateExecutor.h"
 
-1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/execution/UpdateExecutor.h
+1513702085 /home/huangwentao/WorkSpaces/carrots/dbms/execution/UpdateExecutor.h
 	"QueryExecutor.h"
+	<stack>
 
 1513603330 source:/home/huangwentao/WorkSpaces/carrots/dbms/index/BPTree.cpp
 	"BPTree.h"
@@ -669,7 +670,7 @@
 	<map>
 	"Index.h"
 
-1513656340 source:/home/huangwentao/WorkSpaces/carrots/dbms/main.cpp
+1513702410 source:/home/huangwentao/WorkSpaces/carrots/dbms/main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -692,7 +693,7 @@
 
 1513603330 /home/huangwentao/WorkSpaces/carrots/dbms/parser/sql-parser.h
 
-1513656275 source:/home/huangwentao/WorkSpaces/carrots/dbms/parser/exec.c
+1513701234 source:/home/huangwentao/WorkSpaces/carrots/dbms/parser/exec.c
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
@@ -790,7 +791,7 @@
 	"../index/Index.h"
 	<string>
 
-1513690992 /home/huangwentao/WorkSpaces/carrots/dbms/SPJ/Selection.h
+1513702534 /home/huangwentao/WorkSpaces/carrots/dbms/SPJ/Selection.h
 	"SPJ.h"
 	"../util/DataUtil.h"
 	<string>

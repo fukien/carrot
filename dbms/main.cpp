@@ -77,7 +77,7 @@ static void err_id_initialize()
     err_reason[-16] = "INSERT FAILED!\t THE TUPLE FIELD NUMBER DOESN'T MATCH THE FIELD NUMBER OF THE TABLE!!!";
     err_reason[-17] = "INSERT FAILED!\t SOME STRING LENGTH DON'T MATCH THE FIELD LENGTH!!!";
     err_reason[-18] = "INSERT FAILED!\t TABLE NOT FOUND!!!";
-    err_reason[-21] = "UPDATE FAILED!";
+    err_reason[-21] = "UPDATE FAILED!\t TABLE NOT FOUND!!!  ";
     err_reason[-26] = "DELETE FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-27] = "DELETE FAILED!\t TABLE FOUND BUT NOT EVEN A SINGLE TUPLE!!!";
     err_reason[-28] = "DELETE FAILED!\t COLUMN TYPE DOESN'T MATCH!!!";
