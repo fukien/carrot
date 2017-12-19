@@ -8,6 +8,10 @@
 #include "../util/DataUtil.h"
 #include "../SPJ/SPJ.h"
 #include "../SPJ/Selection.h"
+#include "../SPJ/Join.h"
+#include "../SPJ/Projection.h"
+
+#define MAX_CONDITION_LEN 64
 
  using namespace std;
  extern query_tree queryTree;// 全局查询树
@@ -22,6 +26,8 @@
  extern fromList currentTableList[MAX_TABLE_LIST]; // 当前所有表的列表
  extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
  extern deleteWhere dw;// 记录delete语句的where
+extern updateWhere uw;// 记录update语句的where
+extern selectWhere sw;// 记录select语句的where
 
 class QueryExecutor
 {

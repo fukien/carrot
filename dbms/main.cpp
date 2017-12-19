@@ -12,6 +12,7 @@
 #include "execution/InsertExecutor.h"
 #include "execution/UpdateExecutor.h"
 #include "execution/DeleteExecutor.h"
+#include "execution/SelectExecutor.h"
 
 using namespace std;
 extern "C"
@@ -35,6 +36,8 @@ extern int currentTableListNum;// 现有表的数量
 extern fromList currentTableList[MAX_TABLE_LIST]; // 当前所有表的列表
 extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
 extern deleteWhere dw;// 记录delete语句的where
+extern updateWhere uw;// 记录update语句的where
+extern selectWhere sw;// 记录select语句的where
 
 map<int, char*> err_reason;// 全局错误号信息反馈
 /**********************************************************
@@ -66,8 +69,8 @@ static void err_id_initialize()
     err_reason[0] = "DEFAULT!";
     err_reason[-1]  = "CREATE TABLE FAILED!";
     err_reason[-6] = "DROP TABLE FAILED!\t TABLE NOT FOUND!!!";
-    err_reason[-7] = "DROP TABLE FAILED!\T TABLE FOUND BUT CAN NOT DROP!!!";
-    err_reason[-11] = " SELECT FAILED!";
+    err_reason[-7] = "DROP TABLE FAILED!\t TABLE FOUND BUT CAN NOT DROP!!!";
+    err_reason[-11] = "SELECT FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-12]="SELECTION FAILED!";
     err_reason[-13] = "PROJECTION FAILED!";
     err_reason[-14] = "JOIN FAILED!";
@@ -77,6 +80,7 @@ static void err_id_initialize()
     err_reason[-21] = "UPDATE FAILED!";
     err_reason[-26] = "DELETE FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-27] = "DELETE FAILED!\t TABLE FOUND BUT NOT EVEN A SINGLE TUPLE!!!";
+    err_reason[-28] = "DELETE FAILED!\t COLUMN TYPE DOESN'T MATCH!!!";
 }
 int currentTableCount() //获取当前工作路径下的表的数量
  {
@@ -108,6 +112,8 @@ void iniQuery()
     memset(&ctfp,0,sizeof(ctfp));//清空当前表的指针
     memset(&ttit,0,sizeof(ttit));//清空当前临时元组，为下一次插入作准备
     memset(&dw,0,sizeof(dw));// 清空delete的where
+    memset(&uw,0,sizeof(uw));//清空update的where
+    memset(&sw,0,sizeof(sw));//清空select的where
     mfListCursor = 0; //置0当前MF属性的游标
     mfcListCursor = 0;//置0当前MFC属性的游标
 //    currentTableCursor = 0;
@@ -142,11 +148,21 @@ void doQuery()
                 {
                     cout<<"successfully insert " << ie->getChdNum() << " tuple"<<endl;
                 }
-                cout<<err_reason[ie->getStatus()]<<endl;
+                    cout<<err_reason[ie->getStatus()]<<endl;
                 delete ie;
             }
             break;
         case 4://update
+            {
+                UpdateExecutor *ue = new UpdateExecutor();
+                ue->execute(queryTree);
+                if(ue->getStatus() == 1)
+                    {
+                        cout<<"successfully update " << ue->getChdNum() << "tuple" <<endl;
+                    }
+                    cout<<err_reason[ue->getStatus()] <<endl;
+                    delete ue;
+            }
             break;
         case 5://delete
             {
@@ -157,7 +173,14 @@ void doQuery()
             }
             break;
         case 6://select
+            {
+                SelectExecutor*se = new SelectExecutor();
+                se->execute(queryTree);
+                cout<<err_reason[se->getStatus()]<<endl;
+                delete se;
+            }
             break;
+
         default: // what the hell
             break;
     }

@@ -594,6 +594,7 @@ void sqlp_select_nodata(struct psql_state *pstate, int opts, int n_expr)
 
 void sqlp_select_all(struct psql_state *pstate)
 {
+    sw.isAll = 0;
 	printf("exec SELECT-ALL\n");
 }
 
@@ -645,6 +646,9 @@ void sqlp_table(struct psql_state *pstate, const char *db_name, const char *name
     strcat(dir,".tb");
     ctfp.currentFp = fopen(dir,"r");
     strcpy(ctfp.name, dir);
+
+
+    strcpy(sw.tableName,dir);
 
     /*
     if(currentFp != NULL)

@@ -58,7 +58,7 @@ typedef struct query_tree{
 typedef struct currentTableFp{
     FILE * currentFp;
     char name[MAX_TABLE_NAME_LEN_PARSER];
-} currentTableFp;
+} currentTableFp; //DROP, SELECT,UPDATE
 
 typedef struct tempTuple{
     int fieldNum;
@@ -73,8 +73,6 @@ typedef struct tempTuple{
 
 
 typedef struct deleteWhere{
-    char tableName[MAX_TABLE_NAME_LEN_PARSER];
-
     /*
     char field[MAX_TYPE_FILED_NUM][MAX_FIELD_NAME_LEN];
     //运算符: 0DEFAULT, 1ADD, 2SUB, 3MUL, 4DIV 5MOD
@@ -84,7 +82,7 @@ typedef struct deleteWhere{
     //逻辑符: 0 DEFAULT,1AND, 2OR
     int logicType[MAX_TYPE_FILED_NUM];
  */
-
+    char tableName[MAX_TABLE_NAME_LEN_PARSER];
     char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];//where子句
 
     /***********************************************************
@@ -97,10 +95,35 @@ typedef struct deleteWhere{
     21-IN_SELECT, 22-BETWEEN, 23-IS_NULL, 24-SMALLER_OR_EQUAL,
     25_GREATER_OR_EQUAL
     ********************************************************/
-        int type[MAX_WHERE_ITEM_LENGTH];
-
+    int type[MAX_WHERE_ITEM_LENGTH];
     int whereCursor;//where子句的游标
 }deleteWhere;
+
+typedef struct updateWhere{
+    char tableName[MAX_TABLE_NAME_LEN_PARSER];
+    char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];//where子句
+
+    /***********************************************************
+    记录数据类型.
+    0-COLUMN, 1-INT, 2-FLOAT, 3-STRING,
+    4-ADD, 5-SUB, 6-MUL, 7-DIV, 8-MOD,
+    9-AND, 10-OR, 11- WHERE(END), 12-SMALLERTHAN,
+    13- GREATERTHAN, 14-NOTEQUAL, 15-EQUAL, 16-NEG,
+    17-XOR, 18-NOT, 19-LIKE, 20-EXISTS,
+    21-IN_SELECT, 22-BETWEEN, 23-IS_NULL, 24-SMALLER_OR_EQUAL,
+    25_GREATER_OR_EQUAL
+    ********************************************************/
+    int type[MAX_WHERE_ITEM_LENGTH];
+    int whereCursor;//where子句的游标
+}updateWhere;
+
+typedef struct selectWhere{
+    char tableName[MAX_TABLE_NAME_LEN_PARSER];
+    char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_NUM];
+    int type[MAX_WHERE_ITEM_LENGTH];
+    int whereCursor;//where子句的游标
+    int isAll; //0 not, 1 -all
+}selectWhere;
 #endif // PARSER
 
 

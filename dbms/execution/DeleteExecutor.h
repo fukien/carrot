@@ -16,11 +16,13 @@ public:
     int getChdNum();
 
 private:
-    void parse(char * dir);
-    void decorate(Condition * cond, char * dir);
     int chdNum;
+    int condCursor;
     stack<char*> sd;
     stack <int> sdType;
+    Condition cond[MAX_CONDITION_LEN];
+    bool parse();
+    bool decorate(int cursor);
 };
 
 

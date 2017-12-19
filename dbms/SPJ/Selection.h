@@ -10,8 +10,8 @@ typedef struct {
     //Condition condition;
     void*value;
     Byte  compare;
-    Byte DataType;
-    int len;
+    Byte DataType;//列名不赋值
+    int len;//string len, for field name and string both
 }Condition;
 
 class CompareType{
@@ -34,6 +34,7 @@ public :
             Byte*data2=new Byte[len];
             memcpy(data1,value1,len);
             memcpy(data2,value2,len);
+
             int result=DataUtil::cmpData(data1,data2,dataType,len);
           switch(cmpType){
             case CompareType::LESS:

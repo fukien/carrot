@@ -34,8 +34,27 @@ int SelectExecutor::getChdNum()
     return chdNum;
 }
 
+int SelectExecutor::selectAll()
+{
+    Table* table = new Table();
+    table->open(ctfp.name,false);
+
+    setStatus(1);
+    return getStatus();
+}
+
+
 int SelectExecutor::execute(query_tree qt)
 {
-    setStatus(1);
+
+     if(sw.isAll == 1)//全选
+        {
+                if(ctfp.currentFp == NULL)
+            {
+                setStatus(-11);
+                return getStatus();
+            }
+            selectAll();
+        }
     return getStatus();
 }

@@ -12,6 +12,7 @@ public:
     int getStatus();
     void setChdNum(int a);
     int getChdNum();
+    int selectAll();
 private:
     int chdNum;
 };

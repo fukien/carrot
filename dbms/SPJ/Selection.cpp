@@ -1,6 +1,7 @@
 #include"Selection.h"
 #include<cstdio>
 #include<limits>
+#include<iostream>
 
  Selection::Selection(int type,int initial):SPJ(){
     this->operatorType=type;
@@ -149,9 +150,6 @@ void Selection::getFirst(SPJItem * item){
                 table->findNextTuple(this->currentTuple,tuple);
                 if(oldaddr==tuple->tupleAddr||tuple->tupleAddr==0) break;
                 //table->releaseEmptyTuple(this->currentTuple);
-//                char*str=new char[1000];
-//                DataUtil::toString(str,tuple->column[1].data,DataTypeFlag::VARCHAR);
-//                printf("%s\n",str);
                 }
                 if(checkItem(tuple)==true){
                          fillItem(item,tuple);
@@ -189,6 +187,7 @@ bool Selection::checkItem(Tuple *tuple){
                if(mp.count(ss)>=1){
                      for(int j=0;j<mp[ss].size();j++){
                              flag=CompareType::Compare(tuple->column[i].data,mp[ss][j].value, mp[ss][j].compare,tuple->column[i].field->dataType,tuple->column[i].field->len);
+
                              if(!flag) break;
                      }
                }
@@ -466,28 +465,19 @@ void Selection::spjForDeleteOne(SPJItem * item)
             Tuple *tuple=this->table->buildEmptyTuple();
             table->findFirstTuple(tuple);
             this->currentTuple=tuple;
-            if(tuple->tupleAddr!=0)
-            {
-                while(checkItem(tuple)!=true)
+            Addr oldAddr=0u;
+            //printf("%llx\t%llx\n", oldAddr, tuple->tupleAddr);
+             while(oldAddr!=tuple->tupleAddr&&tuple->tupleAddr!=0)
                 {
-                    Addr oldaddr=this->currentTuple->tupleAddr;
-                    table->findNextTuple(this->currentTuple,tuple);
-                    if(oldaddr==tuple->tupleAddr||tuple->tupleAddr==0)
+                     if(checkItem(tuple)==true)
                     {
-                        break;
-                    }
-                //table->releaseEmptyTuple(this->currentTuple);
-//                char*str=new char[1000];
-//                DataUtil::toString(str,tuple->column[1].data,DataTypeFlag::VARCHAR);
-//                printf("%s\n",str);
-                }
-
-                if(checkItem(tuple)==true)
-                {
-                         fillItem(item,tuple);
+                         //fillItem(item,tuple);
                          table->deleteTuple(tuple);
-                         //this->currentTuple=tuple;
+                         this->currentTuple=tuple;
+                    }
+
+                    oldAddr=this->currentTuple->tupleAddr;
+                    table->findNextTuple(this->currentTuple,tuple);
                 }
-        }
             //table->releaseEmptyTuple(tuple);
 }
