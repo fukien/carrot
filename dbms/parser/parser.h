@@ -47,7 +47,8 @@ typedef struct fromList{
      3  insert
      4  update
      5  delete
-     6  selectfromListNum
+     6  select
+     7  join
     ***********************************************/
 typedef struct query_tree{
     int query_type;
@@ -132,6 +133,12 @@ typedef struct selectWhere{
     int fieldNum;
     int isProj; // 0-not finished projection, 1-finished projection
 }selectWhere;
+
+typedef struct joinWhere{
+    char tableList[MAX_TABLE_LIST][MAX_TABLE_NAME_LEN_PARSER];//记录join的表格
+    int tableCursor;//记录table的数量
+
+}joinWhere;
 #endif // PARSER
 
 

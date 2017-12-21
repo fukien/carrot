@@ -26,8 +26,9 @@
  extern fromList currentTableList[MAX_TABLE_LIST]; // 当前所有表的列表
  extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
  extern deleteWhere dw;// 记录delete语句的where
-extern updateWhere uw;// 记录update语句的where
-extern selectWhere sw;// 记录select语句的where
+ extern updateWhere uw;// 记录update语句的where
+ extern selectWhere sw;// 记录select语句的where
+ extern joinWhere jw;// 记录join语句的where
 
 class QueryExecutor
 {

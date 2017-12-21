@@ -18,4 +18,6 @@ tempTuple ttit; // temp tuple to insert, 临时元组，即将插入
 deleteWhere dw;// 记录delete语句的where
 updateWhere uw;//记录update语句的where
 selectWhere sw;//记录select语句的where
+joinWhere jw;//记录join语句的where
+
 #endif // GLOBAL_H_INCLUDED

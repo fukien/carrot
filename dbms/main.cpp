@@ -14,6 +14,7 @@
 #include "execution/UpdateExecutor.h"
 #include "execution/DeleteExecutor.h"
 #include "execution/SelectExecutor.h"
+#include "execution/JoinExecutor.h"
 
 using namespace std;
 extern "C"
@@ -39,6 +40,7 @@ extern tempTuple ttit;// temp tuple to insert, 临时元组，即将插入
 extern deleteWhere dw;// 记录delete语句的where
 extern updateWhere uw;// 记录update语句的where
 extern selectWhere sw;// 记录select语句的where
+extern joinWhere jw;// 记录join语句的where
 
 map<int, char*> err_reason;// 全局错误号信息反馈
 /**********************************************************
@@ -51,18 +53,17 @@ error id: -10~-6,    error reasons for DROP
 error id: -15~-11,    error reasons for SELECT
 error id: -20~-16,    error reasons for INSERT
 error id: -25~-21,    error reasons for UPDATE
-error id: -30~-26,    error reasons for DELETEexec INT/NUMBER
+error id: -30~-26,    error reasons for DELETE
+error id: -35~-31,    error reasons for JOIN
 
 error id        error reason
 -1                  CREATE FAILED
 -6                  DROP FAILED
 -11                SELECT FAILED
--12                SELECTION FAILED
--13                PROJECTION FAILED
--14                JOIN FAILED
 -16                INSERT FAILED
 -21                UPDATE FAILED
 -26                DELETE FAILED
+-31                JOIN FAILED
 **********************************************************/
 static void err_id_initialize()
 {
@@ -117,6 +118,7 @@ void iniQuery()
     memset(&dw,0,sizeof(dw));// 清空delete的where
     memset(&uw,0,sizeof(uw));//清空update的where
     memset(&sw,0,sizeof(sw));//清空select的where
+    memset(&jw,0,sizeof(jw));//清空join的where
     mfListCursor = 0; //置0当前MF属性的游标
     mfcListCursor = 0;//置0当前MFC属性的游标
 //    currentTableCursor = 0;
@@ -191,7 +193,18 @@ void doQuery()
                 delete se;
             }
             break;
-
+        case 7://join
+            {
+                JoinExecutor* je = new JoinExecutor();
+                je->execute(queryTree);
+                if(je->getStatus() == 1)
+                    {
+                        cout<<"\nsuccessfully select "<<je->getChdNum() << " tuple" << endl;
+                    }
+                cout<<err_reason[je->getStatus()]<<endl;
+                delete je;
+            }
+            break;
         default: // what the hell
             break;
     }

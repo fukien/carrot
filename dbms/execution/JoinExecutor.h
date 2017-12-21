@@ -1,14 +1,14 @@
-#ifndef SELECTEXECUTOR_H_INCLUDED
-#define SELECTEXECUTOR_H_INCLUDED
+#ifndef JOINEXECUTOR_H_INCLUDED
+#define JOINEXECUTOR_H_INCLUDED
 #include "QueryExecutor.h"
 #include <stack>
 #include <iostream>
 
-class SelectExecutor:QueryExecutor
+class JoinExecutor:QueryExecutor
 {
 public:
-    SelectExecutor();
-    ~SelectExecutor();
+    JoinExecutor();
+    ~JoinExecutor();
     int execute(query_tree qt);
     void setStatus(int a);
     int getStatus();
@@ -23,7 +23,6 @@ private:
     Condition cond[MAX_CONDITION_LEN];
     bool parse();
     bool decorate(int cursor);
-    void selectAll();
 };
 
-#endif // SELECTEXECUTOR_H_INCLUDED
+#endif // JOINEXECUTOR_H_INCLUDED

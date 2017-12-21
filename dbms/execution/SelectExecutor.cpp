@@ -246,6 +246,11 @@ void SelectExecutor::selectAll()
     int cnt = 0;
     SPJItem * item = proj->buildSPJItem();
     proj->getFirst(item);
+    for(int i = 0; i < item->fieldNum; i++)
+        {
+            cout<<"|\t"<<item->fieldName[i]<<"\t|";
+        }
+    cout<<endl;
     while(item->use!=0)
         {
             char *str = new char[1000];
@@ -330,6 +335,14 @@ int SelectExecutor::execute(query_tree qt)
     int cnt = 0;
     SPJItem * item = proj->buildSPJItem();
     proj->getFirst(item);
+
+    for(int i = 0; i< sw.fieldNum; i++)
+        {
+            cout<<"|\t"<<item->fieldName[i]<<"\t|";
+        }
+
+    cout<<endl;
+
     while(item->use!=0)
         {
             char *str = new char[1000];
