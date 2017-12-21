@@ -502,8 +502,7 @@ int Selection::spjForUpdate(SPJItem * item, char * fieldName, int intValue, floa
                     //table->findNextTuple(this->currentTuple,tuple);
                     table->findNextTuple(tuple, tuple);
                 }
-            //table->releaseEmptyTuple(tuple);
-            delete meta;
+            table->releaseEmptyTuple(tuple);
 
             return times;
 }
@@ -531,7 +530,6 @@ int Selection::spjForDelete(SPJItem * item)
                     table ->findNextTuple(tuple,tuple);
 
                 }
-            //table->releaseEmptyTuple(tuple);
-            //table->close();
+            table->releaseEmptyTuple(tuple);
             return times;
 }

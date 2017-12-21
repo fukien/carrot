@@ -64,7 +64,7 @@ void SelectExecutor::selectAll()
             for(int i =0; i< item->fieldNum &&  item->use != 0; i ++)
                 {
                     DataUtil::toString(str,item->data[i],  item->dataType[i]);
-                    printf("%s|\t", str);
+                    printf("\t%s\t|", str);
                 }
                 printf("\n");
             cnt ++;
@@ -79,11 +79,13 @@ void SelectExecutor::selectAll()
             setChdNum(cnt);
             setStatus(1);
         }
-        delete meta;
-        delete tuple;
-        delete fp;
-        //delete column;
-        table->close();
+        //delete meta;
+       //delete tuple;
+        //delete fp;
+       delete[] column;
+       table->releaseEmptyTuple(tuple);
+       table->close();
+
 }
 
 
@@ -107,11 +109,13 @@ int SelectExecutor::execute(query_tree qt)
     FieldPart * fp =  meta->head;
     Tuple*tuple = table->buildEmptyTuple();
     string* column = new string[sw.fieldNum];
-    for(int i =0; i <sw.fieldNum; i++)
+        for(int i =0; i <sw.fieldNum; i++)
         {
             column[i] = tuple->column[i].field->fname;
         }
 
 
-    return getStatus();
+        delete [] column;
+        table->close();
+        return getStatus();
 }

@@ -298,6 +298,8 @@ int UpdateExecutor::execute(query_tree qt)
                 {
                     setChdNum(temp);
                 }
+
+        delete[] condition;
         table->close();
         delete spj;
         delete item;
