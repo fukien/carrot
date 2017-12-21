@@ -24,7 +24,7 @@ private:
     Condition cond[MAX_CONDITION_LEN];
     bool parse();
     bool decorate(int cursor);
-    void parseField();
+
 };
 
 #endif // SELECTEXECUTOR_H_INCLUDED

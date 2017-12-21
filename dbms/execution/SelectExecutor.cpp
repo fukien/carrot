@@ -74,8 +74,16 @@ void SelectExecutor::selectAll()
         {
                 setStatus(-12);
         }
-    setChdNum(cnt);
-    setStatus(1);
+        else
+        {
+            setChdNum(cnt);
+            setStatus(1);
+        }
+        delete meta;
+        delete tuple;
+        delete fp;
+        //delete column;
+        table->close();
 }
 
 
@@ -91,6 +99,17 @@ int SelectExecutor::execute(query_tree qt)
             }
            selectAll();
            return getStatus();
+        }
+
+    Table* table = new Table();
+    table->open(ctfp.name,false);
+    TableMeta * meta = table->getTableMeta();
+    FieldPart * fp =  meta->head;
+    Tuple*tuple = table->buildEmptyTuple();
+    string* column = new string[sw.fieldNum];
+    for(int i =0; i <sw.fieldNum; i++)
+        {
+            column[i] = tuple->column[i].field->fname;
         }
 
 
