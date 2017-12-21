@@ -455,8 +455,9 @@ void Selection::initSelection(SPJ*spj,Condition condition[] ,int conditionLen){
             this->conditionLen=conditionLen;
 }
 
-void Selection::spjForUpdateOne(SPJItem * item, char * fieldName, int intValue, float floatValue, char* str, int flag)
+int Selection::spjForUpdate(SPJItem * item, char * fieldName, int intValue, float floatValue, char* str, int flag)
 {
+            int times = 0;
             TableMeta *meta = table->getTableMeta();
             Tuple *tuple=this->table->buildEmptyTuple();
             //Tuple * toFill = this->table->buildEmptyTuple();
@@ -495,16 +496,20 @@ void Selection::spjForUpdateOne(SPJItem * item, char * fieldName, int intValue, 
                         TODO
                     ******************************************/
                          this->currentTuple=tuple;
+                         times ++;
                     }
                     oldAddr=this->currentTuple->tupleAddr;
-                    table->findNextTuple(this->currentTuple,tuple);
+                    //table->findNextTuple(this->currentTuple,tuple);
+                    table->findNextTuple(tuple, tuple);
                 }
             //table->releaseEmptyTuple(tuple);
+            delete meta;
+            return times;
 }
 
-void Selection::spjForDeleteOne(SPJItem * item)
+int Selection::spjForDelete(SPJItem * item)
 {
-
+            int times = 0;
             Tuple *tuple=this->table->buildEmptyTuple();
             table->findFirstTuple(tuple);
             this->currentTuple=tuple;
@@ -520,7 +525,10 @@ void Selection::spjForDeleteOne(SPJItem * item)
                     }
 
                     oldAddr=this->currentTuple->tupleAddr;
-                    table->findNextTuple(this->currentTuple,tuple);
+                    //table->findNextTuple(this->currentTuple,tuple);
+                    table ->findNextTuple(tuple,tuple);
+                    times ++;
                 }
             //table->releaseEmptyTuple(tuple);
+            return times;
 }

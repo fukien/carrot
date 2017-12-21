@@ -2,6 +2,9 @@
 #define UPDATEEXECUTOR_H_INCLUDED
 #include "QueryExecutor.h"
 #include <stack>
+#include<iostream>
+
+
 
 class UpdateExecutor:QueryExecutor
 {
@@ -24,6 +27,11 @@ private:
     bool parse();
     bool decorate(int cursor);
     void parseAss();
+    char str[MAX_FIELD_NAME_LEN];
+    char fieldName[MAX_FIELD_NAME_LEN];
+    int intValue;
+    float floatValue;
+    int flag;
 };
 
 #endif // UPDATEEXECUTOR_H_INCLUDED

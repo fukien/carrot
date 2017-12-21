@@ -76,7 +76,7 @@ void sqlp_alias(struct psql_state *pstate, const char *alias)
 
 void sqlp_assign(struct psql_state *pstate, const char *db_name, const char *name)
 {
-    removeFirstAndLast(uw.assWhere[uw.assCursor],name);
+    strcpy(uw.assWhere[uw.assCursor],name);
     uw.assType[uw.assCursor] = 26;
     uw.assCursor ++ ;
     uw.ass = 1;
@@ -522,12 +522,12 @@ void sqlp_float(struct psql_state *pstate, float val)
 
     if(uw.ass == 0){
         sprintf(uw.assWhere[uw.assCursor], "%f", val);
-        uw.assType[uw.assCursor] = 1;
+        uw.assType[uw.assCursor] = 2;
         uw.assCursor ++;
     }else
     {
         sprintf(uw.where[uw.whereCursor],"%f", val);
-        uw.type[uw.whereCursor] = 1;
+        uw.type[uw.whereCursor] = 2;
         uw.whereCursor++;
     }
 
@@ -623,6 +623,13 @@ void sqlp_name(struct psql_state *pstate, const char *name)
     strcpy(dw.where[dw.whereCursor], name);
     dw.type[dw.whereCursor] = 0;
     dw.whereCursor++;
+
+    if(uw.ass == 1)
+        {
+            strcpy(uw.where[uw.whereCursor], name);
+            uw.type[uw.whereCursor] = 0;
+            uw.whereCursor++;
+        }
 
 	printf("exec NAME %s\n", name);
 }
@@ -723,12 +730,12 @@ void sqlp_string(struct psql_state *pstate, const char *str)
 
     if(uw.ass == 0){
         removeFirstAndLast(uw.assWhere[uw.assCursor], str);
-        uw.assType[uw.assCursor] = 1;
+        uw.assType[uw.assCursor] = 3;
         uw.assCursor ++;
     }else
     {
         removeFirstAndLast(uw.where[uw.whereCursor], str);
-        uw.type[uw.whereCursor] = 1;
+        uw.type[uw.whereCursor] = 3;
         uw.whereCursor++;
     }
 

@@ -455,7 +455,15 @@ int DeleteExecutor::execute(query_tree qt)
 
     spj->initSelection(table,condition,condCursor);
     SPJItem * item = spj->buildSPJItem();
-    spj->spjForDeleteOne(item);
+    int temp = spj->spjForDelete(item);
+    if(temp == 0)
+        {
+            setStatus(-29);
+            return getStatus();
+        }else
+        {
+            setChdNum(temp);
+        }
     table->close();
     delete spj;
     delete item;

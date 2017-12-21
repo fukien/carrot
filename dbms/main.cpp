@@ -78,9 +78,12 @@ static void err_id_initialize()
     err_reason[-17] = "INSERT FAILED!\t SOME STRING LENGTH DON'T MATCH THE FIELD LENGTH!!!";
     err_reason[-18] = "INSERT FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-21] = "UPDATE FAILED!\t TABLE NOT FOUND!!!  ";
+    err_reason[-22] = "UPDATE FAILED!\t PARSE ERROR!!!";
+    err_reason[-23] = "UPDATE FALED!\t NOT SUCH TUPLE";
     err_reason[-26] = "DELETE FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-27] = "DELETE FAILED!\t TABLE FOUND BUT NOT EVEN A SINGLE TUPLE!!!";
     err_reason[-28] = "DELETE FAILED!\t COLUMN TYPE DOESN'T MATCH!!!";
+    err_reason[-29] = "DELETE FAILED!\t NOT SUCH TUPLE!!!";
 }
 int currentTableCount() //获取当前工作路径下的表的数量
  {
@@ -158,7 +161,7 @@ void doQuery()
                 ue->execute(queryTree);
                 if(ue->getStatus() == 1)
                     {
-                        cout<<"successfully update " << ue->getChdNum() << "tuple" <<endl;
+                        cout<<"successfully update " << ue->getChdNum() << " tuple" <<endl;
                     }
                     cout<<err_reason[ue->getStatus()] <<endl;
                     delete ue;
@@ -168,6 +171,10 @@ void doQuery()
             {
                 DeleteExecutor*de = new DeleteExecutor();
                 de->execute(queryTree);
+                if(de ->getStatus() == 1)
+                    {
+                        cout<<"successfully delete " << de->getChdNum() << " tuple" << endl;
+                    }
                 cout<<err_reason[de->getStatus()]<<endl;
                 delete de;
             }
