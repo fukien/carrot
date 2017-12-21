@@ -5,6 +5,7 @@
 #include <map>
 #include <vector>
 #include <dirent.h>
+#include <time.h>
 #include "parser/parser.h"
 #include "execution/QueryExecutor.h"
 #include "execution/CreateExecutor.h"
@@ -72,6 +73,7 @@ static void err_id_initialize()
     err_reason[-7] = "DROP TABLE FAILED!\t TABLE FOUND BUT CAN NOT DROP!!!";
     err_reason[-11] = "SELECT FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-12]="SELECT FAILED!\t NOT SUCH TUPLE!!!";
+    err_reason[-13]="SELECT FAILED!\t PARSE ERROR!!!";
     err_reason[-16] = "INSERT FAILED!\t THE TUPLE FIELD NUMBER DOESN'T MATCH THE FIELD NUMBER OF THE TABLE!!!";
     err_reason[-17] = "INSERT FAILED!\t SOME STRING LENGTH DON'T MATCH THE FIELD LENGTH!!!";
     err_reason[-18] = "INSERT FAILED!\t TABLE NOT FOUND!!!";
@@ -183,7 +185,7 @@ void doQuery()
                 se->execute(queryTree);
                 if(se->getStatus() == 1)
                     {
-                        cout<<"successfully select "<<se->getChdNum() << " tuple" << endl;
+                        cout<<"\nsuccessfully select "<<se->getChdNum() << " tuple" << endl;
                     }
                 cout<<err_reason[se->getStatus()]<<endl;
                 delete se;
@@ -235,6 +237,10 @@ int main(int ac,char** av)
   */
   while (true)
 {
+    clock_t starttime;
+    clock_t endtime;
+    double totaltime;
+    starttime = clock();
     iniQuery();
     cout<<"\nCARROTS >>\t" ;
     if(!yyparse(pstate.scanner, &pstate)) {
@@ -246,6 +252,10 @@ int main(int ac,char** av)
   }
   cout<<endl;
   doQuery();
+  endtime = clock();
+  totaltime=(double)((endtime-starttime)/(double)CLOCKS_PER_SEC);
+  cout<<"time: "<<totaltime<<"s"<<endl;
+  cout<<"================================================================================"<<endl;
 }
     return 0;
 }

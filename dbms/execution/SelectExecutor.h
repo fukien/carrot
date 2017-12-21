@@ -18,7 +18,6 @@ public:
 private:
     int chdNum;
     int condCursor;
-    int fieldNum;
     stack<char*> sd;
     stack<int> sdType;
     Condition cond[MAX_CONDITION_LEN];

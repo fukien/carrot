@@ -126,7 +126,7 @@ typedef struct selectWhere{
     char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_NUM];
     int type[MAX_WHERE_ITEM_LENGTH];
     int whereCursor;//where子句的游标
-    int isAll; //0 not, 1 -all
+    int isAll; //0 not, 1 -all, if projects all columns
 
     char fieldList[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
     int fieldNum;
