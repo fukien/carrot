@@ -8,7 +8,7 @@ class Projection :public SPJ{
 public:
     void getNext(SPJItem*item);
     void getFirst(SPJItem * item);
-    void initProjection(Table*table,string columnName[],int columnNum);//given the columns, if select* just set columnNum as -1
+    void initProjection(Table*table,string columnName[], int columnNum);//given the columns, if select* just set columnNum as -1
     void initProjection(SPJ*spj,string columnName[],int columnNum);
     void releaseSPJItem(SPJItem*item);
     SPJItem* buildSPJItem();

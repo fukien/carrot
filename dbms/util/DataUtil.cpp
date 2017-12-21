@@ -44,7 +44,7 @@ void DataUtil::toString(char* str,void* data,Byte dataTypeFlag)
            switch(dataTypeFlag)
             {
                 case DataTypeFlag::DOUBLE:
-                    memcpy(&ad,data,getTypeLength(dataTypeFlag));
+                memcpy(&ad,data,getTypeLength(dataTypeFlag));
                 sprintf(str,"%llf",data);
                 break;
             case DataTypeFlag::FLOAT:

@@ -467,6 +467,7 @@ int DeleteExecutor::execute(query_tree qt)
     table->close();
     delete spj;
     delete item;
+
     /*
     bool dec = parse(dir);
     if(dec != false)

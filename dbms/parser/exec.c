@@ -331,31 +331,37 @@ void sqlp_expr_cmp(struct psql_state *pstate, int comp)
         strcat(cmp,"<");
         dw.type[dw.whereCursor] = 12;
         uw.type[uw.whereCursor] = 12;
+        sw.type[sw.whereCursor] = 12;
         break;
     case 2:
         strcat(cmp,">");
         dw.type[dw.whereCursor] = 13;
         uw.type[uw.whereCursor] = 13;
+        sw.type[sw.whereCursor] = 13;
         break;
     case 3:
         strcat(cmp,"!=");
         dw.type[dw.whereCursor] = 14;
         uw.type[uw.whereCursor] = 14;
+        sw.type[sw.whereCursor] = 14;
         break;
     case 4:
         strcat(cmp,"=");
         dw.type[dw.whereCursor] = 15;
         uw.type[uw.whereCursor] = 15;
+        sw.type[sw.whereCursor]= 15;
         break;
     case 24:
         strcat(cmp, "<=");
         dw.type[dw.whereCursor] = 24;
         uw.type[uw.whereCursor] = 24;
+        sw.type[sw.whereCursor] = 24;
         break;
     case 25:
         strcat(cmp, ">=");
         dw.type[dw.whereCursor] = 25;
         uw.type[uw.whereCursor] = 25;
+        sw.type[sw.whereCursor] = 25;
         break;
     default:
         break;
@@ -365,6 +371,9 @@ void sqlp_expr_cmp(struct psql_state *pstate, int comp)
 
     strcpy(uw.where[uw.whereCursor],cmp);
     uw.whereCursor++;
+
+    strcpy(sw.where[sw.whereCursor],cmp);
+    sw.whereCursor++;
 
 	printf("exec CMP %d\n", comp);
 }
@@ -496,6 +505,64 @@ void sqlp_expr_op(struct psql_state *pstate, enum sqlp_expr_ops op)
                 uw.whereCursor++;
         }
 
+         if(sw.isProj == 1)
+        {
+            strcpy(sw.where[sw.whereCursor], op_names[op]);
+                switch(op)
+                {
+                    case SEO_ADD:
+                        sw.type[sw.whereCursor] = 4;
+                        break;
+                    case SEO_SUB:
+                        sw.type[sw.whereCursor] = 5;
+                        break;
+                    case SEO_MUL:
+                        sw.type[sw.whereCursor] = 6;
+                        break;
+                    case SEO_DIV:
+                        sw.type[sw.whereCursor] = 7;
+                        break;
+                    case SEO_MOD:
+                        sw.type[sw.whereCursor] = 8;
+                        break;
+                    case SEO_AND:
+                        sw.type[sw.whereCursor] = 9;
+                        break;
+                    case SEO_OR:
+                        sw.type[sw.whereCursor] = 10;
+                        break;
+                    case SEO_NEG:
+                        sw.type[sw.whereCursor] = 16;
+                        break;
+                    case SEO_XOR:
+                        sw.type[sw.whereCursor] = 17;
+                        break;
+                    case SEO_NOT:
+                        sw.type[sw.whereCursor] = 18;
+                        break;
+                    case SEO_LIKE:
+                        sw.type[sw.whereCursor] = 19;
+                        break;
+                    case SEO_EXISTS:
+                        sw.type[sw.whereCursor] = 20;
+                        break;
+                    case SEO_IN_SELECT:
+                        sw.type[sw.whereCursor] = 21;
+                        break;
+                    case SEO_BETWEEN:
+                        sw.type[sw.whereCursor] = 22;
+                        break;
+                    case SEO_IS_NULL:
+                        sw.type[sw.whereCursor] = 23;
+                        break;
+                    case SEO_REGEX:
+                        sw.type[sw.whereCursor] = 24;
+                        break;
+                    default:
+                        break;
+                }
+                sw.whereCursor++;
+        }
 
 	printf("exec EXPR-OP %s\n", op_names[op]);
 }
@@ -531,6 +598,12 @@ void sqlp_float(struct psql_state *pstate, float val)
         uw.whereCursor++;
     }
 
+    if(sw.isProj == 1)
+        {
+            sprintf(sw.where[sw.whereCursor], "%f", val);
+            sw.type[sw.whereCursor] = 2;
+            sw.whereCursor ++;
+        }
 
 	printf("exec FLOAT %g\n", val);
 }
@@ -631,6 +704,17 @@ void sqlp_name(struct psql_state *pstate, const char *name)
             uw.whereCursor++;
         }
 
+    if(sw.isProj == 0)
+    {
+        strcpy(sw.fieldList[sw.fieldNum], name);
+        sw.fieldNum++;
+    }else
+    {
+        strcpy(sw.where[sw.whereCursor],name);
+        sw.type[sw.whereCursor] = 0;
+        sw.whereCursor++;
+    }
+
 	printf("exec NAME %s\n", name);
 }
 
@@ -658,6 +742,14 @@ void sqlp_number(struct psql_state *pstate, int val)
         uw.type[uw.whereCursor] = 1;
         uw.whereCursor++;
     }
+
+    if(sw.isProj == 1)
+        {
+            sprintf(sw.where[sw.whereCursor], "%d", val);
+            sw.type[sw.whereCursor] = 1;
+            sw.whereCursor ++;
+        }
+
     printf("exec INT/NUMBER %d\n", val);
 }
 
@@ -695,7 +787,7 @@ void sqlp_select_nodata(struct psql_state *pstate, int opts, int n_expr)
 
 void sqlp_select_all(struct psql_state *pstate)
 {
-    sw.isAll = 0;
+    sw.isAll = 1;
 	printf("exec SELECT-ALL\n");
 }
 
@@ -739,6 +831,12 @@ void sqlp_string(struct psql_state *pstate, const char *str)
         uw.whereCursor++;
     }
 
+    if(sw.isProj == 1)
+        {
+            removeFirstAndLast(sw.where[sw.whereCursor],str);
+            sw.type[sw.whereCursor] = 3;
+            sw.whereCursor ++;
+        }
 
 	printf("exec STRING %s\n", str);
 }
@@ -761,9 +859,10 @@ void sqlp_table(struct psql_state *pstate, const char *db_name, const char *name
     ctfp.currentFp = fopen(dir,"r");
     strcpy(ctfp.name, dir);
 
+    strcpy(uw.tableName,dir);
 
     strcpy(sw.tableName,dir);
-    strcpy(uw.tableName,dir);
+    sw.isProj = 1;
 
     /*
     if(currentFp != NULL)
@@ -810,6 +909,10 @@ void sqlp_where(struct psql_state *pstate)
     strcpy(uw.where[uw.whereCursor],"WHERE");
     uw.type[uw.whereCursor] = 11;
     uw.whereCursor++;
+
+    strcpy(sw.where[sw.whereCursor],"WHERE");
+    sw.type[sw.whereCursor] = 11;
+    sw.whereCursor++;
 
 	printf("exec WHERE\n");
 }

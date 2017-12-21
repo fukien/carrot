@@ -71,9 +71,7 @@ static void err_id_initialize()
     err_reason[-6] = "DROP TABLE FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-7] = "DROP TABLE FAILED!\t TABLE FOUND BUT CAN NOT DROP!!!";
     err_reason[-11] = "SELECT FAILED!\t TABLE NOT FOUND!!!";
-    err_reason[-12]="SELECTION FAILED!";
-    err_reason[-13] = "PROJECTION FAILED!";
-    err_reason[-14] = "JOIN FAILED!";
+    err_reason[-12]="SELECT FAILED!\t NOT SUCH TUPLE!!!";
     err_reason[-16] = "INSERT FAILED!\t THE TUPLE FIELD NUMBER DOESN'T MATCH THE FIELD NUMBER OF THE TABLE!!!";
     err_reason[-17] = "INSERT FAILED!\t SOME STRING LENGTH DON'T MATCH THE FIELD LENGTH!!!";
     err_reason[-18] = "INSERT FAILED!\t TABLE NOT FOUND!!!";
@@ -183,6 +181,10 @@ void doQuery()
             {
                 SelectExecutor*se = new SelectExecutor();
                 se->execute(queryTree);
+                if(se->getStatus() == 1)
+                    {
+                        cout<<"successfully select "<<se->getChdNum() << " tuple" << endl;
+                    }
                 cout<<err_reason[se->getStatus()]<<endl;
                 delete se;
             }

@@ -127,6 +127,10 @@ typedef struct selectWhere{
     int type[MAX_WHERE_ITEM_LENGTH];
     int whereCursor;//where子句的游标
     int isAll; //0 not, 1 -all
+
+    char fieldList[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
+    int fieldNum;
+    int isProj; // 0-not finished projection, 1-finished projection
 }selectWhere;
 #endif // PARSER
 
