@@ -331,7 +331,7 @@ int SelectExecutor::execute(query_tree qt)
                 condition[i].value = cond[i].value;
             }
 
-    Selection * sspj = new Selection(OperatorType::PROJECTION,SPJ::TABLEINITIAL);
+    Selection * sspj = new Selection(OperatorType::SELECTION,SPJ::TABLEINITIAL);
     sspj->initSelection(table,condition, condCursor);
 
     Projection *proj = new Projection(OperatorType::PROJECTION, SPJ::ITERATORINITIAL);
@@ -356,7 +356,7 @@ int SelectExecutor::execute(query_tree qt)
                     DataUtil::toString(str,item->data[i],  item->dataType[i]);
                     printf("|\t%s\t|", str);
                 }
-                printf("\n");
+            printf("\n");
             cnt ++;
             proj->getNext(item);
             delete str;

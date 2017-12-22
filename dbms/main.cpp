@@ -87,6 +87,7 @@ static void err_id_initialize()
     err_reason[-29] = "DELETE FAILED!\t NOT SUCH TUPLE!!!";
     err_reason[-31] = "JOIN FAILED!\t TABLE NOT FOUND!!!";
     err_reason[-32] = "JOIN FAILED!\t PARSE ERROR!!!";
+    err_reason[-33] = "JOIN FAILED!\t NOT TUPLE PAIR CAN BE JOINED!!!";
 }
 int currentTableCount() //获取当前工作路径下的表的数量
  {

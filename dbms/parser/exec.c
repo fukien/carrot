@@ -644,9 +644,12 @@ void sqlp_fieldname(struct psql_state *pstate, const char *db_name, const char *
 {
     if(jw.isProj == 0)
         {
+            /*WE DON'T SUPPOT THIS RIGHT NOW
             strcpy(jw.fieldList[jw.fieldNum], db_name);
             strcat(jw.fieldList[jw.fieldNum],".");
             strcat(jw.fieldList[jw.fieldNum], name);
+            */
+            strcpy(jw.fieldList[jw.fieldNum], name);
             jw.fieldNum ++;
         }else
         {

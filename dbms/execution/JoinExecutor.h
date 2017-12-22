@@ -18,7 +18,7 @@ public:
 private:
     int chdNum;
     int condCursor;
-    char tableSeq[2*MAX_CONDITION_LEN][MAX_TABLE_NAME_LEN];
+    char tableSeq[2*MAX_CONDITION_LEN][MAX_TABLE_NAME_LEN];// FOR WHERE FIELD
     int tableSeqCursor;
     stack<char*> sd;
     stack<int> sdType;
