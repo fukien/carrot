@@ -298,6 +298,11 @@ int SelectExecutor::execute(query_tree qt)
            return getStatus();
         }
 
+    if(ctfp.currentFp == NULL)
+        {
+            setStatus(-11);
+            return getStatus();
+        }
     bool parseCorrect = parse();
     if(parseCorrect == false)
         {

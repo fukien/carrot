@@ -332,36 +332,42 @@ void sqlp_expr_cmp(struct psql_state *pstate, int comp)
         dw.type[dw.whereCursor] = 12;
         uw.type[uw.whereCursor] = 12;
         sw.type[sw.whereCursor] = 12;
+        jw.type[jw.whereCursor] = 12;
         break;
     case 2:
         strcat(cmp,">");
         dw.type[dw.whereCursor] = 13;
         uw.type[uw.whereCursor] = 13;
         sw.type[sw.whereCursor] = 13;
+        jw.type[jw.whereCursor] = 13;
         break;
     case 3:
         strcat(cmp,"!=");
         dw.type[dw.whereCursor] = 14;
         uw.type[uw.whereCursor] = 14;
         sw.type[sw.whereCursor] = 14;
+        jw.type[jw.whereCursor] = 14;
         break;
     case 4:
         strcat(cmp,"=");
         dw.type[dw.whereCursor] = 15;
         uw.type[uw.whereCursor] = 15;
         sw.type[sw.whereCursor]= 15;
+        jw.type[jw.whereCursor] = 15;
         break;
     case 24:
         strcat(cmp, "<=");
         dw.type[dw.whereCursor] = 24;
         uw.type[uw.whereCursor] = 24;
         sw.type[sw.whereCursor] = 24;
+        jw.type[jw.whereCursor] = 24;
         break;
     case 25:
         strcat(cmp, ">=");
         dw.type[dw.whereCursor] = 25;
         uw.type[uw.whereCursor] = 25;
         sw.type[sw.whereCursor] = 25;
+        jw.type[jw.whereCursor] = 25;
         break;
     default:
         break;
@@ -374,6 +380,9 @@ void sqlp_expr_cmp(struct psql_state *pstate, int comp)
 
     strcpy(sw.where[sw.whereCursor],cmp);
     sw.whereCursor++;
+
+    strcpy(jw.where[jw.whereCursor], cmp);
+    jw.whereCursor ++;
 
 	printf("exec CMP %d\n", comp);
 }
@@ -564,6 +573,65 @@ void sqlp_expr_op(struct psql_state *pstate, enum sqlp_expr_ops op)
                 sw.whereCursor++;
         }
 
+             if(jw.isProj == 1)
+        {
+            strcpy(jw.where[jw.whereCursor], op_names[op]);
+                switch(op)
+                {
+                    case SEO_ADD:
+                        jw.type[jw.whereCursor] = 4;
+                        break;
+                    case SEO_SUB:
+                        jw.type[jw.whereCursor] = 5;
+                        break;
+                    case SEO_MUL:
+                        jw.type[jw.whereCursor] = 6;
+                        break;
+                    case SEO_DIV:
+                        jw.type[jw.whereCursor] = 7;
+                        break;
+                    case SEO_MOD:
+                        jw.type[jw.whereCursor] = 8;
+                        break;
+                    case SEO_AND:
+                        jw.type[jw.whereCursor] = 9;
+                        break;
+                    case SEO_OR:
+                        jw.type[jw.whereCursor] = 10;
+                        break;
+                    case SEO_NEG:
+                        jw.type[jw.whereCursor] = 16;
+                        break;
+                    case SEO_XOR:
+                        jw.type[jw.whereCursor] = 17;
+                        break;
+                    case SEO_NOT:
+                        jw.type[jw.whereCursor] = 18;
+                        break;
+                    case SEO_LIKE:
+                        jw.type[jw.whereCursor] = 19;
+                        break;
+                    case SEO_EXISTS:
+                        jw.type[jw.whereCursor] = 20;
+                        break;
+                    case SEO_IN_SELECT:
+                        jw.type[jw.whereCursor] = 21;
+                        break;
+                    case SEO_BETWEEN:
+                        jw.type[jw.whereCursor] = 22;
+                        break;
+                    case SEO_IS_NULL:
+                        jw.type[jw.whereCursor] = 23;
+                        break;
+                    case SEO_REGEX:
+                        jw.type[jw.whereCursor] = 24;
+                        break;
+                    default:
+                        break;
+                }
+                jw.whereCursor++;
+        }
+
 	printf("exec EXPR-OP %s\n", op_names[op]);
 }
 
@@ -574,6 +642,20 @@ void sqlp_expr_cmp_sel(struct psql_state *pstate, int sel_type, int comp)
 
 void sqlp_fieldname(struct psql_state *pstate, const char *db_name, const char *name)
 {
+    if(jw.isProj == 0)
+        {
+            strcpy(jw.fieldList[jw.fieldNum], db_name);
+            strcat(jw.fieldList[jw.fieldNum],".");
+            strcat(jw.fieldList[jw.fieldNum], name);
+            jw.fieldNum ++;
+        }else
+        {
+            strcpy(jw.where[jw.whereCursor], db_name);
+            strcat(jw.where[jw.whereCursor], ".");
+            strcat(jw.where[jw.whereCursor],name);
+            jw.type[jw.whereCursor] = 0;
+            jw.whereCursor ++;
+        }
 	printf("exec FIELD-NAME %s.%s\n", db_name, name);
 }
 
@@ -776,6 +858,10 @@ void sqlp_replace_sel(struct psql_state *pstate, int opts, const char *name)
 void sqlp_select(struct psql_state *pstate, int opts, int n_expr, int n_tbl_ref)
 {
     queryTree.query_type = 6;
+    if(n_tbl_ref>1)
+        {
+            queryTree.query_type = 7; // A MARK FOR JOIN IDENTIFICATION
+        }
 	printf("exec SELECT %d %d %d\n", opts, n_expr, n_tbl_ref);
 
 }
@@ -788,6 +874,7 @@ void sqlp_select_nodata(struct psql_state *pstate, int opts, int n_expr)
 void sqlp_select_all(struct psql_state *pstate)
 {
     sw.isAll = 1;
+    jw.isAll = 1;
 	printf("exec SELECT-ALL\n");
 }
 
@@ -864,6 +951,11 @@ void sqlp_table(struct psql_state *pstate, const char *db_name, const char *name
     strcpy(sw.tableName,dir);
     sw.isProj = 1;
 
+
+    strcpy(jw.tableList[jw.tableCursor],name);
+    jw.tableCursor ++;
+    jw.isProj = 1;
+
     /*
     if(currentFp != NULL)
         {
@@ -913,6 +1005,10 @@ void sqlp_where(struct psql_state *pstate)
     strcpy(sw.where[sw.whereCursor],"WHERE");
     sw.type[sw.whereCursor] = 11;
     sw.whereCursor++;
+
+    strcpy(jw.where[jw.whereCursor], "WHERE");
+    jw.type[jw.whereCursor] = 11;
+    jw.whereCursor ++;
 
 	printf("exec WHERE\n");
 }

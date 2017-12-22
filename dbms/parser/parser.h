@@ -124,7 +124,7 @@ typedef struct updateWhere{
 
 typedef struct selectWhere{
     char tableName[MAX_TABLE_NAME_LEN_PARSER];
-    char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_NUM];
+    char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
     int type[MAX_WHERE_ITEM_LENGTH];
     int whereCursor;//where子句的游标
     int isAll; //0 not, 1 -all, if projects all columns
@@ -137,6 +137,16 @@ typedef struct selectWhere{
 typedef struct joinWhere{
     char tableList[MAX_TABLE_LIST][MAX_TABLE_NAME_LEN_PARSER];//记录join的表格
     int tableCursor;//记录table的数量
+
+    char fieldList[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];//记录投影的属性
+    int fieldNum;//记录投影属性数目
+
+    char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
+    int type[MAX_WHERE_ITEM_LENGTH];
+    int whereCursor;
+
+    int isAll; //0 not, 1 -all, if projects all columns
+    int isProj; // 0-not finished projection, 1-finished projection
 
 }joinWhere;
 #endif // PARSER

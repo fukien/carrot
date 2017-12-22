@@ -103,6 +103,12 @@
 		<Unit filename="execution/InsertExecutor.h">
 			<Option virtualFolder="execution/" />
 		</Unit>
+		<Unit filename="execution/JoinExecutor.cpp">
+			<Option virtualFolder="execution/" />
+		</Unit>
+		<Unit filename="execution/JoinExecutor.h">
+			<Option virtualFolder="execution/" />
+		</Unit>
 		<Unit filename="execution/QueryExecutor.cpp">
 			<Option virtualFolder="execution/" />
 		</Unit>

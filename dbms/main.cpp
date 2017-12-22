@@ -85,6 +85,8 @@ static void err_id_initialize()
     err_reason[-27] = "DELETE FAILED!\t TABLE FOUND BUT NOT EVEN A SINGLE TUPLE!!!";
     err_reason[-28] = "DELETE FAILED!\t COLUMN TYPE DOESN'T MATCH!!!";
     err_reason[-29] = "DELETE FAILED!\t NOT SUCH TUPLE!!!";
+    err_reason[-31] = "JOIN FAILED!\t TABLE NOT FOUND!!!";
+    err_reason[-32] = "JOIN FAILED!\t PARSE ERROR!!!";
 }
 int currentTableCount() //获取当前工作路径下的表的数量
  {
@@ -213,7 +215,7 @@ void doQuery()
 int yydebug;
 int main(int ac,char** av)
 {
-  cout<< "WELCOME TO OUR DATABASE: CARROTS !!!"<<endl;
+  cout<< "Welcome to use our database: CarrotSQL !!!"<<endl;
   err_id_initialize();
   FILE *in_f;
   struct psql_state pstate;
@@ -255,7 +257,7 @@ int main(int ac,char** av)
     double totaltime;
     starttime = clock();
     iniQuery();
-    cout<<"\nCARROTS >>\t" ;
+    cout<<"\nCarrotSQL >>\t" ;
     if(!yyparse(pstate.scanner, &pstate)) {
     printf("SQL parse worked\n");
     //return 0;

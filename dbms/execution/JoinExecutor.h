@@ -18,11 +18,16 @@ public:
 private:
     int chdNum;
     int condCursor;
+    char tableSeq[2*MAX_CONDITION_LEN][MAX_TABLE_NAME_LEN];
+    int tableSeqCursor;
     stack<char*> sd;
     stack<int> sdType;
     Condition cond[MAX_CONDITION_LEN];
     bool parse();
     bool decorate(int cursor);
+    void selectAll();
+    int findChar(char * str, char a);
+    void refactorString( char*tb, char* field, char*str, int seq);
 };
 
 #endif // JOINEXECUTOR_H_INCLUDED

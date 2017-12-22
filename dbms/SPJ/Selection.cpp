@@ -187,7 +187,6 @@ bool Selection::checkItem(Tuple *tuple){
                if(mp.count(ss)>=1){
                      for(int j=0;j<mp[ss].size();j++){
                              flag=CompareType::Compare(tuple->column[i].data,mp[ss][j].value, mp[ss][j].compare,tuple->column[i].field->dataType,tuple->column[i].field->len);
-
                              if(!flag) break;
                      }
                }
