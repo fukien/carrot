@@ -56,11 +56,20 @@ int JoinExecutor::findChar(char *str, char a)
 
 void JoinExecutor::refactorString(char * tb, char*field, char * str, int seq)
 {
+    int cursor = 0;
      for(int j = 0; j<seq; j++)
-            tb[j] = str[j];
-
+            {
+                tb[j] = str[j];
+                cursor ++;
+            }
+            tb[cursor] = '\0';
+            cursor = 0;
     for(int j =seq+1; j<strlen(str); j++)
-            field[j-seq-1] = str[j];
+            {
+                field[j-seq-1] = str[j];
+                cursor++;
+            }
+            field[cursor] = '\0';
 }
 
 bool JoinExecutor::decorate(int cursor)
@@ -141,8 +150,8 @@ bool JoinExecutor::parse()
                             setStatus(-32);
                             return false;
                         }
-                    char * tb;
-                    char * field;
+                    char * tb = new char[100];
+                    char * field = new char [100];
                     refactorString(tb, field, jw.where[i], seq);
                     strcpy(tableSeq[tableSeqCursor], tb);
                     tableSeqCursor ++;
@@ -245,6 +254,7 @@ void JoinExecutor::selectAll()
 {
     char dir[64] = "workspace/";
     int allColumn = 0;
+    int columnTableCursor = 0;
     Condition * condition = new Condition[condCursor];
             for(int i =0; i < condCursor; i ++)
                 {
@@ -257,25 +267,35 @@ void JoinExecutor::selectAll()
                 }
 
         Table ** table = new Table *[jw.tableCursor];
-        TableMeta ** meta = new TableMeta*[jw.tableCursor];
-        FieldPart ** fp = new FieldPart*[jw.tableCursor];
-        Tuple ** tuple = new Tuple * [jw.tableCursor];
+
         for(int i = 0; i < jw.tableCursor; i++)
         {
                 strcpy(dir,"workspace/");
                 strcat(dir,jw.tableList[i]);
                 strcat(dir,".tb");
+                table[i] = new Table();
                 table[i]->open(dir,false);
                 strcpy(dir,"\0");
         }
         for(int i = 0; i < jw.tableCursor; i ++)
             {
-                meta[i] = table[i]->getTableMeta();
-                fp[i] = meta[i]->head;
-                tuple[i] = table[i] ->buildEmptyTuple();
-                allColumn += fp[i] ->partNum;
+                TableMeta * meta = table[i]->getTableMeta();
+                FieldPart * fp =  meta->head;
+                allColumn += fp ->partNum;
             }
+        string* column = new string[allColumn];
+        for(int i = 0; i < jw.tableCursor; i++)
+            {
 
+                TableMeta * meta = table[i]->getTableMeta();
+                FieldPart * fp =  meta->head;
+                Tuple * tuple = table[i]->buildEmptyTuple();
+                for(int j = 0; j< fp->partNum;j++)
+                    {
+                        column[columnTableCursor] = tuple->column[j].field->fname;
+                        columnTableCursor++;
+                    }
+            }
 
         Join *jspj = new Join(OperatorType::JOIN,SPJ::TABLEINITIAL,JoinType::NESTLOOPJOIN);
         jspj->initJoin(table, jw.tableCursor, 0,0, condition, condCursor);
@@ -291,13 +311,46 @@ void JoinExecutor::selectAll()
             {
                 setStatus(-33);
             }
-        string* column = new string[allColumn];
 
         Projection * pspj = new Projection(OperatorType::PROJECTION,SPJ::ITERATORINITIAL);
-        pspj->initProjection(jspj, column, jw.fieldNum);
+        pspj->initProjection(jspj, column, allColumn);
         int cnt1 = 0;
         SPJItem * item1 = pspj->buildSPJItem();
         pspj->getFirst(item1);
+
+        for(int i = 0; i< allColumn; i++)
+        {
+            cout<<"|\t"<<item1->fieldName[i]<<"\t|";
+        }
+        cout<<endl;
+            while(item1->use!=0)
+        {
+            char *str = new char[1000];
+            for(int i =0; i< allColumn &&  item1->use != 0; i ++)
+                {
+                    DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
+                    printf("|\t%s\t|", str);
+                }
+            printf("\n");
+            cnt1 ++;
+            pspj->getNext(item1);
+            delete str;
+        }
+        if(cnt1 == 0)
+        {
+                setStatus(-33);
+        }
+        else
+        {
+            setChdNum(cnt1);
+            setStatus(1);
+        }
+    delete [] condition;
+    delete [] column;
+    for(int i = 0; i<jw.tableCursor; i++)
+        {
+            table[i]->close();
+        }
 }
 
 int JoinExecutor::execute(query_tree qt)
@@ -349,6 +402,7 @@ int JoinExecutor::execute(query_tree qt)
                 strcpy(dir,"workspace/");
                 strcat(dir,jw.tableList[i]);
                 strcat(dir,".tb");
+                table[i] = new Table();
                 table[i]->open(dir,false);
                 strcpy(dir,"\0");
         }
