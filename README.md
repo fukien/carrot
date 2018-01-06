@@ -15,7 +15,7 @@ sudo apt install flex bison build-essential
 
 ### Installing
 
-### Running the tests
+### Usage
 
 ### Authors
 
