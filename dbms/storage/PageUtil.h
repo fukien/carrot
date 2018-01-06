@@ -17,7 +17,7 @@ typedef struct Used
 {
     PageAddr addr;
     uint len;
-}Used;
+} Used;
 /**
  * 通过标记来模拟读写锁,由于一个页可以供多个进程读或单个进程写，所以分别使用int和bool标记
  *
@@ -25,8 +25,8 @@ typedef struct Used
 typedef struct Page
 {
     Addr pageNo;
-    Buffer* buffer;
-    Byte* data;
+    Buffer *buffer;
+    Byte *data;
     // 该页有多少字节被占用
     ushort usedByte;
     //该页的标志位,共16位，具体含义：
@@ -35,7 +35,7 @@ typedef struct Page
     // 该页是否在内存中
     bool inMem;
 
-    Used usedByteList[PAGE_HEAD_BODY/2];
+    Used usedByteList[PAGE_HEAD_BODY / 2];
     int usedLen;
     int readLock;
     bool writeLock;
@@ -55,23 +55,24 @@ class VisitStrategy
 };*/
 class PageUtil
 {
-    public:
-        PageUtil(DBFile* dbfile,FreeBuffer* buffer);
-        ~PageUtil();
-        void buildPage(Page& page,Addr pageNo=0);
-        Addr buildNewPage(Page& page);
-        void releasePage(Page& page);
-        void buildUsedByteList(Byte* iter,Page& page);
-        void buildPageUsedByteMap(Page& page);
-        void readPage(Addr pageNo,Page& page);
-        void writePage(Addr pageNo,Page& page);
-        Addr allocSpace(Page& page,int len);
-        bool freeSpace(Page& page,PageAddr addr, int len);
-        DBFile* getFile();
-    private:
-        DBFile* dbfile;
-        FreeBuffer* freeBuffer;
-        void listMove(int k,int offset,bool forward,Page& page);
-        //  VisitStrategy* strategy;
+  public:
+    PageUtil(DBFile *dbfile, FreeBuffer *buffer);
+    ~PageUtil();
+    void buildPage(Page &page, Addr pageNo = 0);
+    Addr buildNewPage(Page &page);
+    void releasePage(Page &page);
+    void buildUsedByteList(Byte *iter, Page &page);
+    void buildPageUsedByteMap(Page &page);
+    void readPage(Addr pageNo, Page &page);
+    void writePage(Addr pageNo, Page &page);
+    Addr allocSpace(Page &page, int len);
+    bool freeSpace(Page &page, PageAddr addr, int len);
+    DBFile *getFile();
+
+  private:
+    DBFile *dbfile;
+    FreeBuffer *freeBuffer;
+    void listMove(int k, int offset, bool forward, Page &page);
+    //  VisitStrategy* strategy;
 };
 #endif // FILEBUFFER_H_INCLUDED

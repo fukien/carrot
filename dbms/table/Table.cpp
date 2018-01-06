@@ -1,15 +1,17 @@
 #include "Table.h"
 #include <cstdio>
 #include <cstdlib>
-Table::Table(){
-strategy=0;
-dirseg = 0;
-metaseg=0;
- dataseg=0;
-init=false;
+Table::Table()
+{
+    strategy = 0;
+    dirseg = 0;
+    metaseg = 0;
+    dataseg = 0;
+    init = false;
 }
 
-BufferStrategy* Table::getStrategy(){
+BufferStrategy *Table::getStrategy()
+{
     return this->strategy;
 }
 /**
@@ -20,52 +22,56 @@ BufferStrategy* Table::getStrategy(){
     * if the table is opened, it will not effect!
     *
     */
-void Table::setStrategy(StrategyInBuffer _strategy){
-    if(init)
+void Table::setStrategy(StrategyInBuffer _strategy)
+{
+    if (init)
     {
-        #ifdef DEBUG
+#ifdef DEBUG
         printf("the strategy is already applied! and this setting is invalid.");
-        #endif // DEBUG
-        return ;
+#endif // DEBUG
+        return;
     }
-        if(this->strategy!=0)
-        {
-            delete this->strategy;
-            this->strategy =0;
-        }
-    if(_strategy==FIFO)
+    if (this->strategy != 0)
     {
-        strategy=new FIFOStrategy();
-    }else if(_strategy==ClOCK)
+        delete this->strategy;
+        this->strategy = 0;
+    }
+    if (_strategy == FIFO)
+    {
+        strategy = new FIFOStrategy();
+    }
+    else if (_strategy == ClOCK)
     {
         strategy = new ClockFIFOStrategy();
     }
     else
     {
-                #ifdef DEBUG
+#ifdef DEBUG
         printf("the strategy is  not implemented yet!.");
-        #endif // DEBUG
+#endif // DEBUG
     }
 }
 
-bool Table::open(char* name,bool readonly){
-    if(init)
+bool Table::open(char *name, bool readonly)
+{
+    if (init)
     {
-        #ifdef DEBUG
+#ifdef DEBUG
         printf(" the table is already open!");
-        #endif // DEBUG
+#endif // DEBUG
         return false;
     }
     this->dbfile = new DBFile();
-    dbfile->open(name,readonly);
+    dbfile->open(name, readonly);
     this->fb = new FreeBuffer();
-    this->util = new PageUtil(dbfile,fb);
-    if(this->strategy==0)this->strategy = new ClockFIFOStrategy();
-    this->mgr = new BufferManager(strategy,util);
+    this->util = new PageUtil(dbfile, fb);
+    if (this->strategy == 0)
+        this->strategy = new ClockFIFOStrategy();
+    this->mgr = new BufferManager(strategy, util);
     this->dirseg = new DirectorySegment(mgr);
-    this->metaseg = new MetaDataSegment(mgr,dirseg);
+    this->metaseg = new MetaDataSegment(mgr, dirseg);
     this->meta = metaseg->getMetaData();
-    this->dataseg = new DataSegment(mgr,dirseg,meta);
+    this->dataseg = new DataSegment(mgr, dirseg, meta);
     /**
     * TODO: the index segment should be created manually.
     * because it need meta segment.
@@ -74,98 +80,125 @@ bool Table::open(char* name,bool readonly){
     init = true;
 }
 
-bool Table::isInit(){
+bool Table::isInit()
+{
     return init;
 }
 
-TableMeta* Table::getTableMeta(){
+TableMeta *Table::getTableMeta()
+{
     return meta;
 }
 
-void Table::updateTableMeta(){
+void Table::updateTableMeta()
+{
     metaseg->createOrUpdate();
     delete dataseg;
-    this->dataseg = new DataSegment(mgr,dirseg,meta);
+    this->dataseg = new DataSegment(mgr, dirseg, meta);
 }
-IndexSegment* Table::getIndexSegment()
+IndexSegment *Table::getIndexSegment()
 {
-    if(this->indexseg==0)
+    if (this->indexseg == 0)
     {
-        this->indexseg = new IndexSegment(this->mgr,this->dirseg,this->dataseg,this->metaseg);
+        this->indexseg = new IndexSegment(this->mgr, this->dirseg, this->dataseg, this->metaseg);
     }
     return this->indexseg;
 }
-DataSegment*Table::getDataSegment(){
+DataSegment *Table::getDataSegment()
+{
     return this->dataseg;
 }
-Tuple* Table::buildEmptyTuple(){
+Tuple *Table::buildEmptyTuple()
+{
     return dataseg->buildEmptyTuple();
 }
-    void Table::findTupleAtPosition(Tuple* tuple,Addr addr)
-    {
-        dataseg->findTupleAtPosition(tuple,addr);
-    }
-void Table::releaseEmptyTuple(Tuple*& tuple){
+void Table::findTupleAtPosition(Tuple *tuple, Addr addr)
+{
+    dataseg->findTupleAtPosition(tuple, addr);
+}
+void Table::releaseEmptyTuple(Tuple *&tuple)
+{
     dataseg->releaseEmptyTuple(tuple);
 }
 
-void Table::findFirstTuple(Tuple* tuple){
+void Table::findFirstTuple(Tuple *tuple)
+{
     dataseg->findFirstTuple(tuple);
 }
 
-void Table::findNextTuple(Tuple* tuple,Tuple* tuple2){
-    dataseg->findNextTuple(tuple,tuple2);
+void Table::findNextTuple(Tuple *tuple, Tuple *tuple2)
+{
+    dataseg->findNextTuple(tuple, tuple2);
 }
 
-Addr Table::insertTuple(Tuple* tuple){
+Addr Table::insertTuple(Tuple *tuple)
+{
     return dataseg->insertTuple(tuple);
 }
 
-bool Table::deleteTuple(Tuple* tuple){
+bool Table::deleteTuple(Tuple *tuple)
+{
     return dataseg->deleteTuple(tuple);
 }
-Addr Table::flushTuple(Tuple* tuple)
+Addr Table::flushTuple(Tuple *tuple)
 {
     return dataseg->flushTuple(tuple);
 }
-void Table::close(){
-    if(indexseg!=0)
+void Table::close()
+{
+    if (indexseg != 0)
     {
         delete this->indexseg;
         this->indexseg = 0;
     }
-    if(dataseg!=0)
+    if (dataseg != 0)
     {
         delete this->dataseg;
-        this->dataseg=0;
+        this->dataseg = 0;
     }
-    if(metaseg!=0)
+    if (metaseg != 0)
     {
         delete this->metaseg;
         this->metaseg = 0;
     }
-    if(dirseg!=0)
+    if (dirseg != 0)
     {
         delete this->dirseg;
         this->dirseg = 0;
     }
-    if(dbfile!=0)dbfile->flush();
-    if(this->mgr!=0){delete this->mgr;this->mgr=0;}
-    if(this->strategy!=0){delete this->strategy;strategy=0;}
-    if(this->util!=0){delete this->util;util = 0;}
-    if(dbfile!=0)
-    {   dbfile->close();
+    if (dbfile != 0)
+        dbfile->flush();
+    if (this->mgr != 0)
+    {
+        delete this->mgr;
+        this->mgr = 0;
+    }
+    if (this->strategy != 0)
+    {
+        delete this->strategy;
+        strategy = 0;
+    }
+    if (this->util != 0)
+    {
+        delete this->util;
+        util = 0;
+    }
+    if (dbfile != 0)
+    {
+        dbfile->close();
         delete dbfile;
         this->dbfile = 0;
     }
-    if(fb!=0)
-    {delete this->fb;
-    fb = 0;
+    if (fb != 0)
+    {
+        delete this->fb;
+        fb = 0;
     }
     init = false;
 }
 
-Table::~Table(){
-    if(init)this->close();
+Table::~Table()
+{
+    if (init)
+        this->close();
 }
-
