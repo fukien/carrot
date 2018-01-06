@@ -333,6 +333,13 @@ void JoinExecutor::selectAll()
                 }
             printf("\n");
             cnt1 ++;
+            if(jw.isLimit == 1)
+            {
+               if(cnt1 >= jw.limit)
+               {
+                   break;
+               }
+            }
             pspj->getNext(item1);
             delete str;
         }
@@ -447,6 +454,13 @@ int JoinExecutor::execute(query_tree qt)
                 }
             printf("\n");
             cnt1 ++;
+            if(jw.isLimit == 1)
+                {
+                    if(cnt1 >= jw.limit)
+                    {
+                        break;
+                    }
+                }
             pspj->getNext(item1);
             delete str;
         }
