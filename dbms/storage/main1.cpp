@@ -57,7 +57,7 @@ void fillMetaSegment(TableMeta* meta,MetaDataSegment *ms)
     parts->partNum=7;
     parts->tid=1;
      parts->fieldList = new Field[7];
-     int leng[]={4,25,40,4,15,4,101};
+     int leng[]={4,28,40,4,16,4,104};
      int stype[]={DataTypeFlag::INTEGER,DataTypeFlag::CHAR,DataTypeFlag::VARCHAR,
      DataTypeFlag::INTEGER,DataTypeFlag::CHAR,DataTypeFlag::FLOAT,DataTypeFlag::VARCHAR
      };
@@ -261,7 +261,7 @@ int readdb()
 
 int writedb()
 {
-        char s[] = "data/supplier.db";
+        char s[] = "data/supplier.tb";
         char data[] = "benchmark_data/benchmark_data/supplier.tbl";
         //char s[] = "data/nation.db";
         //char data[] = "benchmark_data/benchmark_data/nation.tbl";
@@ -289,12 +289,12 @@ int writedb()
         package2(tuple,ms,meta);
         //unpackage(tuple,meta);
          Addr w = table->insertTuple(tuple);
-        //m++;
-        //printf("m=%d\n",m);
+        m++;
+        printf("m=%d\n",m);
         len = 0;
         len = k.findNext(ms);
-        cnt++;
-        if(cnt>20) break;
+       // cnt++;
+     //   if(cnt>20) break;
         }
         //printf("sss%s",ms[1]);
         k.close();
