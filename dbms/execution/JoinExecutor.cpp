@@ -563,7 +563,7 @@ void JoinExecutor::selectAllM()
             Selection * sspj = new Selection(OperatorType::SELECTION,SPJ::ITERATORINITIAL);
             sspj->initSelection(jspjIterator, condition, condCursor);
 
-    /*        SPJItem * item = sspj ->buildSPJItem();
+            SPJItem * item = sspj ->buildSPJItem();
              sspj->getFirst(item);
              int cnt = 0;
                 while(item->use != 0)
@@ -572,7 +572,7 @@ void JoinExecutor::selectAllM()
                     sspj->getNext(item);
                   }
                    cout<<"after selection \t"<<cnt<<endl;
-*/
+
 
 
             Projection *pspj = new Projection(OperatorType::PROJECTION, SPJ::ITERATORINITIAL);

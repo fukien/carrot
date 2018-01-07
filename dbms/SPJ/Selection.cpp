@@ -181,13 +181,38 @@ bool Selection::checkItem(Tuple *tuple){
             string str=this->condition[i].filedName;
             mp[str].push_back(condition[i]);
          }
+
+                                             map<string,int> columnMap;
+                                             for(int i=0;i<fieldNum;i++){
+                                                 string ss=tuple->column[i].field->fname;
+                                                 columnMap[ss]=i;
+                                             }
+
+
          int cnt=0;
          bool flag=true;
         for(int i=0;i<fieldNum;i++){
                string ss=tuple->column[i].field->fname;
                if(mp.count(ss)>=1){
                      for(int j=0;j<mp[ss].size();j++){
-                             flag=CompareType::Compare(tuple->column[i].data,mp[ss][j].value, mp[ss][j].compare,tuple->column[i].field->dataType,tuple->column[i].field->len);
+                             //flag=CompareType::Compare(tuple->column[i].data,mp[ss][j].value, mp[ss][j].compare,tuple->column[i].field->dataType,tuple->column[i].field->len);
+
+                                                            if(mp[ss][j].conditionType==2){
+                                                        char*str=new char[mp[ss][j].len+10];
+                                                        DataUtil::toString(str,mp[ss][j].value,DataTypeFlag::CHAR);
+                                                        string filedNameB=str;
+                                                        if(columnMap.count(filedNameB)>=1){
+                                                            flag=CompareType::Compare(tuple->column[i].data,tuple->column[columnMap[filedNameB]].data, mp[ss][j].compare,tuple->column[i].field->dataType,tuple->column[i].field->len);
+                                                        }else{
+                                                            flag=false;
+                                                            break;
+                                                        }
+                                                    }else{
+                                                        flag=CompareType::Compare(tuple->column[i].data,mp[ss][j].value, mp[ss][j].compare,tuple->column[i].field->dataType,tuple->column[i].field->len);
+                                                    }
+
+
+
                              if(!flag) break;
                      }
                }
@@ -202,13 +227,38 @@ bool Selection::checkItem(SPJItem*sourceItem){
             string str=this->condition[i].filedName;
             mp[str].push_back(condition[i]);
          }
+
+                                map<string,int> columnMap;
+                                 for(int i=0;i<fieldNum;i++){
+                                     string ss=sourceItem->fieldName[i];
+                                     columnMap[ss]=i;
+                                 }
+
+
          int cnt=0;
          bool flag  = true;
         for(int i=0;i<fieldNum;i++){
                string ss=sourceItem->fieldName[i];
                if(mp.count(ss)>=1){
                      for(int j=0;j<mp[ss].size();j++){
-                             flag=CompareType::Compare(sourceItem->data[i],mp[ss][j].value, mp[ss][j].compare,sourceItem->dataType[i],sourceItem->len[i]);
+                            // flag=CompareType::Compare(sourceItem->data[i], mp[ss][j].value, mp[ss][j].compare, sourceItem->dataType[i],sourceItem->len[i]);
+
+                                                            if(mp[ss][j].conditionType==2){
+                                                    char*str=new char[mp[ss][j].len+10];
+                                                    DataUtil::toString(str,mp[ss][j].value,DataTypeFlag::CHAR);
+                                                    string filedNameB=str;
+                                                    if(columnMap.count(filedNameB)>=1){
+                                                        flag=CompareType::Compare(sourceItem->data[i],sourceItem->data[columnMap[filedNameB]], mp[ss][j].compare,sourceItem->dataType[i],sourceItem->len[i]);
+                                                    }else{
+                                                        flag=false;
+                                                        break;
+                                                    }
+                                                }else{
+                                                    flag=CompareType::Compare(sourceItem->data[i],mp[ss][j].value, mp[ss][j].compare,sourceItem->dataType[i],sourceItem->len[i]);
+                                                }
+
+
+
                              if(flag==false) {
                                 return false;
                              }
