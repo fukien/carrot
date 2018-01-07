@@ -103,6 +103,7 @@ void Selection::getNext(SPJItem*item){
         }else if(this->initialType==SPJ::ITERATORINITIAL){
                SPJItem*sourceItem =this->spj->buildSPJItem();
                bool flag=true;
+               spj->getNext(sourceItem);
              while(checkItem(sourceItem)!=true){
                     spj->getNext(sourceItem);
                     if(sourceItem->use==0){
@@ -202,7 +203,7 @@ bool Selection::checkItem(SPJItem*sourceItem){
             mp[str].push_back(condition[i]);
          }
          int cnt=0;
-         bool flag;
+         bool flag  = true;
         for(int i=0;i<fieldNum;i++){
                string ss=sourceItem->fieldName[i];
                if(mp.count(ss)>=1){

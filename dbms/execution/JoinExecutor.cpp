@@ -546,9 +546,6 @@ void JoinExecutor::selectAllM()
                             SPJ ** spj = new SPJ*[1];
                             spj[0] = jspjInitial;
                             jspjIterator->initJoin(tmpTable, 1, spj, 1, 0 ,0);
-
-
-
                         }
                         else
                             {
@@ -562,23 +559,25 @@ void JoinExecutor::selectAllM()
                             }
             }
 
+
             Selection * sspj = new Selection(OperatorType::SELECTION,SPJ::ITERATORINITIAL);
             sspj->initSelection(jspjIterator, condition, condCursor);
 
-                                               SPJItem * item = sspj ->buildSPJItem();
-                                                sspj->getFirst(item);
-                                                int cnt = 0;
-                                                while(item->use != 0)
-                                                {
-                                                    cnt++;
-                                                    sspj->getNext(item);
-                                                }
-                                                cout<<"after selection \t"<<cnt<<endl;
-
+    /*        SPJItem * item = sspj ->buildSPJItem();
+             sspj->getFirst(item);
+             int cnt = 0;
+                while(item->use != 0)
+                 {
+                    cnt++;
+                    sspj->getNext(item);
+                  }
+                   cout<<"after selection \t"<<cnt<<endl;
+*/
 
 
             Projection *pspj = new Projection(OperatorType::PROJECTION, SPJ::ITERATORINITIAL);
             pspj->initProjection(sspj, column, allColumn);
+
             int cnt1 = 0;
             SPJItem * item1 = pspj ->buildSPJItem();
             pspj->getFirst(item1);
@@ -597,6 +596,7 @@ void JoinExecutor::selectAllM()
                         }
                     printf("\n");
                     cnt1 ++;
+
                     if(jw.isLimit == 1)
                     {
                        if(cnt1 >= jw.limit)
@@ -604,9 +604,13 @@ void JoinExecutor::selectAllM()
                            break;
                        }
                     }
+                    //cout << "HIYOU" <<cnt1<< endl;
                     pspj->getNext(item1);
+
                     delete str;
+
                 }
+
 
                 if(cnt1 == 0)
                 {
