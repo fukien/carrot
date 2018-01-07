@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include "../storage/PageUtil.h"
-#incldue "./Sort.h"
+#incldue "Sort.h"
 #include "../buffer/BufferManager.h"
 #include "../segment/DataSegment.h"
 #include "../segment/DirectorySegment.h"

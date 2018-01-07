@@ -479,6 +479,206 @@ int JoinExecutor::execute(query_tree qt)
         {
             table[i]->close();
         }
-   return getStatus();
+    return getStatus();
 }
 
+void JoinExecutor::selectAllM()
+{
+         char dir[64] = "workspace/";
+    int allColumn = 0;
+    int columnTableCursor = 0;
+    Condition * condition = new Condition[condCursor];
+            for(int i =0; i < condCursor; i ++)
+                {
+                    condition[i].compare = cond[i].compare;
+                    condition[i].conditionType = cond[i].conditionType;
+                    condition[i].DataType = cond[i].DataType;
+                    condition[i].filedName = cond[i].filedName;
+                    condition[i].len = cond[i].len;
+                    condition[i].value = cond[i].value;
+                }
+
+        Table ** table = new Table *[jw.tableCursor];
+        for(int i = 0; i < jw.tableCursor; i++)
+        {
+                strcpy(dir,"workspace/");
+                strcat(dir,jw.tableList[i]);
+                strcat(dir,".tb");
+                table[i] = new Table();
+                table[i]->open(dir,false);
+                strcpy(dir,"\0");
+        }
+        for(int i = 0; i < jw.tableCursor; i ++)
+            {
+                TableMeta * meta = table[i]->getTableMeta();
+                FieldPart * fp =  meta->head;
+                allColumn += fp ->partNum;
+            }
+        string* column = new string[allColumn];
+        for(int i = 0; i < jw.tableCursor; i++)
+            {
+
+                TableMeta * meta = table[i]->getTableMeta();
+                FieldPart * fp =  meta->head;
+                Tuple * tuple = table[i]->buildEmptyTuple();
+                for(int j = 0; j< fp->partNum;j++)
+                    {
+                        column[columnTableCursor] = tuple->column[j].field->fname;
+                        columnTableCursor++;
+                    }
+            }
+
+            Table ** tableInitial = new Table*[2];
+            tableInitial[0] = table[0];
+            tableInitial[1] = table[1];
+            Join * jspjInitial = new Join(OperatorType::JOIN, SPJ::TABLEINITIAL, JoinType::NESTLOOPJOIN);
+            jspjInitial->initJoin(tableInitial, 2, 0, 0, 0, 0);
+
+
+            Join * jspjIterator = new Join(OperatorType::JOIN, SPJ::HYBRIDINITIAL, JoinType::NESTLOOPJOIN);
+
+            for(int i =2; i < jw.tableCursor; i ++)
+            {
+                    if(i == 2)
+                        {
+                            Table ** tmpTable = new Table * [1];
+                            tmpTable[0] = table[i];
+                            SPJ ** spj = new SPJ*[1];
+                            spj[0] = jspjInitial;
+                            jspjIterator->initJoin(tmpTable, 1, spj, 1, 0 ,0);
+
+
+
+                        }
+                        else
+                            {
+                                Join * tmp = new Join(OperatorType::JOIN, SPJ::HYBRIDINITIAL, JoinType::NESTLOOPJOIN);
+                                Table ** tmpTable = new Table * [1];
+                                tmpTable[0] = table[i];
+                                SPJ ** spj = new SPJ*[1];
+                                spj[0] = jspjIterator;
+                                tmp->initJoin(tmpTable, 1, spj, 1, 0 ,0 );
+                                jspjIterator = tmp;
+                            }
+            }
+
+            Selection * sspj = new Selection(OperatorType::SELECTION,SPJ::ITERATORINITIAL);
+            sspj->initSelection(jspjIterator, condition, condCursor);
+
+                                               SPJItem * item = sspj ->buildSPJItem();
+                                                sspj->getFirst(item);
+                                                int cnt = 0;
+                                                while(item->use != 0)
+                                                {
+                                                    cnt++;
+                                                    sspj->getNext(item);
+                                                }
+                                                cout<<"after selection \t"<<cnt<<endl;
+
+
+
+            Projection *pspj = new Projection(OperatorType::PROJECTION, SPJ::ITERATORINITIAL);
+            pspj->initProjection(sspj, column, allColumn);
+            int cnt1 = 0;
+            SPJItem * item1 = pspj ->buildSPJItem();
+            pspj->getFirst(item1);
+            for(int i =0; i < allColumn; i++)
+                {
+                    cout<<"|\t"<<item1->fieldName[i]<<"\t|";
+                }
+                 cout<<endl;
+                 while(item1->use!=0)
+                    {
+                    char *str = new char[1000];
+                    for(int i =0; i< allColumn &&  item1->use != 0; i ++)
+                        {
+                            DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
+                            printf("|\t%s\t|", str);
+                        }
+                    printf("\n");
+                    cnt1 ++;
+                    if(jw.isLimit == 1)
+                    {
+                       if(cnt1 >= jw.limit)
+                       {
+                           break;
+                       }
+                    }
+                    pspj->getNext(item1);
+                    delete str;
+                }
+
+                if(cnt1 == 0)
+                {
+                        setStatus(-33);
+                }
+                else
+                {
+                    setChdNum(cnt1);
+                    setStatus(1);
+                }
+            delete [] condition;
+            delete [] column;
+            for(int i = 0; i<jw.tableCursor; i++)
+                {
+                    table[i]->close();
+                }
+}
+
+int JoinExecutor::executeM(query_tree qt)
+{
+    FILE * fp;
+    char dir[64] = "workspace/";
+    for(int i=0; i < jw.tableCursor;i++)
+        {
+                strcpy(dir,"workspace/");
+                strcat(dir,jw.tableList[i]);
+                strcat(dir,".tb");
+                fp = fopen(dir,"r");
+                if(fp == NULL)
+                    {
+                        setStatus(-31);
+                        return getStatus();
+                    }
+                fclose(fp);
+                fp = NULL;
+                strcpy(dir, "\0");
+        }
+        bool parseCorrect = parse();
+        if(parseCorrect == false)
+            {
+                setStatus(-32);
+                return getStatus();
+            }
+        if(jw.isAll)
+            {
+                selectAllM();
+                return getStatus();
+            }
+
+           Condition * condition = new Condition[condCursor];
+            for(int i =0; i < condCursor; i ++)
+                {
+                    condition[i].compare = cond[i].compare;
+                    condition[i].conditionType = cond[i].conditionType;
+                    condition[i].DataType = cond[i].DataType;
+                    condition[i].filedName = cond[i].filedName;
+                    condition[i].len = cond[i].len;
+                    condition[i].value = cond[i].value;
+                }
+
+            Table ** table = new Table *[jw.tableCursor];
+            for(int i = 0; i < jw.tableCursor; i++)
+            {
+                strcpy(dir,"workspace/");
+                strcat(dir,jw.tableList[i]);
+                strcat(dir,".tb");
+                table[i] = new Table();
+                table[i]->open(dir,false);
+                strcpy(dir,"\0");
+            }
+
+
+
+    return getStatus();
+}

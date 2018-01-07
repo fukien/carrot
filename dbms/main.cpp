@@ -196,10 +196,17 @@ void doQuery()
                 delete se;
             }
             break;
-        case 7://join
+            case 7://join
             {
                 JoinExecutor* je = new JoinExecutor();
-                je->execute(queryTree);
+               if(jw.tableCursor == 2)
+                {
+                    je->execute(queryTree);
+                }
+               else
+                {
+                    je->executeM(queryTree);
+               }
                 if(je->getStatus() == 1)
                     {
                         cout<<"\nsuccessfully select "<<je->getChdNum() << " tuple" << endl;

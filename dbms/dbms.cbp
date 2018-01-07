@@ -5,7 +5,6 @@
 		<Option title="dbms" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="buffer/;segment/;segment/;buffer/;table/;test/;storage/;util/;index/;dataInput/;SPJ/;parser/;execution/;optimization/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/dbms" prefix_auto="1" extension_auto="1" />
@@ -15,9 +14,6 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
-				<Linker>
-					<Add option="-lpthread" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/dbms" prefix_auto="1" extension_auto="1" />
@@ -29,241 +25,99 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add option="-lpthread" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="SPJ/Join.cpp">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/Join.h">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/Projection.cpp">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/Projection.h">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/SPJ.cpp">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/SPJ.h">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/Selection.cpp">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="SPJ/Selection.h">
-			<Option virtualFolder="SPJ/" />
-		</Unit>
-		<Unit filename="buffer/BufferManager.cpp">
-			<Option virtualFolder="buffer/" />
-		</Unit>
-		<Unit filename="buffer/BufferManager.h">
-			<Option virtualFolder="buffer/" />
-		</Unit>
-		<Unit filename="buffer/ClockFIFOStrategy.cpp">
-			<Option virtualFolder="buffer/" />
-		</Unit>
-		<Unit filename="buffer/ClockFIFOStrategy.h">
-			<Option virtualFolder="buffer/" />
-		</Unit>
+		<Unit filename="SPJ/Join.cpp" />
+		<Unit filename="SPJ/Join.h" />
+		<Unit filename="SPJ/Projection.cpp" />
+		<Unit filename="SPJ/Projection.h" />
+		<Unit filename="SPJ/SPJ.cpp" />
+		<Unit filename="SPJ/SPJ.h" />
+		<Unit filename="SPJ/Selection.cpp" />
+		<Unit filename="SPJ/Selection.h" />
+		<Unit filename="buffer/BufferManager.cpp" />
+		<Unit filename="buffer/BufferManager.h" />
+		<Unit filename="buffer/ClockFIFOStrategy.cpp" />
+		<Unit filename="buffer/ClockFIFOStrategy.h" />
 		<Unit filename="common.h" />
-		<Unit filename="dataInput/input.cpp">
-			<Option virtualFolder="dataInput/" />
-		</Unit>
-		<Unit filename="dataInput/inputer.h">
-			<Option virtualFolder="dataInput/" />
-		</Unit>
-		<Unit filename="execution/CreateExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/CreateExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/DeleteExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/DeleteExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/DropExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/DropExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/InsertExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/InsertExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/JoinExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/JoinExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/QueryExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/QueryExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/SelectExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/SelectExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/UpdateExecutor.cpp">
-			<Option virtualFolder="execution/" />
-		</Unit>
-		<Unit filename="execution/UpdateExecutor.h">
-			<Option virtualFolder="execution/" />
-		</Unit>
+		<Unit filename="dataInput/input.cpp" />
+		<Unit filename="dataInput/inputer.h" />
+		<Unit filename="dataload/dataload.cpp" />
+		<Unit filename="execution/CreateExecutor.cpp" />
+		<Unit filename="execution/CreateExecutor.h" />
+		<Unit filename="execution/DeleteExecutor.cpp" />
+		<Unit filename="execution/DeleteExecutor.h" />
+		<Unit filename="execution/DropExecutor.cpp" />
+		<Unit filename="execution/DropExecutor.h" />
+		<Unit filename="execution/InsertExecutor.cpp" />
+		<Unit filename="execution/InsertExecutor.h" />
+		<Unit filename="execution/JoinExecutor.cpp" />
+		<Unit filename="execution/JoinExecutor.h" />
+		<Unit filename="execution/QueryExecutor.cpp" />
+		<Unit filename="execution/QueryExecutor.h" />
+		<Unit filename="execution/SelectExecutor.cpp" />
+		<Unit filename="execution/SelectExecutor.h" />
+		<Unit filename="execution/UpdateExecutor.cpp" />
+		<Unit filename="execution/UpdateExecutor.h" />
 		<Unit filename="global.h" />
-		<Unit filename="index/BPTree.cpp">
-			<Option virtualFolder="index/" />
-		</Unit>
-		<Unit filename="index/BPTree.h">
-			<Option virtualFolder="index/" />
-		</Unit>
-		<Unit filename="index/Index.cpp">
-			<Option virtualFolder="index/" />
-		</Unit>
-		<Unit filename="index/Index.h">
-			<Option virtualFolder="index/" />
-		</Unit>
-		<Unit filename="index/PrimaryHashIndex.cpp">
-			<Option virtualFolder="index/" />
-		</Unit>
-		<Unit filename="index/PrimaryHashIndex.h">
-			<Option virtualFolder="index/" />
-		</Unit>
+		<Unit filename="index/BPTree.cpp" />
+		<Unit filename="index/BPTree.h" />
+		<Unit filename="index/Index.cpp" />
+		<Unit filename="index/Index.h" />
+		<Unit filename="index/PrimaryHashIndex.cpp" />
+		<Unit filename="index/PrimaryHashIndex.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="parser/exec.c">
 			<Option compilerVar="CC" />
-			<Option virtualFolder="parser/" />
 		</Unit>
-		<Unit filename="parser/parser.h">
-			<Option virtualFolder="parser/" />
-		</Unit>
-		<Unit filename="parser/sql-parser.h">
-			<Option virtualFolder="parser/" />
-		</Unit>
+		<Unit filename="parser/parser.h" />
+		<Unit filename="parser/sql-parser.h" />
 		<Unit filename="parser/sql.c">
 			<Option compilerVar="CC" />
-			<Option virtualFolder="parser/" />
 		</Unit>
 		<Unit filename="parser/sql.tab.c">
 			<Option compilerVar="CC" />
-			<Option virtualFolder="parser/" />
 		</Unit>
-		<Unit filename="parser/sql.tab.h">
-			<Option virtualFolder="parser/" />
-		</Unit>
-		<Unit filename="segment/DataSegment.cpp">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/DataSegment.h">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/DirectorySegment.cpp">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/DirectorySegment.h">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/IndexSegment.cpp">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/IndexSegment.h">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/MetaDataSegment.cpp">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/MetaDataSegment.h">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/Segment.cpp">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="segment/Segment.h">
-			<Option virtualFolder="segment/" />
-		</Unit>
-		<Unit filename="storage/DBFile.cpp">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/DBFile.h">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/FreeBuffer.cpp">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/FreeBuffer.h">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/PageUtil.cpp">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/PageUtil.h">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/main1.cpp">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="storage/main2.cpp">
-			<Option virtualFolder="storage/" />
-		</Unit>
-		<Unit filename="table/MemoryTable.cpp">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="table/MemoryTalbe.h">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="table/Table.cpp">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="table/Table.h">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="table/TableUtil.cpp">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="table/TableUtil.h">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="table/meta.h">
-			<Option virtualFolder="table/" />
-		</Unit>
-		<Unit filename="test/dataLoad.cpp">
-			<Option virtualFolder="test/" />
-		</Unit>
-		<Unit filename="test/test.h">
-			<Option virtualFolder="test/" />
-		</Unit>
-		<Unit filename="util/DataUtil.cpp">
-			<Option virtualFolder="util/" />
-		</Unit>
-		<Unit filename="util/DataUtil.h">
-			<Option virtualFolder="util/" />
-		</Unit>
-		<Unit filename="util/Thread.cpp">
-			<Option virtualFolder="util/" />
-		</Unit>
-		<Unit filename="util/Thread.h">
-			<Option virtualFolder="util/" />
-		</Unit>
+		<Unit filename="parser/sql.tab.h" />
+		<Unit filename="segment/DataSegment.cpp" />
+		<Unit filename="segment/DataSegment.h" />
+		<Unit filename="segment/DirectorySegment.cpp" />
+		<Unit filename="segment/DirectorySegment.h" />
+		<Unit filename="segment/IndexSegment.cpp" />
+		<Unit filename="segment/IndexSegment.h" />
+		<Unit filename="segment/MetaDataSegment.cpp" />
+		<Unit filename="segment/MetaDataSegment.h" />
+		<Unit filename="segment/Segment.cpp" />
+		<Unit filename="segment/Segment.h" />
+		<Unit filename="storage/DBFile.cpp" />
+		<Unit filename="storage/DBFile.h" />
+		<Unit filename="storage/FreeBuffer.cpp" />
+		<Unit filename="storage/FreeBuffer.h" />
+		<Unit filename="storage/PageUtil.cpp" />
+		<Unit filename="storage/PageUtil.h" />
+		<Unit filename="storage/main1.cpp" />
+		<Unit filename="storage/main2.cpp" />
+		<Unit filename="table/MemoryTable.cpp" />
+		<Unit filename="table/MemoryTalbe.h" />
+		<Unit filename="table/Table.cpp" />
+		<Unit filename="table/Table.h" />
+		<Unit filename="table/TableUtil.cpp" />
+		<Unit filename="table/TableUtil.h" />
+		<Unit filename="table/meta.h" />
+		<Unit filename="test/dataLoad.cpp" />
+		<Unit filename="test/test.h" />
+		<Unit filename="util/DataUtil.cpp" />
+		<Unit filename="util/DataUtil.h" />
+		<Unit filename="util/Thread.cpp" />
+		<Unit filename="util/Thread.h" />
 		<Extensions>
-			<code_completion />
 			<envvars />
+			<code_completion />
 			<debugger />
 			<lib_finder disable_auto="1" />
 		</Extensions>

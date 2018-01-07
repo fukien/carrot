@@ -37,7 +37,7 @@ uint64_t Thread::guessPhysicalAvailable()
 
    return (pageCount*pageSize)>>2; // Guess 25%
 }
-//---------------------------------------------------------------------------
+//----------------------------------------------------------------------Thread-----
 void Thread::sleep(unsigned time)
    // Wait x ms
 {
