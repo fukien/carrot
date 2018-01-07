@@ -263,7 +263,6 @@ int main(int ac,char** av)
     clock_t starttime;
     clock_t endtime;
     double totaltime;
-    starttime = clock();
     iniQuery();
     cout<<"\nCarrotSQL >>\t" ;
     if(!yyparse(pstate.scanner, &pstate)) {
@@ -274,6 +273,7 @@ int main(int ac,char** av)
     //return 1;
   }
   cout<<endl;
+  starttime = clock();
   doQuery();
   endtime = clock();
   totaltime=(double)((endtime-starttime)/(double)CLOCKS_PER_SEC);

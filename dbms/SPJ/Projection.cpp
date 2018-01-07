@@ -64,6 +64,7 @@ SPJItem* Projection::buildSPJItem(){
         return item;
 }
 void Projection::getNext(SPJItem*item){
+
         item->use=0;
         if(this->initialType==SPJ::TABLEINITIAL){
             Tuple *tuple=this->currentTuple;

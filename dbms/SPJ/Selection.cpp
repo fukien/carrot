@@ -492,8 +492,9 @@ void Selection::fillItem(SPJItem*item,SPJItem*sourceItem){
          }
         for(int i=0;i<fieldNum;i++){
                 item->fieldName[i]=sourceItem->fieldName[i];
-                if(item->data[i]==0) item->data[i]=new Byte[sourceItem->len[i]];
-                memcpy(item->data[i],sourceItem->data[i],sourceItem->len[i]);
+                if(item->data[i]==0)
+                    item->data[i]=new Byte[sourceItem->len[i]];
+                memcpy(item->data[i], sourceItem->data[i], sourceItem->len[i]);
                 item->dataType[i]=sourceItem->dataType[i];
                 item->len[i]=sourceItem->len[i];
         }
