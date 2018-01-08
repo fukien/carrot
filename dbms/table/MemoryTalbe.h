@@ -1,6 +1,6 @@
 #include "meta.h"
-class MemoryTable{
+class MemoryTable
+{
   Byte FiledNum;
-  DataType* fieldType;
-
+  DataType *fieldType;
 }

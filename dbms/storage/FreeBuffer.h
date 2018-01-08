@@ -10,22 +10,23 @@
  */
 typedef struct Buffer
 {
-   Byte data[PAGE_SIZE];
-    void* page;
+    Byte data[PAGE_SIZE];
+    void *page;
     int state;
-    Buffer* next;
+    Buffer *next;
 } Buffer;
 
 class FreeBuffer
 {
-public:
+  public:
     FreeBuffer();
-    Buffer* allocBuffer();
-    void freeBuffer(Buffer* buffer);
+    Buffer *allocBuffer();
+    void freeBuffer(Buffer *buffer);
     ~FreeBuffer();
-private:
-    Buffer* head;
-    Buffer* newBuffer();
+
+  private:
+    Buffer *head;
+    Buffer *newBuffer();
 };
 
 #endif // FREEBUFFER_H_INCLUDED

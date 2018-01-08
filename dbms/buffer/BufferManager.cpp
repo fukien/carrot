@@ -3,8 +3,8 @@
 
 #include "BufferManager.h"
 #ifdef DEBUG
- #include <cstdlib>
- #include <cstdio>
+#include <cstdlib>
+#include <cstdio>
 #endif
 
 BufferStrategy::BufferStrategy()
@@ -14,12 +14,12 @@ BufferStrategy::BufferStrategy()
 }
 void BufferStrategy::initialize( std::queue<BufferFrame*>*& ques,std::map<Addr,BufferFrame*>*& pageMaps)
 {
-        this->que = ques;
+    this->que = ques;
     this->pageMap = pageMaps;
 }
 BufferStrategy::~BufferStrategy(){}
 
- FIFOStrategy::FIFOStrategy():BufferStrategy()
+FIFOStrategy::FIFOStrategy():BufferStrategy()
 {
     this->pageSet = 0;
     this->que = 0;
@@ -43,14 +43,14 @@ void  FIFOStrategy::release(std::queue<BufferFrame*>*& que,std::map<Addr,BufferF
     this->pageMap=0;
     pageSet->clear();
 }
- FIFOStrategy::~FIFOStrategy()
- {
-     if(pageSet!=0)
-     {
-         pageSet->clear();
-         delete pageSet;
-     }
-     pageSet = 0;
+FIFOStrategy::~FIFOStrategy()
+{
+    if(pageSet!=0)
+    {
+        pageSet->clear();
+        delete pageSet;
+    }
+    pageSet = 0;
     if(this->que!=0)
     {
         delete this->que;
@@ -61,46 +61,46 @@ void  FIFOStrategy::release(std::queue<BufferFrame*>*& que,std::map<Addr,BufferF
         delete this->pageMap;
         this->pageMap =0;
     }
- }
+}
 
- void  FIFOStrategy::whenRead(BufferFrame* frame)
- {
-   //  printf("1");
+void  FIFOStrategy::whenRead(BufferFrame* frame)
+{
+    //  printf("1");
     if(pageSet->find(frame->pageNo)==pageSet->end())
     {
-     //   printf("2");
-    que->push(frame);
-     //   printf("3");
-    pageSet->insert(frame->pageNo);
-      //  printf("4");
+        //   printf("2");
+        que->push(frame);
+        //   printf("3");
+        pageSet->insert(frame->pageNo);
+        //  printf("4");
     }
- //   frame->mark=0;
- }
+    //   frame->mark=0;
+}
 
-  void FIFOStrategy::whenWrite(BufferFrame* frame)
-  {
-            if(pageSet->find(frame->pageNo)==pageSet->end())
-            {
-                que->push(frame);
-                pageSet->insert(frame->pageNo);
-            }
- //           frame->mark=0;
-  }
+void FIFOStrategy::whenWrite(BufferFrame* frame)
+{
+    if(pageSet->find(frame->pageNo)==pageSet->end())
+    {
+        que->push(frame);
+        pageSet->insert(frame->pageNo);
+    }
+    //           frame->mark=0;
+}
 
-  void FIFOStrategy::electPageToDrop(std::vector<Addr>& vec,int number)
-  {
-        while(number>0&&!que->empty())
-        {
-            BufferFrame* frame = que->front();
+void FIFOStrategy::electPageToDrop(std::vector<Addr>& vec,int number)
+{
+    while(number>0&&!que->empty())
+    {
+        BufferFrame* frame = que->front();
 #ifdef DEBUG
-printf("page %lld was elected!\n",frame->pageNo);
+        printf("page %lld was elected!\n",frame->pageNo);
 #endif // DEBUG
-            que->pop();
-            number--;
-            vec.push_back(frame->pageNo);
-            pageSet->erase(frame->pageNo);
-        }
-  }
+        que->pop();
+        number--;
+        vec.push_back(frame->pageNo);
+        pageSet->erase(frame->pageNo);
+    }
+}
 
 StrategyInBuffer FIFOStrategy::getStrategy()
 {
@@ -120,13 +120,13 @@ BufferManager::BufferManager(BufferStrategy* _strategy,PageUtil* _util):strategy
     //flusher(this);
     pid = Thread::start(flusher,this,true);
 
-        #ifdef DEBUG
-          if(pid<=0)
-          {
-              printf("thread start failure!");
-          }
+#ifdef DEBUG
+    if(pid<=0)
+    {
+        printf("thread start failure!");
+    }
     printf("mgr construct");
-    #endif // DEBUG
+#endif // DEBUG
 }
 
 BufferManager::~BufferManager()
@@ -134,74 +134,74 @@ BufferManager::~BufferManager()
 
     if(strategy==0)
     {
-        #ifdef DEBUG
+#ifdef DEBUG
         printf(" strategy was released early!");
-        #endif // DEBUG
+#endif // DEBUG
     }
 
-        /**
-    * we considered whether we should delete the que, because the thread may not be flush it finished.
-    */
+    /**
+     * we considered whether we should delete the que, because the thread may not be flush it finished.
+     */
     flushAll();
     while(!this->flusherQueue->empty());
     strategy->release(this->pageQue,this->mapping);
     this->pageQue=0;
     this->mapping=0;
     flag = false;
-   // if(pid>0)pthread_join(pid,NULL);
-   while(!this->flag);
+    // if(pid>0)pthread_join(pid,NULL);
+    while(!this->flag);
     delete waitForReadOrWrite;
     waitForReadOrWrite = 0;
     delete flusherQueue;
     flusherQueue = 0;
-        #ifdef DEBUG
+#ifdef DEBUG
     printf("mgr destroy");
-    #endif // DEBUG
+#endif // DEBUG
 }
 void BufferManager::dropout(int drop)
 {
-                std::vector<Addr> vec;
-                 std::map<Addr,BufferFrame*>::iterator iter;
-            strategy->electPageToDrop(vec,drop);//static_cast<int>(MAX_PAGE_IN_MEMORY*SWAP_RATE)
-            // the page need to be send to flusher.
-            // but some pages is still being read or written.
-            // we send these pages to the other queue.
-            // so we fetch each page and check the status.
-            size_t vecLen = vec.size();
-            for(size_t i=0;i<vecLen;i++)
+    std::vector<Addr> vec;
+    std::map<Addr,BufferFrame*>::iterator iter;
+    strategy->electPageToDrop(vec,drop);//static_cast<int>(MAX_PAGE_IN_MEMORY*SWAP_RATE)
+    // the page need to be send to flusher.
+    // but some pages is still being read or written.
+    // we send these pages to the other queue.
+    // so we fetch each page and check the status.
+    size_t vecLen = vec.size();
+    for(size_t i=0;i<vecLen;i++)
+    {
+        Addr pageNumber = vec[i];
+        iter = mapping->find(pageNumber);
+        if(iter!=mapping->end())
+        {
+            BufferFrame* rw = iter->second;
+            if(rw->page->readLock>0||rw->page->writeLock)
             {
-                Addr pageNumber = vec[i];
-                iter = mapping->find(pageNumber);
-                if(iter!=mapping->end())
-                {
-                    BufferFrame* rw = iter->second;
-                    if(rw->page->readLock>0||rw->page->writeLock)
-                    {
-                        // only when the page finishes read or write,
-                        // can the mapping erase the item.
-                        this->waitForReadOrWrite->insert(rw->pageNo);
-                    }else
-                    {
-                        this->flusherQueue->push(rw);
-                        #ifdef DEBUG
-                        printf("\npush the page no=%lld to the queue, frame.edit = %d\n",rw->pageNo,rw->edit);
-                        #endif // DEBUG
-                        mapping->erase(iter);
-                    }
-                    iter = mapping->end();
-                }else
-                {
-                    #ifdef DEBUG
-                    printf("move pageNo=%lld caused page error",pageNumber);
-                    #endif // DEBUG
-                }
+                // only when the page finishes read or write,
+                // can the mapping erase the item.
+                this->waitForReadOrWrite->insert(rw->pageNo);
+            }else
+            {
+                this->flusherQueue->push(rw);
+#ifdef DEBUG
+                printf("\npush the page no=%lld to the queue, frame.edit = %d\n",rw->pageNo,rw->edit);
+#endif // DEBUG
+                mapping->erase(iter);
             }
+            iter = mapping->end();
+        }else
+        {
+#ifdef DEBUG
+            printf("move pageNo=%lld caused page error",pageNumber);
+#endif // DEBUG
+        }
+    }
 }
 BufferFrame* BufferManager::requestPageForRead(Addr pageAddr)
 {
     Addr pageNo = PAGE_ID(pageAddr);
 #ifdef DEBUG
-//    printf(" read addr %lld\n",pageAddr);
+    //    printf(" read addr %lld\n",pageAddr);
 #endif // DEBUG
     BufferFrame* frame = 0;
     std::map<Addr,BufferFrame*>::iterator iter;
@@ -214,7 +214,7 @@ BufferFrame* BufferManager::requestPageForRead(Addr pageAddr)
         {
             dropout(static_cast<int>(MAX_PAGE_IN_MEMORY*SWAP_RATE));
         }
-// TODO:check it!
+        // TODO:check it!
         // Now, the page is free, and then alloc a page and push it.
         this->buildBufferFrame(frame,pageNo);
         util->readPage(pageNo,*frame->page);
@@ -293,50 +293,50 @@ void BufferManager::finishWrite(BufferFrame* frame)
 {
     frame->page->writeLock=false;
     std::set<Addr>::iterator setIter = this->waitForReadOrWrite->find(frame->pageNo);
-   if(setIter!=this->waitForReadOrWrite->end())
+    if(setIter!=this->waitForReadOrWrite->end())
     {
-         if(frame->page->readLock==0&&!frame->page->writeLock)
-         {
+        if(frame->page->readLock==0&&!frame->page->writeLock)
+        {
 
-                        this->waitForReadOrWrite->erase(setIter);
-                        std::map<Addr,BufferFrame*>::iterator mapIter = mapping->find(frame->pageNo);
-                        if(mapIter!=mapping->end())
-                        {
-                            mapping->erase(mapIter);
-                        }else
-                        {
-                            #ifdef DEBUG
-                             printf("pageNo %lld is missing when finish read",frame->pageNo);
-                            #endif // DEBUG
-                        }
-                        this->flusherQueue->push(frame);
-         }
+            this->waitForReadOrWrite->erase(setIter);
+            std::map<Addr,BufferFrame*>::iterator mapIter = mapping->find(frame->pageNo);
+            if(mapIter!=mapping->end())
+            {
+                mapping->erase(mapIter);
+            }else
+            {
+#ifdef DEBUG
+                printf("pageNo %lld is missing when finish read",frame->pageNo);
+#endif // DEBUG
+            }
+            this->flusherQueue->push(frame);
+        }
     }
 }
- void BufferManager::finishRead(BufferFrame* frame)
- {
-     frame->page->readLock--;
-     std::set<Addr>::iterator hsetIter = this->waitForReadOrWrite->find(frame->pageNo);
-     // find the page in the wait set, we need to push it to the flush set.
+void BufferManager::finishRead(BufferFrame* frame)
+{
+    frame->page->readLock--;
+    std::set<Addr>::iterator hsetIter = this->waitForReadOrWrite->find(frame->pageNo);
+    // find the page in the wait set, we need to push it to the flush set.
     if(hsetIter!=this->waitForReadOrWrite->end())
     {
-         if(frame->page->readLock==0&&!frame->page->writeLock)
-         {
-                        this->waitForReadOrWrite->erase(hsetIter);
-                        std::map<Addr,BufferFrame*>::iterator mapIter = mapping->find(frame->pageNo);
-                        if(mapIter!=mapping->end())
-                        {
-                            mapping->erase(mapIter);
-                        }else
-                        {
-                            #ifdef DEBUG
-                             printf("pageNo %lld is missing when finish read",frame->pageNo);
-                            #endif // DEBUG
-                        }
-                        this->flusherQueue->push(frame);
-         }
+        if(frame->page->readLock==0&&!frame->page->writeLock)
+        {
+            this->waitForReadOrWrite->erase(hsetIter);
+            std::map<Addr,BufferFrame*>::iterator mapIter = mapping->find(frame->pageNo);
+            if(mapIter!=mapping->end())
+            {
+                mapping->erase(mapIter);
+            }else
+            {
+#ifdef DEBUG
+                printf("pageNo %lld is missing when finish read",frame->pageNo);
+#endif // DEBUG
+            }
+            this->flusherQueue->push(frame);
+        }
     }
- }
+}
 void BufferManager::buildBufferFrame(BufferFrame*& frame, Addr pageNo)
 {
     frame = new BufferFrame();
@@ -364,20 +364,20 @@ void BufferManager::releaseBufferFrame(BufferFrame*& frame)
 void BufferManager::flusher(void* ptr)
 {
     BufferManager* mgr = static_cast<BufferManager*>(ptr);
-    #ifdef DEBUG
-       printf("do flusher");
-    #endif // DEBUG
+#ifdef DEBUG
+    printf("do flusher");
+#endif // DEBUG
     while(mgr->flag)
     {
-       //
+        //
         std::queue<BufferFrame*>* que = mgr->getFlusherQueue();
         while(!que->empty())
         {
             BufferFrame* frame = que->front();
             que->pop();
-            #ifdef DEBUG
+#ifdef DEBUG
             printf("tget a page from a queue no=%llx\t",frame->pageNo);
-            #endif // DEBUG
+#endif // DEBUG
 
             if(frame->edit)
             {
@@ -391,21 +391,21 @@ void BufferManager::flusher(void* ptr)
     mgr->pid=0;
 }
 /*
-BufferFrame* BufferManager::allocNewBufferFrame()
- {
+   BufferFrame* BufferManager::allocNewBufferFrame()
+   {
 
- }*/
+   }*/
 void BufferManager::flushAll()
 {
 
     while(this->pageQue->size()>0)
     {
-        #ifdef DEBUG
+#ifdef DEBUG
         printf("a loop of dropping  size = %ld\n",this->pageQue->size());
-        #endif // DEBUG
+#endif // DEBUG
         dropout(this->pageQue->size());
     }
-     //printf("not implement!");
+    //printf("not implement!");
 }
 
 PageUtil* BufferManager::getPageUtil()

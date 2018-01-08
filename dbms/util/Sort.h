@@ -1,4 +1,4 @@
-#include"../PageUtil.h"
+#include "../PageUtil.h"
 #include "../Table.h"
 #include "../DirectorySegment.h"
 #include "../Segment.h"
@@ -6,11 +6,11 @@
 
 class Sort
 {
-public:
+  public:
     tempnode *
-    temp;
-//    BufferFrame *bfm;
-//    BufferManager *fbm;
-    void singlesort(DirectorySegment *dtg,BufferManager *bfm,DataSegment *dts,int fid);
-    Addr mutiplemerge(DirectorySegment *dtg,BufferManager *bfm);
+        temp;
+    //    BufferFrame *bfm;
+    //    BufferManager *fbm;
+    void singlesort(DirectorySegment *dtg, BufferManager *bfm, DataSegment *dts, int fid);
+    Addr mutiplemerge(DirectorySegment *dtg, BufferManager *bfm);
 };

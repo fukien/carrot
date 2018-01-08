@@ -1,8 +1,8 @@
 #include "FreeBuffer.h"
-Buffer* FreeBuffer::allocBuffer()
+Buffer *FreeBuffer::allocBuffer()
 {
-    Buffer* ret = 0;
-    if(head)
+    Buffer *ret = 0;
+    if (head)
     {
         ret = head;
         head = head->next;
@@ -22,29 +22,30 @@ FreeBuffer::FreeBuffer()
 
 FreeBuffer::~FreeBuffer()
 {
-    while(head!=0)
+    while (head != 0)
     {
-        Buffer* tmp = head->next;
+        Buffer *tmp = head->next;
         delete head;
         head = tmp;
     }
 }
-void FreeBuffer::freeBuffer(Buffer* buffer)
+void FreeBuffer::freeBuffer(Buffer *buffer)
 {
-    if(head=0)
+    if (head = 0)
     {
         head = buffer;
-        buffer->next=0;
-    }else
+        buffer->next = 0;
+    }
+    else
     {
         buffer->next = head;
         head = buffer;
     }
 }
 
-Buffer* FreeBuffer::newBuffer()
+Buffer *FreeBuffer::newBuffer()
 {
-    Buffer* buffer = new Buffer();
+    Buffer *buffer = new Buffer();
     buffer->page = 0;
     buffer->state = 0;
     buffer->next = 0;
