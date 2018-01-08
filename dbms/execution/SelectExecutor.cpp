@@ -261,6 +261,11 @@ void SelectExecutor::selectAll()
                 }
                 printf("\n");
             cnt ++;
+            if(sw.isLimit == 1)
+            {
+                   if (cnt >= sw.limit)
+                    break;
+            }
             proj->getNext(item);
             delete str;
         }
@@ -358,6 +363,11 @@ int SelectExecutor::execute(query_tree qt)
                 }
             printf("\n");
             cnt ++;
+            if(sw.isLimit == 1)
+            {
+                   if (cnt >= sw.limit)
+                    break;
+            }
             proj->getNext(item);
             delete str;
         }

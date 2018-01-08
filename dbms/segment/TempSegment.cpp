@@ -12,12 +12,12 @@
 #define MAX_MAGIC_NUM 100
 
 int brave=0;
-void tempSegment::tempSegment(BufferManager* mgr,DirectorySegment* dir,DataSegment* dataseg)
+tempSegment::tempSegment(BufferManager* mgr,DirectorySegment* dir,DataSegment* dataseg)
 {
 
 }
 
-Addr creatTemp(BufferManager* manager,DirectorySegment* dir)
+Addr tempSegment::creatTemp(BufferManager* manager,DirectorySegment* dir)
 {
     this->node= new tempnode();
     this->nodeaddr = dir->findFirstBlock(SegmentType::TempSeg);

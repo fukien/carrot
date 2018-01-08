@@ -77,31 +77,27 @@ SPJItem *Projection::buildSPJItem()
         item->use = 0;
         return item;
 }
-void Projection::getNext(SPJItem *item)
-{
-        item->use = 0;
-        if (this->initialType == SPJ::TABLEINITIAL)
-        {
-                Tuple *tuple = this->currentTuple;
-                Addr oldAddr = tuple->tupleAddr;
-                table->findNextTuple(this->currentTuple, tuple);
-                //Addr newAddr = tuple->tupleAddr;
-                // printf("old:%d new:%d\n",oldAddr,newAddr);
-                if (tuple->tupleAddr != 0 && tuple->tupleAddr != oldAddr)
-                {
-                        fillItem(item, tuple);
-                }
-                // printf("fuck\n");
-                //table->releaseEmptyTuple(this->currentTuple);
-                //this->currentTuple=tuple;
-        }
-        else if (this->initialType == SPJ::ITERATORINITIAL)
-        {
-                SPJItem *sourceItem = this->spj->buildSPJItem();
-                spj->getNext(sourceItem);
-                if (sourceItem->use != 0)
-                        fillItem(item, sourceItem);
-                this->spj->releaseSPJItem(sourceItem);
+void Projection::getNext(SPJItem*item){
+
+        item->use=0;
+        if(this->initialType==SPJ::TABLEINITIAL){
+            Tuple *tuple=this->currentTuple;
+            Addr oldAddr = tuple->tupleAddr;
+            table->findNextTuple(this->currentTuple,tuple);
+            //Addr newAddr = tuple->tupleAddr;
+           // printf("old:%d new:%d\n",oldAddr,newAddr);
+            if(tuple->tupleAddr!=0&&tuple->tupleAddr!=oldAddr){
+                 fillItem(item,tuple);
+            }
+           // printf("fuck\n");
+            //table->releaseEmptyTuple(this->currentTuple);
+            //this->currentTuple=tuple;
+        }else if(this->initialType==SPJ::ITERATORINITIAL){
+               SPJItem*sourceItem =this->spj->buildSPJItem();
+               spj->getNext(sourceItem);
+               if(sourceItem->use!=0)
+               fillItem(item,sourceItem);
+               this->spj->releaseSPJItem(sourceItem);
         }
 }
 void Projection::getFirst(SPJItem *item)

@@ -773,6 +773,8 @@ void sqlp_join_using(struct psql_state *pstate, int n_cols)
 
 void sqlp_limit(struct psql_state *pstate, int two_expr)
 {
+    sw.isLimit = 1;
+    jw.isLimit = 1;
 	printf("exec LIMIT %d\n", two_expr);
 }
 
@@ -834,6 +836,10 @@ void sqlp_number(struct psql_state *pstate, int val)
             sw.type[sw.whereCursor] = 1;
             sw.whereCursor ++;
         }
+
+        //  It doesn't really matter if we set the flag or not, since limit is always the last part of a SQL
+        sw.limit = val;
+        jw.limit = val;
 
     printf("exec INT/NUMBER %d\n", val);
 }
@@ -1008,6 +1014,7 @@ void sqlp_where(struct psql_state *pstate)
     strcpy(sw.where[sw.whereCursor],"WHERE");
     sw.type[sw.whereCursor] = 11;
     sw.whereCursor++;
+
 
     strcpy(jw.where[jw.whereCursor], "WHERE");
     jw.type[jw.whereCursor] = 11;

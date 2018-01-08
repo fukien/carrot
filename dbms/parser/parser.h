@@ -132,6 +132,10 @@ typedef struct selectWhere{
     char fieldList[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
     int fieldNum;
     int isProj; // 0-not finished projection, 1-finished projection
+
+    //int endWhereFlag; // this flag is used for limit or sort ; 0  where not ended; 1 where ended
+    int isLimit; // 0 not limit, 1 limit
+    int limit;
 }selectWhere;
 
 typedef struct joinWhere{
@@ -148,6 +152,9 @@ typedef struct joinWhere{
     int isAll; //0 not, 1 -all, if projects all columns
     int isProj; // 0-not finished projection, 1-finished projection
 
+    //int endWhereFlag; //this flag is used for limitor sort; 0 where not ended; 1 where ended
+    int isLimit; // 0 not limit, 1 limit
+    int limit;
 }joinWhere;
 #endif // PARSER
 

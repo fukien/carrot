@@ -196,15 +196,22 @@ void doQuery()
                 delete se;
             }
             break;
-        case 7: //join
+            case 7://join
             {
-                JoinExecutor *je = new JoinExecutor();
-                je->execute(queryTree);
-                if (je->getStatus() == 1)
+                JoinExecutor* je = new JoinExecutor();
+               if(jw.tableCursor == 2)
                 {
-                    cout << "\nsuccessfully select " << je->getChdNum() << " tuple" << endl;
+                    je->execute(queryTree);
                 }
-                cout << err_reason[je->getStatus()] << endl;
+               else
+                {
+                    je->executeM(queryTree);
+               }
+                if(je->getStatus() == 1)
+                    {
+                        cout<<"\nsuccessfully select "<<je->getChdNum() << " tuple" << endl;
+                    }
+                cout<<err_reason[je->getStatus()]<<endl;
                 delete je;
             }
             break;
@@ -249,6 +256,7 @@ int main(int ac, char **av)
 
     yyset_in(in_f, pstate.scanner);
 
+<<<<<<< HEAD
     /*
        if(!yyparse(pstate.scanner, &pstate)) {
        printf("SQL parse worked\n");
@@ -283,5 +291,38 @@ int main(int ac, char **av)
         cout << "time: " << totaltime << "s" << endl;
         cout << "================================================================================" << endl;
     }
+=======
+  /*
+  if(!yyparse(pstate.scanner, &pstate)) {
+    printf("SQL parse worked\n");
+    return 0;
+  } else {
+    printf("SQL parse failed\n");
+    return 1;
+  }
+  */
+  while (true)
+{
+    clock_t starttime;
+    clock_t endtime;
+    double totaltime;
+    iniQuery();
+    cout<<"\nCarrotSQL >>\t" ;
+    if(!yyparse(pstate.scanner, &pstate)) {
+    printf("SQL parse worked\n");
+    //return 0;
+  } else {
+    printf("SQL parse failed\n");
+    //return 1;
+  }
+  cout<<endl;
+  starttime = clock();
+  doQuery();
+  endtime = clock();
+  totaltime=(double)((endtime-starttime)/(double)CLOCKS_PER_SEC);
+  cout<<"time: "<<totaltime<<"s"<<endl;
+  cout<<"================================================================================"<<endl;
+}
+>>>>>>> 9c66936ac2152a664a2b9e138e631ca0057cf56a
     return 0;
 }

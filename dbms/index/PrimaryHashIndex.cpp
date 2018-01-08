@@ -32,6 +32,7 @@ IndexIterator*PrimaryHashIndex::findByRange(void*value1,void*value2){}
         this->nextAddr=0;
         this->keySize=0;
         this->dataType=this->mts->getMetaData()->head->fieldList[fid].dataType;
+        //this->len=this->mts->getMetaData()->head->fieldList[fid].len;
         created=false;
         loaded=false;
         if(addr==0){
