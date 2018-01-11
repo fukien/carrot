@@ -195,11 +195,23 @@ void doQuery()
                 cout<<err_reason[se->getStatus()]<<endl;
                 delete se;
             }
+<<<<<<< HEAD
             break;   */
         case 7://join
+=======
+            break;
+            case 7://join
+>>>>>>> refs/remotes/origin/master
             {
                 JoinExecutor* je = new JoinExecutor();
-                je->execute(queryTree);
+               if(jw.tableCursor == 2)
+                {
+                    je->execute(queryTree);
+                }
+               else
+                {
+                    je->executeM(queryTree);
+               }
                 if(je->getStatus() == 1)
                     {
                         cout<<"\nsuccessfully select "<<je->getChdNum() << " tuple" << endl;
@@ -256,7 +268,6 @@ int mainHWT(int ac,char** av)
     clock_t starttime;
     clock_t endtime;
     double totaltime;
-    starttime = clock();
     iniQuery();
     cout<<"\nCarrotSQL >>\t" ;
     if(!yyparse(pstate.scanner, &pstate)) {
@@ -267,6 +278,7 @@ int mainHWT(int ac,char** av)
     //return 1;
   }
   cout<<endl;
+  starttime = clock();
   doQuery();
   endtime = clock();
   totaltime=(double)((endtime-starttime)/(double)CLOCKS_PER_SEC);

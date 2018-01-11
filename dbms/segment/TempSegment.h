@@ -23,7 +23,7 @@ class tempSegment
 {
 public:
     tempnode *node;
-    void tempSegment(BufferManager* mgr,DirectorySegment* dir,DataSegment* dataseg);
+    tempSegment(BufferManager* mgr,DirectorySegment* dir,DataSegment* dataseg);
     bool WriteIntoTemp(tempnode *node,tempitem *item);
     Addr creatTemp(BufferManager* mgr,DirectorySegment* dir);
     void transTemptoFrame(BufferFrame* frame,tempnode *item);

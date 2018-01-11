@@ -2,6 +2,7 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="index/BPTree.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="932" topLine="0" />
@@ -319,6 +320,56 @@
 	<File name="execution/DeleteExecutor.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="15390" topLine="226" />
+=======
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8967" topLine="242" />
+		</Cursor>
+	</File>
+	<File name="SPJ/Projection.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2058" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="execution/JoinExecutor.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23783" topLine="651" />
+		</Cursor>
+	</File>
+	<File name="SPJ/SPJ.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="705" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="execution/SelectExecutor.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8599" topLine="251" />
+		</Cursor>
+	</File>
+	<File name="dataInput/inputer.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="index/PrimaryHashIndex.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1278" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="SPJ/SPJ.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="64" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="table/meta.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2319" topLine="80" />
+		</Cursor>
+	</File>
+	<File name="SPJ/Selection.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="25270" topLine="485" />
+>>>>>>> refs/remotes/origin/master
 		</Cursor>
 		<Folding>
 			<Collapse line="5" />
@@ -331,6 +382,7 @@
 	</File>
 	<File name="SPJ/Selection.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="7566" topLine="75" />
 		</Cursor>
 	</File>
@@ -372,6 +424,29 @@
 	<File name="parser/sql.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="101334" topLine="2926" />
+=======
+			<Cursor1 position="2242" topLine="52" />
+		</Cursor>
+	</File>
+	<File name="buffer/BufferManager.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2817" topLine="107" />
+		</Cursor>
+	</File>
+	<File name="util/DataUtil.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4212" topLine="97" />
+		</Cursor>
+	</File>
+	<File name="util/Thread.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1790" topLine="49" />
+		</Cursor>
+	</File>
+	<File name="SPJ/Join.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2013" topLine="75" />
+>>>>>>> refs/remotes/origin/master
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -10,6 +10,8 @@ public:
     JoinExecutor();
     ~JoinExecutor();
     int execute(query_tree qt);
+    int executeM(query_tree qt);
+
     void setStatus(int a);
     int getStatus();
     void setChdNum(int a);
@@ -26,6 +28,7 @@ private:
     bool parse();
     bool decorate(int cursor);
     void selectAll();
+    void selectAllM();
     int findChar(char * str, char a);
     void refactorString( char*tb, char* field, char*str, int seq);
 };
