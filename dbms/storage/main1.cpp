@@ -322,6 +322,11 @@ int writedb()
          //string filename="";
 }
 
+int main()
+{
+    writedb();
+}
+
 int mainSMR()
 {
    //readdb();

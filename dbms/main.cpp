@@ -184,7 +184,7 @@ void doQuery()
                 delete de;
             }
             break;
-        case 6://select
+    /*    case 6://select
             {
                 SelectExecutor*se = new SelectExecutor();
                 se->execute(queryTree);
@@ -195,7 +195,7 @@ void doQuery()
                 cout<<err_reason[se->getStatus()]<<endl;
                 delete se;
             }
-            break;
+            break;   */
         case 7://join
             {
                 JoinExecutor* je = new JoinExecutor();
@@ -214,7 +214,7 @@ void doQuery()
 }
 
 int yydebug;
-int main(int ac,char** av)
+int mainHWT(int ac,char** av)
 {
   cout<< "Welcome to use our database: CarrotSQL !!!"<<endl;
   err_id_initialize();
