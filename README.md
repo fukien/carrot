@@ -20,7 +20,7 @@ sudo apt install flex bison build-essential
 ### Authors
 
 - [Huang Wentao](https://github.com/huangwentao0831)
-- Han Han
+- [Han Han](https://github.com/hagen666)
 - [Guan Hua](https://github.com/GH1995)
-- Shao Mingrui
-- Han Xueran
+- Shao Mingrui(https://github.com/crazyxuehu)
+- Han Xueran(https://github.com/lemontreehxr)
