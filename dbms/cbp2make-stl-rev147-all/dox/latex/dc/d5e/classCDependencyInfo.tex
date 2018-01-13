@@ -1,0 +1,739 @@
+\hypertarget{classCDependencyInfo}{\section{C\-Dependency\-Info Class Reference}
+\label{classCDependencyInfo}\index{C\-Dependency\-Info@{C\-Dependency\-Info}}
+}
+
+
+Dependency information for build units in a project.  
+
+
+
+
+{\ttfamily \#include $<$depsearch.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatform}{C\-Platform} \& \hyperlink{classCDependencyInfo_ae94f6374ec681801cc8304ad3e8a4f5e}{Platform} (void)
+\begin{DoxyCompactList}\small\item\em Platform/\-O\-S type, generally used for creating compatible file paths. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyInfo_a900762f097ed041faa74613da4ea62c2}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the unit dependency database to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyInfo_a946c31a0b7bef21a5793e6b134978912}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Print dependency information for all of build units to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCDependencyInfo_ac2e36edc053c52d6fa9da19ef293e24b}{One\-Line\-Report} (const size\-\_\-t Index, const bool Deps, const bool X\-Refs)
+\begin{DoxyCompactList}\small\item\em Returns a short string representation of dependency information. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a844740f473781d070df0f41d0762eb2f}{Records\-Count} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns the number of dependency records. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCDependencyInfo_abd5a916dfc975667d25d9216d15a3ccf}{Name} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns name of a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a22150f25fecc523402af14ea5c57d104}{Direct\-Dependencies\-Count} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Counts direct dependencies of a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a918389de5c0c99a3e69026ea0176c89e}{Indirect\-Dependencies\-Count} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Counts only indirect dependencies of a build unit with number {\itshape Index}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_acd47e7cf24369dd634b509c6932f7dca}{All\-Dependencies\-Count} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns the total count of dependencies of a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_a00b6287cc4a978f8abfa2b1442175d24}{Direct\-Dependencies} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns a list of build unit names that a build unit with dependency record number {\itshape Index} depends on directly. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_a51e609331ebc077d6eea5778fd8f8c8b}{Indirect\-Dependencies} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns a list of build unit names that a build unit with dependency record number {\itshape Index} depends on indirectly. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_a02419d86ae1e14504c8657fb2d62bb4c}{All\-Dependencies} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns a complete list of build unit names that a build unit with dependency record number {\itshape Index} depends on directly or indirectly. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a4aa7031586c8dd2cc8dfa8ebc54dd9b2}{Direct\-Cross\-References\-Count} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Counts direct cross references to a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a3a4c4419cf30712a16bb71b2f9c7a87c}{Indirect\-Cross\-References\-Count} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Counts indirect cross references to a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_aaf613223ecfb1d5decf8b38cb067ae25}{All\-Cross\-References\-Count} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns the total count of cross references of a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_ac1182a8d99046fc6f735576d6b55fc73}{Direct\-Cross\-References} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns a list of build unit names that directly depend on a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_aa2a9f2ea3bc0e5f3b71603a477fc5619}{Indirect\-Cross\-References} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns a list of build unit names that indirectly depend on a build unit with dependency record number {\itshape Index}. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_ab07c351a53409894d86e9e10f7a70f7f}{All\-Cross\-References} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns a complete list of build unit names that depend on a build unit with dependency record number {\itshape Index} either directly or indirectly. \end{DoxyCompactList}\item 
+bool \hyperlink{classCDependencyInfo_a3325672b42de84d6043fe47c666350a0}{Are\-Dependencies\-Complete} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Verifies if a dependency list for a build unit with dependency record number {\itshape Index} is marked as complete. \end{DoxyCompactList}\item 
+bool \hyperlink{classCDependencyInfo_ae1ffc10e98443e562d6b8a8d7b1a869f}{Are\-Cross\-References\-Complete} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Verifies if a cross reference list for a build unit with dependency record number {\itshape Index} is marked as complete. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyInfo_aab60680f8f1c33981e9abe0ba132d744}{Set\-Dependencies\-Complete} (const size\-\_\-t Index, const bool State=true)
+\begin{DoxyCompactList}\small\item\em Marks a dependency list for a build unit with dependency record number {\itshape Index} as complete. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyInfo_a433798f74d8db352e22dd5e4fd1268af}{Set\-Cross\-References\-Complete} (const size\-\_\-t Index, const bool State=true)
+\begin{DoxyCompactList}\small\item\em Marks a cross reference list for a build unit with number {\itshape Index} as complete. \end{DoxyCompactList}\item 
+int \hyperlink{classCDependencyInfo_ab3c71dc1906f859133771b4228b61c8e}{Find\-Record} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCDependencyInfo_abd5a916dfc975667d25d9216d15a3ccf}{Name})
+\begin{DoxyCompactList}\small\item\em Performs dependency record lookup by a build unit name. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_aae74e0642e410f1f2364908a6030f410}{Add\-Record} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCDependencyInfo_abd5a916dfc975667d25d9216d15a3ccf}{Name})
+\begin{DoxyCompactList}\small\item\em Adds a new dependency record for the {\itshape Name} build unit. \end{DoxyCompactList}\item 
+bool \hyperlink{classCDependencyInfo_aeee41f5696f9e0952d0bb8cef3adf311}{Add\-Dependency} (const size\-\_\-t Index, const \hyperlink{classCString}{C\-String} \&Dependency\-Name)
+\begin{DoxyCompactList}\small\item\em Adds the {\itshape Dependency\-Name} build unit to a dependency record with number {\itshape Index}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a927accf24328efc443082b1cf967a01a}{Add\-Dependency} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCDependencyInfo_abd5a916dfc975667d25d9216d15a3ccf}{Name}, const \hyperlink{classCString}{C\-String} \&Dependency\-Name)
+\begin{DoxyCompactList}\small\item\em Adds the {\itshape Dependency\-Name} build unit to a dependency record of the {\itshape Name} build unit. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyInfo_a076227951bd7f5e01db97e6e40eb5955}{Make\-Rules} (\hyperlink{classCMakefile}{C\-Makefile} \&Makefile, const int Section, const bool Multiline)
+\begin{DoxyCompactList}\small\item\em Generates makefile rules for build unit dependencies. \end{DoxyCompactList}\item 
+\hyperlink{classCDependencyInfo_a4fff8f942c388852af5b1a3ebd235d70}{C\-Dependency\-Info} (void)
+\begin{DoxyCompactList}\small\item\em Creates build unit dependency database. \end{DoxyCompactList}\item 
+\hyperlink{classCDependencyInfo_a1674b17fa54f4e53571ce9aac6abd88e}{$\sim$\-C\-Dependency\-Info} (void)
+\begin{DoxyCompactList}\small\item\em Destroys build unit dependency database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCDependencyInfo_a437ff774f21c51a187ad9a0b7ffbfa93}{Reset\-Markers} (void)
+\begin{DoxyCompactList}\small\item\em Clears \hyperlink{classCDependencyRecord_a0327e854ac8b0bc48eefe3155a84475e}{C\-Dependency\-Record\-::m\-\_\-\-Marker} for all records in \hyperlink{classCDependencyInfo_ad76c0932810b200455ce757da050cda2}{C\-Dependency\-Info\-::m\-\_\-\-Records}. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a3ce43638906ad7dcc21f4ea8664ab34e}{Dependencies\-Count} (\hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$Record)
+\begin{DoxyCompactList}\small\item\em Returns the number of dependencies for a build unit pointed by {\itshape Record}. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_aebc22dfe747ed1208ab4a16a396e7afb}{Dependencies} (\hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$Record)
+\begin{DoxyCompactList}\small\item\em Returns the list of file names of build units that a build unit pointed by {\itshape Record} depends on. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyInfo_a2f6a15907c7ccb90c9dc1466d565241f}{Cross\-References\-Count} (\hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$Record)
+\begin{DoxyCompactList}\small\item\em Returns the number of cross references for a build unit pointed by {\itshape Record}. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCDependencyInfo_ab93f959d3c0430039430a73562080b90}{Cross\-References} (\hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$Record)
+\begin{DoxyCompactList}\small\item\em Returns the list of file names of build units that depend on a build unit pointed by {\itshape Record}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatform}{C\-Platform} \hyperlink{classCDependencyInfo_a6a7fb9ef5de03c0013ce3aa3774d469c}{m\-\_\-\-Platform}
+\begin{DoxyCompactList}\small\item\em Platform/\-O\-S type, generally used for creating compatible file paths. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$ $>$ \hyperlink{classCDependencyInfo_ad76c0932810b200455ce757da050cda2}{m\-\_\-\-Records}
+\begin{DoxyCompactList}\small\item\em Database of build unit dependencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dependency information for build units in a project. 
+
+Stores a database of build unit dependencies and cross references, searches and unwinds dependncies of a particular unit, writes makefile rules for unit dependencies. Generally speaking, \hyperlink{classCDependencyInfo}{C\-Dependency\-Info} tracks only dependencies between abstract names (strings), it doesn't really care whether those names are real file names or build units or not. The only exception to that is providing platform information to a dependency search filter like \hyperlink{classCIncludeSearchFilter}{C\-Include\-Search\-Filter} and its descendants for building compatible file paths. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCDependencyInfo_a4fff8f942c388852af5b1a3ebd235d70}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!C\-Dependency\-Info@{C\-Dependency\-Info}}
+\index{C\-Dependency\-Info@{C\-Dependency\-Info}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{C\-Dependency\-Info}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-C\-Dependency\-Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a4fff8f942c388852af5b1a3ebd235d70}
+
+
+Creates build unit dependency database. 
+
+\hypertarget{classCDependencyInfo_a1674b17fa54f4e53571ce9aac6abd88e}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!$\sim$\-C\-Dependency\-Info@{$\sim$\-C\-Dependency\-Info}}
+\index{$\sim$\-C\-Dependency\-Info@{$\sim$\-C\-Dependency\-Info}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{$\sim$\-C\-Dependency\-Info}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::$\sim$\-C\-Dependency\-Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a1674b17fa54f4e53571ce9aac6abd88e}
+
+
+Destroys build unit dependency database. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCDependencyInfo_aeee41f5696f9e0952d0bb8cef3adf311}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Add\-Dependency@{Add\-Dependency}}
+\index{Add\-Dependency@{Add\-Dependency}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Add\-Dependency}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Add\-Dependency (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index, }
+\item[{const {\bf C\-String} \&}]{Dependency\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_aeee41f5696f9e0952d0bb8cef3adf311}
+
+
+Adds the {\itshape Dependency\-Name} build unit to a dependency record with number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record of a build unit. \\
+\hline
+{\em Dependency\-Name} & name of another build unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if {\itshape Index} is a valid number of a dependency record, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a927accf24328efc443082b1cf967a01a}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Add\-Dependency@{Add\-Dependency}}
+\index{Add\-Dependency@{Add\-Dependency}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Add\-Dependency}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Add\-Dependency (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Dependency\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a927accf24328efc443082b1cf967a01a}
+
+
+Adds the {\itshape Dependency\-Name} build unit to a dependency record of the {\itshape Name} build unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of a build unit. \\
+\hline
+{\em Dependency\-Name} & name of another build unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of a dependency record of the {\itshape Name} build unit. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_aae74e0642e410f1f2364908a6030f410}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Add\-Record@{Add\-Record}}
+\index{Add\-Record@{Add\-Record}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Add\-Record}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Add\-Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_aae74e0642e410f1f2364908a6030f410}
+
+
+Adds a new dependency record for the {\itshape Name} build unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of a build unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number (index) of the new dependency record. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_ab07c351a53409894d86e9e10f7a70f7f}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!All\-Cross\-References@{All\-Cross\-References}}
+\index{All\-Cross\-References@{All\-Cross\-References}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{All\-Cross\-References}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-All\-Cross\-References (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_ab07c351a53409894d86e9e10f7a70f7f}
+
+
+Returns a complete list of build unit names that depend on a build unit with dependency record number {\itshape Index} either directly or indirectly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of build unit names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_aaf613223ecfb1d5decf8b38cb067ae25}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!All\-Cross\-References\-Count@{All\-Cross\-References\-Count}}
+\index{All\-Cross\-References\-Count@{All\-Cross\-References\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{All\-Cross\-References\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-All\-Cross\-References\-Count (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_aaf613223ecfb1d5decf8b38cb067ae25}
+
+
+Returns the total count of cross references of a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cross references count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a02419d86ae1e14504c8657fb2d62bb4c}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!All\-Dependencies@{All\-Dependencies}}
+\index{All\-Dependencies@{All\-Dependencies}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{All\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-All\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a02419d86ae1e14504c8657fb2d62bb4c}
+
+
+Returns a complete list of build unit names that a build unit with dependency record number {\itshape Index} depends on directly or indirectly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of build unit names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_acd47e7cf24369dd634b509c6932f7dca}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!All\-Dependencies\-Count@{All\-Dependencies\-Count}}
+\index{All\-Dependencies\-Count@{All\-Dependencies\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{All\-Dependencies\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-All\-Dependencies\-Count (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_acd47e7cf24369dd634b509c6932f7dca}
+
+
+Returns the total count of dependencies of a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum of direct and indirect dependencies. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_ae1ffc10e98443e562d6b8a8d7b1a869f}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Are\-Cross\-References\-Complete@{Are\-Cross\-References\-Complete}}
+\index{Are\-Cross\-References\-Complete@{Are\-Cross\-References\-Complete}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Are\-Cross\-References\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Are\-Cross\-References\-Complete (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_ae1ffc10e98443e562d6b8a8d7b1a869f}
+
+
+Verifies if a cross reference list for a build unit with dependency record number {\itshape Index} is marked as complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if a cross rference list is complete, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a3325672b42de84d6043fe47c666350a0}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Are\-Dependencies\-Complete@{Are\-Dependencies\-Complete}}
+\index{Are\-Dependencies\-Complete@{Are\-Dependencies\-Complete}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Are\-Dependencies\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Are\-Dependencies\-Complete (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a3325672b42de84d6043fe47c666350a0}
+
+
+Verifies if a dependency list for a build unit with dependency record number {\itshape Index} is marked as complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if a dependency list is complete, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a900762f097ed041faa74613da4ea62c2}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Clear@{Clear}}
+\index{Clear@{Clear}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a900762f097ed041faa74613da4ea62c2}
+
+
+Resets the unit dependency database to the initial state. 
+
+\hypertarget{classCDependencyInfo_ab93f959d3c0430039430a73562080b90}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Cross\-References@{Cross\-References}}
+\index{Cross\-References@{Cross\-References}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Cross\-References}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Cross\-References (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Dependency\-Record} $\ast$}]{Record}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_ab93f959d3c0430039430a73562080b90}
+
+
+Returns the list of file names of build units that depend on a build unit pointed by {\itshape Record}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Record} & dependency record of a build unit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of file names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a2f6a15907c7ccb90c9dc1466d565241f}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Cross\-References\-Count@{Cross\-References\-Count}}
+\index{Cross\-References\-Count@{Cross\-References\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Cross\-References\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Cross\-References\-Count (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Dependency\-Record} $\ast$}]{Record}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_a2f6a15907c7ccb90c9dc1466d565241f}
+
+
+Returns the number of cross references for a build unit pointed by {\itshape Record}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Record} & dependency record of a build unit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cross references count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_aebc22dfe747ed1208ab4a16a396e7afb}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Dependency\-Record} $\ast$}]{Record}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_aebc22dfe747ed1208ab4a16a396e7afb}
+
+
+Returns the list of file names of build units that a build unit pointed by {\itshape Record} depends on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Record} & dependency record of a build unit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of file names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a3ce43638906ad7dcc21f4ea8664ab34e}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Dependencies\-Count@{Dependencies\-Count}}
+\index{Dependencies\-Count@{Dependencies\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Dependencies\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Dependencies\-Count (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Dependency\-Record} $\ast$}]{Record}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_a3ce43638906ad7dcc21f4ea8664ab34e}
+
+
+Returns the number of dependencies for a build unit pointed by {\itshape Record}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Record} & dependency record of a build unit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dependencies count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_ac1182a8d99046fc6f735576d6b55fc73}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Direct\-Cross\-References@{Direct\-Cross\-References}}
+\index{Direct\-Cross\-References@{Direct\-Cross\-References}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Direct\-Cross\-References}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Direct\-Cross\-References (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyInfo_ac1182a8d99046fc6f735576d6b55fc73}
+
+
+Returns a list of build unit names that directly depend on a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of build unit names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a4aa7031586c8dd2cc8dfa8ebc54dd9b2}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Direct\-Cross\-References\-Count@{Direct\-Cross\-References\-Count}}
+\index{Direct\-Cross\-References\-Count@{Direct\-Cross\-References\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Direct\-Cross\-References\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Direct\-Cross\-References\-Count (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyInfo_a4aa7031586c8dd2cc8dfa8ebc54dd9b2}
+
+
+Counts direct cross references to a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a build unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cross references count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a00b6287cc4a978f8abfa2b1442175d24}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Direct\-Dependencies@{Direct\-Dependencies}}
+\index{Direct\-Dependencies@{Direct\-Dependencies}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Direct\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Direct\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyInfo_a00b6287cc4a978f8abfa2b1442175d24}
+
+
+Returns a list of build unit names that a build unit with dependency record number {\itshape Index} depends on directly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of build unit names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a22150f25fecc523402af14ea5c57d104}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Direct\-Dependencies\-Count@{Direct\-Dependencies\-Count}}
+\index{Direct\-Dependencies\-Count@{Direct\-Dependencies\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Direct\-Dependencies\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Direct\-Dependencies\-Count (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyInfo_a22150f25fecc523402af14ea5c57d104}
+
+
+Counts direct dependencies of a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dependencies count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_ab3c71dc1906f859133771b4228b61c8e}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Find\-Record@{Find\-Record}}
+\index{Find\-Record@{Find\-Record}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Find\-Record}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Find\-Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_ab3c71dc1906f859133771b4228b61c8e}
+
+
+Performs dependency record lookup by a build unit name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of a build unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number (index) of the corresponding dependency record or -\/1 if no dependency record for the {\itshape Name} build unit is found. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_aa2a9f2ea3bc0e5f3b71603a477fc5619}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Indirect\-Cross\-References@{Indirect\-Cross\-References}}
+\index{Indirect\-Cross\-References@{Indirect\-Cross\-References}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Indirect\-Cross\-References}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Indirect\-Cross\-References (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_aa2a9f2ea3bc0e5f3b71603a477fc5619}
+
+
+Returns a list of build unit names that indirectly depend on a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of build unit names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a3a4c4419cf30712a16bb71b2f9c7a87c}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Indirect\-Cross\-References\-Count@{Indirect\-Cross\-References\-Count}}
+\index{Indirect\-Cross\-References\-Count@{Indirect\-Cross\-References\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Indirect\-Cross\-References\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Indirect\-Cross\-References\-Count (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a3a4c4419cf30712a16bb71b2f9c7a87c}
+
+
+Counts indirect cross references to a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cross references count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a51e609331ebc077d6eea5778fd8f8c8b}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Indirect\-Dependencies@{Indirect\-Dependencies}}
+\index{Indirect\-Dependencies@{Indirect\-Dependencies}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Indirect\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Indirect\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a51e609331ebc077d6eea5778fd8f8c8b}
+
+
+Returns a list of build unit names that a build unit with dependency record number {\itshape Index} depends on indirectly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of build unit names. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a918389de5c0c99a3e69026ea0176c89e}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Indirect\-Dependencies\-Count@{Indirect\-Dependencies\-Count}}
+\index{Indirect\-Dependencies\-Count@{Indirect\-Dependencies\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Indirect\-Dependencies\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Indirect\-Dependencies\-Count (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a918389de5c0c99a3e69026ea0176c89e}
+
+
+Counts only indirect dependencies of a build unit with number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a build unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dependencies count.
+\end{DoxyReturn}
+Indirect dependencies are dependencies of all build units that selected build unit with number {\itshape Index} depends on excluding these units. \hypertarget{classCDependencyInfo_a076227951bd7f5e01db97e6e40eb5955}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Make\-Rules@{Make\-Rules}}
+\index{Make\-Rules@{Make\-Rules}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Make\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Make\-Rules (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Makefile} \&}]{Makefile, }
+\item[{const int}]{Section, }
+\item[{const bool}]{Multiline}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a076227951bd7f5e01db97e6e40eb5955}
+
+
+Generates makefile rules for build unit dependencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Makefile} & a makefile object. \\
+\hline
+{\em Section} & number of makefile section. \\
+\hline
+{\em Multiline} & allows multi-\/line rules. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCDependencyInfo_abd5a916dfc975667d25d9216d15a3ccf}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Name@{Name}}
+\index{Name@{Name}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Name (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyInfo_abd5a916dfc975667d25d9216d15a3ccf}
+
+
+Returns name of a build unit with dependency record number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name of the build unit. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_ac2e36edc053c52d6fa9da19ef293e24b}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!One\-Line\-Report@{One\-Line\-Report}}
+\index{One\-Line\-Report@{One\-Line\-Report}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{One\-Line\-Report}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-One\-Line\-Report (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index, }
+\item[{const bool}]{Deps, }
+\item[{const bool}]{X\-Refs}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_ac2e36edc053c52d6fa9da19ef293e24b}
+
+
+Returns a short string representation of dependency information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number a dependency record. \\
+\hline
+{\em Deps} & enables output of dependencies. \\
+\hline
+{\em X\-Refs} & enables output of cross references. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string representation of dependency information. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_ae94f6374ec681801cc8304ad3e8a4f5e}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Platform@{Platform}}
+\index{Platform@{Platform}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Platform}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Platform (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCDependencyInfo_ae94f6374ec681801cc8304ad3e8a4f5e}
+
+
+Platform/\-O\-S type, generally used for creating compatible file paths. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCDependencyInfo_a6a7fb9ef5de03c0013ce3aa3774d469c}{C\-Dependency\-Info\-::m\-\_\-\-Platform}. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a844740f473781d070df0f41d0762eb2f}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Records\-Count@{Records\-Count}}
+\index{Records\-Count@{Records\-Count}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Records\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Records\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyInfo_a844740f473781d070df0f41d0762eb2f}
+
+
+Returns the number of dependency records. 
+
+\begin{DoxyReturn}{Returns}
+dependency records count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyInfo_a437ff774f21c51a187ad9a0b7ffbfa93}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Reset\-Markers@{Reset\-Markers}}
+\index{Reset\-Markers@{Reset\-Markers}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Reset\-Markers}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Reset\-Markers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_a437ff774f21c51a187ad9a0b7ffbfa93}
+
+
+Clears \hyperlink{classCDependencyRecord_a0327e854ac8b0bc48eefe3155a84475e}{C\-Dependency\-Record\-::m\-\_\-\-Marker} for all records in \hyperlink{classCDependencyInfo_ad76c0932810b200455ce757da050cda2}{C\-Dependency\-Info\-::m\-\_\-\-Records}. 
+
+This function should be called before unwinding a new dependency. \hypertarget{classCDependencyInfo_a433798f74d8db352e22dd5e4fd1268af}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Set\-Cross\-References\-Complete@{Set\-Cross\-References\-Complete}}
+\index{Set\-Cross\-References\-Complete@{Set\-Cross\-References\-Complete}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Set\-Cross\-References\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Set\-Cross\-References\-Complete (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index, }
+\item[{const bool}]{State = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a433798f74d8db352e22dd5e4fd1268af}
+
+
+Marks a cross reference list for a build unit with number {\itshape Index} as complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a build unit. \\
+\hline
+{\em State} & state of completeness. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCDependencyInfo_aab60680f8f1c33981e9abe0ba132d744}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Set\-Dependencies\-Complete@{Set\-Dependencies\-Complete}}
+\index{Set\-Dependencies\-Complete@{Set\-Dependencies\-Complete}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Set\-Dependencies\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Set\-Dependencies\-Complete (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index, }
+\item[{const bool}]{State = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_aab60680f8f1c33981e9abe0ba132d744}
+
+
+Marks a dependency list for a build unit with dependency record number {\itshape Index} as complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency record. \\
+\hline
+{\em State} & state of completeness. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCDependencyInfo_a946c31a0b7bef21a5793e6b134978912}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!Show@{Show}}
+\index{Show@{Show}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyInfo_a946c31a0b7bef21a5793e6b134978912}
+
+
+Print dependency information for all of build units to the standard output. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCDependencyInfo_a6a7fb9ef5de03c0013ce3aa3774d469c}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!m\-\_\-\-Platform@{m\-\_\-\-Platform}}
+\index{m\-\_\-\-Platform@{m\-\_\-\-Platform}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{m\-\_\-\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::m\-\_\-\-Platform\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_a6a7fb9ef5de03c0013ce3aa3774d469c}
+
+
+Platform/\-O\-S type, generally used for creating compatible file paths. 
+
+\hypertarget{classCDependencyInfo_ad76c0932810b200455ce757da050cda2}{\index{C\-Dependency\-Info@{C\-Dependency\-Info}!m\-\_\-\-Records@{m\-\_\-\-Records}}
+\index{m\-\_\-\-Records@{m\-\_\-\-Records}!CDependencyInfo@{C\-Dependency\-Info}}
+\subsubsection[{m\-\_\-\-Records}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Info\-::m\-\_\-\-Records\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyInfo_ad76c0932810b200455ce757da050cda2}
+
+
+Database of build unit dependencies. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{depsearch_8h}{depsearch.\-h}\item 
+src/\hyperlink{depsearch_8cpp}{depsearch.\-cpp}\item 
+src/doc/\hyperlink{depsearch_8dox}{depsearch.\-dox}\end{DoxyCompactItemize}

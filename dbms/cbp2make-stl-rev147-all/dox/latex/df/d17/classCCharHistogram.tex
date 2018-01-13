@@ -1,0 +1,236 @@
+\hypertarget{classCCharHistogram}{\section{C\-Char\-Histogram Class Reference}
+\label{classCCharHistogram}\index{C\-Char\-Histogram@{C\-Char\-Histogram}}
+}
+
+
+{\ttfamily \#include $<$stlstrings.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCCharHistogram_ac1d1a5fb7c245cf4e84d58bb15ca7ba0}{Reset} (void)
+\item 
+void \hyperlink{classCCharHistogram_aa0384eefe70ccbe0e467bad1e3d2ecf7}{Insert} (const char A\-Char)
+\item 
+void \hyperlink{classCCharHistogram_a6a53c608c11ff86f1047947dc629256b}{Insert} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+void \hyperlink{classCCharHistogram_af0dcfdbdc97076906feb7e1b37a1f29a}{Insert} (const \hyperlink{classCStringList}{C\-String\-List} \&A\-String\-List)
+\item 
+void \hyperlink{classCCharHistogram_ae43ca9363f00e6d84379b548497ab6f5}{Remove} (const char A\-Char)
+\item 
+void \hyperlink{classCCharHistogram_a344701a235d295a1e2e93a22d0c0ab9d}{Remove} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+void \hyperlink{classCCharHistogram_a58dbb3bd6839d5b7de46c1f30f96f025}{Remove} (const \hyperlink{classCStringList}{C\-String\-List} \&A\-String\-List)
+\item 
+bool \hyperlink{classCCharHistogram_ac4caddfbf04efa132cbd3aa4ef8e0f48}{Is\-Pure\-Numeric} (void)
+\item 
+bool \hyperlink{classCCharHistogram_ad7711ea7c3bfcefaa02da602e5c84872}{Is\-Pure\-Integer} (void)
+\item 
+bool \hyperlink{classCCharHistogram_a2b5bdec0b8d532d36f978d58956e9dc4}{Is\-Ascii\-Text} (void)
+\item 
+bool \hyperlink{classCCharHistogram_a6b472044ac6a46ce9a16369bbc92c869}{Is\-Custom\-Binary} (void)
+\item 
+unsigned int \hyperlink{classCCharHistogram_ac2f5b10b78260e6a7f2b33a9ef22e093}{Get\-At} (const char A\-Char) const 
+\item 
+void \hyperlink{classCCharHistogram_af400c54dbe885f88bc573571c983ebf9}{Set\-At} (const char A\-Char, const unsigned int Frequency)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCharHistogram_a4e859ca770e32c17e7a095497b79010f}{Get\-Alphabet} (void) const 
+\item 
+void \hyperlink{classCCharHistogram_a9bb45898311556d8e8a1e2d440d26169}{Print} (std\-::ostream \&out)
+\item 
+\hyperlink{classCCharHistogram_a02f89ee29030c141374a0f9fbec65351}{C\-Char\-Histogram} (void)
+\item 
+\hyperlink{classCCharHistogram_a3610e2cb0baacc09dc0f9fa50cfc43cc}{C\-Char\-Histogram} (const \hyperlink{classCCharHistogram}{C\-Char\-Histogram} \&A\-Histogram)
+\item 
+\hyperlink{classCCharHistogram_aa33ebe08c1f21feaec5d183ae80599ca}{$\sim$\-C\-Char\-Histogram} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCCharHistogram_aae4f899a4a1b4bf64d3bf9d01fdd6211}{Analyze} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classCCharHistogram_a76d704b2eb9941abfe14acd56b064543}{m\-\_\-\-Histogram} \mbox{[}\hyperlink{stlstrings_8h_a8085b77b952d20d37d96fff6a294be34}{C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E}\mbox{]}
+\item 
+unsigned int \hyperlink{classCCharHistogram_a043e57dff1e0d698e3a9c6b39a1c69ba}{m\-\_\-\-Flags}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \hyperlink{classCCharHistogram_af672d0091a521b09e29ac4360441008e}{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C} = 0x00000001
+\item 
+static const unsigned int \hyperlink{classCCharHistogram_a68149d2c3b283c1a0dac13cb4b571826}{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R} = 0x00000002
+\item 
+static const unsigned int \hyperlink{classCCharHistogram_a353dace3e2607fc835a5735a26d34b59}{F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T} = 0x00000004
+\item 
+static const unsigned int \hyperlink{classCCharHistogram_a941e9dfb7204bc5cbe48760be50e0e22}{F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y} = 0x00000008
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCharHistogram_a02f89ee29030c141374a0f9fbec65351}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!C\-Char\-Histogram@{C\-Char\-Histogram}}
+\index{C\-Char\-Histogram@{C\-Char\-Histogram}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{C\-Char\-Histogram}]{\setlength{\rightskip}{0pt plus 5cm}C\-Char\-Histogram\-::\-C\-Char\-Histogram (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a02f89ee29030c141374a0f9fbec65351}
+\hypertarget{classCCharHistogram_a3610e2cb0baacc09dc0f9fa50cfc43cc}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!C\-Char\-Histogram@{C\-Char\-Histogram}}
+\index{C\-Char\-Histogram@{C\-Char\-Histogram}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{C\-Char\-Histogram}]{\setlength{\rightskip}{0pt plus 5cm}C\-Char\-Histogram\-::\-C\-Char\-Histogram (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Char\-Histogram} \&}]{A\-Histogram}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a3610e2cb0baacc09dc0f9fa50cfc43cc}
+\hypertarget{classCCharHistogram_aa33ebe08c1f21feaec5d183ae80599ca}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!$\sim$\-C\-Char\-Histogram@{$\sim$\-C\-Char\-Histogram}}
+\index{$\sim$\-C\-Char\-Histogram@{$\sim$\-C\-Char\-Histogram}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{$\sim$\-C\-Char\-Histogram}]{\setlength{\rightskip}{0pt plus 5cm}C\-Char\-Histogram\-::$\sim$\-C\-Char\-Histogram (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_aa33ebe08c1f21feaec5d183ae80599ca}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCharHistogram_aae4f899a4a1b4bf64d3bf9d01fdd6211}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Analyze@{Analyze}}
+\index{Analyze@{Analyze}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Analyze}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Analyze (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCharHistogram_aae4f899a4a1b4bf64d3bf9d01fdd6211}
+\hypertarget{classCCharHistogram_a4e859ca770e32c17e7a095497b79010f}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Get\-Alphabet@{Get\-Alphabet}}
+\index{Get\-Alphabet@{Get\-Alphabet}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Get\-Alphabet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Char\-Histogram\-::\-Get\-Alphabet (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCCharHistogram_a4e859ca770e32c17e7a095497b79010f}
+\hypertarget{classCCharHistogram_ac2f5b10b78260e6a7f2b33a9ef22e093}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Get\-At@{Get\-At}}
+\index{Get\-At@{Get\-At}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Get\-At}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-Char\-Histogram\-::\-Get\-At (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+) const}}\label{classCCharHistogram_ac2f5b10b78260e6a7f2b33a9ef22e093}
+\hypertarget{classCCharHistogram_aa0384eefe70ccbe0e467bad1e3d2ecf7}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Insert@{Insert}}
+\index{Insert@{Insert}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_aa0384eefe70ccbe0e467bad1e3d2ecf7}
+\hypertarget{classCCharHistogram_a6a53c608c11ff86f1047947dc629256b}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Insert@{Insert}}
+\index{Insert@{Insert}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a6a53c608c11ff86f1047947dc629256b}
+\hypertarget{classCCharHistogram_af0dcfdbdc97076906feb7e1b37a1f29a}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Insert@{Insert}}
+\index{Insert@{Insert}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_af0dcfdbdc97076906feb7e1b37a1f29a}
+\hypertarget{classCCharHistogram_a2b5bdec0b8d532d36f978d58956e9dc4}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Is\-Ascii\-Text@{Is\-Ascii\-Text}}
+\index{Is\-Ascii\-Text@{Is\-Ascii\-Text}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Is\-Ascii\-Text}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Char\-Histogram\-::\-Is\-Ascii\-Text (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a2b5bdec0b8d532d36f978d58956e9dc4}
+\hypertarget{classCCharHistogram_a6b472044ac6a46ce9a16369bbc92c869}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Is\-Custom\-Binary@{Is\-Custom\-Binary}}
+\index{Is\-Custom\-Binary@{Is\-Custom\-Binary}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Is\-Custom\-Binary}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Char\-Histogram\-::\-Is\-Custom\-Binary (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a6b472044ac6a46ce9a16369bbc92c869}
+\hypertarget{classCCharHistogram_ad7711ea7c3bfcefaa02da602e5c84872}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Is\-Pure\-Integer@{Is\-Pure\-Integer}}
+\index{Is\-Pure\-Integer@{Is\-Pure\-Integer}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Is\-Pure\-Integer}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Char\-Histogram\-::\-Is\-Pure\-Integer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_ad7711ea7c3bfcefaa02da602e5c84872}
+\hypertarget{classCCharHistogram_ac4caddfbf04efa132cbd3aa4ef8e0f48}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Is\-Pure\-Numeric@{Is\-Pure\-Numeric}}
+\index{Is\-Pure\-Numeric@{Is\-Pure\-Numeric}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Is\-Pure\-Numeric}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Char\-Histogram\-::\-Is\-Pure\-Numeric (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_ac4caddfbf04efa132cbd3aa4ef8e0f48}
+\hypertarget{classCCharHistogram_a9bb45898311556d8e8a1e2d440d26169}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Print@{Print}}
+\index{Print@{Print}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a9bb45898311556d8e8a1e2d440d26169}
+\hypertarget{classCCharHistogram_ae43ca9363f00e6d84379b548497ab6f5}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Remove@{Remove}}
+\index{Remove@{Remove}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_ae43ca9363f00e6d84379b548497ab6f5}
+\hypertarget{classCCharHistogram_a344701a235d295a1e2e93a22d0c0ab9d}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Remove@{Remove}}
+\index{Remove@{Remove}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a344701a235d295a1e2e93a22d0c0ab9d}
+\hypertarget{classCCharHistogram_a58dbb3bd6839d5b7de46c1f30f96f025}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Remove@{Remove}}
+\index{Remove@{Remove}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_a58dbb3bd6839d5b7de46c1f30f96f025}
+\hypertarget{classCCharHistogram_ac1d1a5fb7c245cf4e84d58bb15ca7ba0}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Reset@{Reset}}
+\index{Reset@{Reset}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_ac1d1a5fb7c245cf4e84d58bb15ca7ba0}
+\hypertarget{classCCharHistogram_af400c54dbe885f88bc573571c983ebf9}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!Set\-At@{Set\-At}}
+\index{Set\-At@{Set\-At}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{Set\-At}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Char\-Histogram\-::\-Set\-At (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char, }
+\item[{const unsigned int}]{Frequency}
+\end{DoxyParamCaption}
+)}}\label{classCCharHistogram_af400c54dbe885f88bc573571c983ebf9}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCharHistogram_a353dace3e2607fc835a5735a26d34b59}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T@{F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T}}
+\index{F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T@{F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int C\-Char\-Histogram\-::\-F\-L\-A\-G\-\_\-\-A\-S\-C\-I\-I\-\_\-\-T\-E\-X\-T = 0x00000004\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classCCharHistogram_a353dace3e2607fc835a5735a26d34b59}
+\hypertarget{classCCharHistogram_a941e9dfb7204bc5cbe48760be50e0e22}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y@{F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y}}
+\index{F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y@{F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int C\-Char\-Histogram\-::\-F\-L\-A\-G\-\_\-\-C\-U\-S\-T\-O\-M\-\_\-\-B\-I\-N\-A\-R\-Y = 0x00000008\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classCCharHistogram_a941e9dfb7204bc5cbe48760be50e0e22}
+\hypertarget{classCCharHistogram_a68149d2c3b283c1a0dac13cb4b571826}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R@{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R}}
+\index{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R@{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int C\-Char\-Histogram\-::\-F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-I\-N\-T\-E\-G\-E\-R = 0x00000002\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classCCharHistogram_a68149d2c3b283c1a0dac13cb4b571826}
+\hypertarget{classCCharHistogram_af672d0091a521b09e29ac4360441008e}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C@{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C}}
+\index{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C@{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int C\-Char\-Histogram\-::\-F\-L\-A\-G\-\_\-\-P\-U\-R\-E\-\_\-\-N\-U\-M\-E\-R\-I\-C = 0x00000001\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classCCharHistogram_af672d0091a521b09e29ac4360441008e}
+\hypertarget{classCCharHistogram_a043e57dff1e0d698e3a9c6b39a1c69ba}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!m\-\_\-\-Flags@{m\-\_\-\-Flags}}
+\index{m\-\_\-\-Flags@{m\-\_\-\-Flags}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{m\-\_\-\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-Char\-Histogram\-::m\-\_\-\-Flags\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCharHistogram_a043e57dff1e0d698e3a9c6b39a1c69ba}
+\hypertarget{classCCharHistogram_a76d704b2eb9941abfe14acd56b064543}{\index{C\-Char\-Histogram@{C\-Char\-Histogram}!m\-\_\-\-Histogram@{m\-\_\-\-Histogram}}
+\index{m\-\_\-\-Histogram@{m\-\_\-\-Histogram}!CCharHistogram@{C\-Char\-Histogram}}
+\subsubsection[{m\-\_\-\-Histogram}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int C\-Char\-Histogram\-::m\-\_\-\-Histogram\mbox{[}{\bf C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCharHistogram_a76d704b2eb9941abfe14acd56b064543}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{stlstrings_8h}{stlstrings.\-h}\item 
+lib/\hyperlink{stlstrings_8cpp}{stlstrings.\-cpp}\end{DoxyCompactItemize}

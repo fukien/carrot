@@ -1,0 +1,235 @@
+\hypertarget{stlfutils_8h}{\section{lib/stlfutils.h File Reference}
+\label{stlfutils_8h}\index{lib/stlfutils.\-h@{lib/stlfutils.\-h}}
+}
+{\ttfamily \#include \char`\"{}macros.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stlstrings.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{stlfutils_8h_a3ef34b84b1d31e4c5145c6ee69e33e22}{Path\-Delimiter} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_aae2632e6554b6b43b7a17e4edbb95f0b}{Native\-Path\-Delimiter} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_ae354dd3828ff22a92880372c75aede29}{Change\-File\-Ext} (const \hyperlink{classCString}{C\-String} \&File\-Name, const \hyperlink{classCString}{C\-String} \&File\-Ext)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a5bd13ec31f3032f604e35585f81ccb4e}{Extract\-File\-Path} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a7858788821ff62f5f512490c7ee9334c}{Extract\-File\-Name} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a9a416a5ac0feea6f9d01e0640f11a63e}{Extract\-File\-Ext} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+void \hyperlink{stlfutils_8h_adcf2ea14cab409347bc6883ced15f413}{Split\-File\-Path\-Name} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name, \hyperlink{classCString}{C\-String} \&File\-Path, \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCString}{C\-String} \&File\-Ext)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_ac06f56a61db865537a8e4a1614ef28da}{Make\-Unix\-Path} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a3a64f8791c4d8ccb8bec2eea266089ef}{Make\-Windows\-Path} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a0f1714700b4a5180cc0f9e66f705f80a}{Make\-Native\-Path} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a038c8d6cad849238e8c21ebc86fbf61c}{Remove\-Leading\-Path\-Delimiter} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a14ac4bff329d515ef543a0460710456e}{Include\-Leading\-Path\-Delimiter} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_ab8b7ce059f3cb183b826091d621d72ca}{Remove\-Trailing\-Path\-Delimiter} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a9224be8e7795a87af0602e1d0725f600}{Include\-Trailing\-Path\-Delimiter} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_afae2468df806c68816255f2e10839c69}{Quote\-Spaces} (const \hyperlink{classCString}{C\-String} \&File\-Path\-Name, const int Quote\-Mode=0)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a5c336d660b9f17b997c4242b4c8d2b1c}{Join\-Paths} (const \hyperlink{classCString}{C\-String} \&Head\-Path, const \hyperlink{classCString}{C\-String} \&Tail\-Path, const char Separator=\hyperlink{stlfutils_8h_a3ef34b84b1d31e4c5145c6ee69e33e22}{Path\-Delimiter}())
+\item 
+bool \hyperlink{stlfutils_8h_a53dce78a63d62be1cbf38d6f286be77d}{File\-Exists} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+bool \hyperlink{stlfutils_8h_a4de3e2fd0dae72ab9d0568dbd6e8df3f}{Dir\-Exists} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+bool \hyperlink{stlfutils_8h_acae88e4535ef6f66ab4f5fc4db3a67fe}{Make\-Dir} (const \hyperlink{classCString}{C\-String} \&Dir\-Path, int Dir\-Mode=0755)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_ae6b480f924b10898727d6dd6205910b9}{Root\-Dir\-Path} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a95bdae974a015b8d961799832d40f02e}{Home\-Dir\-Path} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_ae49067c448a637bd1a5fa67539fcea4a}{Temp\-Dir\-Path} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlfutils_8h_a4be5fe42e557b63b6551bce63aa4f953}{Get\-Current\-Dir} (void)
+\item 
+bool \hyperlink{stlfutils_8h_a0c24baa2a0cfe8234868aa80847bf215}{Change\-Dir} (const \hyperlink{classCString}{C\-String} \&Dir\-Path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{stlfutils_8h_a0c24baa2a0cfe8234868aa80847bf215}{\index{stlfutils.\-h@{stlfutils.\-h}!Change\-Dir@{Change\-Dir}}
+\index{Change\-Dir@{Change\-Dir}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}bool Change\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Dir\-Path}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a0c24baa2a0cfe8234868aa80847bf215}
+\hypertarget{stlfutils_8h_ae354dd3828ff22a92880372c75aede29}{\index{stlfutils.\-h@{stlfutils.\-h}!Change\-File\-Ext@{Change\-File\-Ext}}
+\index{Change\-File\-Ext@{Change\-File\-Ext}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Change\-File\-Ext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Change\-File\-Ext (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{const {\bf C\-String} \&}]{File\-Ext}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_ae354dd3828ff22a92880372c75aede29}
+\hypertarget{stlfutils_8h_a4de3e2fd0dae72ab9d0568dbd6e8df3f}{\index{stlfutils.\-h@{stlfutils.\-h}!Dir\-Exists@{Dir\-Exists}}
+\index{Dir\-Exists@{Dir\-Exists}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Dir\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool Dir\-Exists (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a4de3e2fd0dae72ab9d0568dbd6e8df3f}
+\hypertarget{stlfutils_8h_a9a416a5ac0feea6f9d01e0640f11a63e}{\index{stlfutils.\-h@{stlfutils.\-h}!Extract\-File\-Ext@{Extract\-File\-Ext}}
+\index{Extract\-File\-Ext@{Extract\-File\-Ext}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Extract\-File\-Ext}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Extract\-File\-Ext (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a9a416a5ac0feea6f9d01e0640f11a63e}
+\hypertarget{stlfutils_8h_a7858788821ff62f5f512490c7ee9334c}{\index{stlfutils.\-h@{stlfutils.\-h}!Extract\-File\-Name@{Extract\-File\-Name}}
+\index{Extract\-File\-Name@{Extract\-File\-Name}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Extract\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Extract\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a7858788821ff62f5f512490c7ee9334c}
+\hypertarget{stlfutils_8h_a5bd13ec31f3032f604e35585f81ccb4e}{\index{stlfutils.\-h@{stlfutils.\-h}!Extract\-File\-Path@{Extract\-File\-Path}}
+\index{Extract\-File\-Path@{Extract\-File\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Extract\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Extract\-File\-Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a5bd13ec31f3032f604e35585f81ccb4e}
+\hypertarget{stlfutils_8h_a53dce78a63d62be1cbf38d6f286be77d}{\index{stlfutils.\-h@{stlfutils.\-h}!File\-Exists@{File\-Exists}}
+\index{File\-Exists@{File\-Exists}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{File\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Exists (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a53dce78a63d62be1cbf38d6f286be77d}
+\hypertarget{stlfutils_8h_a4be5fe42e557b63b6551bce63aa4f953}{\index{stlfutils.\-h@{stlfutils.\-h}!Get\-Current\-Dir@{Get\-Current\-Dir}}
+\index{Get\-Current\-Dir@{Get\-Current\-Dir}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Get\-Current\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Get\-Current\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a4be5fe42e557b63b6551bce63aa4f953}
+\hypertarget{stlfutils_8h_a95bdae974a015b8d961799832d40f02e}{\index{stlfutils.\-h@{stlfutils.\-h}!Home\-Dir\-Path@{Home\-Dir\-Path}}
+\index{Home\-Dir\-Path@{Home\-Dir\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Home\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Home\-Dir\-Path (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a95bdae974a015b8d961799832d40f02e}
+\hypertarget{stlfutils_8h_a14ac4bff329d515ef543a0460710456e}{\index{stlfutils.\-h@{stlfutils.\-h}!Include\-Leading\-Path\-Delimiter@{Include\-Leading\-Path\-Delimiter}}
+\index{Include\-Leading\-Path\-Delimiter@{Include\-Leading\-Path\-Delimiter}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Include\-Leading\-Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Include\-Leading\-Path\-Delimiter (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a14ac4bff329d515ef543a0460710456e}
+\hypertarget{stlfutils_8h_a9224be8e7795a87af0602e1d0725f600}{\index{stlfutils.\-h@{stlfutils.\-h}!Include\-Trailing\-Path\-Delimiter@{Include\-Trailing\-Path\-Delimiter}}
+\index{Include\-Trailing\-Path\-Delimiter@{Include\-Trailing\-Path\-Delimiter}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Include\-Trailing\-Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Include\-Trailing\-Path\-Delimiter (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a9224be8e7795a87af0602e1d0725f600}
+\hypertarget{stlfutils_8h_a5c336d660b9f17b997c4242b4c8d2b1c}{\index{stlfutils.\-h@{stlfutils.\-h}!Join\-Paths@{Join\-Paths}}
+\index{Join\-Paths@{Join\-Paths}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Join\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Join\-Paths (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Head\-Path, }
+\item[{const {\bf C\-String} \&}]{Tail\-Path, }
+\item[{const char}]{Separator = {\ttfamily {\bf Path\-Delimiter}()}}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a5c336d660b9f17b997c4242b4c8d2b1c}
+\hypertarget{stlfutils_8h_acae88e4535ef6f66ab4f5fc4db3a67fe}{\index{stlfutils.\-h@{stlfutils.\-h}!Make\-Dir@{Make\-Dir}}
+\index{Make\-Dir@{Make\-Dir}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}bool Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Dir\-Path, }
+\item[{int}]{Dir\-Mode = {\ttfamily 0755}}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_acae88e4535ef6f66ab4f5fc4db3a67fe}
+\hypertarget{stlfutils_8h_a0f1714700b4a5180cc0f9e66f705f80a}{\index{stlfutils.\-h@{stlfutils.\-h}!Make\-Native\-Path@{Make\-Native\-Path}}
+\index{Make\-Native\-Path@{Make\-Native\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Make\-Native\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Make\-Native\-Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a0f1714700b4a5180cc0f9e66f705f80a}
+\hypertarget{stlfutils_8h_ac06f56a61db865537a8e4a1614ef28da}{\index{stlfutils.\-h@{stlfutils.\-h}!Make\-Unix\-Path@{Make\-Unix\-Path}}
+\index{Make\-Unix\-Path@{Make\-Unix\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Make\-Unix\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Make\-Unix\-Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_ac06f56a61db865537a8e4a1614ef28da}
+\hypertarget{stlfutils_8h_a3a64f8791c4d8ccb8bec2eea266089ef}{\index{stlfutils.\-h@{stlfutils.\-h}!Make\-Windows\-Path@{Make\-Windows\-Path}}
+\index{Make\-Windows\-Path@{Make\-Windows\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Make\-Windows\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Make\-Windows\-Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a3a64f8791c4d8ccb8bec2eea266089ef}
+\hypertarget{stlfutils_8h_aae2632e6554b6b43b7a17e4edbb95f0b}{\index{stlfutils.\-h@{stlfutils.\-h}!Native\-Path\-Delimiter@{Native\-Path\-Delimiter}}
+\index{Native\-Path\-Delimiter@{Native\-Path\-Delimiter}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Native\-Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Native\-Path\-Delimiter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_aae2632e6554b6b43b7a17e4edbb95f0b}
+\hypertarget{stlfutils_8h_a3ef34b84b1d31e4c5145c6ee69e33e22}{\index{stlfutils.\-h@{stlfutils.\-h}!Path\-Delimiter@{Path\-Delimiter}}
+\index{Path\-Delimiter@{Path\-Delimiter}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}char Path\-Delimiter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a3ef34b84b1d31e4c5145c6ee69e33e22}
+\hypertarget{stlfutils_8h_afae2468df806c68816255f2e10839c69}{\index{stlfutils.\-h@{stlfutils.\-h}!Quote\-Spaces@{Quote\-Spaces}}
+\index{Quote\-Spaces@{Quote\-Spaces}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Quote\-Spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Quote\-Spaces (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name, }
+\item[{const int}]{Quote\-Mode = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_afae2468df806c68816255f2e10839c69}
+\hypertarget{stlfutils_8h_a038c8d6cad849238e8c21ebc86fbf61c}{\index{stlfutils.\-h@{stlfutils.\-h}!Remove\-Leading\-Path\-Delimiter@{Remove\-Leading\-Path\-Delimiter}}
+\index{Remove\-Leading\-Path\-Delimiter@{Remove\-Leading\-Path\-Delimiter}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Remove\-Leading\-Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Remove\-Leading\-Path\-Delimiter (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_a038c8d6cad849238e8c21ebc86fbf61c}
+\hypertarget{stlfutils_8h_ab8b7ce059f3cb183b826091d621d72ca}{\index{stlfutils.\-h@{stlfutils.\-h}!Remove\-Trailing\-Path\-Delimiter@{Remove\-Trailing\-Path\-Delimiter}}
+\index{Remove\-Trailing\-Path\-Delimiter@{Remove\-Trailing\-Path\-Delimiter}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Remove\-Trailing\-Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Remove\-Trailing\-Path\-Delimiter (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_ab8b7ce059f3cb183b826091d621d72ca}
+\hypertarget{stlfutils_8h_ae6b480f924b10898727d6dd6205910b9}{\index{stlfutils.\-h@{stlfutils.\-h}!Root\-Dir\-Path@{Root\-Dir\-Path}}
+\index{Root\-Dir\-Path@{Root\-Dir\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Root\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Root\-Dir\-Path (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_ae6b480f924b10898727d6dd6205910b9}
+\hypertarget{stlfutils_8h_adcf2ea14cab409347bc6883ced15f413}{\index{stlfutils.\-h@{stlfutils.\-h}!Split\-File\-Path\-Name@{Split\-File\-Path\-Name}}
+\index{Split\-File\-Path\-Name@{Split\-File\-Path\-Name}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Split\-File\-Path\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Split\-File\-Path\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Path\-Name, }
+\item[{{\bf C\-String} \&}]{File\-Path, }
+\item[{{\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-String} \&}]{File\-Ext}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_adcf2ea14cab409347bc6883ced15f413}
+\hypertarget{stlfutils_8h_ae49067c448a637bd1a5fa67539fcea4a}{\index{stlfutils.\-h@{stlfutils.\-h}!Temp\-Dir\-Path@{Temp\-Dir\-Path}}
+\index{Temp\-Dir\-Path@{Temp\-Dir\-Path}!stlfutils.h@{stlfutils.\-h}}
+\subsubsection[{Temp\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Temp\-Dir\-Path (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{stlfutils_8h_ae49067c448a637bd1a5fa67539fcea4a}

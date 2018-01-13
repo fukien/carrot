@@ -1,0 +1,326 @@
+\hypertarget{stringhash_8cpp}{\section{lib/stringhash.cpp File Reference}
+\label{stringhash_8cpp}\index{lib/stringhash.\-cpp@{lib/stringhash.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}stringhash.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a7573c6dc12bbf971c13ec76b36846d7f}{add\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Additive hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a3b9da65bc56c5db07e2f3eb4b344ae04}{xor\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em X\-O\-R hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_ac36397384816aeaa8e6a566936ec7ac0}{rot\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Rotating hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a70614aa755c088429499779b536c762f}{djb\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Bernstein hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a33c6a13eca64836b03a30792d4007259}{djb2\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Modified Bernstein hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a4e669376ac32d75888a832f291efc38f}{sax\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Shift-\/\-Add-\/\-X\-O\-R hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a2c269a9949a48c06f7b6647deda9fd11}{fnv\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em F\-N\-V hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a1c384ed43ac9f502055b689aacde1f19}{oat\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em One-\/at-\/a-\/\-Time hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a0d67e521fccfb371e411e72812f36c6b}{jsw\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size, const \hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} $\ast$magic)
+\begin{DoxyCompactList}\small\item\em J\-S\-W hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_ab15ec088c9489c19a9f13720e66c695b}{elf\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em E\-L\-F hash. \end{DoxyCompactList}\item 
+void \hyperlink{stringhash_8cpp_a65a819f6d3a58abfc276ffcdc89f2023}{jen\-\_\-mix} (\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \&a, \hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \&b, \hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \&c)
+\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_a363e65ffe5c9b0d5bcfc63d503b92938}{jen\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size, const \hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} magic)
+\begin{DoxyCompactList}\small\item\em Jenkins hash. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{stringhash_8cpp_ac633b93854f2d2749a59de4fe75f741f}{sdbm\-\_\-hash} (const \hyperlink{stringhash_8h_adb5f3584b941a8dc0fed6b7302b4b8eb}{data\-\_\-t} $\ast$data, const size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Public-\/domain reimplementation of N\-D\-B\-M hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{stringhash_8cpp_a7573c6dc12bbf971c13ec76b36846d7f}{\index{stringhash.\-cpp@{stringhash.\-cpp}!add\-\_\-hash@{add\-\_\-hash}}
+\index{add\-\_\-hash@{add\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{add\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}add\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a7573c6dc12bbf971c13ec76b36846d7f}
+
+
+Additive hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+Probably the simplest algorithm for hashing a sequence of integral values (such as a string), is to add all of the characters together and then force the range into something suitable for lookup with the remainder of division. I will give an example of this algorithm only because books commonly suggest it in their rush to get past the topic of hash functions on their way to collision resolution methods. This algorithm is very bad.
+
+Generally, any hash algorithm that relies primarily on a commutitive operation will have an exceptionally bad distribution. This hash fails to treat permutations differently, so “abc”, “cba”, and “cab” will all result in the same hash value.
+
+Despite the suckiness of this algorithm, the example is useful in that it shows how to create a general hash function. add\-\_\-hash can be used to hash strings, single integers, single floating-\/point values, arrays of scalar values, and just about anything else you can think of because it is always legal to pun a simple object into an array of unsigned char and work with the individual bytes of the object. \hypertarget{stringhash_8cpp_a33c6a13eca64836b03a30792d4007259}{\index{stringhash.\-cpp@{stringhash.\-cpp}!djb2\-\_\-hash@{djb2\-\_\-hash}}
+\index{djb2\-\_\-hash@{djb2\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{djb2\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}djb2\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a33c6a13eca64836b03a30792d4007259}
+
+
+Modified Bernstein hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+A minor update to Bernstein's hash replaces addition with X\-O\-R for the combining step. This change does not appear to be well known or often used, the original algorithm is still recommended by nearly everyone, but the new algorithm typically results in a better distribution. \hypertarget{stringhash_8cpp_a70614aa755c088429499779b536c762f}{\index{stringhash.\-cpp@{stringhash.\-cpp}!djb\-\_\-hash@{djb\-\_\-hash}}
+\index{djb\-\_\-hash@{djb\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{djb\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}djb\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a70614aa755c088429499779b536c762f}
+
+
+Bernstein hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+Professor Dan Bernstein created this algorithm and posted it in a comp.\-lang.\-c newsgroup. It is known by many as the Chris Torek hash because Chris went a long way toward popularizing it. Since then it has been used successfully by many, but despite that the algorithm itself is not very sound when it comes to avalanche and permutation of the internal state. It has proven very good for small character keys, where it can outperform algorithms that result in a more random distribution.
+
+Bernstein's hash should be used with caution. It performs very well in practice, for no apparently known reasons (much like how the constant 33 does better than more logical constants for no apparent reason), but in theory it is not up to snuff. Always test this function with sample data for every application to ensure that it does not encounter a degenerate case and cause excessive collisions. \hypertarget{stringhash_8cpp_ab15ec088c9489c19a9f13720e66c695b}{\index{stringhash.\-cpp@{stringhash.\-cpp}!elf\-\_\-hash@{elf\-\_\-hash}}
+\index{elf\-\_\-hash@{elf\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{elf\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}elf\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_ab15ec088c9489c19a9f13720e66c695b}
+
+
+E\-L\-F hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+The E\-L\-F hash function has been around for a while, and it is believed to be one of the better algorithms out there. In my experience, this is true, though E\-L\-F hash does not perform sufficiently better than most of the other algorithms presented in this tutorial to justify its slightly more complicated implementation. It should be on your list of first functions to test in a new lookup implementation. \hypertarget{stringhash_8cpp_a2c269a9949a48c06f7b6647deda9fd11}{\index{stringhash.\-cpp@{stringhash.\-cpp}!fnv\-\_\-hash@{fnv\-\_\-hash}}
+\index{fnv\-\_\-hash@{fnv\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{fnv\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}fnv\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a2c269a9949a48c06f7b6647deda9fd11}
+
+
+F\-N\-V hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+The F\-N\-V hash, short for Fowler/\-Noll/\-Vo in honor of the creators, is a very powerful algorithm that, not surprisingly, follows the same lines as Bernstein's modified hash with carefully chosen constants. This algorithm has been used in many applications with wonderful results, and for its simplicity, the F\-N\-V hash should be one of the first hashes tried in an application. \hypertarget{stringhash_8cpp_a363e65ffe5c9b0d5bcfc63d503b92938}{\index{stringhash.\-cpp@{stringhash.\-cpp}!jen\-\_\-hash@{jen\-\_\-hash}}
+\index{jen\-\_\-hash@{jen\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{jen\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}jen\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size, }
+\item[{const {\bf hash\-\_\-t}}]{magic}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a363e65ffe5c9b0d5bcfc63d503b92938}
+
+
+Jenkins hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+{\em magic} & a random number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+The dreaded Jenkins hash has been thoroughly tested and passes all kinds of tests for avalanche and permutations. As such it is considered to be one of the best and most thoroughly analyzed algorithms. Unfortunately, it is also ridiculously complicated compared to the other hashes. \hypertarget{stringhash_8cpp_a65a819f6d3a58abfc276ffcdc89f2023}{\index{stringhash.\-cpp@{stringhash.\-cpp}!jen\-\_\-mix@{jen\-\_\-mix}}
+\index{jen\-\_\-mix@{jen\-\_\-mix}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{jen\-\_\-mix}]{\setlength{\rightskip}{0pt plus 5cm}void jen\-\_\-mix (
+\begin{DoxyParamCaption}
+\item[{{\bf hash\-\_\-t} \&}]{a, }
+\item[{{\bf hash\-\_\-t} \&}]{b, }
+\item[{{\bf hash\-\_\-t} \&}]{c}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a65a819f6d3a58abfc276ffcdc89f2023}
+\hypertarget{stringhash_8cpp_a0d67e521fccfb371e411e72812f36c6b}{\index{stringhash.\-cpp@{stringhash.\-cpp}!jsw\-\_\-hash@{jsw\-\_\-hash}}
+\index{jsw\-\_\-hash@{jsw\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{jsw\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}jsw\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size, }
+\item[{const {\bf hash\-\_\-t} $\ast$}]{magic}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a0d67e521fccfb371e411e72812f36c6b}
+
+
+J\-S\-W hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+{\em magic} & table of random numbers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+This is a hash of my own devising that combines a rotating hash with a table of randomly generated numbers. The algorithm walks through each byte of the input, and uses it as an index into a table of random integers generated by a good random number generator. The internal state is rotated to mix it up a bit, then X\-O\-Red with the random number from the table. The result is a uniform distribution if the random numbers are uniform. The size of the table should match the values in a byte. For example, if a byte is eight bits then the table would hold 256 random numbers. \hypertarget{stringhash_8cpp_a1c384ed43ac9f502055b689aacde1f19}{\index{stringhash.\-cpp@{stringhash.\-cpp}!oat\-\_\-hash@{oat\-\_\-hash}}
+\index{oat\-\_\-hash@{oat\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{oat\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}oat\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a1c384ed43ac9f502055b689aacde1f19}
+
+
+One-\/at-\/a-\/\-Time hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+Bob Jenkins is a well known authority on designing hash functions for table lookup. In fact, one of his hashes is considered state of the art for lookup, which we will see shortly. A considerably simpler algorithm of his design is the One-\/at-\/a-\/\-Time hash.
+
+This algorithm quickly reaches avalanche and performs very well. This function is another that should be one of the first to be tested in any application, if not the very first. This algorithm has seen effective use in several high level scripting languages as the hash function for their associative array data type. \hypertarget{stringhash_8cpp_ac36397384816aeaa8e6a566936ec7ac0}{\index{stringhash.\-cpp@{stringhash.\-cpp}!rot\-\_\-hash@{rot\-\_\-hash}}
+\index{rot\-\_\-hash@{rot\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{rot\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}rot\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_ac36397384816aeaa8e6a566936ec7ac0}
+
+
+Rotating hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+The rotating hash is identical to the X\-O\-R hash except instead of simply folding each byte of the input into the internal state, it also performs a fold of the internal state before combining it with the each byte of the input. This extra mixing step is enough to give the rotating hash a much better distribution. Much of the time, the rotating hash is sufficient, and can be considered the minimal acceptable algorithm. Notice that with each improvement, the internal state is being mixed up more and more. This is a key element in a good hash function. \hypertarget{stringhash_8cpp_a4e669376ac32d75888a832f291efc38f}{\index{stringhash.\-cpp@{stringhash.\-cpp}!sax\-\_\-hash@{sax\-\_\-hash}}
+\index{sax\-\_\-hash@{sax\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{sax\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}sax\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a4e669376ac32d75888a832f291efc38f}
+
+
+Shift-\/\-Add-\/\-X\-O\-R hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+The shift-\/add-\/\-X\-O\-R hash was designed as a string hashing function, but because it is so effective, it works for any data as well with similar efficiency. The algorithm is surprisingly similar to the rotating hash except a different choice of constants for the rotation is used, and addition is a preferred operation for mixing. All in all, this is a surprisingly powerful and flexible hash. Like many effective hashes, it will fail tests for avalanche, but that does not seem to affect its performance in practice. \hypertarget{stringhash_8cpp_ac633b93854f2d2749a59de4fe75f741f}{\index{stringhash.\-cpp@{stringhash.\-cpp}!sdbm\-\_\-hash@{sdbm\-\_\-hash}}
+\index{sdbm\-\_\-hash@{sdbm\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{sdbm\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}sdbm\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_ac633b93854f2d2749a59de4fe75f741f}
+
+
+Public-\/domain reimplementation of N\-D\-B\-M hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest. 
+\end{DoxyReturn}
+\hypertarget{stringhash_8cpp_a3b9da65bc56c5db07e2f3eb4b344ae04}{\index{stringhash.\-cpp@{stringhash.\-cpp}!xor\-\_\-hash@{xor\-\_\-hash}}
+\index{xor\-\_\-hash@{xor\-\_\-hash}!stringhash.cpp@{stringhash.\-cpp}}
+\subsubsection[{xor\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}xor\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf data\-\_\-t} $\ast$}]{data, }
+\item[{const size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{stringhash_8cpp_a3b9da65bc56c5db07e2f3eb4b344ae04}
+
+
+X\-O\-R hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & input array (string). \\
+\hline
+{\em size} & size of input array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hash digest.
+\end{DoxyReturn}
+The X\-O\-R hash is another algorithm commonly suggested by textbooks. Instead of adding together the bytes of an object as the additive hash does, the X\-O\-R hash repeatedly folds the bytes together to produce a seemingly random hash value.
+
+Unfortunately, this algorithm is too simple to work properly on most input data. The internal state, the variable h, is not mixed nearly enough to come close to achieving avalanche, nor is a single X\-O\-R effective at permuting the internal state, so the resulting distribution, while better than the additive and multiplicative hashes, is still not very good. 

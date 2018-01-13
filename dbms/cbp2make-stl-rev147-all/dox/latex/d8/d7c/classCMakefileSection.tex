@@ -1,0 +1,344 @@
+\hypertarget{classCMakefileSection}{\section{C\-Makefile\-Section Class Reference}
+\label{classCMakefileSection}\index{C\-Makefile\-Section@{C\-Makefile\-Section}}
+}
+
+
+Makefile section definition.  
+
+
+
+
+{\ttfamily \#include $<$makefile.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCMakefileSection_af08b2da5cf2bea30f88d82e7076288ea}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the makefile section to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileSection_a190c932398264095c33f9aed3162fa4c}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints contents of the makefile section to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCMakefileSection_a59809cace68f470cfe6e8b6f9af3765c}{Header} (void)
+\begin{DoxyCompactList}\small\item\em Section header, describes makefile section contents. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} $\ast$ $>$ \& \hyperlink{classCMakefileSection_aefd7a83c39397eff928e487ef5e4830f}{Macros} (void)
+\begin{DoxyCompactList}\small\item\em A list of macro variables in the section. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} $\ast$ $>$ \& \hyperlink{classCMakefileSection_a1d5ca98517803f8cb61bbbcdb9a4617f}{Env\-Vars} (void)
+\begin{DoxyCompactList}\small\item\em A list of environment variables in the section. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} \& \hyperlink{classCMakefileSection_ac106969cabae16d8475a1e36f02672c8}{Add\-Macro} (const \hyperlink{classCString}{C\-String} \&Name, const \hyperlink{classCString}{C\-String} \&Value)
+\begin{DoxyCompactList}\small\item\em Creates a new macro variable and adds it to the section. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} \& \hyperlink{classCMakefileSection_aa6ef8789a7f3906925ffc5d727c431f3}{Add\-Env\-Var} (const \hyperlink{classCString}{C\-String} \&Name, const \hyperlink{classCString}{C\-String} \&Value)
+\begin{DoxyCompactList}\small\item\em Creates a new environment variable and adds it to the section. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCMakefileSection_aa1fe2aca8d228bdaf3b58ec6c9960153}{Rules\-Count} (void) const 
+\begin{DoxyCompactList}\small\item\em Counts makefile rules in the section. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileRule}{C\-Makefile\-Rule} \& \hyperlink{classCMakefileSection_a2bb0288892998d8fef244fc7577603bd}{Get\-Rule} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns makefile rule by the {\itshape Index} number. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileRule}{C\-Makefile\-Rule} \& \hyperlink{classCMakefileSection_a67bd40db35403fb5e1977fed432ec8ff}{Add\-Rule} (const \hyperlink{classCString}{C\-String} \&Target\-Name)
+\begin{DoxyCompactList}\small\item\em Creates a new makefile rule and adds it to the section. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileSection_a2669d3e48d1bc78ef8a72c792d52af7e}{C\-Makefile\-Section} (void)
+\begin{DoxyCompactList}\small\item\em Creates makefile section. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileSection_ac8ed9b94580dba116e989a6274981288}{$\sim$\-C\-Makefile\-Section} (void)
+\begin{DoxyCompactList}\small\item\em Destroys makefile section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} $\ast$ \hyperlink{classCMakefileSection_a3b626dd591b6ebbf49382c87f9a4040e}{Find\-Macro} (const \hyperlink{classCString}{C\-String} \&Name)
+\begin{DoxyCompactList}\small\item\em Searches macro variables by name. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} $\ast$ \hyperlink{classCMakefileSection_a780f6d59f56d8aee1fbc3687e04eebd5}{Find\-Env\-Var} (const \hyperlink{classCString}{C\-String} \&Name)
+\begin{DoxyCompactList}\small\item\em Searches environment variables by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCMakefileSection_a19aff76a974cefa540960369eaed43ec}{m\-\_\-\-Header}
+\begin{DoxyCompactList}\small\item\em Section header, describes makefile section contents. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} $\ast$ $>$ \hyperlink{classCMakefileSection_a77768b7c6c3acb031990ebcbae9957de}{m\-\_\-\-Macros}
+\begin{DoxyCompactList}\small\item\em A list of macro variables in the section. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} $\ast$ $>$ \hyperlink{classCMakefileSection_acd47bab1b30e88633d75c9fd08497fca}{m\-\_\-\-Env\-Vars}
+\begin{DoxyCompactList}\small\item\em A list of environment variables in the section. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCMakefileRule}{C\-Makefile\-Rule} $\ast$ $>$ \hyperlink{classCMakefileSection_aa5ba1d41937450d96795e4e08cb64f49}{m\-\_\-\-Rules}
+\begin{DoxyCompactList}\small\item\em A list of makefile rules in the section. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileVariable}{C\-Makefile\-Variable} \hyperlink{classCMakefileSection_ad9819eeb550fafffcfe7814ffd859cdd}{m\-\_\-\-Null\-Variable}
+\begin{DoxyCompactList}\small\item\em A substitute variable, it is returned when no variable satisfies search conditions. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileRule}{C\-Makefile\-Rule} \hyperlink{classCMakefileSection_a30793048110e7a747f5b142bec3143a7}{m\-\_\-\-Null\-Rule}
+\begin{DoxyCompactList}\small\item\em A substitute rule, it is returned when no rule satisfies search conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Makefile section definition. 
+
+Manages makefile section data. A makefile section is a logical block of text with common structure\-: header, macros, environment variables, rules. A makefile may consist of one or more sections to maintain strict logical structure of the makefile text. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCMakefileSection_a2669d3e48d1bc78ef8a72c792d52af7e}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!C\-Makefile\-Section@{C\-Makefile\-Section}}
+\index{C\-Makefile\-Section@{C\-Makefile\-Section}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{C\-Makefile\-Section}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::\-C\-Makefile\-Section (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_a2669d3e48d1bc78ef8a72c792d52af7e}
+
+
+Creates makefile section. 
+
+\hypertarget{classCMakefileSection_ac8ed9b94580dba116e989a6274981288}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!$\sim$\-C\-Makefile\-Section@{$\sim$\-C\-Makefile\-Section}}
+\index{$\sim$\-C\-Makefile\-Section@{$\sim$\-C\-Makefile\-Section}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{$\sim$\-C\-Makefile\-Section}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::$\sim$\-C\-Makefile\-Section (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_ac8ed9b94580dba116e989a6274981288}
+
+
+Destroys makefile section. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCMakefileSection_aa6ef8789a7f3906925ffc5d727c431f3}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Add\-Env\-Var@{Add\-Env\-Var}}
+\index{Add\-Env\-Var@{Add\-Env\-Var}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Add\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Makefile\-Variable} \& C\-Makefile\-Section\-::\-Add\-Env\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_aa6ef8789a7f3906925ffc5d727c431f3}
+
+
+Creates a new environment variable and adds it to the section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of an environment variable. \\
+\hline
+{\em Value} & default value of an environment variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the new variable.
+\end{DoxyReturn}
+If an environment variable with name {\itshape Name} already exists, a new variable will not be created. \hypertarget{classCMakefileSection_ac106969cabae16d8475a1e36f02672c8}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Add\-Macro@{Add\-Macro}}
+\index{Add\-Macro@{Add\-Macro}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Add\-Macro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Makefile\-Variable} \& C\-Makefile\-Section\-::\-Add\-Macro (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_ac106969cabae16d8475a1e36f02672c8}
+
+
+Creates a new macro variable and adds it to the section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of a macro variable. \\
+\hline
+{\em Value} & default value of a macro variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the new variable.
+\end{DoxyReturn}
+If a macro variable with name {\itshape Name} already exists, a new variable will not be created. \hypertarget{classCMakefileSection_a67bd40db35403fb5e1977fed432ec8ff}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Add\-Rule@{Add\-Rule}}
+\index{Add\-Rule@{Add\-Rule}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Add\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Makefile\-Rule} \& C\-Makefile\-Section\-::\-Add\-Rule (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Target\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_a67bd40db35403fb5e1977fed432ec8ff}
+
+
+Creates a new makefile rule and adds it to the section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\-Name} & name of makefile target for the rule. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the new rule.
+\end{DoxyReturn}
+If a makefile rule with target name {\itshape Target\-Name} already exists, a new rule will not be created. \hypertarget{classCMakefileSection_af08b2da5cf2bea30f88d82e7076288ea}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Clear@{Clear}}
+\index{Clear@{Clear}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Section\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_af08b2da5cf2bea30f88d82e7076288ea}
+
+
+Resets the makefile section to the initial state. 
+
+\hypertarget{classCMakefileSection_a1d5ca98517803f8cb61bbbcdb9a4617f}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Env\-Vars@{Env\-Vars}}
+\index{Env\-Vars@{Env\-Vars}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Env\-Vars}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf C\-Makefile\-Variable} $\ast$ $>$ \& C\-Makefile\-Section\-::\-Env\-Vars (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_a1d5ca98517803f8cb61bbbcdb9a4617f}
+
+
+A list of environment variables in the section. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileSection_a77768b7c6c3acb031990ebcbae9957de}{C\-Makefile\-Section\-::m\-\_\-\-Macros}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_a780f6d59f56d8aee1fbc3687e04eebd5}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Find\-Env\-Var@{Find\-Env\-Var}}
+\index{Find\-Env\-Var@{Find\-Env\-Var}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Find\-Env\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Makefile\-Variable} $\ast$ C\-Makefile\-Section\-::\-Find\-Env\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCMakefileSection_a780f6d59f56d8aee1fbc3687e04eebd5}
+
+
+Searches environment variables by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & an environment variable name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to an environment variable or \hyperlink{classCMakefileSection_ad9819eeb550fafffcfe7814ffd859cdd}{C\-Makefile\-Section\-::m\-\_\-\-Null\-Variable} if no variable has the {\itshape Name} name. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_a3b626dd591b6ebbf49382c87f9a4040e}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Find\-Macro@{Find\-Macro}}
+\index{Find\-Macro@{Find\-Macro}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Find\-Macro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Makefile\-Variable} $\ast$ C\-Makefile\-Section\-::\-Find\-Macro (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCMakefileSection_a3b626dd591b6ebbf49382c87f9a4040e}
+
+
+Searches macro variables by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & a macro variable name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to a macro variable or \hyperlink{classCMakefileSection_ad9819eeb550fafffcfe7814ffd859cdd}{C\-Makefile\-Section\-::m\-\_\-\-Null\-Variable} if no variable has the {\itshape Name} name. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_a2bb0288892998d8fef244fc7577603bd}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Get\-Rule@{Get\-Rule}}
+\index{Get\-Rule@{Get\-Rule}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Get\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Makefile\-Rule} \& C\-Makefile\-Section\-::\-Get\-Rule (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_a2bb0288892998d8fef244fc7577603bd}
+
+
+Returns makefile rule by the {\itshape Index} number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a rule. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to a makefile rule. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_a59809cace68f470cfe6e8b6f9af3765c}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Header@{Header}}
+\index{Header@{Header}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-Makefile\-Section\-::\-Header (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_a59809cace68f470cfe6e8b6f9af3765c}
+
+
+Section header, describes makefile section contents. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileSection_a19aff76a974cefa540960369eaed43ec}{C\-Makefile\-Section\-::m\-\_\-\-Header}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_aefd7a83c39397eff928e487ef5e4830f}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Macros@{Macros}}
+\index{Macros@{Macros}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Macros}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf C\-Makefile\-Variable} $\ast$ $>$ \& C\-Makefile\-Section\-::\-Macros (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_aefd7a83c39397eff928e487ef5e4830f}
+
+
+A list of macro variables in the section. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileSection_a77768b7c6c3acb031990ebcbae9957de}{C\-Makefile\-Section\-::m\-\_\-\-Macros}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_aa1fe2aca8d228bdaf3b58ec6c9960153}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Rules\-Count@{Rules\-Count}}
+\index{Rules\-Count@{Rules\-Count}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Rules\-Count}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t C\-Makefile\-Section\-::\-Rules\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCMakefileSection_aa1fe2aca8d228bdaf3b58ec6c9960153}
+
+
+Counts makefile rules in the section. 
+
+\begin{DoxyReturn}{Returns}
+section rules count. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileSection_a190c932398264095c33f9aed3162fa4c}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!Show@{Show}}
+\index{Show@{Show}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Section\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileSection_a190c932398264095c33f9aed3162fa4c}
+
+
+Prints contents of the makefile section to the standard output. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCMakefileSection_acd47bab1b30e88633d75c9fd08497fca}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!m\-\_\-\-Env\-Vars@{m\-\_\-\-Env\-Vars}}
+\index{m\-\_\-\-Env\-Vars@{m\-\_\-\-Env\-Vars}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{m\-\_\-\-Env\-Vars}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::m\-\_\-\-Env\-Vars\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileSection_acd47bab1b30e88633d75c9fd08497fca}
+
+
+A list of environment variables in the section. 
+
+Enviroment variable definitions follow macro variables and precide rules. \hypertarget{classCMakefileSection_a19aff76a974cefa540960369eaed43ec}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!m\-\_\-\-Header@{m\-\_\-\-Header}}
+\index{m\-\_\-\-Header@{m\-\_\-\-Header}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{m\-\_\-\-Header}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::m\-\_\-\-Header\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileSection_a19aff76a974cefa540960369eaed43ec}
+
+
+Section header, describes makefile section contents. 
+
+Contains lines of text that precide other parts of the section. \hypertarget{classCMakefileSection_a77768b7c6c3acb031990ebcbae9957de}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!m\-\_\-\-Macros@{m\-\_\-\-Macros}}
+\index{m\-\_\-\-Macros@{m\-\_\-\-Macros}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{m\-\_\-\-Macros}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::m\-\_\-\-Macros\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileSection_a77768b7c6c3acb031990ebcbae9957de}
+
+
+A list of macro variables in the section. 
+
+Macro variable definitions follow the section header and precide enviroment variables. \hypertarget{classCMakefileSection_a30793048110e7a747f5b142bec3143a7}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!m\-\_\-\-Null\-Rule@{m\-\_\-\-Null\-Rule}}
+\index{m\-\_\-\-Null\-Rule@{m\-\_\-\-Null\-Rule}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{m\-\_\-\-Null\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::m\-\_\-\-Null\-Rule\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileSection_a30793048110e7a747f5b142bec3143a7}
+
+
+A substitute rule, it is returned when no rule satisfies search conditions. 
+
+\hypertarget{classCMakefileSection_ad9819eeb550fafffcfe7814ffd859cdd}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!m\-\_\-\-Null\-Variable@{m\-\_\-\-Null\-Variable}}
+\index{m\-\_\-\-Null\-Variable@{m\-\_\-\-Null\-Variable}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{m\-\_\-\-Null\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::m\-\_\-\-Null\-Variable\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileSection_ad9819eeb550fafffcfe7814ffd859cdd}
+
+
+A substitute variable, it is returned when no variable satisfies search conditions. 
+
+\hypertarget{classCMakefileSection_aa5ba1d41937450d96795e4e08cb64f49}{\index{C\-Makefile\-Section@{C\-Makefile\-Section}!m\-\_\-\-Rules@{m\-\_\-\-Rules}}
+\index{m\-\_\-\-Rules@{m\-\_\-\-Rules}!CMakefileSection@{C\-Makefile\-Section}}
+\subsubsection[{m\-\_\-\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Section\-::m\-\_\-\-Rules\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileSection_aa5ba1d41937450d96795e4e08cb64f49}
+
+
+A list of makefile rules in the section. 
+
+Rule definitions follow environment variables and finish the section. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{makefile_8h}{makefile.\-h}\item 
+src/doc/\hyperlink{makefile_8dox}{makefile.\-dox}\item 
+src/\hyperlink{makefile_8cpp}{makefile.\-cpp}\end{DoxyCompactItemize}

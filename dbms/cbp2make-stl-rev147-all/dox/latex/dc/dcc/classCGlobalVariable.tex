@@ -1,0 +1,446 @@
+\hypertarget{classCGlobalVariable}{\section{C\-Global\-Variable Class Reference}
+\label{classCGlobalVariable}\index{C\-Global\-Variable@{C\-Global\-Variable}}
+}
+
+
+Contains properties of global compiler variables.  
+
+
+
+
+{\ttfamily \#include $<$cbglobalvar.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCGlobalVariable_ad969569563c43f2e531048f12680e86b}{Name} (void)
+\begin{DoxyCompactList}\small\item\em Name of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCGlobalVariable_a8b5f004ada72bf8a6a385201eca1bcec}{Description} (void)
+\begin{DoxyCompactList}\small\item\em Description of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a343f767d0e98936bd987fe5543cc5136}{Base} (void)
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in default field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a38ea7ccde81095a5db6574b741eab786}{Include} (void)
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Include\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_adb642bd9f4c1d2ccd80f1bb494b59a94}{Lib} (void)
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Lib\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCGlobalVariable_aee635a839635b27b1368b4f0db4d3a66}{Obj} (void)
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Obj\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCGlobalVariable_a821dc587f962c31dddf011fb6a0f2844}{Cflags} (void)
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Cflags\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCGlobalVariable_a3c456bc6db79d58a9e0f02c43e31bb7d}{Lflags} (void)
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Lflags\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+int \hyperlink{classCGlobalVariable_aec353078fad015a6ebba488f11284fd2}{Count} (void)
+\begin{DoxyCompactList}\small\item\em Returns number of user-\/defined fields. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_ac5b28d50dfcb1ef7151809c7aa5803d4}{Get\-Field} (const int Index)
+\begin{DoxyCompactList}\small\item\em Returns name of user-\/defined field. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_ae9ea3bf58582375986c1a36262299e0f}{Get\-Value} (const int Index)
+\begin{DoxyCompactList}\small\item\em Returns value of user-\/defined field. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariable_a32fc9ddac4defdd28a04dd9072f487c5}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the global compiler variable to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariable_a0261d0ff3fbc60da39d8aa37c92fbd37}{Add} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCGlobalVariable_ad969569563c43f2e531048f12680e86b}{Name}, const \hyperlink{classCString}{C\-String} \&Value)
+\begin{DoxyCompactList}\small\item\em Adds new user-\/defined field. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariable_a650887d53d1edd59dc2a22871d5fc563}{Remove} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCGlobalVariable_ad969569563c43f2e531048f12680e86b}{Name})
+\begin{DoxyCompactList}\small\item\em Removes user-\/defined field. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariable_a78b75495505a8ffc5dd97b6fa364dff4}{Read} (const Ti\-Xml\-Element $\ast$Global\-Variable\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the global variable settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariable_a3ce7991ab6c5a69083db7f72020c2f14}{Write} (Ti\-Xml\-Element $\ast$Global\-Variable\-Root)
+\begin{DoxyCompactList}\small\item\em Writes the global variable settings to an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariable_a82a023e4410cc2ad2261faf0024925f3}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the global compiler variable contents to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariable_a38fcc9740f5bff89ec925d4a28642be3}{C\-Global\-Variable} (void)
+\begin{DoxyCompactList}\small\item\em Creates global compiler variable. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariable_abad0e58f8362841438da31bd7503eb04}{$\sim$\-C\-Global\-Variable} (void)
+\begin{DoxyCompactList}\small\item\em Destroys global compiler variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a1a19ed995e8d12071334da52ae47bbba}{Convert} (const \hyperlink{classCString}{C\-String} \&Value, const int Case=0)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_ae2e71db4b7f7a5c0dec2c97cf6186fc9}{m\-\_\-\-Name}
+\begin{DoxyCompactList}\small\item\em Name of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a5fcfab7b98ac6eac8ef6fcabe29e57c9}{m\-\_\-\-Description}
+\begin{DoxyCompactList}\small\item\em Description of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a5b9003628abc6731b802f8991e5d8e0f}{m\-\_\-\-Base}
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in default field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a31bf0d3eb6a89b83810c14014da3da4b}{m\-\_\-\-Include}
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Include\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_acea43fe8f3fb15c77a8853259acb713e}{m\-\_\-\-Lib}
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Lib\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_ac9845f5df77a0ec9e99d139b298ff7b5}{m\-\_\-\-Obj}
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Obj\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a43dab168ec93f8d99a585b266c4db5d4}{m\-\_\-\-Cflags}
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Cflags\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGlobalVariable_a2a7041fe1f22113872e9ca4d91a65889}{m\-\_\-\-Lflags}
+\begin{DoxyCompactList}\small\item\em Value of the built-\/in \char`\"{}\-Lflags\char`\"{} field of the variable. \end{DoxyCompactList}\item 
+\hyperlink{classCConfiguration}{C\-Configuration} \hyperlink{classCGlobalVariable_a3dddbf794ac1de89bddcc79f2e645e55}{m\-\_\-\-Fields}
+\begin{DoxyCompactList}\small\item\em User-\/defined fields of the global compiler variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains properties of global compiler variables. 
+
+Global compiler variables store installation-\/specific file paths and build options. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCGlobalVariable_a38fcc9740f5bff89ec925d4a28642be3}{\index{C\-Global\-Variable@{C\-Global\-Variable}!C\-Global\-Variable@{C\-Global\-Variable}}
+\index{C\-Global\-Variable@{C\-Global\-Variable}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{C\-Global\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-C\-Global\-Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a38fcc9740f5bff89ec925d4a28642be3}
+
+
+Creates global compiler variable. 
+
+\hypertarget{classCGlobalVariable_abad0e58f8362841438da31bd7503eb04}{\index{C\-Global\-Variable@{C\-Global\-Variable}!$\sim$\-C\-Global\-Variable@{$\sim$\-C\-Global\-Variable}}
+\index{$\sim$\-C\-Global\-Variable@{$\sim$\-C\-Global\-Variable}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{$\sim$\-C\-Global\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::$\sim$\-C\-Global\-Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_abad0e58f8362841438da31bd7503eb04}
+
+
+Destroys global compiler variable. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCGlobalVariable_a0261d0ff3fbc60da39d8aa37c92fbd37}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Add@{Add}}
+\index{Add@{Add}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a0261d0ff3fbc60da39d8aa37c92fbd37}
+
+
+Adds new user-\/defined field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & field name. \\
+\hline
+{\em Value} & field value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCGlobalVariable_a343f767d0e98936bd987fe5543cc5136}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Base@{Base}}
+\index{Base@{Base}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Base}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Base (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a343f767d0e98936bd987fe5543cc5136}
+
+
+Value of the built-\/in default field of the variable. 
+
+\begin{DoxyReturn}{Returns}
+default field value. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_a821dc587f962c31dddf011fb6a0f2844}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Cflags@{Cflags}}
+\index{Cflags@{Cflags}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Cflags}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Cflags (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGlobalVariable_a821dc587f962c31dddf011fb6a0f2844}
+
+
+Value of the built-\/in \char`\"{}\-Cflags\char`\"{} field of the variable. 
+
+\begin{DoxyReturn}{Returns}
+reference to . 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_a32fc9ddac4defdd28a04dd9072f487c5}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Clear@{Clear}}
+\index{Clear@{Clear}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a32fc9ddac4defdd28a04dd9072f487c5}
+
+
+Resets the global compiler variable to the initial state. 
+
+\hypertarget{classCGlobalVariable_a1a19ed995e8d12071334da52ae47bbba}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Convert@{Convert}}
+\index{Convert@{Convert}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Convert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Global\-Variable\-::\-Convert (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Value, }
+\item[{const int}]{Case = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCGlobalVariable_a1a19ed995e8d12071334da52ae47bbba}
+\hypertarget{classCGlobalVariable_aec353078fad015a6ebba488f11284fd2}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Count@{Count}}
+\index{Count@{Count}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_aec353078fad015a6ebba488f11284fd2}
+
+
+Returns number of user-\/defined fields. 
+
+\begin{DoxyReturn}{Returns}
+number of user-\/defined fields. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_a8b5f004ada72bf8a6a385201eca1bcec}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Description@{Description}}
+\index{Description@{Description}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Description}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Description (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGlobalVariable_a8b5f004ada72bf8a6a385201eca1bcec}
+
+
+Description of the variable. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCGlobalVariable_a5fcfab7b98ac6eac8ef6fcabe29e57c9}{C\-Global\-Variable\-::m\-\_\-\-Description}. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_ac5b28d50dfcb1ef7151809c7aa5803d4}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Get\-Field@{Get\-Field}}
+\index{Get\-Field@{Get\-Field}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Get\-Field}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Get\-Field (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_ac5b28d50dfcb1ef7151809c7aa5803d4}
+
+
+Returns name of user-\/defined field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & index of user-\/defined field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+field name. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_ae9ea3bf58582375986c1a36262299e0f}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Get\-Value@{Get\-Value}}
+\index{Get\-Value@{Get\-Value}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Get\-Value (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_ae9ea3bf58582375986c1a36262299e0f}
+
+
+Returns value of user-\/defined field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & index of user-\/defined field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+field value. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_a38ea7ccde81095a5db6574b741eab786}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Include@{Include}}
+\index{Include@{Include}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Include}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Include (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a38ea7ccde81095a5db6574b741eab786}
+
+
+Value of the built-\/in \char`\"{}\-Include\char`\"{} field of the variable. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\-Include\char`\"{} field value. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_a3c456bc6db79d58a9e0f02c43e31bb7d}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Lflags@{Lflags}}
+\index{Lflags@{Lflags}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Lflags}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Lflags (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGlobalVariable_a3c456bc6db79d58a9e0f02c43e31bb7d}
+
+
+Value of the built-\/in \char`\"{}\-Lflags\char`\"{} field of the variable. 
+
+\begin{DoxyReturn}{Returns}
+reference to . 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_adb642bd9f4c1d2ccd80f1bb494b59a94}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Lib@{Lib}}
+\index{Lib@{Lib}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Lib}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Lib (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_adb642bd9f4c1d2ccd80f1bb494b59a94}
+
+
+Value of the built-\/in \char`\"{}\-Lib\char`\"{} field of the variable. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\-Lib\char`\"{} field value. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_ad969569563c43f2e531048f12680e86b}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Name@{Name}}
+\index{Name@{Name}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGlobalVariable_ad969569563c43f2e531048f12680e86b}
+
+
+Name of the variable. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCGlobalVariable_ae2e71db4b7f7a5c0dec2c97cf6186fc9}{C\-Global\-Variable\-::m\-\_\-\-Name}. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_aee635a839635b27b1368b4f0db4d3a66}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Obj@{Obj}}
+\index{Obj@{Obj}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Obj}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Obj (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGlobalVariable_aee635a839635b27b1368b4f0db4d3a66}
+
+
+Value of the built-\/in \char`\"{}\-Obj\char`\"{} field of the variable. 
+
+\begin{DoxyReturn}{Returns}
+reference to . 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariable_a78b75495505a8ffc5dd97b6fa364dff4}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Read@{Read}}
+\index{Read@{Read}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Global\-Variable\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a78b75495505a8ffc5dd97b6fa364dff4}
+
+
+Reads the global variable settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Global\-Variable\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCGlobalVariable_a650887d53d1edd59dc2a22871d5fc563}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Remove@{Remove}}
+\index{Remove@{Remove}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a650887d53d1edd59dc2a22871d5fc563}
+
+
+Removes user-\/defined field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & field name. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCGlobalVariable_a82a023e4410cc2ad2261faf0024925f3}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Show@{Show}}
+\index{Show@{Show}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a82a023e4410cc2ad2261faf0024925f3}
+
+
+Prints the global compiler variable contents to standard output. 
+
+\hypertarget{classCGlobalVariable_a3ce7991ab6c5a69083db7f72020c2f14}{\index{C\-Global\-Variable@{C\-Global\-Variable}!Write@{Write}}
+\index{Write@{Write}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Global\-Variable\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariable_a3ce7991ab6c5a69083db7f72020c2f14}
+
+
+Writes the global variable settings to an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Global\-Variable\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCGlobalVariable_a5b9003628abc6731b802f8991e5d8e0f}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Base@{m\-\_\-\-Base}}
+\index{m\-\_\-\-Base@{m\-\_\-\-Base}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Base}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Base\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_a5b9003628abc6731b802f8991e5d8e0f}
+
+
+Value of the built-\/in default field of the variable. 
+
+When a global variable field is not specified, this value should used as variable's value. The base field usually points to root directory of a library. \hypertarget{classCGlobalVariable_a43dab168ec93f8d99a585b266c4db5d4}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Cflags@{m\-\_\-\-Cflags}}
+\index{m\-\_\-\-Cflags@{m\-\_\-\-Cflags}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Cflags}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Cflags\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_a43dab168ec93f8d99a585b266c4db5d4}
+
+
+Value of the built-\/in \char`\"{}\-Cflags\char`\"{} field of the variable. 
+
+\hypertarget{classCGlobalVariable_a5fcfab7b98ac6eac8ef6fcabe29e57c9}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Description@{m\-\_\-\-Description}}
+\index{m\-\_\-\-Description@{m\-\_\-\-Description}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Description}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Description\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_a5fcfab7b98ac6eac8ef6fcabe29e57c9}
+
+
+Description of the variable. 
+
+\hypertarget{classCGlobalVariable_a3dddbf794ac1de89bddcc79f2e645e55}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Fields@{m\-\_\-\-Fields}}
+\index{m\-\_\-\-Fields@{m\-\_\-\-Fields}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Fields}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Fields\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_a3dddbf794ac1de89bddcc79f2e645e55}
+
+
+User-\/defined fields of the global compiler variable. 
+
+\hypertarget{classCGlobalVariable_a31bf0d3eb6a89b83810c14014da3da4b}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Include@{m\-\_\-\-Include}}
+\index{m\-\_\-\-Include@{m\-\_\-\-Include}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Include}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Include\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_a31bf0d3eb6a89b83810c14014da3da4b}
+
+
+Value of the built-\/in \char`\"{}\-Include\char`\"{} field of the variable. 
+
+\hypertarget{classCGlobalVariable_a2a7041fe1f22113872e9ca4d91a65889}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Lflags@{m\-\_\-\-Lflags}}
+\index{m\-\_\-\-Lflags@{m\-\_\-\-Lflags}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Lflags}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Lflags\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_a2a7041fe1f22113872e9ca4d91a65889}
+
+
+Value of the built-\/in \char`\"{}\-Lflags\char`\"{} field of the variable. 
+
+\hypertarget{classCGlobalVariable_acea43fe8f3fb15c77a8853259acb713e}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Lib@{m\-\_\-\-Lib}}
+\index{m\-\_\-\-Lib@{m\-\_\-\-Lib}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Lib}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Lib\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_acea43fe8f3fb15c77a8853259acb713e}
+
+
+Value of the built-\/in \char`\"{}\-Lib\char`\"{} field of the variable. 
+
+\hypertarget{classCGlobalVariable_ae2e71db4b7f7a5c0dec2c97cf6186fc9}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Name@{m\-\_\-\-Name}}
+\index{m\-\_\-\-Name@{m\-\_\-\-Name}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_ae2e71db4b7f7a5c0dec2c97cf6186fc9}
+
+
+Name of the variable. 
+
+\hypertarget{classCGlobalVariable_ac9845f5df77a0ec9e99d139b298ff7b5}{\index{C\-Global\-Variable@{C\-Global\-Variable}!m\-\_\-\-Obj@{m\-\_\-\-Obj}}
+\index{m\-\_\-\-Obj@{m\-\_\-\-Obj}!CGlobalVariable@{C\-Global\-Variable}}
+\subsubsection[{m\-\_\-\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-::m\-\_\-\-Obj\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariable_ac9845f5df77a0ec9e99d139b298ff7b5}
+
+
+Value of the built-\/in \char`\"{}\-Obj\char`\"{} field of the variable. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbglobalvar_8h}{cbglobalvar.\-h}\item 
+src/\hyperlink{cbglobalvar_8cpp}{cbglobalvar.\-cpp}\item 
+src/doc/\hyperlink{cbglobalvar_8dox}{cbglobalvar.\-dox}\end{DoxyCompactItemize}

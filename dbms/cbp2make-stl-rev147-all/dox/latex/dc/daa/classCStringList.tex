@@ -1,0 +1,314 @@
+\hypertarget{classCStringList}{\section{C\-String\-List Class Reference}
+\label{classCStringList}\index{C\-String\-List@{C\-String\-List}}
+}
+
+
+{\ttfamily \#include $<$stlstrings.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classCStringList_a9aad005c9fc328d8c1fff768444d1bc7}{Is\-Empty} (void) const 
+\item 
+int \hyperlink{classCStringList_a8a5c522ad2de73b4d27d73101a3e7f19}{Get\-Count} (void) const 
+\item 
+int \hyperlink{classCStringList_a166f5b12d4505567b01c149204418282}{Get\-Length} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCStringList_a92cf7329bf278bc02f364f64a328f5d8}{Get\-String} (const int Index)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCStringList_a0050c77f44595ac8b6a83fd358ba020e}{Get\-String} (const int Index) const 
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCStringList_ae23be469222e1225008d6ff7c2e619f8}{Join} (const \hyperlink{classCString}{C\-String} \&Delimiter) const 
+\item 
+int \hyperlink{classCStringList_ab46abd6f167dee53d121c1edd2a7bdf2}{Find\-String} (const \hyperlink{classCString}{C\-String} \&A\-String) const 
+\item 
+int \hyperlink{classCStringList_a5558c06f3bf9a26ef1d226bed05b7e5b}{Insert} (const \hyperlink{classCString}{C\-String} $\ast$A\-String)
+\item 
+int \hyperlink{classCStringList_a3273bc85fb10f82a99d00b7c4dc69c39}{Insert} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_aec23e4c991eb5f869b5bf2c74723be47}{Insert} (const \hyperlink{classCStringList}{C\-String\-List} \&A\-String\-List)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a067dd43d107bfd9a87cbfdb9517039c1}{Insert\-At} (const int Index, const \hyperlink{classCStringList}{C\-String\-List} \&A\-String\-List)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_ad3f79584d3ca54478a41442bc92462d8}{Insert\-At} (const int Index, const \hyperlink{classCString}{C\-String} $\ast$A\-String)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a54b5bba3ad6620a1506184f6a4a20f06}{Insert\-At} (const int Index, const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_ad8b01958de9cd1e675969b78d175c1ca}{Remove\-At} (const int Index)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a7cbb71dee911b10c577a26ed47493bc5}{Remove\-Empty} (void)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a3598e4809c05f70f97fca169949bf2a2}{Remove\-Duplicates} (void)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a563db5b1c201a9db6386284f8fb7ba75}{Clear} (void)
+\item 
+bool \hyperlink{classCStringList_a1ddee6028388f2af0641b39dbb796fde}{Append\-From\-File} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+bool \hyperlink{classCStringList_a98ff4f6bd7b940cc6bc3356e2ca9130e}{Load\-From\-File} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+bool \hyperlink{classCStringList_a305df4ec24936fe8be8fb0354856669c}{Save\-To\-File} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+void \hyperlink{classCStringList_ac923e1c0f87f0a979135b7ce46afe63c}{Print} (std\-::ostream \&out)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a08327987a556b60898c242dac6501857}{operator=} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_a924ddeb20e3f122b561a8c931b482a70}{operator=} (const \hyperlink{classCStringList}{C\-String\-List} \&A\-String\-List)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCStringList_a9b2b556fdd5bc5535269d782fc80c6e1}{operator\mbox{[}$\,$\mbox{]}} (const int Index)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCStringList_a8bdb9a9ae1b232214241eb3f4658bbeb}{operator\mbox{[}$\,$\mbox{]}} (const int Index) const 
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCStringList_ac7af08bd93a1d622379f5e9dc54329a1}{operator$<$$<$} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCStringList_ac9d2195d4f6e0fa08488cb1ab98a236e}{C\-String\-List} (void)
+\item 
+\hyperlink{classCStringList_aa1cc8d6d2e1138e2734556e45257614d}{C\-String\-List} (const \hyperlink{classCStringList}{C\-String\-List} \&A\-String\-List)
+\item 
+\hyperlink{classCStringList_aa7c3df28564109982e37b0fa2d908672}{$\sim$\-C\-String\-List} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classCStringList_ab98413493b1f07399ec8721db6d57389}{Valid\-Index} (const int Index) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classCString}{C\-String} $\ast$ $>$ \hyperlink{classCStringList_a60e983669566a41d76a98122b7e9e7af}{m\-\_\-\-Strings}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCStringList_a26d8e40b767037a4314894ebe1fcf2b0}{m\-\_\-\-Null\-String}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCStringList_ac9d2195d4f6e0fa08488cb1ab98a236e}{\index{C\-String\-List@{C\-String\-List}!C\-String\-List@{C\-String\-List}}
+\index{C\-String\-List@{C\-String\-List}!CStringList@{C\-String\-List}}
+\subsubsection[{C\-String\-List}]{\setlength{\rightskip}{0pt plus 5cm}C\-String\-List\-::\-C\-String\-List (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_ac9d2195d4f6e0fa08488cb1ab98a236e}
+\hypertarget{classCStringList_aa1cc8d6d2e1138e2734556e45257614d}{\index{C\-String\-List@{C\-String\-List}!C\-String\-List@{C\-String\-List}}
+\index{C\-String\-List@{C\-String\-List}!CStringList@{C\-String\-List}}
+\subsubsection[{C\-String\-List}]{\setlength{\rightskip}{0pt plus 5cm}C\-String\-List\-::\-C\-String\-List (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_aa1cc8d6d2e1138e2734556e45257614d}
+\hypertarget{classCStringList_aa7c3df28564109982e37b0fa2d908672}{\index{C\-String\-List@{C\-String\-List}!$\sim$\-C\-String\-List@{$\sim$\-C\-String\-List}}
+\index{$\sim$\-C\-String\-List@{$\sim$\-C\-String\-List}!CStringList@{C\-String\-List}}
+\subsubsection[{$\sim$\-C\-String\-List}]{\setlength{\rightskip}{0pt plus 5cm}C\-String\-List\-::$\sim$\-C\-String\-List (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_aa7c3df28564109982e37b0fa2d908672}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCStringList_a1ddee6028388f2af0641b39dbb796fde}{\index{C\-String\-List@{C\-String\-List}!Append\-From\-File@{Append\-From\-File}}
+\index{Append\-From\-File@{Append\-From\-File}!CStringList@{C\-String\-List}}
+\subsubsection[{Append\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-String\-List\-::\-Append\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a1ddee6028388f2af0641b39dbb796fde}
+\hypertarget{classCStringList_a563db5b1c201a9db6386284f8fb7ba75}{\index{C\-String\-List@{C\-String\-List}!Clear@{Clear}}
+\index{Clear@{Clear}!CStringList@{C\-String\-List}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a563db5b1c201a9db6386284f8fb7ba75}
+\hypertarget{classCStringList_ab46abd6f167dee53d121c1edd2a7bdf2}{\index{C\-String\-List@{C\-String\-List}!Find\-String@{Find\-String}}
+\index{Find\-String@{Find\-String}!CStringList@{C\-String\-List}}
+\subsubsection[{Find\-String}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-::\-Find\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_ab46abd6f167dee53d121c1edd2a7bdf2}
+\hypertarget{classCStringList_a8a5c522ad2de73b4d27d73101a3e7f19}{\index{C\-String\-List@{C\-String\-List}!Get\-Count@{Get\-Count}}
+\index{Get\-Count@{Get\-Count}!CStringList@{C\-String\-List}}
+\subsubsection[{Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-::\-Get\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_a8a5c522ad2de73b4d27d73101a3e7f19}
+\hypertarget{classCStringList_a166f5b12d4505567b01c149204418282}{\index{C\-String\-List@{C\-String\-List}!Get\-Length@{Get\-Length}}
+\index{Get\-Length@{Get\-Length}!CStringList@{C\-String\-List}}
+\subsubsection[{Get\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-::\-Get\-Length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_a166f5b12d4505567b01c149204418282}
+\hypertarget{classCStringList_a92cf7329bf278bc02f364f64a328f5d8}{\index{C\-String\-List@{C\-String\-List}!Get\-String@{Get\-String}}
+\index{Get\-String@{Get\-String}!CStringList@{C\-String\-List}}
+\subsubsection[{Get\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} \& C\-String\-List\-::\-Get\-String (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a92cf7329bf278bc02f364f64a328f5d8}
+\hypertarget{classCStringList_a0050c77f44595ac8b6a83fd358ba020e}{\index{C\-String\-List@{C\-String\-List}!Get\-String@{Get\-String}}
+\index{Get\-String@{Get\-String}!CStringList@{C\-String\-List}}
+\subsubsection[{Get\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-String\-List\-::\-Get\-String (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_a0050c77f44595ac8b6a83fd358ba020e}
+\hypertarget{classCStringList_a5558c06f3bf9a26ef1d226bed05b7e5b}{\index{C\-String\-List@{C\-String\-List}!Insert@{Insert}}
+\index{Insert@{Insert}!CStringList@{C\-String\-List}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} $\ast$}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a5558c06f3bf9a26ef1d226bed05b7e5b}
+\hypertarget{classCStringList_a3273bc85fb10f82a99d00b7c4dc69c39}{\index{C\-String\-List@{C\-String\-List}!Insert@{Insert}}
+\index{Insert@{Insert}!CStringList@{C\-String\-List}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a3273bc85fb10f82a99d00b7c4dc69c39}
+\hypertarget{classCStringList_aec23e4c991eb5f869b5bf2c74723be47}{\index{C\-String\-List@{C\-String\-List}!Insert@{Insert}}
+\index{Insert@{Insert}!CStringList@{C\-String\-List}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_aec23e4c991eb5f869b5bf2c74723be47}
+\hypertarget{classCStringList_a067dd43d107bfd9a87cbfdb9517039c1}{\index{C\-String\-List@{C\-String\-List}!Insert\-At@{Insert\-At}}
+\index{Insert\-At@{Insert\-At}!CStringList@{C\-String\-List}}
+\subsubsection[{Insert\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Insert\-At (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index, }
+\item[{const {\bf C\-String\-List} \&}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a067dd43d107bfd9a87cbfdb9517039c1}
+\hypertarget{classCStringList_ad3f79584d3ca54478a41442bc92462d8}{\index{C\-String\-List@{C\-String\-List}!Insert\-At@{Insert\-At}}
+\index{Insert\-At@{Insert\-At}!CStringList@{C\-String\-List}}
+\subsubsection[{Insert\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Insert\-At (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index, }
+\item[{const {\bf C\-String} $\ast$}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_ad3f79584d3ca54478a41442bc92462d8}
+\hypertarget{classCStringList_a54b5bba3ad6620a1506184f6a4a20f06}{\index{C\-String\-List@{C\-String\-List}!Insert\-At@{Insert\-At}}
+\index{Insert\-At@{Insert\-At}!CStringList@{C\-String\-List}}
+\subsubsection[{Insert\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Insert\-At (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index, }
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a54b5bba3ad6620a1506184f6a4a20f06}
+\hypertarget{classCStringList_a9aad005c9fc328d8c1fff768444d1bc7}{\index{C\-String\-List@{C\-String\-List}!Is\-Empty@{Is\-Empty}}
+\index{Is\-Empty@{Is\-Empty}!CStringList@{C\-String\-List}}
+\subsubsection[{Is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-String\-List\-::\-Is\-Empty (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_a9aad005c9fc328d8c1fff768444d1bc7}
+\hypertarget{classCStringList_ae23be469222e1225008d6ff7c2e619f8}{\index{C\-String\-List@{C\-String\-List}!Join@{Join}}
+\index{Join@{Join}!CStringList@{C\-String\-List}}
+\subsubsection[{Join}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-String\-List\-::\-Join (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Delimiter}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_ae23be469222e1225008d6ff7c2e619f8}
+\hypertarget{classCStringList_a98ff4f6bd7b940cc6bc3356e2ca9130e}{\index{C\-String\-List@{C\-String\-List}!Load\-From\-File@{Load\-From\-File}}
+\index{Load\-From\-File@{Load\-From\-File}!CStringList@{C\-String\-List}}
+\subsubsection[{Load\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-String\-List\-::\-Load\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a98ff4f6bd7b940cc6bc3356e2ca9130e}
+\hypertarget{classCStringList_ac7af08bd93a1d622379f5e9dc54329a1}{\index{C\-String\-List@{C\-String\-List}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!CStringList@{C\-String\-List}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_ac7af08bd93a1d622379f5e9dc54329a1}
+\hypertarget{classCStringList_a08327987a556b60898c242dac6501857}{\index{C\-String\-List@{C\-String\-List}!operator=@{operator=}}
+\index{operator=@{operator=}!CStringList@{C\-String\-List}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a08327987a556b60898c242dac6501857}
+\hypertarget{classCStringList_a924ddeb20e3f122b561a8c931b482a70}{\index{C\-String\-List@{C\-String\-List}!operator=@{operator=}}
+\index{operator=@{operator=}!CStringList@{C\-String\-List}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a924ddeb20e3f122b561a8c931b482a70}
+\hypertarget{classCStringList_a9b2b556fdd5bc5535269d782fc80c6e1}{\index{C\-String\-List@{C\-String\-List}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!CStringList@{C\-String\-List}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} \& C\-String\-List\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a9b2b556fdd5bc5535269d782fc80c6e1}
+\hypertarget{classCStringList_a8bdb9a9ae1b232214241eb3f4658bbeb}{\index{C\-String\-List@{C\-String\-List}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!CStringList@{C\-String\-List}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-String\-List\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCStringList_a8bdb9a9ae1b232214241eb3f4658bbeb}
+\hypertarget{classCStringList_ac923e1c0f87f0a979135b7ce46afe63c}{\index{C\-String\-List@{C\-String\-List}!Print@{Print}}
+\index{Print@{Print}!CStringList@{C\-String\-List}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void C\-String\-List\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_ac923e1c0f87f0a979135b7ce46afe63c}
+\hypertarget{classCStringList_ad8b01958de9cd1e675969b78d175c1ca}{\index{C\-String\-List@{C\-String\-List}!Remove\-At@{Remove\-At}}
+\index{Remove\-At@{Remove\-At}!CStringList@{C\-String\-List}}
+\subsubsection[{Remove\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Remove\-At (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_ad8b01958de9cd1e675969b78d175c1ca}
+\hypertarget{classCStringList_a3598e4809c05f70f97fca169949bf2a2}{\index{C\-String\-List@{C\-String\-List}!Remove\-Duplicates@{Remove\-Duplicates}}
+\index{Remove\-Duplicates@{Remove\-Duplicates}!CStringList@{C\-String\-List}}
+\subsubsection[{Remove\-Duplicates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Remove\-Duplicates (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a3598e4809c05f70f97fca169949bf2a2}
+\hypertarget{classCStringList_a7cbb71dee911b10c577a26ed47493bc5}{\index{C\-String\-List@{C\-String\-List}!Remove\-Empty@{Remove\-Empty}}
+\index{Remove\-Empty@{Remove\-Empty}!CStringList@{C\-String\-List}}
+\subsubsection[{Remove\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} \& C\-String\-List\-::\-Remove\-Empty (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a7cbb71dee911b10c577a26ed47493bc5}
+\hypertarget{classCStringList_a305df4ec24936fe8be8fb0354856669c}{\index{C\-String\-List@{C\-String\-List}!Save\-To\-File@{Save\-To\-File}}
+\index{Save\-To\-File@{Save\-To\-File}!CStringList@{C\-String\-List}}
+\subsubsection[{Save\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-String\-List\-::\-Save\-To\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCStringList_a305df4ec24936fe8be8fb0354856669c}
+\hypertarget{classCStringList_ab98413493b1f07399ec8721db6d57389}{\index{C\-String\-List@{C\-String\-List}!Valid\-Index@{Valid\-Index}}
+\index{Valid\-Index@{Valid\-Index}!CStringList@{C\-String\-List}}
+\subsubsection[{Valid\-Index}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-String\-List\-::\-Valid\-Index (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCStringList_ab98413493b1f07399ec8721db6d57389}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCStringList_a26d8e40b767037a4314894ebe1fcf2b0}{\index{C\-String\-List@{C\-String\-List}!m\-\_\-\-Null\-String@{m\-\_\-\-Null\-String}}
+\index{m\-\_\-\-Null\-String@{m\-\_\-\-Null\-String}!CStringList@{C\-String\-List}}
+\subsubsection[{m\-\_\-\-Null\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-String\-List\-::m\-\_\-\-Null\-String\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCStringList_a26d8e40b767037a4314894ebe1fcf2b0}
+\hypertarget{classCStringList_a60e983669566a41d76a98122b7e9e7af}{\index{C\-String\-List@{C\-String\-List}!m\-\_\-\-Strings@{m\-\_\-\-Strings}}
+\index{m\-\_\-\-Strings@{m\-\_\-\-Strings}!CStringList@{C\-String\-List}}
+\subsubsection[{m\-\_\-\-Strings}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-String} $\ast$$>$ C\-String\-List\-::m\-\_\-\-Strings\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCStringList_a60e983669566a41d76a98122b7e9e7af}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{stlstrings_8h}{stlstrings.\-h}\item 
+lib/\hyperlink{stlstrings_8cpp}{stlstrings.\-cpp}\end{DoxyCompactItemize}

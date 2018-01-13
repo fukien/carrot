@@ -1,0 +1,210 @@
+\hypertarget{buildtools_8h}{\section{src/buildtools.h File Reference}
+\label{buildtools_8h}\index{src/buildtools.\-h@{src/buildtools.\-h}}
+}
+{\ttfamily \#include \char`\"{}stlconfig.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stlstrings.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}platforms.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}depsearch.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCBuildTool}{C\-Build\-Tool}
+\item 
+class \hyperlink{classCPreprocessor}{C\-Preprocessor}
+\item 
+class \hyperlink{classCCompiler}{C\-Compiler}
+\item 
+class \hyperlink{classCAssembler}{C\-Assembler}
+\item 
+class \hyperlink{classCResourceCompiler}{C\-Resource\-Compiler}
+\item 
+class \hyperlink{classCLinker}{C\-Linker}
+\item 
+class \hyperlink{classCLibraryLinker}{C\-Library\-Linker}
+\item 
+class \hyperlink{classCStaticLinker}{C\-Static\-Linker}
+\item 
+class \hyperlink{classCDynamicLinker}{C\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCExecutableLinker}{C\-Executable\-Linker}
+\item 
+class \hyperlink{classCDependencyGenerator}{C\-Dependency\-Generator}
+\item 
+class \hyperlink{classCBuildManager}{C\-Build\-Manager}
+\item 
+class \hyperlink{classCGNUCCompiler}{C\-G\-N\-U\-C\-Compiler}
+\item 
+class \hyperlink{classCGNUCppCompiler}{C\-G\-N\-U\-Cpp\-Compiler}
+\item 
+class \hyperlink{classCGNUFortran77Compiler}{C\-G\-N\-U\-Fortran77\-Compiler}
+\item 
+class \hyperlink{classCGNUFortran90Compiler}{C\-G\-N\-U\-Fortran90\-Compiler}
+\item 
+class \hyperlink{classCGNUWindowsResourceCompiler}{C\-G\-N\-U\-Windows\-Resource\-Compiler}
+\item 
+class \hyperlink{classCGNUStaticLinker}{C\-G\-N\-U\-Static\-Linker}
+\item 
+class \hyperlink{classCGNUDynamicLinker}{C\-G\-N\-U\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCGNUExecutableLinker}{C\-G\-N\-U\-Executable\-Linker}
+\item 
+class \hyperlink{classCGNUAVRCCompiler}{C\-G\-N\-U\-A\-V\-R\-C\-Compiler}
+\item 
+class \hyperlink{classCGNUAVRCppCompiler}{C\-G\-N\-U\-A\-V\-R\-Cpp\-Compiler}
+\item 
+class \hyperlink{classCGNUAVRStaticLinker}{C\-G\-N\-U\-A\-V\-R\-Static\-Linker}
+\item 
+class \hyperlink{classCGNUAVRDynamicLinker}{C\-G\-N\-U\-A\-V\-R\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCGNUAVRExecutableLinker}{C\-G\-N\-U\-A\-V\-R\-Executable\-Linker}
+\item 
+class \hyperlink{classCGNUAVRDependencyGenerator}{C\-G\-N\-U\-A\-V\-R\-Dependency\-Generator}
+\item 
+class \hyperlink{classCGNUARMCCompiler}{C\-G\-N\-U\-A\-R\-M\-C\-Compiler}
+\item 
+class \hyperlink{classCGNUARMCppCompiler}{C\-G\-N\-U\-A\-R\-M\-Cpp\-Compiler}
+\item 
+class \hyperlink{classCGNUARMWindowsResourceCompiler}{C\-G\-N\-U\-A\-R\-M\-Windows\-Resource\-Compiler}
+\item 
+class \hyperlink{classCGNUARMStaticLinker}{C\-G\-N\-U\-A\-R\-M\-Static\-Linker}
+\item 
+class \hyperlink{classCGNUARMDynamicLinker}{C\-G\-N\-U\-A\-R\-M\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCGNUARMExecutableLinker}{C\-G\-N\-U\-A\-R\-M\-Executable\-Linker}
+\item 
+class \hyperlink{classCBorlandCppCompiler}{C\-Borland\-Cpp\-Compiler}
+\item 
+class \hyperlink{classCBorlandResourceCompiler}{C\-Borland\-Resource\-Compiler}
+\item 
+class \hyperlink{classCBorlandStaticLinker}{C\-Borland\-Static\-Linker}
+\item 
+class \hyperlink{classCBorlandDynamicLinker}{C\-Borland\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCBorlandExecutableLinker}{C\-Borland\-Executable\-Linker}
+\item 
+class \hyperlink{classCBorlandConsoleExecutableLinker}{C\-Borland\-Console\-Executable\-Linker}
+\item 
+class \hyperlink{classCIntelCCompiler}{C\-Intel\-C\-Compiler}
+\item 
+class \hyperlink{classCIntelCppCompiler}{C\-Intel\-Cpp\-Compiler}
+\item 
+class \hyperlink{classCIntelStaticLinker}{C\-Intel\-Static\-Linker}
+\item 
+class \hyperlink{classCIntelDynamicLinker}{C\-Intel\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCIntelExecutableLinker}{C\-Intel\-Executable\-Linker}
+\item 
+class \hyperlink{classCMSVCCompiler}{C\-M\-S\-V\-C\-Compiler}
+\item 
+class \hyperlink{classCMSVCppCompiler}{C\-M\-S\-V\-Cpp\-Compiler}
+\item 
+class \hyperlink{classCMSVCResourceCompiler}{C\-M\-S\-V\-C\-Resource\-Compiler}
+\item 
+class \hyperlink{classCMSVCStaticLinker}{C\-M\-S\-V\-C\-Static\-Linker}
+\item 
+class \hyperlink{classCMSVCDynamicLinker}{C\-M\-S\-V\-C\-Dynamic\-Linker}
+\item 
+class \hyperlink{classCMSVCExecutableLinker}{C\-M\-S\-V\-C\-Executable\-Linker}
+\item 
+class \hyperlink{classCMSVCConsoleExecutableLinker}{C\-M\-S\-V\-C\-Console\-Executable\-Linker}
+\item 
+class \hyperlink{classCMSVCNativeExecutableLinker}{C\-M\-S\-V\-C\-Native\-Executable\-Linker}
+\item 
+class \hyperlink{classCMSVCBuildManager}{C\-M\-S\-V\-C\-Build\-Manager}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_acfd4a79c45f9ef25c877f1759aef0c28}{T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R} = \char`\"{}\$compiler\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_acee2ade241e00ac96c93f6431cab50e2}{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R} = \char`\"{}\$rescomp\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ae8a823b2f72b244ec3581c8edc16b1d7}{T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R} = \char`\"{}\$linker\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a3b69bbdc117f897775f0af93d57b8c47}{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R} = \char`\"{}\$lib\-\_\-linker\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ad412452f1b4ba008fcfc3b065ce0751a}{T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S} = \char`\"{}\$options\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a4bf913910e21316f326ef5ce8509b063}{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S} = \char`\"{}\$res\-\_\-includes\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_af5f3e4670d21a9322b8c567bd6c602c3}{T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S} = \char`\"{}\$includes\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ab0c962b7a4dc62e4101adb25f96ea145}{T\-P\-L\-\_\-\-F\-I\-L\-E} = \char`\"{}\$file\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ac68e87273e6950e120f0f88214bf1e84}{T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T} = \char`\"{}\$object\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a5000de1e767dab5fa7646c325470995a}{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T} = \char`\"{}\$resource\-\_\-output\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a8fed4d2cf391f0c8db2bf536ecfc665a}{T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T} = \char`\"{}\$output\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ae855e1d36f6c2cb20edb98806f7d92bd}{T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T} = \char`\"{}\$static\-\_\-output\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ab3b3056cb11a8a18af6b0b015e155d3d}{T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T} = \char`\"{}\$exe\-\_\-output\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a05d20fee1bcab24488aa337afe9daf5a}{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S} = \char`\"{}\$link\-\_\-options\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ad5976bf724fd3dc54a65aff34571628e}{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S} = \char`\"{}\$link\-\_\-objects\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a78bb753cac7d7e333bbc76b8a2bf4e00}{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S} = \char`\"{}\$link\-\_\-resobjects\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_ac642cfc249b18ceca3c419eab2f66b6b}{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S} = \char`\"{}\$libdirs\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{buildtools_8h_a8201f8ae3d6394fea92205d3c677bad8}{T\-P\-L\-\_\-\-L\-I\-B\-S} = \char`\"{}\$libs\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{buildtools_8h_acfd4a79c45f9ef25c877f1759aef0c28}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R@{T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R}}
+\index{T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R@{T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R = \char`\"{}\$compiler\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_acfd4a79c45f9ef25c877f1759aef0c28}
+\hypertarget{buildtools_8h_ab3b3056cb11a8a18af6b0b015e155d3d}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-E\-X\-E\-\_\-\-O\-U\-T\-P\-U\-T = \char`\"{}\$exe\-\_\-output\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ab3b3056cb11a8a18af6b0b015e155d3d}
+\hypertarget{buildtools_8h_ab0c962b7a4dc62e4101adb25f96ea145}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-F\-I\-L\-E@{T\-P\-L\-\_\-\-F\-I\-L\-E}}
+\index{T\-P\-L\-\_\-\-F\-I\-L\-E@{T\-P\-L\-\_\-\-F\-I\-L\-E}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-F\-I\-L\-E = \char`\"{}\$file\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ab0c962b7a4dc62e4101adb25f96ea145}
+\hypertarget{buildtools_8h_af5f3e4670d21a9322b8c567bd6c602c3}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S@{T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S}}
+\index{T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S@{T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S = \char`\"{}\$includes\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_af5f3e4670d21a9322b8c567bd6c602c3}
+\hypertarget{buildtools_8h_ac642cfc249b18ceca3c419eab2f66b6b}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S@{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S}}
+\index{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S@{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-D\-I\-R\-S = \char`\"{}\$libdirs\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ac642cfc249b18ceca3c419eab2f66b6b}
+\hypertarget{buildtools_8h_a3b69bbdc117f897775f0af93d57b8c47}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R@{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R}}
+\index{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R@{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-I\-B\-\_\-\-L\-I\-N\-K\-E\-R = \char`\"{}\$lib\-\_\-linker\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a3b69bbdc117f897775f0af93d57b8c47}
+\hypertarget{buildtools_8h_a8201f8ae3d6394fea92205d3c677bad8}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-I\-B\-S@{T\-P\-L\-\_\-\-L\-I\-B\-S}}
+\index{T\-P\-L\-\_\-\-L\-I\-B\-S@{T\-P\-L\-\_\-\-L\-I\-B\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-I\-B\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-I\-B\-S = \char`\"{}\$libs\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a8201f8ae3d6394fea92205d3c677bad8}
+\hypertarget{buildtools_8h_ae8a823b2f72b244ec3581c8edc16b1d7}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R@{T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R}}
+\index{T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R@{T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-I\-N\-K\-E\-R = \char`\"{}\$linker\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ae8a823b2f72b244ec3581c8edc16b1d7}
+\hypertarget{buildtools_8h_ad5976bf724fd3dc54a65aff34571628e}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S@{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S}}
+\index{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S@{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-B\-J\-E\-C\-T\-S = \char`\"{}\$link\-\_\-objects\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ad5976bf724fd3dc54a65aff34571628e}
+\hypertarget{buildtools_8h_a05d20fee1bcab24488aa337afe9daf5a}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S@{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S}}
+\index{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S@{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-O\-P\-T\-I\-O\-N\-S = \char`\"{}\$link\-\_\-options\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a05d20fee1bcab24488aa337afe9daf5a}
+\hypertarget{buildtools_8h_a78bb753cac7d7e333bbc76b8a2bf4e00}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S@{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S}}
+\index{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S@{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-L\-N\-K\-\_\-\-R\-E\-S\-\_\-\-O\-B\-J\-E\-C\-T\-S = \char`\"{}\$link\-\_\-resobjects\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a78bb753cac7d7e333bbc76b8a2bf4e00}
+\hypertarget{buildtools_8h_ac68e87273e6950e120f0f88214bf1e84}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T@{T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T}}
+\index{T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T@{T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-O\-B\-J\-E\-C\-T = \char`\"{}\$object\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ac68e87273e6950e120f0f88214bf1e84}
+\hypertarget{buildtools_8h_ad412452f1b4ba008fcfc3b065ce0751a}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S@{T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S}}
+\index{T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S@{T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-O\-P\-T\-I\-O\-N\-S = \char`\"{}\$options\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ad412452f1b4ba008fcfc3b065ce0751a}
+\hypertarget{buildtools_8h_a8fed4d2cf391f0c8db2bf536ecfc665a}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-O\-U\-T\-P\-U\-T = \char`\"{}\$output\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a8fed4d2cf391f0c8db2bf536ecfc665a}
+\hypertarget{buildtools_8h_acee2ade241e00ac96c93f6431cab50e2}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R@{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R}}
+\index{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R@{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-C\-O\-M\-P\-I\-L\-E\-R = \char`\"{}\$rescomp\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_acee2ade241e00ac96c93f6431cab50e2}
+\hypertarget{buildtools_8h_a4bf913910e21316f326ef5ce8509b063}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S@{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S}}
+\index{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S@{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-I\-N\-C\-L\-U\-D\-E\-S = \char`\"{}\$res\-\_\-includes\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a4bf913910e21316f326ef5ce8509b063}
+\hypertarget{buildtools_8h_a5000de1e767dab5fa7646c325470995a}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-R\-E\-S\-\_\-\-O\-U\-T\-P\-U\-T = \char`\"{}\$resource\-\_\-output\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_a5000de1e767dab5fa7646c325470995a}
+\hypertarget{buildtools_8h_ae855e1d36f6c2cb20edb98806f7d92bd}{\index{buildtools.\-h@{buildtools.\-h}!T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T@{T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T}!buildtools.h@{buildtools.\-h}}
+\subsubsection[{T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} T\-P\-L\-\_\-\-S\-T\-L\-\_\-\-O\-U\-T\-P\-U\-T = \char`\"{}\$static\-\_\-output\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{buildtools_8h_ae855e1d36f6c2cb20edb98806f7d92bd}

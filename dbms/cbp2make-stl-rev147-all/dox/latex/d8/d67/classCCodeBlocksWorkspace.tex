@@ -1,0 +1,327 @@
+\hypertarget{classCCodeBlocksWorkspace}{\section{C\-Code\-Blocks\-Workspace Class Reference}
+\label{classCCodeBlocksWorkspace}\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}}
+}
+
+
+Workspace description.  
+
+
+
+
+{\ttfamily \#include $<$cbworkspace.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCCodeBlocksWorkspace_ab3fd3af0485cacef0644ddcab5d7e162}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the workspace to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksWorkspace_a42ce65be75b14721a7467133705f49d0}{Read} (const Ti\-Xml\-Element $\ast$Workspace\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the workspace settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksWorkspace_ad152d19f3596ea14a286348db0a1cfbc}{Load\-Workspace\-Projects} (const \hyperlink{classCString}{C\-String} \&Workspace\-Path)
+\begin{DoxyCompactList}\small\item\em Loads all workspace units (projects) in the workspace. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksWorkspace_a963cd06ba0427bca3dcef2e4281b2c69}{Load\-Workspace} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Loads a workspace from a file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksWorkspace_ac85196730e4c07db6e910034bb2600f7}{Show} (const bool Show\-Projects=false)
+\begin{DoxyCompactList}\small\item\em Prints the workspace contents and (optionally) contents of workspace units (projects) to standard output. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{Generate\-Makefile} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \&Config)
+\begin{DoxyCompactList}\small\item\em Generates makefile and writes its text representation to a file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksWorkspace_aef881aafe1c5e43a56ffdcff6b8d8b8d}{Generate\-Makefile\-Text} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \&Config)
+\begin{DoxyCompactList}\small\item\em Generates makefile text and writes it to a file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksWorkspace_ace587b370700c298536c5d65d1f29b88}{C\-Code\-Blocks\-Workspace} (void)
+\begin{DoxyCompactList}\small\item\em Create workspace. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksWorkspace_aaeb3537cae380cec19879e73fe8887a2}{$\sim$\-C\-Code\-Blocks\-Workspace} (void)
+\begin{DoxyCompactList}\small\item\em Destroys workspace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCCodeBlocksWorkspace_a744f6469c1941fa666eb7107bf4a4e02}{Calculate\-Project\-Weight} (const size\-\_\-t Index=0)
+\begin{DoxyCompactList}\small\item\em Calculates weight (priority) of a single workspace unit (project) with number {\itshape Index}. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksWorkspace_a1e1ed6973a47f6ed7a73c2769eaba68d}{Resolve\-Project\-Dependencies} (void)
+\begin{DoxyCompactList}\small\item\em Resolves workspace unit (project) dependencies by calculating project weights. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksWorkspace_a52cc49715dfa46321f77f099a6d9c261}{Sort\-Projects\-By\-Weight} (void)
+\begin{DoxyCompactList}\small\item\em Sorts workspace units (projects) by weight in ascending order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksWorkspace_adbae0f57273b1e8e46b983859942476a}{m\-\_\-\-Title}
+\begin{DoxyCompactList}\small\item\em Title of the workspace. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCWorkspaceUnit}{C\-Workspace\-Unit} $\ast$ $>$ \hyperlink{classCCodeBlocksWorkspace_aa76c64684c8b462b93a7066477a8e8fc}{m\-\_\-\-Units}
+\begin{DoxyCompactList}\small\item\em List of workspace units (projects) in the workspace. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksWorkspace_aad71e4af12c3f47eea577bef49a71433}{m\-\_\-\-Target\-Names}
+\begin{DoxyCompactList}\small\item\em List of build target names of workspace units. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksWorkspace_a6d068259798bb7878ebbac957cdc8c58}{m\-\_\-\-Makefile\-Names}
+\begin{DoxyCompactList}\small\item\em List of makefile names of workspace units. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksWorkspace_aa1b3293bb2f0a1ae7783bb645f216f62}{m\-\_\-\-Makefile\-Paths}
+\begin{DoxyCompactList}\small\item\em List of makefile paths of workspace units. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksWorkspace_a5e1d4659d90551a37aa3f9f2254dff34}{m\-\_\-\-Target\-Deps}
+\begin{DoxyCompactList}\small\item\em List of dependencies of workspace units. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksWorkspace_a95da319fd45ea58130eb821412f268ce}{m\-\_\-\-Makefile\-Text}
+\begin{DoxyCompactList}\small\item\em Contains plain text of makefile for the workspace. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefile}{C\-Makefile} \hyperlink{classCCodeBlocksWorkspace_a616bd5ca6e64a9694a09ed2361f599ef}{m\-\_\-\-Makefile}
+\begin{DoxyCompactList}\small\item\em Contains object-\/based makefile for the workspace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Workspace description. 
+
+Contains properties of Code\-::\-Blocks workspace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCodeBlocksWorkspace_ace587b370700c298536c5d65d1f29b88}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}}
+\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{C\-Code\-Blocks\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-C\-Code\-Blocks\-Workspace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_ace587b370700c298536c5d65d1f29b88}
+
+
+Create workspace. 
+
+\hypertarget{classCCodeBlocksWorkspace_aaeb3537cae380cec19879e73fe8887a2}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!$\sim$\-C\-Code\-Blocks\-Workspace@{$\sim$\-C\-Code\-Blocks\-Workspace}}
+\index{$\sim$\-C\-Code\-Blocks\-Workspace@{$\sim$\-C\-Code\-Blocks\-Workspace}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{$\sim$\-C\-Code\-Blocks\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::$\sim$\-C\-Code\-Blocks\-Workspace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_aaeb3537cae380cec19879e73fe8887a2}
+
+
+Destroys workspace. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCodeBlocksWorkspace_a744f6469c1941fa666eb7107bf4a4e02}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Calculate\-Project\-Weight@{Calculate\-Project\-Weight}}
+\index{Calculate\-Project\-Weight@{Calculate\-Project\-Weight}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Calculate\-Project\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Calculate\-Project\-Weight (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCodeBlocksWorkspace_a744f6469c1941fa666eb7107bf4a4e02}
+
+
+Calculates weight (priority) of a single workspace unit (project) with number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a workspace unit (project). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+weight of a project.
+\end{DoxyReturn}
+This function is a part of the core mechanism for resolving project dependencies. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classCCodeBlocksWorkspace_a1e1ed6973a47f6ed7a73c2769eaba68d}{C\-Code\-Blocks\-Workspace\-::\-Resolve\-Project\-Dependencies(void)} 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksWorkspace_ab3fd3af0485cacef0644ddcab5d7e162}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Clear@{Clear}}
+\index{Clear@{Clear}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_ab3fd3af0485cacef0644ddcab5d7e162}
+
+
+Resets the workspace to the initial state. 
+
+\hypertarget{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Generate\-Makefile@{Generate\-Makefile}}
+\index{Generate\-Makefile@{Generate\-Makefile}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Generate\-Makefile}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-Code\-Blocks\-Build\-Config} \&}]{Config}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}
+
+
+Generates makefile and writes its text representation to a file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a file name for makefile of the workspace.\\
+\hline
+{\em Config} & build configuration.\\
+\hline
+\end{DoxyParams}
+This function generates makefile text only for the workspace, makefiles for individual projects in the workspace are generated by \hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project}. \hypertarget{classCCodeBlocksWorkspace_aef881aafe1c5e43a56ffdcff6b8d8b8d}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Generate\-Makefile\-Text@{Generate\-Makefile\-Text}}
+\index{Generate\-Makefile\-Text@{Generate\-Makefile\-Text}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Generate\-Makefile\-Text}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile\-Text (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-Code\-Blocks\-Build\-Config} \&}]{Config}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_aef881aafe1c5e43a56ffdcff6b8d8b8d}
+
+
+Generates makefile text and writes it to a file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a file name for makefile of the workspace.\\
+\hline
+{\em Config} & build configuration.\\
+\hline
+\end{DoxyParams}
+This function generates makefile text only for the workspace, makefiles for individual projects in the workspace are generated by \hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project}. \hypertarget{classCCodeBlocksWorkspace_a963cd06ba0427bca3dcef2e4281b2c69}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Load\-Workspace@{Load\-Workspace}}
+\index{Load\-Workspace@{Load\-Workspace}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Load\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Load\-Workspace (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_a963cd06ba0427bca3dcef2e4281b2c69}
+
+
+Loads a workspace from a file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & name of Code\-::\-Blocks workspace file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if specified workspace and all of its units (projects) were successfully loaded, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksWorkspace_ad152d19f3596ea14a286348db0a1cfbc}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Load\-Workspace\-Projects@{Load\-Workspace\-Projects}}
+\index{Load\-Workspace\-Projects@{Load\-Workspace\-Projects}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Load\-Workspace\-Projects}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Load\-Workspace\-Projects (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Workspace\-Path}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_ad152d19f3596ea14a286348db0a1cfbc}
+
+
+Loads all workspace units (projects) in the workspace. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if all of projects were successfully loaded, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksWorkspace_a42ce65be75b14721a7467133705f49d0}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Read@{Read}}
+\index{Read@{Read}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Workspace\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_a42ce65be75b14721a7467133705f49d0}
+
+
+Reads the workspace settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Workspace\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCCodeBlocksWorkspace_a1e1ed6973a47f6ed7a73c2769eaba68d}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Resolve\-Project\-Dependencies@{Resolve\-Project\-Dependencies}}
+\index{Resolve\-Project\-Dependencies@{Resolve\-Project\-Dependencies}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Resolve\-Project\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Resolve\-Project\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCodeBlocksWorkspace_a1e1ed6973a47f6ed7a73c2769eaba68d}
+
+
+Resolves workspace unit (project) dependencies by calculating project weights. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCCodeBlocksWorkspace_a744f6469c1941fa666eb7107bf4a4e02}{C\-Code\-Blocks\-Workspace\-::\-Calculate\-Project\-Weight}(const size\-\_\-t Index = 0) 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksWorkspace_ac85196730e4c07db6e910034bb2600f7}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Show@{Show}}
+\index{Show@{Show}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{const bool}]{Show\-Projects = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksWorkspace_ac85196730e4c07db6e910034bb2600f7}
+
+
+Prints the workspace contents and (optionally) contents of workspace units (projects) to standard output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Show\-Projects} & tell to display contents of workspace units. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCCodeBlocksWorkspace_a52cc49715dfa46321f77f099a6d9c261}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!Sort\-Projects\-By\-Weight@{Sort\-Projects\-By\-Weight}}
+\index{Sort\-Projects\-By\-Weight@{Sort\-Projects\-By\-Weight}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{Sort\-Projects\-By\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::\-Sort\-Projects\-By\-Weight (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCodeBlocksWorkspace_a52cc49715dfa46321f77f099a6d9c261}
+
+
+Sorts workspace units (projects) by weight in ascending order. 
+
+This function is a part of the core mechanism for resolving project dependencies. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classCCodeBlocksWorkspace_a1e1ed6973a47f6ed7a73c2769eaba68d}{C\-Code\-Blocks\-Workspace\-::\-Resolve\-Project\-Dependencies(void)} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCodeBlocksWorkspace_a616bd5ca6e64a9694a09ed2361f599ef}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Makefile@{m\-\_\-\-Makefile}}
+\index{m\-\_\-\-Makefile@{m\-\_\-\-Makefile}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Makefile}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Makefile\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_a616bd5ca6e64a9694a09ed2361f599ef}
+
+
+Contains object-\/based makefile for the workspace. 
+
+Contents of makefile are generated by \hyperlink{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)} before saving to a file. \hypertarget{classCCodeBlocksWorkspace_a6d068259798bb7878ebbac957cdc8c58}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Makefile\-Names@{m\-\_\-\-Makefile\-Names}}
+\index{m\-\_\-\-Makefile\-Names@{m\-\_\-\-Makefile\-Names}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Makefile\-Names}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Makefile\-Names\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_a6d068259798bb7878ebbac957cdc8c58}
+
+
+List of makefile names of workspace units. 
+
+This list is automatically refreshed by \hyperlink{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksWorkspace_aa1b3293bb2f0a1ae7783bb645f216f62}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Makefile\-Paths@{m\-\_\-\-Makefile\-Paths}}
+\index{m\-\_\-\-Makefile\-Paths@{m\-\_\-\-Makefile\-Paths}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Makefile\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Makefile\-Paths\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_aa1b3293bb2f0a1ae7783bb645f216f62}
+
+
+List of makefile paths of workspace units. 
+
+This list is automatically refreshed by \hyperlink{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksWorkspace_a95da319fd45ea58130eb821412f268ce}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Makefile\-Text@{m\-\_\-\-Makefile\-Text}}
+\index{m\-\_\-\-Makefile\-Text@{m\-\_\-\-Makefile\-Text}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Makefile\-Text}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Makefile\-Text\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_a95da319fd45ea58130eb821412f268ce}
+
+
+Contains plain text of makefile for the workspace. 
+
+Contents of makefile are generated by \hyperlink{classCCodeBlocksWorkspace_aef881aafe1c5e43a56ffdcff6b8d8b8d}{C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile\-Text(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)} before saving to a file. \hypertarget{classCCodeBlocksWorkspace_a5e1d4659d90551a37aa3f9f2254dff34}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Target\-Deps@{m\-\_\-\-Target\-Deps}}
+\index{m\-\_\-\-Target\-Deps@{m\-\_\-\-Target\-Deps}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Target\-Deps}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Target\-Deps\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_a5e1d4659d90551a37aa3f9f2254dff34}
+
+
+List of dependencies of workspace units. 
+
+Each line of the list contains decorated project names separated by space character and represents dependencies of corresponding project contained in the workspace. Decorated names are used as makefile target names. This list is automatically refreshed by \hyperlink{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksWorkspace_aad71e4af12c3f47eea577bef49a71433}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Target\-Names@{m\-\_\-\-Target\-Names}}
+\index{m\-\_\-\-Target\-Names@{m\-\_\-\-Target\-Names}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Target\-Names}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Target\-Names\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_aad71e4af12c3f47eea577bef49a71433}
+
+
+List of build target names of workspace units. 
+
+This list is automatically refreshed by \hyperlink{classCCodeBlocksWorkspace_a2057d5876c3e450b04295066dcaef035}{C\-Code\-Blocks\-Workspace\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksWorkspace_adbae0f57273b1e8e46b983859942476a}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Title@{m\-\_\-\-Title}}
+\index{m\-\_\-\-Title@{m\-\_\-\-Title}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Title}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Title\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_adbae0f57273b1e8e46b983859942476a}
+
+
+Title of the workspace. 
+
+\hypertarget{classCCodeBlocksWorkspace_aa76c64684c8b462b93a7066477a8e8fc}{\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!m\-\_\-\-Units@{m\-\_\-\-Units}}
+\index{m\-\_\-\-Units@{m\-\_\-\-Units}!CCodeBlocksWorkspace@{C\-Code\-Blocks\-Workspace}}
+\subsubsection[{m\-\_\-\-Units}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Workspace\-::m\-\_\-\-Units\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksWorkspace_aa76c64684c8b462b93a7066477a8e8fc}
+
+
+List of workspace units (projects) in the workspace. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCWorkspaceUnit}{C\-Workspace\-Unit}. 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbworkspace_8h}{cbworkspace.\-h}\item 
+src/\hyperlink{cbworkspace_8cpp}{cbworkspace.\-cpp}\item 
+src/doc/\hyperlink{cbworkspace_8dox}{cbworkspace.\-dox}\end{DoxyCompactItemize}

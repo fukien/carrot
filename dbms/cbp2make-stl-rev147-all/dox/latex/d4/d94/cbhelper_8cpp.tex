@@ -1,0 +1,98 @@
+\hypertarget{cbhelper_8cpp}{\section{src/cbhelper.cpp File Reference}
+\label{cbhelper_8cpp}\index{src/cbhelper.\-cpp@{src/cbhelper.\-cpp}}
+}
+
+
+Auxiliary functions for strings processing.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}cbhelper.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cbhelper_8cpp_af2ca95624e481dffa273dfc68e6bc99a}{Show\-String\-List} (const \hyperlink{classCString}{C\-String} \&Title, const \hyperlink{classCString}{C\-String} \&Line\-Prefix, const \hyperlink{classCStringList}{C\-String\-List} \&String\-List)
+\begin{DoxyCompactList}\small\item\em Prints titled string list to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{cbhelper_8cpp_aa7d51b115f3921c671673ca89e4824c4}{Makefile\-Friendly} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\begin{DoxyCompactList}\small\item\em Makes a makefile compatible identifier string from the given string. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{cbhelper_8cpp_ab99be774bdb63d0883083835fc519647}{X\-M\-L\-Friendly} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\begin{DoxyCompactList}\small\item\em Makes an X\-M\-L compatible identifier string from the given string. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{cbhelper_8cpp_a209598536fbd3b3cde7b5cb911e1032f}{Flat\-File\-Name} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Converts given file path to another file name without path delimiters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Auxiliary functions for strings processing. 
+
+\subsection{Function Documentation}
+\hypertarget{cbhelper_8cpp_a209598536fbd3b3cde7b5cb911e1032f}{\index{cbhelper.\-cpp@{cbhelper.\-cpp}!Flat\-File\-Name@{Flat\-File\-Name}}
+\index{Flat\-File\-Name@{Flat\-File\-Name}!cbhelper.cpp@{cbhelper.\-cpp}}
+\subsubsection[{Flat\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}Flat\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{cbhelper_8cpp_a209598536fbd3b3cde7b5cb911e1032f}
+
+
+Converts given file path to another file name without path delimiters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a file name possibly containing path to a file.\\
+\hline
+\end{DoxyParams}
+Example\-: \char`\"{}path/to/file/source.\-o\char`\"{} will be converted to \char`\"{}path\-\_\-to\-\_\-file\-\_\-source.\-o\char`\"{} \hypertarget{cbhelper_8cpp_aa7d51b115f3921c671673ca89e4824c4}{\index{cbhelper.\-cpp@{cbhelper.\-cpp}!Makefile\-Friendly@{Makefile\-Friendly}}
+\index{Makefile\-Friendly@{Makefile\-Friendly}!cbhelper.cpp@{cbhelper.\-cpp}}
+\subsubsection[{Makefile\-Friendly}]{\setlength{\rightskip}{0pt plus 5cm}Makefile\-Friendly (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{cbhelper_8cpp_aa7d51b115f3921c671673ca89e4824c4}
+
+
+Makes a makefile compatible identifier string from the given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\-String} & an identifier name.\\
+\hline
+\end{DoxyParams}
+Custom strings may contain characters that are not allowed inside makefile, therefore these characters are replaced with allowed characters (underscore, etc). \hypertarget{cbhelper_8cpp_af2ca95624e481dffa273dfc68e6bc99a}{\index{cbhelper.\-cpp@{cbhelper.\-cpp}!Show\-String\-List@{Show\-String\-List}}
+\index{Show\-String\-List@{Show\-String\-List}!cbhelper.cpp@{cbhelper.\-cpp}}
+\subsubsection[{Show\-String\-List}]{\setlength{\rightskip}{0pt plus 5cm}Show\-String\-List (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Title, }
+\item[{const {\bf C\-String} \&}]{Line\-Prefix, }
+\item[{const {\bf C\-String\-List} \&}]{String\-List}
+\end{DoxyParamCaption}
+)}}\label{cbhelper_8cpp_af2ca95624e481dffa273dfc68e6bc99a}
+
+
+Prints titled string list to standard output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Title} & title of the string list.\\
+\hline
+{\em Line\-Prefix} & prefix string pritned at the beginning of each line.\\
+\hline
+{\em String\-List} & list of strings to display. \\
+\hline
+\end{DoxyParams}
+\hypertarget{cbhelper_8cpp_ab99be774bdb63d0883083835fc519647}{\index{cbhelper.\-cpp@{cbhelper.\-cpp}!X\-M\-L\-Friendly@{X\-M\-L\-Friendly}}
+\index{X\-M\-L\-Friendly@{X\-M\-L\-Friendly}!cbhelper.cpp@{cbhelper.\-cpp}}
+\subsubsection[{X\-M\-L\-Friendly}]{\setlength{\rightskip}{0pt plus 5cm}X\-M\-L\-Friendly (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{cbhelper_8cpp_ab99be774bdb63d0883083835fc519647}
+
+
+Makes an X\-M\-L compatible identifier string from the given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\-String} & an identifier name.\\
+\hline
+\end{DoxyParams}
+Custom strings may contain characters that are not allowed for X\-M\-L tags, therefore these characters are replaced with allowed characters (underscore, etc). 

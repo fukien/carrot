@@ -1,0 +1,333 @@
+\hypertarget{classCConfiguration}{\section{C\-Configuration Class Reference}
+\label{classCConfiguration}\index{C\-Configuration@{C\-Configuration}}
+}
+
+
+{\ttfamily \#include $<$stlconfig.\-h$>$}
+
+Inheritance diagram for C\-Configuration\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dc/d01/classCConfiguration}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCConfiguration_a20cb2322663278d521175a1938407e71}{Initialize} (void)
+\item 
+virtual void \hyperlink{classCConfiguration_abb885f482171f99631785dc3d0685aab}{Clear} (void)
+\item 
+int \hyperlink{classCConfiguration_a9049c49228af7c7a6e12882f8e7356f4}{Get\-Count} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCConfiguration_ae083d99364629d6c45698449b0d39ee6}{Defined\-Prefix} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCConfiguration_aec3c760ef7a7f5571a2489dfdac47b69}{Defined\-Prefix} (void) const 
+\item 
+bool \hyperlink{classCConfiguration_a2bd48a783d6a2c0a71e74dfab84211df}{Var\-Defined} (const \hyperlink{classCString}{C\-String} \&Name) const 
+\item 
+void \hyperlink{classCConfiguration_a5ca7d9dd9858099936ff9b581a7ab79b}{Set\-Defined} (const \hyperlink{classCString}{C\-String} \&Name)
+\item 
+void \hyperlink{classCConfiguration_a2e9b2e96b342d8f3c8c2ae06e0f80019}{Set\-Undefined} (const \hyperlink{classCString}{C\-String} \&Name)
+\item 
+\hyperlink{classCVariable}{C\-Variable} \& \hyperlink{classCConfiguration_a9983c5dd69ea4fe163c7043381e1da52}{Variable} (const int Index)
+\item 
+\hyperlink{classCVariable}{C\-Variable} \& \hyperlink{classCConfiguration_a0f6e583cbf9d17f864efa3d982730a55}{Var\-Named} (const \hyperlink{classCString}{C\-String} \&Name)
+\item 
+int \hyperlink{classCConfiguration_a2c1cace09788549acc212cd10f822b31}{Var\-Index} (const \hyperlink{classCString}{C\-String} \&Name) const 
+\item 
+int \hyperlink{classCConfiguration_a34ca50d4c0c92cbe032abd2e53804de3}{Insert\-Integer\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const int Value=0)
+\item 
+int \hyperlink{classCConfiguration_a998e32d3c6cddecf064e020748cbe331}{Insert\-Float\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const double Value=0.\-0)
+\item 
+int \hyperlink{classCConfiguration_a30ee323a4668bacd38bbed0d11192f55}{Insert\-Boolean\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const bool Value=false)
+\item 
+int \hyperlink{classCConfiguration_aa0006435e2b8a4c5a72ef3d5a0a8849b}{Insert\-String\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const \hyperlink{classCString}{C\-String} \&Value=\char`\"{}\char`\"{})
+\item 
+int \hyperlink{classCConfiguration_a2f3e36f9ec1d6ab3076ab46501136bf4}{Insert\-Char\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const char Value=char(0))
+\item 
+void \hyperlink{classCConfiguration_aa71a97f192c38fa37df1ad75a7789460}{Remove\-Variable} (const int Index)
+\item 
+void \hyperlink{classCConfiguration_a2b4c8069b424baabc7eb15b6c91349eb}{Remove\-Variable} (const \hyperlink{classCString}{C\-String} \&Name)
+\item 
+void \hyperlink{classCConfiguration_a2f69b4e64ee22d43f50d37644cb36c7b}{Set\-Integer\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const int Value)
+\item 
+void \hyperlink{classCConfiguration_a18bb6f1546cb662a1cf4bec4deb587ba}{Set\-Float\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const double Value)
+\item 
+void \hyperlink{classCConfiguration_a4d9a58e5376e4dc66c72c2b2713cfb31}{Set\-Boolean\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const bool Value)
+\item 
+void \hyperlink{classCConfiguration_a37ea2a42c36bcef95fddc28fdd4ac34b}{Set\-String\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const \hyperlink{classCString}{C\-String} \&Value)
+\item 
+void \hyperlink{classCConfiguration_a78acb5cc352d63460876b91622d976cc}{Set\-Char\-Variable} (const \hyperlink{classCString}{C\-String} \&Name, const char Value)
+\item 
+void \hyperlink{classCConfiguration_ad7567abe3549c11531f1b3c599990230}{Print} (std\-::ostream \&out)
+\item 
+void \hyperlink{classCConfiguration_a9bd44bd2a143aea3b794294f4c12ac7a}{Process\-Parameters} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{classCConfiguration_a18a27bc8369914d3fdb924fb44c63fff}{Load\-From\-File} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+void \hyperlink{classCConfiguration_ad379e27380475b31348f95f04db75257}{Save\-To\-File} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+\hyperlink{classCConfiguration_adc320be38da481ec9c33b02777991425}{C\-Configuration} (void)
+\item 
+virtual \hyperlink{classCConfiguration_a64473225d29e05323df79c0f17799d8b}{$\sim$\-C\-Configuration} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classCConfiguration_a0015975c9f3c3ef92c10d10024fb9312}{Valid\-Index} (const int Index) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCVariable}{C\-Variable} \hyperlink{classCConfiguration_a3e379beeb1a6795eaf95740a0054f215}{m\-\_\-\-Null\-Variable}
+\item 
+std\-::vector$<$ \hyperlink{classCVariable}{C\-Variable} $\ast$ $>$ \hyperlink{classCConfiguration_ab55474edc9916f3e057ca0019be734c2}{m\-\_\-\-Variables}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCConfiguration_a85333335417a9d19030b03273562adee}{m\-\_\-\-Defined\-Prefix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCConfiguration_adc320be38da481ec9c33b02777991425}{\index{C\-Configuration@{C\-Configuration}!C\-Configuration@{C\-Configuration}}
+\index{C\-Configuration@{C\-Configuration}!CConfiguration@{C\-Configuration}}
+\subsubsection[{C\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}C\-Configuration\-::\-C\-Configuration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_adc320be38da481ec9c33b02777991425}
+\hypertarget{classCConfiguration_a64473225d29e05323df79c0f17799d8b}{\index{C\-Configuration@{C\-Configuration}!$\sim$\-C\-Configuration@{$\sim$\-C\-Configuration}}
+\index{$\sim$\-C\-Configuration@{$\sim$\-C\-Configuration}!CConfiguration@{C\-Configuration}}
+\subsubsection[{$\sim$\-C\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}C\-Configuration\-::$\sim$\-C\-Configuration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCConfiguration_a64473225d29e05323df79c0f17799d8b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCConfiguration_abb885f482171f99631785dc3d0685aab}{\index{C\-Configuration@{C\-Configuration}!Clear@{Clear}}
+\index{Clear@{Clear}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCConfiguration_abb885f482171f99631785dc3d0685aab}
+\hypertarget{classCConfiguration_ae083d99364629d6c45698449b0d39ee6}{\index{C\-Configuration@{C\-Configuration}!Defined\-Prefix@{Defined\-Prefix}}
+\index{Defined\-Prefix@{Defined\-Prefix}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Defined\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Configuration\-::\-Defined\-Prefix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCConfiguration_ae083d99364629d6c45698449b0d39ee6}
+\hypertarget{classCConfiguration_aec3c760ef7a7f5571a2489dfdac47b69}{\index{C\-Configuration@{C\-Configuration}!Defined\-Prefix@{Defined\-Prefix}}
+\index{Defined\-Prefix@{Defined\-Prefix}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Defined\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Configuration\-::\-Defined\-Prefix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCConfiguration_aec3c760ef7a7f5571a2489dfdac47b69}
+\hypertarget{classCConfiguration_a9049c49228af7c7a6e12882f8e7356f4}{\index{C\-Configuration@{C\-Configuration}!Get\-Count@{Get\-Count}}
+\index{Get\-Count@{Get\-Count}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Get\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCConfiguration_a9049c49228af7c7a6e12882f8e7356f4}
+\hypertarget{classCConfiguration_a20cb2322663278d521175a1938407e71}{\index{C\-Configuration@{C\-Configuration}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}virtual void C\-Configuration\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classCConfiguration_a20cb2322663278d521175a1938407e71}
+\hypertarget{classCConfiguration_a30ee323a4668bacd38bbed0d11192f55}{\index{C\-Configuration@{C\-Configuration}!Insert\-Boolean\-Variable@{Insert\-Boolean\-Variable}}
+\index{Insert\-Boolean\-Variable@{Insert\-Boolean\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Insert\-Boolean\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Insert\-Boolean\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const bool}]{Value = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a30ee323a4668bacd38bbed0d11192f55}
+\hypertarget{classCConfiguration_a2f3e36f9ec1d6ab3076ab46501136bf4}{\index{C\-Configuration@{C\-Configuration}!Insert\-Char\-Variable@{Insert\-Char\-Variable}}
+\index{Insert\-Char\-Variable@{Insert\-Char\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Insert\-Char\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Insert\-Char\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const char}]{Value = {\ttfamily char(0)}}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a2f3e36f9ec1d6ab3076ab46501136bf4}
+\hypertarget{classCConfiguration_a998e32d3c6cddecf064e020748cbe331}{\index{C\-Configuration@{C\-Configuration}!Insert\-Float\-Variable@{Insert\-Float\-Variable}}
+\index{Insert\-Float\-Variable@{Insert\-Float\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Insert\-Float\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Insert\-Float\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const double}]{Value = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a998e32d3c6cddecf064e020748cbe331}
+\hypertarget{classCConfiguration_a34ca50d4c0c92cbe032abd2e53804de3}{\index{C\-Configuration@{C\-Configuration}!Insert\-Integer\-Variable@{Insert\-Integer\-Variable}}
+\index{Insert\-Integer\-Variable@{Insert\-Integer\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Insert\-Integer\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Insert\-Integer\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const int}]{Value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a34ca50d4c0c92cbe032abd2e53804de3}
+\hypertarget{classCConfiguration_aa0006435e2b8a4c5a72ef3d5a0a8849b}{\index{C\-Configuration@{C\-Configuration}!Insert\-String\-Variable@{Insert\-String\-Variable}}
+\index{Insert\-String\-Variable@{Insert\-String\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Insert\-String\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Insert\-String\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_aa0006435e2b8a4c5a72ef3d5a0a8849b}
+\hypertarget{classCConfiguration_a18a27bc8369914d3fdb924fb44c63fff}{\index{C\-Configuration@{C\-Configuration}!Load\-From\-File@{Load\-From\-File}}
+\index{Load\-From\-File@{Load\-From\-File}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Load\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Load\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a18a27bc8369914d3fdb924fb44c63fff}
+\hypertarget{classCConfiguration_ad7567abe3549c11531f1b3c599990230}{\index{C\-Configuration@{C\-Configuration}!Print@{Print}}
+\index{Print@{Print}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_ad7567abe3549c11531f1b3c599990230}
+\hypertarget{classCConfiguration_a9bd44bd2a143aea3b794294f4c12ac7a}{\index{C\-Configuration@{C\-Configuration}!Process\-Parameters@{Process\-Parameters}}
+\index{Process\-Parameters@{Process\-Parameters}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Process\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Process\-Parameters (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a9bd44bd2a143aea3b794294f4c12ac7a}
+\hypertarget{classCConfiguration_aa71a97f192c38fa37df1ad75a7789460}{\index{C\-Configuration@{C\-Configuration}!Remove\-Variable@{Remove\-Variable}}
+\index{Remove\-Variable@{Remove\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Remove\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Remove\-Variable (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_aa71a97f192c38fa37df1ad75a7789460}
+\hypertarget{classCConfiguration_a2b4c8069b424baabc7eb15b6c91349eb}{\index{C\-Configuration@{C\-Configuration}!Remove\-Variable@{Remove\-Variable}}
+\index{Remove\-Variable@{Remove\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Remove\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Remove\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a2b4c8069b424baabc7eb15b6c91349eb}
+\hypertarget{classCConfiguration_ad379e27380475b31348f95f04db75257}{\index{C\-Configuration@{C\-Configuration}!Save\-To\-File@{Save\-To\-File}}
+\index{Save\-To\-File@{Save\-To\-File}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Save\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Save\-To\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_ad379e27380475b31348f95f04db75257}
+\hypertarget{classCConfiguration_a4d9a58e5376e4dc66c72c2b2713cfb31}{\index{C\-Configuration@{C\-Configuration}!Set\-Boolean\-Variable@{Set\-Boolean\-Variable}}
+\index{Set\-Boolean\-Variable@{Set\-Boolean\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-Boolean\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-Boolean\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const bool}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a4d9a58e5376e4dc66c72c2b2713cfb31}
+\hypertarget{classCConfiguration_a78acb5cc352d63460876b91622d976cc}{\index{C\-Configuration@{C\-Configuration}!Set\-Char\-Variable@{Set\-Char\-Variable}}
+\index{Set\-Char\-Variable@{Set\-Char\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-Char\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-Char\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const char}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a78acb5cc352d63460876b91622d976cc}
+\hypertarget{classCConfiguration_a5ca7d9dd9858099936ff9b581a7ab79b}{\index{C\-Configuration@{C\-Configuration}!Set\-Defined@{Set\-Defined}}
+\index{Set\-Defined@{Set\-Defined}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-Defined}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-Defined (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a5ca7d9dd9858099936ff9b581a7ab79b}
+\hypertarget{classCConfiguration_a18bb6f1546cb662a1cf4bec4deb587ba}{\index{C\-Configuration@{C\-Configuration}!Set\-Float\-Variable@{Set\-Float\-Variable}}
+\index{Set\-Float\-Variable@{Set\-Float\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-Float\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-Float\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const double}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a18bb6f1546cb662a1cf4bec4deb587ba}
+\hypertarget{classCConfiguration_a2f69b4e64ee22d43f50d37644cb36c7b}{\index{C\-Configuration@{C\-Configuration}!Set\-Integer\-Variable@{Set\-Integer\-Variable}}
+\index{Set\-Integer\-Variable@{Set\-Integer\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-Integer\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-Integer\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const int}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a2f69b4e64ee22d43f50d37644cb36c7b}
+\hypertarget{classCConfiguration_a37ea2a42c36bcef95fddc28fdd4ac34b}{\index{C\-Configuration@{C\-Configuration}!Set\-String\-Variable@{Set\-String\-Variable}}
+\index{Set\-String\-Variable@{Set\-String\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-String\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-String\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a37ea2a42c36bcef95fddc28fdd4ac34b}
+\hypertarget{classCConfiguration_a2e9b2e96b342d8f3c8c2ae06e0f80019}{\index{C\-Configuration@{C\-Configuration}!Set\-Undefined@{Set\-Undefined}}
+\index{Set\-Undefined@{Set\-Undefined}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Set\-Undefined}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Configuration\-::\-Set\-Undefined (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a2e9b2e96b342d8f3c8c2ae06e0f80019}
+\hypertarget{classCConfiguration_a0015975c9f3c3ef92c10d10024fb9312}{\index{C\-Configuration@{C\-Configuration}!Valid\-Index@{Valid\-Index}}
+\index{Valid\-Index@{Valid\-Index}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Valid\-Index}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Configuration\-::\-Valid\-Index (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCConfiguration_a0015975c9f3c3ef92c10d10024fb9312}
+\hypertarget{classCConfiguration_a2bd48a783d6a2c0a71e74dfab84211df}{\index{C\-Configuration@{C\-Configuration}!Var\-Defined@{Var\-Defined}}
+\index{Var\-Defined@{Var\-Defined}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Var\-Defined}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Configuration\-::\-Var\-Defined (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+) const}}\label{classCConfiguration_a2bd48a783d6a2c0a71e74dfab84211df}
+\hypertarget{classCConfiguration_a9983c5dd69ea4fe163c7043381e1da52}{\index{C\-Configuration@{C\-Configuration}!Variable@{Variable}}
+\index{Variable@{Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Variable} \& C\-Configuration\-::\-Variable (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a9983c5dd69ea4fe163c7043381e1da52}
+\hypertarget{classCConfiguration_a2c1cace09788549acc212cd10f822b31}{\index{C\-Configuration@{C\-Configuration}!Var\-Index@{Var\-Index}}
+\index{Var\-Index@{Var\-Index}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Var\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Configuration\-::\-Var\-Index (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+) const}}\label{classCConfiguration_a2c1cace09788549acc212cd10f822b31}
+\hypertarget{classCConfiguration_a0f6e583cbf9d17f864efa3d982730a55}{\index{C\-Configuration@{C\-Configuration}!Var\-Named@{Var\-Named}}
+\index{Var\-Named@{Var\-Named}!CConfiguration@{C\-Configuration}}
+\subsubsection[{Var\-Named}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Variable} \& C\-Configuration\-::\-Var\-Named (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCConfiguration_a0f6e583cbf9d17f864efa3d982730a55}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCConfiguration_a85333335417a9d19030b03273562adee}{\index{C\-Configuration@{C\-Configuration}!m\-\_\-\-Defined\-Prefix@{m\-\_\-\-Defined\-Prefix}}
+\index{m\-\_\-\-Defined\-Prefix@{m\-\_\-\-Defined\-Prefix}!CConfiguration@{C\-Configuration}}
+\subsubsection[{m\-\_\-\-Defined\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Configuration\-::m\-\_\-\-Defined\-Prefix\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCConfiguration_a85333335417a9d19030b03273562adee}
+\hypertarget{classCConfiguration_a3e379beeb1a6795eaf95740a0054f215}{\index{C\-Configuration@{C\-Configuration}!m\-\_\-\-Null\-Variable@{m\-\_\-\-Null\-Variable}}
+\index{m\-\_\-\-Null\-Variable@{m\-\_\-\-Null\-Variable}!CConfiguration@{C\-Configuration}}
+\subsubsection[{m\-\_\-\-Null\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Variable} C\-Configuration\-::m\-\_\-\-Null\-Variable\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCConfiguration_a3e379beeb1a6795eaf95740a0054f215}
+\hypertarget{classCConfiguration_ab55474edc9916f3e057ca0019be734c2}{\index{C\-Configuration@{C\-Configuration}!m\-\_\-\-Variables@{m\-\_\-\-Variables}}
+\index{m\-\_\-\-Variables@{m\-\_\-\-Variables}!CConfiguration@{C\-Configuration}}
+\subsubsection[{m\-\_\-\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Variable} $\ast$$>$ C\-Configuration\-::m\-\_\-\-Variables\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCConfiguration_ab55474edc9916f3e057ca0019be734c2}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{stlconfig_8h}{stlconfig.\-h}\item 
+lib/\hyperlink{stlconfig_8cpp}{stlconfig.\-cpp}\end{DoxyCompactItemize}

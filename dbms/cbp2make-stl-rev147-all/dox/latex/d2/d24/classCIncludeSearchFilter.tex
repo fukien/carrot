@@ -1,0 +1,300 @@
+\hypertarget{classCIncludeSearchFilter}{\section{C\-Include\-Search\-Filter Class Reference}
+\label{classCIncludeSearchFilter}\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}}
+}
+
+
+Declares interface for gathering build unit dependencies from project files into build unit dependency database.  
+
+
+
+
+{\ttfamily \#include $<$depsearch.\-h$>$}
+
+Inheritance diagram for C\-Include\-Search\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d2/d24/classCIncludeSearchFilter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCIncludeSearchFilter_a5effffa7de380a06feab27bdfde177a5}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the filter to the initial state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classCIncludeSearchFilter_aa40e9e57c931219ab680beff78babb40}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints filter settings to standard output. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classCIncludeSearchFilter_adf262663be6dd431f048c61817ecb07a}{Assign} (const \hyperlink{classCIncludeSearchFilter}{C\-Include\-Search\-Filter} \&Filter)
+\begin{DoxyCompactList}\small\item\em Copies filter settings from another filter. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classCIncludeSearchFilter_a2b30667171e75cd5721e97b54eeb9182}{Execute} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCStringList}{C\-String\-List} \&Includes)
+\begin{DoxyCompactList}\small\item\em Gathers dependencies to {\itshape Includes} string list starting from {\itshape File\-Name} file. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classCIncludeSearchFilter_aa43b2d4b8f62c9d695490d5cd072c3bc}{Execute} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCDependencyInfo}{C\-Dependency\-Info} \&Dependencies)
+\begin{DoxyCompactList}\small\item\em Gathers dependencies to {\itshape Dependencies} database starting from {\itshape File\-Name} file. \end{DoxyCompactList}\item 
+void \hyperlink{classCIncludeSearchFilter_a5716c9dc6d07feaeeaab44a7fe65bdcb}{Add\-Include\-Directory} (const \hyperlink{classCString}{C\-String} \&Path)
+\begin{DoxyCompactList}\small\item\em Adds {\itshape Path} path to the list of unit lookup directories. \end{DoxyCompactList}\item 
+void \hyperlink{classCIncludeSearchFilter_a7d91b0a6d6bb3b0dacca02a47f0bc1d2}{Add\-Include\-Directories} (const \hyperlink{classCStringList}{C\-String\-List} \&Paths)
+\begin{DoxyCompactList}\small\item\em Adds {\itshape Paths} list of paths to the list of unit lookup directories. \end{DoxyCompactList}\item 
+void \hyperlink{classCIncludeSearchFilter_a1f9de2b494d146bc2df210c7524c153b}{Add\-Macro\-Definiton} (const \hyperlink{classCString}{C\-String} \&Macro)
+\begin{DoxyCompactList}\small\item\em Adds {\itshape Macro} macro to the list of macros. \end{DoxyCompactList}\item 
+void \hyperlink{classCIncludeSearchFilter_ab5bd5e9e177f90b6bbe29d4a4ea83f41}{Add\-Macro\-Definitons} (const \hyperlink{classCStringList}{C\-String\-List} \&Macros)
+\begin{DoxyCompactList}\small\item\em Adds {\itshape Macros} macros to the list of macros. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCIncludeSearchFilter_a89c3d026fb68931212d397dff94ede64}{Resolve\-Include\-Path} (const \hyperlink{classCString}{C\-String} \&Include\-Name)
+\begin{DoxyCompactList}\small\item\em Resolves a build unit file name into complete file path. \end{DoxyCompactList}\item 
+\hyperlink{classCIncludeSearchFilter_ab3fbb998a1ff29e3c33e5bb296780bec}{C\-Include\-Search\-Filter} (void)
+\begin{DoxyCompactList}\small\item\em Creates dependency search filter. \end{DoxyCompactList}\item 
+\hyperlink{classCIncludeSearchFilter_ae38d64230ed0a36bce60b0e4a3a9759e}{C\-Include\-Search\-Filter} (const \hyperlink{classCIncludeSearchFilter}{C\-Include\-Search\-Filter} \&Filter)
+\begin{DoxyCompactList}\small\item\em Copies dependency search filter from another filter. \end{DoxyCompactList}\item 
+\hyperlink{classCIncludeSearchFilter_a54b44f1662a196e45d49d2155ba3eef2}{$\sim$\-C\-Include\-Search\-Filter} (void)
+\begin{DoxyCompactList}\small\item\em Destroys dependency search filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCIncludeSearchFilter_a888266f23bb4769ba0c931e285c04015}{m\-\_\-\-Include\-Directories}
+\begin{DoxyCompactList}\small\item\em a list of directories to look for build units. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCIncludeSearchFilter_af5c1083b429ed970c5ae8bce126e726d}{m\-\_\-\-Defined\-Macros}
+\begin{DoxyCompactList}\small\item\em a list of preprocessor's macro defnitions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declares interface for gathering build unit dependencies from project files into build unit dependency database. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCIncludeSearchFilter_ab3fbb998a1ff29e3c33e5bb296780bec}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}}
+\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{C\-Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-C\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_ab3fbb998a1ff29e3c33e5bb296780bec}
+
+
+Creates dependency search filter. 
+
+\hypertarget{classCIncludeSearchFilter_ae38d64230ed0a36bce60b0e4a3a9759e}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}}
+\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{C\-Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-C\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Include\-Search\-Filter} \&}]{Filter}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_ae38d64230ed0a36bce60b0e4a3a9759e}
+
+
+Copies dependency search filter from another filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Filter} & another dependency search filter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCIncludeSearchFilter_a54b44f1662a196e45d49d2155ba3eef2}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!$\sim$\-C\-Include\-Search\-Filter@{$\sim$\-C\-Include\-Search\-Filter}}
+\index{$\sim$\-C\-Include\-Search\-Filter@{$\sim$\-C\-Include\-Search\-Filter}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{$\sim$\-C\-Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::$\sim$\-C\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_a54b44f1662a196e45d49d2155ba3eef2}
+
+
+Destroys dependency search filter. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCIncludeSearchFilter_a7d91b0a6d6bb3b0dacca02a47f0bc1d2}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Add\-Include\-Directories@{Add\-Include\-Directories}}
+\index{Add\-Include\-Directories@{Add\-Include\-Directories}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Add\-Include\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Add\-Include\-Directories (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{Paths}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_a7d91b0a6d6bb3b0dacca02a47f0bc1d2}
+
+
+Adds {\itshape Paths} list of paths to the list of unit lookup directories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Paths} & a list of directories. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCIncludeSearchFilter_a5716c9dc6d07feaeeaab44a7fe65bdcb}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Add\-Include\-Directory@{Add\-Include\-Directory}}
+\index{Add\-Include\-Directory@{Add\-Include\-Directory}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Add\-Include\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Add\-Include\-Directory (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_a5716c9dc6d07feaeeaab44a7fe65bdcb}
+
+
+Adds {\itshape Path} path to the list of unit lookup directories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a directory path. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCIncludeSearchFilter_a1f9de2b494d146bc2df210c7524c153b}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Add\-Macro\-Definiton@{Add\-Macro\-Definiton}}
+\index{Add\-Macro\-Definiton@{Add\-Macro\-Definiton}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Add\-Macro\-Definiton}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Add\-Macro\-Definiton (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Macro}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_a1f9de2b494d146bc2df210c7524c153b}
+
+
+Adds {\itshape Macro} macro to the list of macros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Macro} & name of a macro definition. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCIncludeSearchFilter_ab5bd5e9e177f90b6bbe29d4a4ea83f41}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Add\-Macro\-Definitons@{Add\-Macro\-Definitons}}
+\index{Add\-Macro\-Definitons@{Add\-Macro\-Definitons}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Add\-Macro\-Definitons}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Add\-Macro\-Definitons (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{Macros}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_ab5bd5e9e177f90b6bbe29d4a4ea83f41}
+
+
+Adds {\itshape Macros} macros to the list of macros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Macros} & a list of names of macro definitions. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCIncludeSearchFilter_adf262663be6dd431f048c61817ecb07a}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Assign@{Assign}}
+\index{Assign@{Assign}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Assign}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Include\-Search\-Filter} \&}]{Filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCIncludeSearchFilter_adf262663be6dd431f048c61817ecb07a}
+
+
+Copies filter settings from another filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Filter} & another filter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCIncludeSearchFilter_a5effffa7de380a06feab27bdfde177a5}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Clear@{Clear}}
+\index{Clear@{Clear}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCIncludeSearchFilter_a5effffa7de380a06feab27bdfde177a5}
+
+
+Resets the filter to the initial state. 
+
+\hypertarget{classCIncludeSearchFilter_a2b30667171e75cd5721e97b54eeb9182}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Execute@{Execute}}
+\index{Execute@{Execute}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Execute (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-String\-List} \&}]{Includes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCIncludeSearchFilter_a2b30667171e75cd5721e97b54eeb9182}
+
+
+Gathers dependencies to {\itshape Includes} string list starting from {\itshape File\-Name} file. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]Use \hyperlink{classCIncludeSearchFilter_aa43b2d4b8f62c9d695490d5cd072c3bc}{C\-Include\-Search\-Filter\-::\-Execute(const C\-String\& File\-Name, C\-Dependency\-Info\& Dependencies)}.\end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a build unit name. \\
+\hline
+{\em Includes} & a list of build unit names. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if dependencies were gather from at least one (starting) file, {\itshape false} otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classCCppIncludeSearchFilter_a847f213a3ab4d7220a1ee0a095a5f42f}{C\-Cpp\-Include\-Search\-Filter}.
+
+\hypertarget{classCIncludeSearchFilter_aa43b2d4b8f62c9d695490d5cd072c3bc}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Execute@{Execute}}
+\index{Execute@{Execute}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Execute (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-Dependency\-Info} \&}]{Dependencies}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCIncludeSearchFilter_aa43b2d4b8f62c9d695490d5cd072c3bc}
+
+
+Gathers dependencies to {\itshape Dependencies} database starting from {\itshape File\-Name} file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a build unit name. \\
+\hline
+{\em Dependencies} & a build unit dependency database. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if dependencies were gather from at least one (starting) file, {\itshape false} otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classCCppIncludeSearchFilter_ac37bc3584c554db6a7964c8e9de31636}{C\-Cpp\-Include\-Search\-Filter}.
+
+\hypertarget{classCIncludeSearchFilter_a89c3d026fb68931212d397dff94ede64}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Resolve\-Include\-Path@{Resolve\-Include\-Path}}
+\index{Resolve\-Include\-Path@{Resolve\-Include\-Path}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Resolve\-Include\-Path}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Resolve\-Include\-Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Include\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCIncludeSearchFilter_a89c3d026fb68931212d397dff94ede64}
+
+
+Resolves a build unit file name into complete file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Include\-Name} & a build unit file name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file path to the build unit if it is successfully found or an empty string if it can't be found. 
+\end{DoxyReturn}
+\hypertarget{classCIncludeSearchFilter_aa40e9e57c931219ab680beff78babb40}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!Show@{Show}}
+\index{Show@{Show}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCIncludeSearchFilter_aa40e9e57c931219ab680beff78babb40}
+
+
+Prints filter settings to standard output. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCIncludeSearchFilter_af5c1083b429ed970c5ae8bce126e726d}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!m\-\_\-\-Defined\-Macros@{m\-\_\-\-Defined\-Macros}}
+\index{m\-\_\-\-Defined\-Macros@{m\-\_\-\-Defined\-Macros}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{m\-\_\-\-Defined\-Macros}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::m\-\_\-\-Defined\-Macros\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCIncludeSearchFilter_af5c1083b429ed970c5ae8bce126e726d}
+
+
+a list of preprocessor's macro defnitions. 
+
+\hypertarget{classCIncludeSearchFilter_a888266f23bb4769ba0c931e285c04015}{\index{C\-Include\-Search\-Filter@{C\-Include\-Search\-Filter}!m\-\_\-\-Include\-Directories@{m\-\_\-\-Include\-Directories}}
+\index{m\-\_\-\-Include\-Directories@{m\-\_\-\-Include\-Directories}!CIncludeSearchFilter@{C\-Include\-Search\-Filter}}
+\subsubsection[{m\-\_\-\-Include\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}C\-Include\-Search\-Filter\-::m\-\_\-\-Include\-Directories\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCIncludeSearchFilter_a888266f23bb4769ba0c931e285c04015}
+
+
+a list of directories to look for build units. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{depsearch_8h}{depsearch.\-h}\item 
+src/\hyperlink{depsearch_8cpp}{depsearch.\-cpp}\item 
+src/doc/\hyperlink{depsearch_8dox}{depsearch.\-dox}\end{DoxyCompactItemize}

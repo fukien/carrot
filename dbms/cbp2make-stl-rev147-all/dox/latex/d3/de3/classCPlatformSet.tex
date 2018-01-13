@@ -1,0 +1,240 @@
+\hypertarget{classCPlatformSet}{\section{C\-Platform\-Set Class Reference}
+\label{classCPlatformSet}\index{C\-Platform\-Set@{C\-Platform\-Set}}
+}
+
+
+Manages a set of platforms.  
+
+
+
+
+{\ttfamily \#include $<$platforms.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCPlatformSet_a575fcaf69b5e5fd9a37b5e54284b4e11}{Lock} (void)
+\begin{DoxyCompactList}\small\item\em Locks the platform set to avoid accidental changes. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatformSet_a1eb7afe6ee551c362982e871ed372df9}{Unlock} (void)
+\begin{DoxyCompactList}\small\item\em Unlocks the platform set. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatformSet_a41fc26c9d238b10cc2154b86d9a91127}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the platform set to the initial state. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCPlatformSet_adf0879e4dba2d4f081e45a551e76464a}{Get\-Count} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns the number of platforms in the set. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform}{C\-Platform} $\ast$ \hyperlink{classCPlatformSet_a876417c9ec7a5490587cdacac0ed1d2a}{Platform} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns a plafrorm by index. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform}{C\-Platform} $\ast$ \hyperlink{classCPlatformSet_abfcd0d9823ea261efe6d893952d10a1f}{Find} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S)
+\begin{DoxyCompactList}\small\item\em Searches a platform by operating system type. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatformSet_a8c4130e3585d6d915b916b6572708714}{Add\-Default} (void)
+\begin{DoxyCompactList}\small\item\em Registers three default platforms\-: U\-N\-I\-X, Mac\-O\-S, Windows. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatformSet_a8c96bb82230c3e2288055ca4852ec63e}{Read} (const Ti\-Xml\-Element $\ast$Config\-Root)
+\begin{DoxyCompactList}\small\item\em Reads a platform set configuration from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatformSet_a21dcc5bd75c8511e38efdbf26720fa98}{Write} (Ti\-Xml\-Element $\ast$Config\-Root)
+\begin{DoxyCompactList}\small\item\em Writes a platform set configuration to an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatformSet_af0d48ec8098208ff9be0ccbabe5719e5}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the platform set contents to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatformSet_ac19c70e976f424776f7c94f16e4c9232}{C\-Platform\-Set} (void)
+\begin{DoxyCompactList}\small\item\em Creates set of platforms. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatformSet_abc02ebfb1f0c772091a12e9fefdcf6fd}{$\sim$\-C\-Platform\-Set} (void)
+\begin{DoxyCompactList}\small\item\em Destroys set of platforms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classCPlatform}{C\-Platform} $\ast$ $>$ \hyperlink{classCPlatformSet_ad7d358f5439e3d8f431c7d4be21f8880}{m\-\_\-\-Platforms}
+\begin{DoxyCompactList}\small\item\em A collection of known platfroms. \end{DoxyCompactList}\item 
+bool \hyperlink{classCPlatformSet_ac820a15b13090a00c4ace509fc59ece2}{m\-\_\-\-Locked}
+\begin{DoxyCompactList}\small\item\em A lock for preventing from accidental changes during makefile generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages a set of platforms. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlatformSet_ac19c70e976f424776f7c94f16e4c9232}{\index{C\-Platform\-Set@{C\-Platform\-Set}!C\-Platform\-Set@{C\-Platform\-Set}}
+\index{C\-Platform\-Set@{C\-Platform\-Set}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{C\-Platform\-Set}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-Set\-::\-C\-Platform\-Set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_ac19c70e976f424776f7c94f16e4c9232}
+
+
+Creates set of platforms. 
+
+\hypertarget{classCPlatformSet_abc02ebfb1f0c772091a12e9fefdcf6fd}{\index{C\-Platform\-Set@{C\-Platform\-Set}!$\sim$\-C\-Platform\-Set@{$\sim$\-C\-Platform\-Set}}
+\index{$\sim$\-C\-Platform\-Set@{$\sim$\-C\-Platform\-Set}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{$\sim$\-C\-Platform\-Set}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-Set\-::$\sim$\-C\-Platform\-Set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_abc02ebfb1f0c772091a12e9fefdcf6fd}
+
+
+Destroys set of platforms. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlatformSet_a8c4130e3585d6d915b916b6572708714}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Add\-Default@{Add\-Default}}
+\index{Add\-Default@{Add\-Default}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Add\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Add\-Default (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_a8c4130e3585d6d915b916b6572708714}
+
+
+Registers three default platforms\-: U\-N\-I\-X, Mac\-O\-S, Windows. 
+
+\hypertarget{classCPlatformSet_a41fc26c9d238b10cc2154b86d9a91127}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Clear@{Clear}}
+\index{Clear@{Clear}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_a41fc26c9d238b10cc2154b86d9a91127}
+
+
+Resets the platform set to the initial state. 
+
+\hypertarget{classCPlatformSet_abfcd0d9823ea261efe6d893952d10a1f}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Find@{Find}}
+\index{Find@{Find}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Platform} $\ast$ C\-Platform\-Set\-::\-Find (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_abfcd0d9823ea261efe6d893952d10a1f}
+
+
+Searches a platform by operating system type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em O\-S} & an operating system type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{classCPlatform}{C\-Platform} or {\itshape N\-U\-L\-L} if the {\itshape O\-S} parameter is not valid. 
+\end{DoxyReturn}
+\hypertarget{classCPlatformSet_adf0879e4dba2d4f081e45a551e76464a}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Get\-Count@{Get\-Count}}
+\index{Get\-Count@{Get\-Count}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t C\-Platform\-Set\-::\-Get\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatformSet_adf0879e4dba2d4f081e45a551e76464a}
+
+
+Returns the number of platforms in the set. 
+
+\begin{DoxyReturn}{Returns}
+number of platforms. 
+\end{DoxyReturn}
+\hypertarget{classCPlatformSet_a575fcaf69b5e5fd9a37b5e54284b4e11}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Lock@{Lock}}
+\index{Lock@{Lock}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Lock}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Lock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_a575fcaf69b5e5fd9a37b5e54284b4e11}
+
+
+Locks the platform set to avoid accidental changes. 
+
+\hypertarget{classCPlatformSet_a876417c9ec7a5490587cdacac0ed1d2a}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Platform@{Platform}}
+\index{Platform@{Platform}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Platform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Platform} $\ast$ C\-Platform\-Set\-::\-Platform (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatformSet_a876417c9ec7a5490587cdacac0ed1d2a}
+
+
+Returns a plafrorm by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & a platform index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{classCPlatform}{C\-Platform} or {\itshape N\-U\-L\-L} if the {\itshape Index} parameter is not valid. 
+\end{DoxyReturn}
+\hypertarget{classCPlatformSet_a8c96bb82230c3e2288055ca4852ec63e}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Read@{Read}}
+\index{Read@{Read}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Config\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_a8c96bb82230c3e2288055ca4852ec63e}
+
+
+Reads a platform set configuration from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Config\-Root} & an X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatformSet_af0d48ec8098208ff9be0ccbabe5719e5}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Show@{Show}}
+\index{Show@{Show}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_af0d48ec8098208ff9be0ccbabe5719e5}
+
+
+Prints the platform set contents to the standard output. 
+
+\hypertarget{classCPlatformSet_a1eb7afe6ee551c362982e871ed372df9}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Unlock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_a1eb7afe6ee551c362982e871ed372df9}
+
+
+Unlocks the platform set. 
+
+\hypertarget{classCPlatformSet_a21dcc5bd75c8511e38efdbf26720fa98}{\index{C\-Platform\-Set@{C\-Platform\-Set}!Write@{Write}}
+\index{Write@{Write}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-Set\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Config\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCPlatformSet_a21dcc5bd75c8511e38efdbf26720fa98}
+
+
+Writes a platform set configuration to an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Config\-Root} & an X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlatformSet_ac820a15b13090a00c4ace509fc59ece2}{\index{C\-Platform\-Set@{C\-Platform\-Set}!m\-\_\-\-Locked@{m\-\_\-\-Locked}}
+\index{m\-\_\-\-Locked@{m\-\_\-\-Locked}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{m\-\_\-\-Locked}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-Set\-::m\-\_\-\-Locked\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatformSet_ac820a15b13090a00c4ace509fc59ece2}
+
+
+A lock for preventing from accidental changes during makefile generation. 
+
+\hypertarget{classCPlatformSet_ad7d358f5439e3d8f431c7d4be21f8880}{\index{C\-Platform\-Set@{C\-Platform\-Set}!m\-\_\-\-Platforms@{m\-\_\-\-Platforms}}
+\index{m\-\_\-\-Platforms@{m\-\_\-\-Platforms}!CPlatformSet@{C\-Platform\-Set}}
+\subsubsection[{m\-\_\-\-Platforms}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-Set\-::m\-\_\-\-Platforms\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatformSet_ad7d358f5439e3d8f431c7d4be21f8880}
+
+
+A collection of known platfroms. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{platforms_8h}{platforms.\-h}\item 
+src/doc/\hyperlink{platforms_8dox}{platforms.\-dox}\item 
+src/\hyperlink{platforms_8cpp}{platforms.\-cpp}\end{DoxyCompactItemize}

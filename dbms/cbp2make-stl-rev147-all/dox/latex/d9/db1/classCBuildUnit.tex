@@ -1,0 +1,242 @@
+\hypertarget{classCBuildUnit}{\section{C\-Build\-Unit Class Reference}
+\label{classCBuildUnit}\index{C\-Build\-Unit@{C\-Build\-Unit}}
+}
+
+
+Build unit description.  
+
+
+
+
+{\ttfamily \#include $<$cbpunit.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildUnit_ad40cf7352f45a27e57b6311beb6bee6d}{File\-Name} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildUnit_aacd2162b069fc68029b717e4d12ed690}{Extension} (void) const 
+\item 
+bool \hyperlink{classCBuildUnit_af6f2482ae13eb001c0c5b1b521ee51a5}{Belong\-To\-Target} (const \hyperlink{classCString}{C\-String} \&Target\-Name)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildUnit_a860f41c4576f41923dface8ca6400644}{Compiler\-Variable} (void) const 
+\item 
+bool \hyperlink{classCBuildUnit_aff6100868bde918ae36b6b8f66ac236b}{Do\-Compile} (void) const 
+\item 
+bool \hyperlink{classCBuildUnit_a6dafdc5ad265275d0df4a7d4925475b5}{Do\-Link} (void) const 
+\item 
+int \hyperlink{classCBuildUnit_a9f7b7b1b89b965c0e373af6b24b49a4d}{Weight} (void) const 
+\item 
+void \hyperlink{classCBuildUnit_a1823fada9ce022e1fcc10b4cda7d1c78}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the build unit to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCBuildUnit_a5f6525727bea04483400925baf4c09c9}{Read} (const Ti\-Xml\-Element $\ast$Unit\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the build unit settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCBuildUnit_a6c0349730fe7130c043e504d81f6c898}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the build unit contents to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCBuildUnit_ae0c7be712022bd1b21e667d50b4951d9}{C\-Build\-Unit} (void)
+\begin{DoxyCompactList}\small\item\em Creates build unit. \end{DoxyCompactList}\item 
+\hyperlink{classCBuildUnit_a5a75daf4424828e6390954d06193d5b8}{$\sim$\-C\-Build\-Unit} (void)
+\begin{DoxyCompactList}\small\item\em Destroys build unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildUnit_a5ad43c7517f4f80499ff21daf294d967}{m\-\_\-\-File\-Name}
+\begin{DoxyCompactList}\small\item\em File name of the build unit. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCBuildUnit_a7de33cce470e64171c8bdbb502dd5395}{m\-\_\-\-Targets}
+\begin{DoxyCompactList}\small\item\em List of build target names to which this build unit belong. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildUnit_ae8ffef7689a48215b7c98ce2ba7edada}{m\-\_\-\-Compiler\-Variable}
+\item 
+bool \hyperlink{classCBuildUnit_afc82990203560d45c4e00d451ffee977}{m\-\_\-\-Do\-Compile}
+\begin{DoxyCompactList}\small\item\em Allows compilation of the build unit. \end{DoxyCompactList}\item 
+bool \hyperlink{classCBuildUnit_a26d55f28bb6566143aaabb61c4fe93d4}{m\-\_\-\-Do\-Link}
+\begin{DoxyCompactList}\small\item\em Allows linking of the build unit. \end{DoxyCompactList}\item 
+int \hyperlink{classCBuildUnit_aae6c75ed4d916241e1daf249425b5dc5}{m\-\_\-\-Weight}
+\begin{DoxyCompactList}\small\item\em Weight (priority) of the build unit. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildUnit_a890c7a9cef4689007e45631c01069fc5}{m\-\_\-\-Object\-File\-Name}
+\begin{DoxyCompactList}\small\item\em File name of the object file (a result of compilation) of this build unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCBuildUnit_aa868ebc46e8f990e0d8bc5a60e58ef37}{C\-Unit\-Weight\-Comparison}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Build unit description. 
+
+Contains properties of a build unit. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCBuildUnit_ae0c7be712022bd1b21e667d50b4951d9}{\index{C\-Build\-Unit@{C\-Build\-Unit}!C\-Build\-Unit@{C\-Build\-Unit}}
+\index{C\-Build\-Unit@{C\-Build\-Unit}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{C\-Build\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::\-C\-Build\-Unit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCBuildUnit_ae0c7be712022bd1b21e667d50b4951d9}
+
+
+Creates build unit. 
+
+\hypertarget{classCBuildUnit_a5a75daf4424828e6390954d06193d5b8}{\index{C\-Build\-Unit@{C\-Build\-Unit}!$\sim$\-C\-Build\-Unit@{$\sim$\-C\-Build\-Unit}}
+\index{$\sim$\-C\-Build\-Unit@{$\sim$\-C\-Build\-Unit}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{$\sim$\-C\-Build\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::$\sim$\-C\-Build\-Unit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCBuildUnit_a5a75daf4424828e6390954d06193d5b8}
+
+
+Destroys build unit. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCBuildUnit_af6f2482ae13eb001c0c5b1b521ee51a5}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Belong\-To\-Target@{Belong\-To\-Target}}
+\index{Belong\-To\-Target@{Belong\-To\-Target}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Belong\-To\-Target}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Unit\-::\-Belong\-To\-Target (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Target\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCBuildUnit_af6f2482ae13eb001c0c5b1b521ee51a5}
+\hypertarget{classCBuildUnit_a1823fada9ce022e1fcc10b4cda7d1c78}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Clear@{Clear}}
+\index{Clear@{Clear}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCBuildUnit_a1823fada9ce022e1fcc10b4cda7d1c78}
+
+
+Resets the build unit to the initial state. 
+
+\hypertarget{classCBuildUnit_a860f41c4576f41923dface8ca6400644}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Compiler\-Variable@{Compiler\-Variable}}
+\index{Compiler\-Variable@{Compiler\-Variable}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Compiler\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Unit\-::\-Compiler\-Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildUnit_a860f41c4576f41923dface8ca6400644}
+\hypertarget{classCBuildUnit_aff6100868bde918ae36b6b8f66ac236b}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Do\-Compile@{Do\-Compile}}
+\index{Do\-Compile@{Do\-Compile}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Do\-Compile}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Unit\-::\-Do\-Compile (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildUnit_aff6100868bde918ae36b6b8f66ac236b}
+\hypertarget{classCBuildUnit_a6dafdc5ad265275d0df4a7d4925475b5}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Do\-Link@{Do\-Link}}
+\index{Do\-Link@{Do\-Link}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Do\-Link}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Unit\-::\-Do\-Link (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildUnit_a6dafdc5ad265275d0df4a7d4925475b5}
+\hypertarget{classCBuildUnit_aacd2162b069fc68029b717e4d12ed690}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Extension@{Extension}}
+\index{Extension@{Extension}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Unit\-::\-Extension (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCBuildUnit_aacd2162b069fc68029b717e4d12ed690}
+\hypertarget{classCBuildUnit_ad40cf7352f45a27e57b6311beb6bee6d}{\index{C\-Build\-Unit@{C\-Build\-Unit}!File\-Name@{File\-Name}}
+\index{File\-Name@{File\-Name}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Unit\-::\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildUnit_ad40cf7352f45a27e57b6311beb6bee6d}
+\hypertarget{classCBuildUnit_a5f6525727bea04483400925baf4c09c9}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Read@{Read}}
+\index{Read@{Read}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Unit\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCBuildUnit_a5f6525727bea04483400925baf4c09c9}
+
+
+Reads the build unit settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Unit\-Root} & an element of an X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCBuildUnit_a6c0349730fe7130c043e504d81f6c898}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Show@{Show}}
+\index{Show@{Show}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCBuildUnit_a6c0349730fe7130c043e504d81f6c898}
+
+
+Prints the build unit contents to standard output. 
+
+\hypertarget{classCBuildUnit_a9f7b7b1b89b965c0e373af6b24b49a4d}{\index{C\-Build\-Unit@{C\-Build\-Unit}!Weight@{Weight}}
+\index{Weight@{Weight}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{Weight}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Build\-Unit\-::\-Weight (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildUnit_a9f7b7b1b89b965c0e373af6b24b49a4d}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classCBuildUnit_aa868ebc46e8f990e0d8bc5a60e58ef37}{\index{C\-Build\-Unit@{C\-Build\-Unit}!C\-Unit\-Weight\-Comparison@{C\-Unit\-Weight\-Comparison}}
+\index{C\-Unit\-Weight\-Comparison@{C\-Unit\-Weight\-Comparison}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{C\-Unit\-Weight\-Comparison}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf C\-Unit\-Weight\-Comparison}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCBuildUnit_aa868ebc46e8f990e0d8bc5a60e58ef37}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCBuildUnit_ae8ffef7689a48215b7c98ce2ba7edada}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-Compiler\-Variable@{m\-\_\-\-Compiler\-Variable}}
+\index{m\-\_\-\-Compiler\-Variable@{m\-\_\-\-Compiler\-Variable}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-Compiler\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Unit\-::m\-\_\-\-Compiler\-Variable\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_ae8ffef7689a48215b7c98ce2ba7edada}
+\hypertarget{classCBuildUnit_afc82990203560d45c4e00d451ffee977}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-Do\-Compile@{m\-\_\-\-Do\-Compile}}
+\index{m\-\_\-\-Do\-Compile@{m\-\_\-\-Do\-Compile}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-Do\-Compile}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::m\-\_\-\-Do\-Compile\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_afc82990203560d45c4e00d451ffee977}
+
+
+Allows compilation of the build unit. 
+
+\hypertarget{classCBuildUnit_a26d55f28bb6566143aaabb61c4fe93d4}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-Do\-Link@{m\-\_\-\-Do\-Link}}
+\index{m\-\_\-\-Do\-Link@{m\-\_\-\-Do\-Link}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-Do\-Link}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::m\-\_\-\-Do\-Link\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_a26d55f28bb6566143aaabb61c4fe93d4}
+
+
+Allows linking of the build unit. 
+
+\hypertarget{classCBuildUnit_a5ad43c7517f4f80499ff21daf294d967}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-File\-Name@{m\-\_\-\-File\-Name}}
+\index{m\-\_\-\-File\-Name@{m\-\_\-\-File\-Name}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::m\-\_\-\-File\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_a5ad43c7517f4f80499ff21daf294d967}
+
+
+File name of the build unit. 
+
+\hypertarget{classCBuildUnit_a890c7a9cef4689007e45631c01069fc5}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-Object\-File\-Name@{m\-\_\-\-Object\-File\-Name}}
+\index{m\-\_\-\-Object\-File\-Name@{m\-\_\-\-Object\-File\-Name}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-Object\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::m\-\_\-\-Object\-File\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_a890c7a9cef4689007e45631c01069fc5}
+
+
+File name of the object file (a result of compilation) of this build unit. 
+
+\hypertarget{classCBuildUnit_a7de33cce470e64171c8bdbb502dd5395}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-Targets@{m\-\_\-\-Targets}}
+\index{m\-\_\-\-Targets@{m\-\_\-\-Targets}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::m\-\_\-\-Targets\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_a7de33cce470e64171c8bdbb502dd5395}
+
+
+List of build target names to which this build unit belong. 
+
+\hypertarget{classCBuildUnit_aae6c75ed4d916241e1daf249425b5dc5}{\index{C\-Build\-Unit@{C\-Build\-Unit}!m\-\_\-\-Weight@{m\-\_\-\-Weight}}
+\index{m\-\_\-\-Weight@{m\-\_\-\-Weight}!CBuildUnit@{C\-Build\-Unit}}
+\subsubsection[{m\-\_\-\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Unit\-::m\-\_\-\-Weight\hspace{0.3cm}{\ttfamily [private]}}}\label{classCBuildUnit_aae6c75ed4d916241e1daf249425b5dc5}
+
+
+Weight (priority) of the build unit. 
+
+Normally build unit weights range from 0 to 100. Lower weight means higher priority and vice versa. Build units with lower weights are compiled and linked first. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbpunit_8h}{cbpunit.\-h}\item 
+src/\hyperlink{cbpunit_8cpp}{cbpunit.\-cpp}\item 
+src/doc/\hyperlink{cbpunit_8dox}{cbpunit.\-dox}\end{DoxyCompactItemize}

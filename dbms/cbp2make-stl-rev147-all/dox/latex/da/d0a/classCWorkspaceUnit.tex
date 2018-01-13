@@ -1,0 +1,180 @@
+\hypertarget{classCWorkspaceUnit}{\section{C\-Workspace\-Unit Class Reference}
+\label{classCWorkspaceUnit}\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}}
+}
+
+
+Workspace unit description.  
+
+
+
+
+{\ttfamily \#include $<$cbworkspace.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCWorkspaceUnit_a686ef0c6dfac33827cc6b971e78b8cbd}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the workspace unit to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCWorkspaceUnit_a3e379f9772bdac8445b950a105687a6b}{Read} (const Ti\-Xml\-Element $\ast$Unit\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the workspace unit settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCWorkspaceUnit_a06d7939e505f8b9200474b6da03339c6}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the workspace unit contents to standard output. \end{DoxyCompactList}\item 
+bool \hyperlink{classCWorkspaceUnit_a497ddf121815312350dda067c2072595}{Load\-Project} (const \hyperlink{classCString}{C\-String} \&Workspace\-Path)
+\begin{DoxyCompactList}\small\item\em Loads the workspace unit (project) from file. \end{DoxyCompactList}\item 
+\hyperlink{classCWorkspaceUnit_a43606fefd429de9e688d4ad8c459e2d7}{C\-Workspace\-Unit} (void)
+\begin{DoxyCompactList}\small\item\em Creates workspace unit. \end{DoxyCompactList}\item 
+\hyperlink{classCWorkspaceUnit_a301fd79216253991e9207e9d167185aa}{$\sim$\-C\-Workspace\-Unit} (void)
+\begin{DoxyCompactList}\small\item\em Destroys workspace unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCWorkspaceUnit_a7e229a4a570c2ac60165969ad85e14c3}{m\-\_\-\-File\-Name}
+\begin{DoxyCompactList}\small\item\em Workspace unit file name. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCWorkspaceUnit_a6984ed5bc47822d9d8cbc1bf82f19beb}{m\-\_\-\-Depends}
+\begin{DoxyCompactList}\small\item\em List of workspace unit dependencies. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project} \hyperlink{classCWorkspaceUnit_a07129425366054f78a5416c09a028c26}{m\-\_\-\-Project}
+\begin{DoxyCompactList}\small\item\em Contains project properties. \end{DoxyCompactList}\item 
+int \hyperlink{classCWorkspaceUnit_a12fe48bb00386ea645fe3e7f699fd967}{m\-\_\-\-Weight}
+\begin{DoxyCompactList}\small\item\em Weight (priority) of the workspace unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCWorkspaceUnit_a202ad87f231d244c3c0c3537e01a269b}{C\-Code\-Blocks\-Workspace}
+\item 
+class \hyperlink{classCWorkspaceUnit_a67d24e5943ac4af577992f63a808c689}{C\-Project\-Weight\-Comparison}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Workspace unit description. 
+
+Contains properties of Code\-::\-Blocks workspace\-: subprojects, their dependencies and priorities. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCWorkspaceUnit_a43606fefd429de9e688d4ad8c459e2d7}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!C\-Workspace\-Unit@{C\-Workspace\-Unit}}
+\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{C\-Workspace\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::\-C\-Workspace\-Unit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCWorkspaceUnit_a43606fefd429de9e688d4ad8c459e2d7}
+
+
+Creates workspace unit. 
+
+\hypertarget{classCWorkspaceUnit_a301fd79216253991e9207e9d167185aa}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!$\sim$\-C\-Workspace\-Unit@{$\sim$\-C\-Workspace\-Unit}}
+\index{$\sim$\-C\-Workspace\-Unit@{$\sim$\-C\-Workspace\-Unit}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{$\sim$\-C\-Workspace\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::$\sim$\-C\-Workspace\-Unit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCWorkspaceUnit_a301fd79216253991e9207e9d167185aa}
+
+
+Destroys workspace unit. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCWorkspaceUnit_a686ef0c6dfac33827cc6b971e78b8cbd}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!Clear@{Clear}}
+\index{Clear@{Clear}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCWorkspaceUnit_a686ef0c6dfac33827cc6b971e78b8cbd}
+
+
+Resets the workspace unit to the initial state. 
+
+\hypertarget{classCWorkspaceUnit_a497ddf121815312350dda067c2072595}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!Load\-Project@{Load\-Project}}
+\index{Load\-Project@{Load\-Project}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{Load\-Project}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::\-Load\-Project (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Workspace\-Path}
+\end{DoxyParamCaption}
+)}}\label{classCWorkspaceUnit_a497ddf121815312350dda067c2072595}
+
+
+Loads the workspace unit (project) from file. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if the workspace unit was successfully loaded, {\itshape false} otherwise.
+\end{DoxyReturn}
+Uses C\-Build\-Project\-::\-Load\-Project(const C\-String\& File\-Name) with \hyperlink{classCWorkspaceUnit_a7e229a4a570c2ac60165969ad85e14c3}{C\-Workspace\-Unit\-::m\-\_\-\-File\-Name} as the workspace unit file name. \hypertarget{classCWorkspaceUnit_a3e379f9772bdac8445b950a105687a6b}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!Read@{Read}}
+\index{Read@{Read}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Unit\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCWorkspaceUnit_a3e379f9772bdac8445b950a105687a6b}
+
+
+Reads the workspace unit settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Unit\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCWorkspaceUnit_a06d7939e505f8b9200474b6da03339c6}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!Show@{Show}}
+\index{Show@{Show}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCWorkspaceUnit_a06d7939e505f8b9200474b6da03339c6}
+
+
+Prints the workspace unit contents to standard output. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classCWorkspaceUnit_a202ad87f231d244c3c0c3537e01a269b}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}}
+\index{C\-Code\-Blocks\-Workspace@{C\-Code\-Blocks\-Workspace}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{C\-Code\-Blocks\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf C\-Code\-Blocks\-Workspace}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCWorkspaceUnit_a202ad87f231d244c3c0c3537e01a269b}
+\hypertarget{classCWorkspaceUnit_a67d24e5943ac4af577992f63a808c689}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!C\-Project\-Weight\-Comparison@{C\-Project\-Weight\-Comparison}}
+\index{C\-Project\-Weight\-Comparison@{C\-Project\-Weight\-Comparison}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{C\-Project\-Weight\-Comparison}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf C\-Project\-Weight\-Comparison}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classCWorkspaceUnit_a67d24e5943ac4af577992f63a808c689}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCWorkspaceUnit_a6984ed5bc47822d9d8cbc1bf82f19beb}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!m\-\_\-\-Depends@{m\-\_\-\-Depends}}
+\index{m\-\_\-\-Depends@{m\-\_\-\-Depends}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{m\-\_\-\-Depends}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::m\-\_\-\-Depends\hspace{0.3cm}{\ttfamily [private]}}}\label{classCWorkspaceUnit_a6984ed5bc47822d9d8cbc1bf82f19beb}
+
+
+List of workspace unit dependencies. 
+
+Contains list of other workspace unit (project) names that this workspace unit requires to be built before itself. \hypertarget{classCWorkspaceUnit_a7e229a4a570c2ac60165969ad85e14c3}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!m\-\_\-\-File\-Name@{m\-\_\-\-File\-Name}}
+\index{m\-\_\-\-File\-Name@{m\-\_\-\-File\-Name}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{m\-\_\-\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::m\-\_\-\-File\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classCWorkspaceUnit_a7e229a4a570c2ac60165969ad85e14c3}
+
+
+Workspace unit file name. 
+
+\hypertarget{classCWorkspaceUnit_a07129425366054f78a5416c09a028c26}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!m\-\_\-\-Project@{m\-\_\-\-Project}}
+\index{m\-\_\-\-Project@{m\-\_\-\-Project}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{m\-\_\-\-Project}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::m\-\_\-\-Project\hspace{0.3cm}{\ttfamily [private]}}}\label{classCWorkspaceUnit_a07129425366054f78a5416c09a028c26}
+
+
+Contains project properties. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project}. 
+\end{DoxySeeAlso}
+\hypertarget{classCWorkspaceUnit_a12fe48bb00386ea645fe3e7f699fd967}{\index{C\-Workspace\-Unit@{C\-Workspace\-Unit}!m\-\_\-\-Weight@{m\-\_\-\-Weight}}
+\index{m\-\_\-\-Weight@{m\-\_\-\-Weight}!CWorkspaceUnit@{C\-Workspace\-Unit}}
+\subsubsection[{m\-\_\-\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}C\-Workspace\-Unit\-::m\-\_\-\-Weight\hspace{0.3cm}{\ttfamily [private]}}}\label{classCWorkspaceUnit_a12fe48bb00386ea645fe3e7f699fd967}
+
+
+Weight (priority) of the workspace unit. 
+
+Normally workspace unit weights range from 0 to 100. Lower weight means higher priority and vice versa. Workspace units with lower weights are compiled and linked first. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbworkspace_8h}{cbworkspace.\-h}\item 
+src/\hyperlink{cbworkspace_8cpp}{cbworkspace.\-cpp}\item 
+src/doc/\hyperlink{cbworkspace_8dox}{cbworkspace.\-dox}\end{DoxyCompactItemize}

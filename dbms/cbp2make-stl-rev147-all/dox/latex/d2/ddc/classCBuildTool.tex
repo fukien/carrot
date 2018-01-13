@@ -1,0 +1,481 @@
+\hypertarget{classCBuildTool}{\section{C\-Build\-Tool Class Reference}
+\label{classCBuildTool}\index{C\-Build\-Tool@{C\-Build\-Tool}}
+}
+
+
+{\ttfamily \#include $<$buildtools.\-h$>$}
+
+Inheritance diagram for C\-Build\-Tool\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.555555cm]{d2/ddc/classCBuildTool}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{Tool\-Type} \{ \\*
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}{bt\-Other}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da682ffd4849664236bd9cea4ca37c9098}{bt\-Preprocessor}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dacea51ef0acdd86734df3fab58ab6ff63}{bt\-Assembler}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da6452f06a6962d6d1691764fc7547b2fa}{bt\-Compiler}, 
+\\*
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dafa84336de8da15476a3f18c592db84d8}{bt\-Resource\-Compiler}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6daaa590d3915bffb1feeb7fabb95cfdcc9}{bt\-Static\-Linker}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da9337f68db623a79d23af60d99c31977f}{bt\-Dynamic\-Linker}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da304855adea8cd14d42cb204a8e0e412d}{bt\-Executable\-Linker}, 
+\\*
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dac9a46f3c5397fa8f045d5e302ae1ecdd}{bt\-Native\-Linker}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dae3a80faefcf67e0bd400b18640b59833}{bt\-Dependency\-Generator}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da3f42e0d5c99e78480c9955eb52c6a098}{bt\-Build\-Manager}, 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da7992e6bec75ea5848c159fdba11a5090}{bt\-Count}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{C\-Build\-Tool\-::\-Tool\-Type} \hyperlink{classCBuildTool_abd560ed1c839d6ff4c0be5a3d31c83fa}{Type} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a8a78c520f210a52e89de6256ed2fd8af}{Type\-Name} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCBuildTool_a9f4bd07f77e0e5017fd437d4da7c9746}{Alias} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCBuildTool_a513c6a5dade6a3f397ca83dd32a6662b}{Description} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCBuildTool_a8405382b1f3b433ee55e879e74d65215}{Program} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCBuildTool_a971ed2f2b55d9f1127a218484b75aff6}{Make\-Variable} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCBuildTool_ab5238ad27196fd6d11650dd633c66284}{Command\-Template} (void)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCBuildTool_a6a764334cbcc2bf917237286938ad8fd}{Source\-Extensions} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCBuildTool_a3f957896383550c69d8f3136037b74bd}{Target\-Extension} (void)
+\item 
+bool \& \hyperlink{classCBuildTool_ab9e88543f1f7e2a760036ebff1c49298}{Need\-Quoted\-Path} (void)
+\item 
+bool \& \hyperlink{classCBuildTool_adae57be5c380f9e4e2a2934d7929816c}{Need\-Full\-Path} (void)
+\item 
+bool \& \hyperlink{classCBuildTool_a2b0f6b103a1d6de571da86a66a4853e7}{Need\-Unix\-Path} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a21215cc9d80059ce00ed853b87e7d38d}{Make\-Command} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCBuildTool_ab5238ad27196fd6d11650dd633c66284}{Command\-Template}, \hyperlink{classCConfiguration}{C\-Configuration} \&Arguments)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a34da772ee708afd2f77e6222752ea2b4}{Make\-Command} (\hyperlink{classCConfiguration}{C\-Configuration} \&Arguments)
+\item 
+virtual bool \hyperlink{classCBuildTool_a34ad2894ff945f054ccd86db4007934f}{Expected\-Source\-Extension} (const \hyperlink{classCString}{C\-String} \&File\-Extension)
+\item 
+virtual \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ \hyperlink{classCBuildTool_aa7f0e7c0bd7f75c71d37df066bcb581e}{Create\-Instance} (void)
+\item 
+virtual void \hyperlink{classCBuildTool_ae36693eb03f822b8971a4e4b036111c2}{Clear} (void)
+\item 
+virtual void \hyperlink{classCBuildTool_abea21a0e61ab2177effdff5aaa169585}{Reset} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S)
+\item 
+virtual bool \hyperlink{classCBuildTool_ad07fcd46ccc841bc131d65505e5343c1}{Supports} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S)
+\item 
+virtual void \hyperlink{classCBuildTool_a299d87943c0f68dde5316318cc0838f8}{Read} (const Ti\-Xml\-Element $\ast$Build\-Tool\-Root)
+\item 
+virtual void \hyperlink{classCBuildTool_af0331a777785bc2d15236b5c74321ed2}{Write} (Ti\-Xml\-Element $\ast$Build\-Tool\-Root)
+\item 
+virtual void \hyperlink{classCBuildTool_a69815d1393a61dc16b2cc2d0552cd5ac}{Show} (void)
+\item 
+\hyperlink{classCBuildTool_a26f646e16e31257c97663d5651d60fdf}{C\-Build\-Tool} (void)
+\item 
+\hyperlink{classCBuildTool_aa4a2205a51b4c6b106f6218b63fd0f2d}{C\-Build\-Tool} (const \hyperlink{classCBuildTool}{C\-Build\-Tool} \&Build\-Tool)
+\item 
+virtual \hyperlink{classCBuildTool_a20a976c3fc44994a8f0a527869243409}{$\sim$\-C\-Build\-Tool} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{Tool\-Type} \hyperlink{classCBuildTool_a6ca8c98420c412d3e2cc78f11ef7f869}{Type} (const \hyperlink{classCString}{C\-String} \&Name)
+\item 
+static \hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a14f8eedbb567cd410216a162b23a8d57}{Type\-Name} (const \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{Tool\-Type} \hyperlink{classCBuildTool_a6ca8c98420c412d3e2cc78f11ef7f869}{Type})
+\item 
+static \hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a83ed37c5be4cdf13846ff4ae7ecca16c}{Abbrev\-Type\-Name} (const \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{Tool\-Type} \hyperlink{classCBuildTool_a6ca8c98420c412d3e2cc78f11ef7f869}{Type})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCBuildTool_a475f533bf444e533415138afa8ffb1fb}{Read} (const Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, \hyperlink{classCString}{C\-String} \&Value)
+\item 
+void \hyperlink{classCBuildTool_a16323a65679c6a29302aa6e9de178637}{Read} (const Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, bool \&Value)
+\item 
+void \hyperlink{classCBuildTool_a8c938967f1db9034c192c7a72de70054}{Write} (Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, const \hyperlink{classCString}{C\-String} \&Value)
+\item 
+void \hyperlink{classCBuildTool_af44193a557ad2df62c683fa5a2bd237b}{Write} (Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, const bool Value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} \hyperlink{classCBuildTool_ac71c95a56dbe26f62052dfff4f1c5c19}{m\-\_\-\-Platform}
+\item 
+\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{C\-Build\-Tool\-::\-Tool\-Type} \hyperlink{classCBuildTool_aca6ef29a8035174232c7b303ec5c51b1}{m\-\_\-\-Type}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a494ffa896b4101e77dda5f53954e0b71}{m\-\_\-\-Alias}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a366fc905a28c6b5d06f86830963fc2b7}{m\-\_\-\-Description}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_af1a5473dde66a30d9aef8da074b8578f}{m\-\_\-\-Program}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a0dc54c7de4b25e7479bc8f025db697b7}{m\-\_\-\-Make\-Variable}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a2fa8d54915b30ee28de67d4928760967}{m\-\_\-\-Command\-Template}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCBuildTool_aca71945734de780a6b72f9aeb6e4a0c1}{m\-\_\-\-Source\-Extensions}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a358fae486209c5c9ee63d65e832bf815}{m\-\_\-\-Target\-Extension}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCBuildTool_a7d7378e1398389dabb9e205c91a15c9b}{m\-\_\-\-Generic\-Switch}
+\item 
+bool \hyperlink{classCBuildTool_ad5ffb63aa12dc58c2305308e4f86486d}{m\-\_\-\-Need\-Quoted\-Path}
+\item 
+bool \hyperlink{classCBuildTool_ae4e23027052ad550bf8f0dbe04a96ae5}{m\-\_\-\-Need\-Full\-Path}
+\item 
+bool \hyperlink{classCBuildTool_a07c05a66337abb13b6c7cb3b577ac600}{m\-\_\-\-Need\-Unix\-Path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Tool\-Type@{Tool\-Type}}
+\index{Tool\-Type@{Tool\-Type}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Tool\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf C\-Build\-Tool\-::\-Tool\-Type}}}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{bt\-Other@{bt\-Other}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Other@{bt\-Other}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}{bt\-Other}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}
+}]\index{bt\-Preprocessor@{bt\-Preprocessor}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Preprocessor@{bt\-Preprocessor}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da682ffd4849664236bd9cea4ca37c9098}{bt\-Preprocessor}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da682ffd4849664236bd9cea4ca37c9098}
+}]\index{bt\-Assembler@{bt\-Assembler}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Assembler@{bt\-Assembler}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dacea51ef0acdd86734df3fab58ab6ff63}{bt\-Assembler}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dacea51ef0acdd86734df3fab58ab6ff63}
+}]\index{bt\-Compiler@{bt\-Compiler}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Compiler@{bt\-Compiler}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da6452f06a6962d6d1691764fc7547b2fa}{bt\-Compiler}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da6452f06a6962d6d1691764fc7547b2fa}
+}]\index{bt\-Resource\-Compiler@{bt\-Resource\-Compiler}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Resource\-Compiler@{bt\-Resource\-Compiler}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dafa84336de8da15476a3f18c592db84d8}{bt\-Resource\-Compiler}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dafa84336de8da15476a3f18c592db84d8}
+}]\index{bt\-Static\-Linker@{bt\-Static\-Linker}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Static\-Linker@{bt\-Static\-Linker}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6daaa590d3915bffb1feeb7fabb95cfdcc9}{bt\-Static\-Linker}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6daaa590d3915bffb1feeb7fabb95cfdcc9}
+}]\index{bt\-Dynamic\-Linker@{bt\-Dynamic\-Linker}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Dynamic\-Linker@{bt\-Dynamic\-Linker}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da9337f68db623a79d23af60d99c31977f}{bt\-Dynamic\-Linker}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da9337f68db623a79d23af60d99c31977f}
+}]\index{bt\-Executable\-Linker@{bt\-Executable\-Linker}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Executable\-Linker@{bt\-Executable\-Linker}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da304855adea8cd14d42cb204a8e0e412d}{bt\-Executable\-Linker}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da304855adea8cd14d42cb204a8e0e412d}
+}]\index{bt\-Native\-Linker@{bt\-Native\-Linker}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Native\-Linker@{bt\-Native\-Linker}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dac9a46f3c5397fa8f045d5e302ae1ecdd}{bt\-Native\-Linker}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dac9a46f3c5397fa8f045d5e302ae1ecdd}
+}]\index{bt\-Dependency\-Generator@{bt\-Dependency\-Generator}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Dependency\-Generator@{bt\-Dependency\-Generator}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dae3a80faefcf67e0bd400b18640b59833}{bt\-Dependency\-Generator}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dae3a80faefcf67e0bd400b18640b59833}
+}]\index{bt\-Build\-Manager@{bt\-Build\-Manager}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Build\-Manager@{bt\-Build\-Manager}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da3f42e0d5c99e78480c9955eb52c6a098}{bt\-Build\-Manager}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da3f42e0d5c99e78480c9955eb52c6a098}
+}]\index{bt\-Count@{bt\-Count}!C\-Build\-Tool@{C\-Build\-Tool}}\index{C\-Build\-Tool@{C\-Build\-Tool}!bt\-Count@{bt\-Count}}\item[{\em 
+\hypertarget{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da7992e6bec75ea5848c159fdba11a5090}{bt\-Count}\label{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6da7992e6bec75ea5848c159fdba11a5090}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCBuildTool_a26f646e16e31257c97663d5651d60fdf}{\index{C\-Build\-Tool@{C\-Build\-Tool}!C\-Build\-Tool@{C\-Build\-Tool}}
+\index{C\-Build\-Tool@{C\-Build\-Tool}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{C\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Tool\-::\-C\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCBuildTool_a26f646e16e31257c97663d5651d60fdf}
+\hypertarget{classCBuildTool_aa4a2205a51b4c6b106f6218b63fd0f2d}{\index{C\-Build\-Tool@{C\-Build\-Tool}!C\-Build\-Tool@{C\-Build\-Tool}}
+\index{C\-Build\-Tool@{C\-Build\-Tool}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{C\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Tool\-::\-C\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Build\-Tool} \&}]{Build\-Tool}
+\end{DoxyParamCaption}
+)}}\label{classCBuildTool_aa4a2205a51b4c6b106f6218b63fd0f2d}
+\hypertarget{classCBuildTool_a20a976c3fc44994a8f0a527869243409}{\index{C\-Build\-Tool@{C\-Build\-Tool}!$\sim$\-C\-Build\-Tool@{$\sim$\-C\-Build\-Tool}}
+\index{$\sim$\-C\-Build\-Tool@{$\sim$\-C\-Build\-Tool}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{$\sim$\-C\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}C\-Build\-Tool\-::$\sim$\-C\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_a20a976c3fc44994a8f0a527869243409}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCBuildTool_a83ed37c5be4cdf13846ff4ae7ecca16c}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Abbrev\-Type\-Name@{Abbrev\-Type\-Name}}
+\index{Abbrev\-Type\-Name@{Abbrev\-Type\-Name}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Abbrev\-Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::\-Abbrev\-Type\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tool\-Type}}]{Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCBuildTool_a83ed37c5be4cdf13846ff4ae7ecca16c}
+\hypertarget{classCBuildTool_a9f4bd07f77e0e5017fd437d4da7c9746}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Alias@{Alias}}
+\index{Alias@{Alias}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Alias}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Build\-Tool\-::\-Alias (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a9f4bd07f77e0e5017fd437d4da7c9746}
+\hypertarget{classCBuildTool_ae36693eb03f822b8971a4e4b036111c2}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Clear@{Clear}}
+\index{Clear@{Clear}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_ae36693eb03f822b8971a4e4b036111c2}
+\hypertarget{classCBuildTool_ab5238ad27196fd6d11650dd633c66284}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Command\-Template@{Command\-Template}}
+\index{Command\-Template@{Command\-Template}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Command\-Template}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Build\-Tool\-::\-Command\-Template (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_ab5238ad27196fd6d11650dd633c66284}
+\hypertarget{classCBuildTool_aa7f0e7c0bd7f75c71d37df066bcb581e}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Create\-Instance@{Create\-Instance}}
+\index{Create\-Instance@{Create\-Instance}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Create\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool} $\ast$ C\-Build\-Tool\-::\-Create\-Instance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_aa7f0e7c0bd7f75c71d37df066bcb581e}
+
+
+Reimplemented in \hyperlink{classCMSVCBuildManager_a2519f0cd2477b6f9bd4459b15635c466}{C\-M\-S\-V\-C\-Build\-Manager}, \hyperlink{classCMSVCNativeExecutableLinker_ab769242f54c4336e1cedd340b8a45d3a}{C\-M\-S\-V\-C\-Native\-Executable\-Linker}, \hyperlink{classCMSVCConsoleExecutableLinker_a9240460d8f7ea9651177279bf0640a88}{C\-M\-S\-V\-C\-Console\-Executable\-Linker}, \hyperlink{classCMSVCExecutableLinker_ad5b1391fa863f9e966562ee227a00693}{C\-M\-S\-V\-C\-Executable\-Linker}, \hyperlink{classCMSVCDynamicLinker_ad8fc45d290987fb96b9a983b592a2ad1}{C\-M\-S\-V\-C\-Dynamic\-Linker}, \hyperlink{classCMSVCStaticLinker_ab05784f22189ba02f8d2f4be2c3ab095}{C\-M\-S\-V\-C\-Static\-Linker}, \hyperlink{classCMSVCResourceCompiler_aabd1683b76c181322754107af65ed8e0}{C\-M\-S\-V\-C\-Resource\-Compiler}, \hyperlink{classCMSVCppCompiler_ace8c0f315b83286474cdf8c8b41db75a}{C\-M\-S\-V\-Cpp\-Compiler}, \hyperlink{classCMSVCCompiler_a00dec77c231cace2f66fe45fccb25c7e}{C\-M\-S\-V\-C\-Compiler}, \hyperlink{classCIntelExecutableLinker_aacec1bc57c88a614c449a6873c1cc489}{C\-Intel\-Executable\-Linker}, \hyperlink{classCIntelDynamicLinker_a51e4c22985b5c518e8cdef1abeee7d85}{C\-Intel\-Dynamic\-Linker}, \hyperlink{classCIntelStaticLinker_af5e68a1b09bc64dd30af6d7e9ffe6266}{C\-Intel\-Static\-Linker}, \hyperlink{classCIntelCppCompiler_a2e75b0ac5a7860128f25f29698f51509}{C\-Intel\-Cpp\-Compiler}, \hyperlink{classCIntelCCompiler_a4f259da4011feabc53b1ebf9a26bd2de}{C\-Intel\-C\-Compiler}, \hyperlink{classCBorlandConsoleExecutableLinker_a1aba394784a724a2b59c021b732484f8}{C\-Borland\-Console\-Executable\-Linker}, \hyperlink{classCBorlandExecutableLinker_ab4acecd477ed0458760a3f14ee6fb868}{C\-Borland\-Executable\-Linker}, \hyperlink{classCBorlandDynamicLinker_ae76cbd521d03bd3eee2f1d5fe8836d03}{C\-Borland\-Dynamic\-Linker}, \hyperlink{classCBorlandStaticLinker_ac5c637b9e4762cf272d8710be8212857}{C\-Borland\-Static\-Linker}, \hyperlink{classCBorlandResourceCompiler_a5c6aeef4fa07fb9693feb860a70729e0}{C\-Borland\-Resource\-Compiler}, \hyperlink{classCBorlandCppCompiler_a49178aa21245a1400f38c71631b7fa78}{C\-Borland\-Cpp\-Compiler}, \hyperlink{classCGNUARMExecutableLinker_a9241ead8113a3c4c3820240f3993fb19}{C\-G\-N\-U\-A\-R\-M\-Executable\-Linker}, \hyperlink{classCGNUARMDynamicLinker_ad3ded52b8101b6f85ad6d5609f85c78c}{C\-G\-N\-U\-A\-R\-M\-Dynamic\-Linker}, \hyperlink{classCGNUARMStaticLinker_a7cac8fed64437b826d085b0cf33aeaf8}{C\-G\-N\-U\-A\-R\-M\-Static\-Linker}, \hyperlink{classCGNUARMWindowsResourceCompiler_a8da0eff0b561e69f2e2178965cd69253}{C\-G\-N\-U\-A\-R\-M\-Windows\-Resource\-Compiler}, \hyperlink{classCGNUARMCppCompiler_ae61a4db30f31a36bc46341da83ac9c63}{C\-G\-N\-U\-A\-R\-M\-Cpp\-Compiler}, \hyperlink{classCGNUARMCCompiler_a3e102dcc65d172a098282c5554e79302}{C\-G\-N\-U\-A\-R\-M\-C\-Compiler}, \hyperlink{classCGNUAVRDependencyGenerator_a5d4d5e45d1cdd58d998ac961a66647dc}{C\-G\-N\-U\-A\-V\-R\-Dependency\-Generator}, \hyperlink{classCGNUAVRExecutableLinker_ad6c7693277ecb00d550bde8e1bda0b8c}{C\-G\-N\-U\-A\-V\-R\-Executable\-Linker}, \hyperlink{classCGNUAVRDynamicLinker_ae26802d4ce8ce7c45a87a65bf7066832}{C\-G\-N\-U\-A\-V\-R\-Dynamic\-Linker}, \hyperlink{classCGNUAVRStaticLinker_ad4852b66cb610455765089ff8fdb7771}{C\-G\-N\-U\-A\-V\-R\-Static\-Linker}, \hyperlink{classCGNUAVRCppCompiler_ac38cdc207e9dce42f53fef90ebaa3b87}{C\-G\-N\-U\-A\-V\-R\-Cpp\-Compiler}, \hyperlink{classCGNUAVRCCompiler_ad5630a463e0a41b5ecf28295f2c16e2f}{C\-G\-N\-U\-A\-V\-R\-C\-Compiler}, \hyperlink{classCGNUExecutableLinker_a96d5c82ab5c7c26e7e9ef1542c815e94}{C\-G\-N\-U\-Executable\-Linker}, \hyperlink{classCGNUDynamicLinker_addcaa2506e1f804b4737cb564a899f6c}{C\-G\-N\-U\-Dynamic\-Linker}, \hyperlink{classCGNUStaticLinker_aa2e18f13e37d6c4fe3016d55bc67f746}{C\-G\-N\-U\-Static\-Linker}, \hyperlink{classCGNUWindowsResourceCompiler_a295b322f12aa797537c0ef38bed0a9a5}{C\-G\-N\-U\-Windows\-Resource\-Compiler}, \hyperlink{classCGNUFortran90Compiler_a40bbc9c4d1417331e65990ed6f402d24}{C\-G\-N\-U\-Fortran90\-Compiler}, \hyperlink{classCGNUFortran77Compiler_ac9303b9366e63a08983cabcdfcb5cf06}{C\-G\-N\-U\-Fortran77\-Compiler}, \hyperlink{classCGNUCppCompiler_a0e6856b3906b6b32951f9796fba16316}{C\-G\-N\-U\-Cpp\-Compiler}, \hyperlink{classCGNUCCompiler_ae69827132a9bc1170f2073bf4ded88bc}{C\-G\-N\-U\-C\-Compiler}, \hyperlink{classCBuildManager_a3613cf27c028cb883a5b309a8c024d75}{C\-Build\-Manager}, \hyperlink{classCDependencyGenerator_af25a1710b95578b0e7ebcec02c4a7238}{C\-Dependency\-Generator}, \hyperlink{classCExecutableLinker_a457b823b737b0a78285d5ede77df827c}{C\-Executable\-Linker}, \hyperlink{classCDynamicLinker_ac71406ca5c6e8e991a6418a6307d274c}{C\-Dynamic\-Linker}, \hyperlink{classCStaticLinker_a7e626491caa847ef207032ee600625db}{C\-Static\-Linker}, \hyperlink{classCLibraryLinker_a02b85c6bc81ad2973ee9a578412a1fa0}{C\-Library\-Linker}, \hyperlink{classCLinker_a9b644b9c906436f75b394f2324d811d3}{C\-Linker}, \hyperlink{classCResourceCompiler_a4f46ae1558a0096b040eb593d28a810c}{C\-Resource\-Compiler}, \hyperlink{classCAssembler_abc4ab373b93fc0980c204764afa73306}{C\-Assembler}, \hyperlink{classCCompiler_a3d4aaaf69e1ba6070c729fd042d90012}{C\-Compiler}, and \hyperlink{classCPreprocessor_af3308b7a4153f39320345f12f3da231c}{C\-Preprocessor}.
+
+\hypertarget{classCBuildTool_a513c6a5dade6a3f397ca83dd32a6662b}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Description@{Description}}
+\index{Description@{Description}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Build\-Tool\-::\-Description (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a513c6a5dade6a3f397ca83dd32a6662b}
+\hypertarget{classCBuildTool_a34ad2894ff945f054ccd86db4007934f}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Expected\-Source\-Extension@{Expected\-Source\-Extension}}
+\index{Expected\-Source\-Extension@{Expected\-Source\-Extension}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Expected\-Source\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Tool\-::\-Expected\-Source\-Extension (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_a34ad2894ff945f054ccd86db4007934f}
+\hypertarget{classCBuildTool_a21215cc9d80059ce00ed853b87e7d38d}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Make\-Command@{Make\-Command}}
+\index{Make\-Command@{Make\-Command}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Make\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::\-Make\-Command (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Command\-Template, }
+\item[{{\bf C\-Configuration} \&}]{Arguments}
+\end{DoxyParamCaption}
+)}}\label{classCBuildTool_a21215cc9d80059ce00ed853b87e7d38d}
+\hypertarget{classCBuildTool_a34da772ee708afd2f77e6222752ea2b4}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Make\-Command@{Make\-Command}}
+\index{Make\-Command@{Make\-Command}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Make\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::\-Make\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Configuration} \&}]{Arguments}
+\end{DoxyParamCaption}
+)}}\label{classCBuildTool_a34da772ee708afd2f77e6222752ea2b4}
+\hypertarget{classCBuildTool_a971ed2f2b55d9f1127a218484b75aff6}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Make\-Variable@{Make\-Variable}}
+\index{Make\-Variable@{Make\-Variable}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Make\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Build\-Tool\-::\-Make\-Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a971ed2f2b55d9f1127a218484b75aff6}
+\hypertarget{classCBuildTool_adae57be5c380f9e4e2a2934d7929816c}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Need\-Full\-Path@{Need\-Full\-Path}}
+\index{Need\-Full\-Path@{Need\-Full\-Path}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Need\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Build\-Tool\-::\-Need\-Full\-Path (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_adae57be5c380f9e4e2a2934d7929816c}
+\hypertarget{classCBuildTool_ab9e88543f1f7e2a760036ebff1c49298}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Need\-Quoted\-Path@{Need\-Quoted\-Path}}
+\index{Need\-Quoted\-Path@{Need\-Quoted\-Path}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Need\-Quoted\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Build\-Tool\-::\-Need\-Quoted\-Path (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_ab9e88543f1f7e2a760036ebff1c49298}
+\hypertarget{classCBuildTool_a2b0f6b103a1d6de571da86a66a4853e7}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Need\-Unix\-Path@{Need\-Unix\-Path}}
+\index{Need\-Unix\-Path@{Need\-Unix\-Path}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Need\-Unix\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Build\-Tool\-::\-Need\-Unix\-Path (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a2b0f6b103a1d6de571da86a66a4853e7}
+\hypertarget{classCBuildTool_a8405382b1f3b433ee55e879e74d65215}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Program@{Program}}
+\index{Program@{Program}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Program}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Build\-Tool\-::\-Program (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a8405382b1f3b433ee55e879e74d65215}
+\hypertarget{classCBuildTool_a475f533bf444e533415138afa8ffb1fb}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Read@{Read}}
+\index{Read@{Read}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{{\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a475f533bf444e533415138afa8ffb1fb}
+\hypertarget{classCBuildTool_a16323a65679c6a29302aa6e9de178637}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Read@{Read}}
+\index{Read@{Read}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{bool \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a16323a65679c6a29302aa6e9de178637}
+\hypertarget{classCBuildTool_a299d87943c0f68dde5316318cc0838f8}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Read@{Read}}
+\index{Read@{Read}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Build\-Tool\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_a299d87943c0f68dde5316318cc0838f8}
+
+
+Reimplemented in \hyperlink{classCBuildManager_a3a2dfa7800c44b7122a248d32dffe193}{C\-Build\-Manager}, \hyperlink{classCDependencyGenerator_aaaff3838bea1e65ba250b78f1746870c}{C\-Dependency\-Generator}, \hyperlink{classCExecutableLinker_a181ea374618a85985db14f468dc63023}{C\-Executable\-Linker}, \hyperlink{classCLinker_a6db5ff1a933b56855b2bfb9260f46dce}{C\-Linker}, \hyperlink{classCCompiler_ac842b165479db817bb86d56367988b10}{C\-Compiler}, and \hyperlink{classCPreprocessor_a30e3222f8d535865ef691d922ec4615e}{C\-Preprocessor}.
+
+\hypertarget{classCBuildTool_abea21a0e61ab2177effdff5aaa169585}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Reset@{Reset}}
+\index{Reset@{Reset}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Reset (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_abea21a0e61ab2177effdff5aaa169585}
+
+
+Reimplemented in \hyperlink{classCMSVCBuildManager_a1ca4f16c93948c195a65d14746555bea}{C\-M\-S\-V\-C\-Build\-Manager}, \hyperlink{classCMSVCNativeExecutableLinker_ab3fb3e7311543adbb49e2ea4d1e1070d}{C\-M\-S\-V\-C\-Native\-Executable\-Linker}, \hyperlink{classCMSVCConsoleExecutableLinker_a79315457d3dfc639a33e60426a67e956}{C\-M\-S\-V\-C\-Console\-Executable\-Linker}, \hyperlink{classCMSVCExecutableLinker_aec2b90e8609888c052952a2072d65f52}{C\-M\-S\-V\-C\-Executable\-Linker}, \hyperlink{classCMSVCDynamicLinker_aae22160e1bee1d4231ce669ac0132937}{C\-M\-S\-V\-C\-Dynamic\-Linker}, \hyperlink{classCMSVCStaticLinker_ac7a93fa46130ad965232df605574a41c}{C\-M\-S\-V\-C\-Static\-Linker}, \hyperlink{classCMSVCResourceCompiler_a0e48cbff3bc0d94803c0b2307317f05b}{C\-M\-S\-V\-C\-Resource\-Compiler}, \hyperlink{classCMSVCppCompiler_ac159b7332272495733a159641a1e6274}{C\-M\-S\-V\-Cpp\-Compiler}, \hyperlink{classCMSVCCompiler_add080abc4d9d62ecfb08d0acb32b7693}{C\-M\-S\-V\-C\-Compiler}, \hyperlink{classCIntelExecutableLinker_adb14460fc50fb8d0e7ef29fd991d4271}{C\-Intel\-Executable\-Linker}, \hyperlink{classCIntelDynamicLinker_a9716e2053535fcadd92d46699d8b445e}{C\-Intel\-Dynamic\-Linker}, \hyperlink{classCIntelStaticLinker_a71064c1a78086c73ddae37f4ecf513c2}{C\-Intel\-Static\-Linker}, \hyperlink{classCIntelCppCompiler_a39338f5aead731a4fc834605d2d60c37}{C\-Intel\-Cpp\-Compiler}, \hyperlink{classCIntelCCompiler_af5d140834df595d4b5e370e534acb933}{C\-Intel\-C\-Compiler}, \hyperlink{classCBorlandConsoleExecutableLinker_a0b31e3b17b2c03a4d6d6ada4fe8b48e0}{C\-Borland\-Console\-Executable\-Linker}, \hyperlink{classCBorlandExecutableLinker_a90ea600853600bac560530248a4a82b4}{C\-Borland\-Executable\-Linker}, \hyperlink{classCBorlandDynamicLinker_acbf22349e7e89873dac5f55f8d9adc8b}{C\-Borland\-Dynamic\-Linker}, \hyperlink{classCBorlandStaticLinker_a179338b382e0a92ccc927666c52cdf18}{C\-Borland\-Static\-Linker}, \hyperlink{classCBorlandResourceCompiler_a586f49a9ccb4b38f3a74534eb3876c55}{C\-Borland\-Resource\-Compiler}, \hyperlink{classCBorlandCppCompiler_ac329f9e685bd1a702d7545fa991be71d}{C\-Borland\-Cpp\-Compiler}, \hyperlink{classCGNUARMExecutableLinker_a9c3143f13605d317022dca24f134ff39}{C\-G\-N\-U\-A\-R\-M\-Executable\-Linker}, \hyperlink{classCGNUARMDynamicLinker_a3f49a2938f97c58d9eaee0986f3b9866}{C\-G\-N\-U\-A\-R\-M\-Dynamic\-Linker}, \hyperlink{classCGNUARMStaticLinker_a2bb9852d9ddd5ad71fdd2bb9a374343e}{C\-G\-N\-U\-A\-R\-M\-Static\-Linker}, \hyperlink{classCGNUARMWindowsResourceCompiler_a0eae18d396f5bfc5ffcd76af42b8d093}{C\-G\-N\-U\-A\-R\-M\-Windows\-Resource\-Compiler}, \hyperlink{classCGNUARMCppCompiler_aa51e81dcb2d4a6982aae3c8627e3fdc6}{C\-G\-N\-U\-A\-R\-M\-Cpp\-Compiler}, \hyperlink{classCGNUARMCCompiler_a379674393ab735aae49e718d8da8d71a}{C\-G\-N\-U\-A\-R\-M\-C\-Compiler}, \hyperlink{classCGNUAVRDependencyGenerator_af96f3eb85393be62b8b91f0376b17273}{C\-G\-N\-U\-A\-V\-R\-Dependency\-Generator}, \hyperlink{classCGNUAVRExecutableLinker_a2bb4fb92e5d0d6846a8635e1ebcc9ccb}{C\-G\-N\-U\-A\-V\-R\-Executable\-Linker}, \hyperlink{classCGNUAVRDynamicLinker_a08c53dfc9f1352a486bfb736aee544f4}{C\-G\-N\-U\-A\-V\-R\-Dynamic\-Linker}, \hyperlink{classCGNUAVRStaticLinker_aed827fdf1de17dfdbcdfe0ba4ca55fda}{C\-G\-N\-U\-A\-V\-R\-Static\-Linker}, \hyperlink{classCGNUAVRCppCompiler_a3c597b2862b70725bcbc2d518c90f7bd}{C\-G\-N\-U\-A\-V\-R\-Cpp\-Compiler}, \hyperlink{classCGNUAVRCCompiler_a7f1f5abcd42d933e732c33bae1e18763}{C\-G\-N\-U\-A\-V\-R\-C\-Compiler}, \hyperlink{classCGNUExecutableLinker_a79d1592b592c3b48d7e1683cdb516d85}{C\-G\-N\-U\-Executable\-Linker}, \hyperlink{classCGNUDynamicLinker_ae156df1627238831556bd40597694d7e}{C\-G\-N\-U\-Dynamic\-Linker}, \hyperlink{classCGNUStaticLinker_a12dca4d9b21cac925906776310521240}{C\-G\-N\-U\-Static\-Linker}, \hyperlink{classCGNUWindowsResourceCompiler_add9c139a642cf1d18a3fb2978bb792c4}{C\-G\-N\-U\-Windows\-Resource\-Compiler}, \hyperlink{classCGNUFortran90Compiler_a6ab744c56fb1f147587fee587d15b652}{C\-G\-N\-U\-Fortran90\-Compiler}, \hyperlink{classCGNUFortran77Compiler_a67867de4d567f8afc4758083b29be23a}{C\-G\-N\-U\-Fortran77\-Compiler}, \hyperlink{classCGNUCppCompiler_ae44ff252152bc51ef1855cc863cb007b}{C\-G\-N\-U\-Cpp\-Compiler}, \hyperlink{classCGNUCCompiler_a56fec9a27346838f33b3c444e90021f7}{C\-G\-N\-U\-C\-Compiler}, and \hyperlink{classCDynamicLinker_a437d46ee65b3585e7be9d15d40c26820}{C\-Dynamic\-Linker}.
+
+\hypertarget{classCBuildTool_a69815d1393a61dc16b2cc2d0552cd5ac}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Show@{Show}}
+\index{Show@{Show}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_a69815d1393a61dc16b2cc2d0552cd5ac}
+
+
+Reimplemented in \hyperlink{classCBuildManager_a6a7e968c30cef765316d06a1f0a6d76c}{C\-Build\-Manager}, \hyperlink{classCDependencyGenerator_a632c6eedf0b8d948748fb29f47545451}{C\-Dependency\-Generator}, \hyperlink{classCExecutableLinker_a01fa91b454c4cc4d154a26f0ab8da467}{C\-Executable\-Linker}, \hyperlink{classCLinker_aa2c99f02f4433dfae7cdc0654b901582}{C\-Linker}, \hyperlink{classCCompiler_a07a1bbfb0fc606cf74bccc1ab64a64e8}{C\-Compiler}, and \hyperlink{classCPreprocessor_a42b578669033aae20b4f1a2d90f922dc}{C\-Preprocessor}.
+
+\hypertarget{classCBuildTool_a6a764334cbcc2bf917237286938ad8fd}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Source\-Extensions@{Source\-Extensions}}
+\index{Source\-Extensions@{Source\-Extensions}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Source\-Extensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List}\& C\-Build\-Tool\-::\-Source\-Extensions (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a6a764334cbcc2bf917237286938ad8fd}
+\hypertarget{classCBuildTool_ad07fcd46ccc841bc131d65505e5343c1}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Supports@{Supports}}
+\index{Supports@{Supports}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Supports}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Tool\-::\-Supports (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_ad07fcd46ccc841bc131d65505e5343c1}
+
+
+Reimplemented in \hyperlink{classCMSVCBuildManager_a3cbaed658bc22c79e3e7773dfa160539}{C\-M\-S\-V\-C\-Build\-Manager}, \hyperlink{classCMSVCNativeExecutableLinker_a06f018ae3ec35146787b4e5970e84b58}{C\-M\-S\-V\-C\-Native\-Executable\-Linker}, \hyperlink{classCMSVCConsoleExecutableLinker_aaa950dd28c23862008a977f416505592}{C\-M\-S\-V\-C\-Console\-Executable\-Linker}, \hyperlink{classCMSVCExecutableLinker_ab29c9d52020b0fcdf8a8a2affd8d48e2}{C\-M\-S\-V\-C\-Executable\-Linker}, \hyperlink{classCMSVCDynamicLinker_a7ff4303d39016e448ca578a1130c8d80}{C\-M\-S\-V\-C\-Dynamic\-Linker}, \hyperlink{classCMSVCStaticLinker_a3328e630b5bd54ab6b32f8a900908ccf}{C\-M\-S\-V\-C\-Static\-Linker}, \hyperlink{classCMSVCResourceCompiler_a5baad5f0696d6d4ee3de3337c8d87e99}{C\-M\-S\-V\-C\-Resource\-Compiler}, \hyperlink{classCMSVCppCompiler_a468de125fdf0a36980a537c67b0cf23a}{C\-M\-S\-V\-Cpp\-Compiler}, \hyperlink{classCMSVCCompiler_ac0d2bf0b4569ee2c375d8358ff1fba66}{C\-M\-S\-V\-C\-Compiler}, \hyperlink{classCBorlandConsoleExecutableLinker_a3f6d2df3415c6ee0cec057b481378b45}{C\-Borland\-Console\-Executable\-Linker}, \hyperlink{classCBorlandExecutableLinker_a9786f43fd6a38bdb00fc043f069f840a}{C\-Borland\-Executable\-Linker}, \hyperlink{classCBorlandDynamicLinker_a78506817efc139b24fe28ebebde51942}{C\-Borland\-Dynamic\-Linker}, \hyperlink{classCBorlandStaticLinker_ad2a9e9d8203c34246ca26641fb2e941b}{C\-Borland\-Static\-Linker}, \hyperlink{classCBorlandResourceCompiler_a114094b4bedcad07c1986e8023ed2aca}{C\-Borland\-Resource\-Compiler}, \hyperlink{classCBorlandCppCompiler_a68255b1124b821456884050014e1b256}{C\-Borland\-Cpp\-Compiler}, \hyperlink{classCGNUARMWindowsResourceCompiler_abffeeed1b3f8b6482c231c7349098f0c}{C\-G\-N\-U\-A\-R\-M\-Windows\-Resource\-Compiler}, and \hyperlink{classCGNUWindowsResourceCompiler_ac234523a2d9575abe309aa1814cf957d}{C\-G\-N\-U\-Windows\-Resource\-Compiler}.
+
+\hypertarget{classCBuildTool_a3f957896383550c69d8f3136037b74bd}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Target\-Extension@{Target\-Extension}}
+\index{Target\-Extension@{Target\-Extension}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Target\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Build\-Tool\-::\-Target\-Extension (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_a3f957896383550c69d8f3136037b74bd}
+\hypertarget{classCBuildTool_a6ca8c98420c412d3e2cc78f11ef7f869}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Type@{Type}}
+\index{Type@{Type}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool\-::\-Tool\-Type} C\-Build\-Tool\-::\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCBuildTool_a6ca8c98420c412d3e2cc78f11ef7f869}
+\hypertarget{classCBuildTool_abd560ed1c839d6ff4c0be5a3d31c83fa}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Type@{Type}}
+\index{Type@{Type}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool\-::\-Tool\-Type} C\-Build\-Tool\-::\-Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCBuildTool_abd560ed1c839d6ff4c0be5a3d31c83fa}
+\hypertarget{classCBuildTool_a14f8eedbb567cd410216a162b23a8d57}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Type\-Name@{Type\-Name}}
+\index{Type\-Name@{Type\-Name}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::\-Type\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tool\-Type}}]{Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCBuildTool_a14f8eedbb567cd410216a162b23a8d57}
+\hypertarget{classCBuildTool_a8a78c520f210a52e89de6256ed2fd8af}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Type\-Name@{Type\-Name}}
+\index{Type\-Name@{Type\-Name}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::\-Type\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCBuildTool_a8a78c520f210a52e89de6256ed2fd8af}
+\hypertarget{classCBuildTool_a8c938967f1db9034c192c7a72de70054}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Write@{Write}}
+\index{Write@{Write}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a8c938967f1db9034c192c7a72de70054}
+\hypertarget{classCBuildTool_af44193a557ad2df62c683fa5a2bd237b}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Write@{Write}}
+\index{Write@{Write}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const bool}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_af44193a557ad2df62c683fa5a2bd237b}
+\hypertarget{classCBuildTool_af0331a777785bc2d15236b5c74321ed2}{\index{C\-Build\-Tool@{C\-Build\-Tool}!Write@{Write}}
+\index{Write@{Write}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Build\-Tool\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Build\-Tool\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCBuildTool_af0331a777785bc2d15236b5c74321ed2}
+
+
+Reimplemented in \hyperlink{classCBuildManager_a62bfb161da5eacc3b372c220dc89fa0b}{C\-Build\-Manager}, \hyperlink{classCDependencyGenerator_a631a53bd18d1974f7375a665e17357a2}{C\-Dependency\-Generator}, \hyperlink{classCExecutableLinker_a6124deba72724510423c17963f960578}{C\-Executable\-Linker}, \hyperlink{classCLinker_ad2b70ef5f824d2697b4f12579415dca3}{C\-Linker}, \hyperlink{classCCompiler_a25f64fb47c532b5261c44aca09b34cfa}{C\-Compiler}, and \hyperlink{classCPreprocessor_abe0fdbf2737d9acb4472ad0b40026938}{C\-Preprocessor}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCBuildTool_a494ffa896b4101e77dda5f53954e0b71}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Alias@{m\-\_\-\-Alias}}
+\index{m\-\_\-\-Alias@{m\-\_\-\-Alias}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Alias}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Alias\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a494ffa896b4101e77dda5f53954e0b71}
+\hypertarget{classCBuildTool_a2fa8d54915b30ee28de67d4928760967}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Command\-Template@{m\-\_\-\-Command\-Template}}
+\index{m\-\_\-\-Command\-Template@{m\-\_\-\-Command\-Template}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Command\-Template}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Command\-Template\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a2fa8d54915b30ee28de67d4928760967}
+\hypertarget{classCBuildTool_a366fc905a28c6b5d06f86830963fc2b7}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Description@{m\-\_\-\-Description}}
+\index{m\-\_\-\-Description@{m\-\_\-\-Description}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Description\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a366fc905a28c6b5d06f86830963fc2b7}
+\hypertarget{classCBuildTool_a7d7378e1398389dabb9e205c91a15c9b}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Generic\-Switch@{m\-\_\-\-Generic\-Switch}}
+\index{m\-\_\-\-Generic\-Switch@{m\-\_\-\-Generic\-Switch}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Generic\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Generic\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a7d7378e1398389dabb9e205c91a15c9b}
+\hypertarget{classCBuildTool_a0dc54c7de4b25e7479bc8f025db697b7}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Make\-Variable@{m\-\_\-\-Make\-Variable}}
+\index{m\-\_\-\-Make\-Variable@{m\-\_\-\-Make\-Variable}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Make\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Make\-Variable\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a0dc54c7de4b25e7479bc8f025db697b7}
+\hypertarget{classCBuildTool_ae4e23027052ad550bf8f0dbe04a96ae5}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Need\-Full\-Path@{m\-\_\-\-Need\-Full\-Path}}
+\index{m\-\_\-\-Need\-Full\-Path@{m\-\_\-\-Need\-Full\-Path}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Need\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Tool\-::m\-\_\-\-Need\-Full\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_ae4e23027052ad550bf8f0dbe04a96ae5}
+\hypertarget{classCBuildTool_ad5ffb63aa12dc58c2305308e4f86486d}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Need\-Quoted\-Path@{m\-\_\-\-Need\-Quoted\-Path}}
+\index{m\-\_\-\-Need\-Quoted\-Path@{m\-\_\-\-Need\-Quoted\-Path}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Need\-Quoted\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Tool\-::m\-\_\-\-Need\-Quoted\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_ad5ffb63aa12dc58c2305308e4f86486d}
+\hypertarget{classCBuildTool_a07c05a66337abb13b6c7cb3b577ac600}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Need\-Unix\-Path@{m\-\_\-\-Need\-Unix\-Path}}
+\index{m\-\_\-\-Need\-Unix\-Path@{m\-\_\-\-Need\-Unix\-Path}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Need\-Unix\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Build\-Tool\-::m\-\_\-\-Need\-Unix\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a07c05a66337abb13b6c7cb3b577ac600}
+\hypertarget{classCBuildTool_ac71c95a56dbe26f62052dfff4f1c5c19}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Platform@{m\-\_\-\-Platform}}
+\index{m\-\_\-\-Platform@{m\-\_\-\-Platform}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Platform\-::\-O\-S\-\_\-\-Type} C\-Build\-Tool\-::m\-\_\-\-Platform\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_ac71c95a56dbe26f62052dfff4f1c5c19}
+\hypertarget{classCBuildTool_af1a5473dde66a30d9aef8da074b8578f}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Program@{m\-\_\-\-Program}}
+\index{m\-\_\-\-Program@{m\-\_\-\-Program}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Program}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Program\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_af1a5473dde66a30d9aef8da074b8578f}
+\hypertarget{classCBuildTool_aca71945734de780a6b72f9aeb6e4a0c1}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Source\-Extensions@{m\-\_\-\-Source\-Extensions}}
+\index{m\-\_\-\-Source\-Extensions@{m\-\_\-\-Source\-Extensions}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Source\-Extensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Build\-Tool\-::m\-\_\-\-Source\-Extensions\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_aca71945734de780a6b72f9aeb6e4a0c1}
+\hypertarget{classCBuildTool_a358fae486209c5c9ee63d65e832bf815}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Target\-Extension@{m\-\_\-\-Target\-Extension}}
+\index{m\-\_\-\-Target\-Extension@{m\-\_\-\-Target\-Extension}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Target\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Build\-Tool\-::m\-\_\-\-Target\-Extension\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_a358fae486209c5c9ee63d65e832bf815}
+\hypertarget{classCBuildTool_aca6ef29a8035174232c7b303ec5c51b1}{\index{C\-Build\-Tool@{C\-Build\-Tool}!m\-\_\-\-Type@{m\-\_\-\-Type}}
+\index{m\-\_\-\-Type@{m\-\_\-\-Type}!CBuildTool@{C\-Build\-Tool}}
+\subsubsection[{m\-\_\-\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool\-::\-Tool\-Type} C\-Build\-Tool\-::m\-\_\-\-Type\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCBuildTool_aca6ef29a8035174232c7b303ec5c51b1}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{buildtools_8h}{buildtools.\-h}\item 
+src/\hyperlink{buildtools_8cpp}{buildtools.\-cpp}\end{DoxyCompactItemize}

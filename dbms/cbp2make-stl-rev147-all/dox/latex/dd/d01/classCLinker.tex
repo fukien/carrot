@@ -1,0 +1,242 @@
+\hypertarget{classCLinker}{\section{C\-Linker Class Reference}
+\label{classCLinker}\index{C\-Linker@{C\-Linker}}
+}
+
+
+{\ttfamily \#include $<$buildtools.\-h$>$}
+
+Inheritance diagram for C\-Linker\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.777778cm]{dd/d01/classCLinker}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCLinker_af3b1d957d4f12e01c0426b094bfc3f4b}{Library\-Dir\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCLinker_a5ed2852d1da83e08ca9006c80dd6208b}{Link\-Library\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCLinker_a368f5e7adece962a799896ca47494e8b}{Object\-Extension} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCLinker_a0e30da82690cd233d51e644d9c3ad367}{Library\-Prefix} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCLinker_a324c41a9b833e91ec238ca0552e0a654}{Library\-Extension} (void)
+\item 
+bool \& \hyperlink{classCLinker_ab1681c03a2c3998087fb31f022567ba2}{Need\-Library\-Prefix} (void)
+\item 
+bool \& \hyperlink{classCLinker_a5be0c19dd3df62d8c9114752ad525a7b}{Need\-Library\-Extension} (void)
+\item 
+bool \& \hyperlink{classCLinker_a9c5f276b64848af6a188424b68d2fe0e}{Need\-Flat\-Objects} (void)
+\item 
+virtual \hyperlink{classCLinker}{C\-Linker} $\ast$ \hyperlink{classCLinker_a9b644b9c906436f75b394f2324d811d3}{Create\-Instance} (void)
+\item 
+virtual void \hyperlink{classCLinker_a6db5ff1a933b56855b2bfb9260f46dce}{Read} (const Ti\-Xml\-Element $\ast$Build\-Tool\-Root)
+\item 
+virtual void \hyperlink{classCLinker_ad2b70ef5f824d2697b4f12579415dca3}{Write} (Ti\-Xml\-Element $\ast$Build\-Tool\-Root)
+\item 
+virtual void \hyperlink{classCLinker_aa2c99f02f4433dfae7cdc0654b901582}{Show} (void)
+\item 
+\hyperlink{classCLinker_a8ed62e385faa10d72320ca590c67113f}{C\-Linker} (void)
+\item 
+\hyperlink{classCLinker_a0bc98af914fde1c3d7c54647739ee4b8}{C\-Linker} (const \hyperlink{classCLinker}{C\-Linker} \&Linker)
+\item 
+virtual \hyperlink{classCLinker_a3e57506f54acf2c76fc1427b4e005033}{$\sim$\-C\-Linker} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCLinker_a8221d44b37262b0c8c6bfbf7d0f1680e}{m\-\_\-\-Library\-Dir\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCLinker_a2417ec61775026fc3efcfb46118c5a93}{m\-\_\-\-Link\-Library\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCLinker_ae5945cfa69ae9ffd27fb7a41f618cbb8}{m\-\_\-\-Object\-Extension}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCLinker_a701e77df0c24ca36679b98328ba509e6}{m\-\_\-\-Library\-Prefix}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCLinker_af481e3e79703844fe6b7b9bc0a44d8b2}{m\-\_\-\-Library\-Extension}
+\item 
+bool \hyperlink{classCLinker_a2d18d1f275583edaf51929171e91189c}{m\-\_\-\-Need\-Library\-Prefix}
+\item 
+bool \hyperlink{classCLinker_ac699e22d086ddbb74d39a381a55f0cfb}{m\-\_\-\-Need\-Library\-Extension}
+\item 
+bool \hyperlink{classCLinker_abf55c8a0d374129e983314f6ea492455}{m\-\_\-\-Need\-Flat\-Objects}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCLinker_a8ed62e385faa10d72320ca590c67113f}{\index{C\-Linker@{C\-Linker}!C\-Linker@{C\-Linker}}
+\index{C\-Linker@{C\-Linker}!CLinker@{C\-Linker}}
+\subsubsection[{C\-Linker}]{\setlength{\rightskip}{0pt plus 5cm}C\-Linker\-::\-C\-Linker (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCLinker_a8ed62e385faa10d72320ca590c67113f}
+\hypertarget{classCLinker_a0bc98af914fde1c3d7c54647739ee4b8}{\index{C\-Linker@{C\-Linker}!C\-Linker@{C\-Linker}}
+\index{C\-Linker@{C\-Linker}!CLinker@{C\-Linker}}
+\subsubsection[{C\-Linker}]{\setlength{\rightskip}{0pt plus 5cm}C\-Linker\-::\-C\-Linker (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Linker} \&}]{Linker}
+\end{DoxyParamCaption}
+)}}\label{classCLinker_a0bc98af914fde1c3d7c54647739ee4b8}
+\hypertarget{classCLinker_a3e57506f54acf2c76fc1427b4e005033}{\index{C\-Linker@{C\-Linker}!$\sim$\-C\-Linker@{$\sim$\-C\-Linker}}
+\index{$\sim$\-C\-Linker@{$\sim$\-C\-Linker}!CLinker@{C\-Linker}}
+\subsubsection[{$\sim$\-C\-Linker}]{\setlength{\rightskip}{0pt plus 5cm}C\-Linker\-::$\sim$\-C\-Linker (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCLinker_a3e57506f54acf2c76fc1427b4e005033}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCLinker_a9b644b9c906436f75b394f2324d811d3}{\index{C\-Linker@{C\-Linker}!Create\-Instance@{Create\-Instance}}
+\index{Create\-Instance@{Create\-Instance}!CLinker@{C\-Linker}}
+\subsubsection[{Create\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Linker} $\ast$ C\-Linker\-::\-Create\-Instance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCLinker_a9b644b9c906436f75b394f2324d811d3}
+
+
+Reimplemented from \hyperlink{classCBuildTool_aa7f0e7c0bd7f75c71d37df066bcb581e}{C\-Build\-Tool}.
+
+
+
+Reimplemented in \hyperlink{classCMSVCNativeExecutableLinker_ab769242f54c4336e1cedd340b8a45d3a}{C\-M\-S\-V\-C\-Native\-Executable\-Linker}, \hyperlink{classCMSVCConsoleExecutableLinker_a9240460d8f7ea9651177279bf0640a88}{C\-M\-S\-V\-C\-Console\-Executable\-Linker}, \hyperlink{classCMSVCExecutableLinker_ad5b1391fa863f9e966562ee227a00693}{C\-M\-S\-V\-C\-Executable\-Linker}, \hyperlink{classCMSVCDynamicLinker_ad8fc45d290987fb96b9a983b592a2ad1}{C\-M\-S\-V\-C\-Dynamic\-Linker}, \hyperlink{classCMSVCStaticLinker_ab05784f22189ba02f8d2f4be2c3ab095}{C\-M\-S\-V\-C\-Static\-Linker}, \hyperlink{classCIntelExecutableLinker_aacec1bc57c88a614c449a6873c1cc489}{C\-Intel\-Executable\-Linker}, \hyperlink{classCIntelDynamicLinker_a51e4c22985b5c518e8cdef1abeee7d85}{C\-Intel\-Dynamic\-Linker}, \hyperlink{classCIntelStaticLinker_af5e68a1b09bc64dd30af6d7e9ffe6266}{C\-Intel\-Static\-Linker}, \hyperlink{classCBorlandConsoleExecutableLinker_a1aba394784a724a2b59c021b732484f8}{C\-Borland\-Console\-Executable\-Linker}, \hyperlink{classCBorlandExecutableLinker_ab4acecd477ed0458760a3f14ee6fb868}{C\-Borland\-Executable\-Linker}, \hyperlink{classCBorlandDynamicLinker_ae76cbd521d03bd3eee2f1d5fe8836d03}{C\-Borland\-Dynamic\-Linker}, \hyperlink{classCBorlandStaticLinker_ac5c637b9e4762cf272d8710be8212857}{C\-Borland\-Static\-Linker}, \hyperlink{classCGNUARMExecutableLinker_a9241ead8113a3c4c3820240f3993fb19}{C\-G\-N\-U\-A\-R\-M\-Executable\-Linker}, \hyperlink{classCGNUARMDynamicLinker_ad3ded52b8101b6f85ad6d5609f85c78c}{C\-G\-N\-U\-A\-R\-M\-Dynamic\-Linker}, \hyperlink{classCGNUARMStaticLinker_a7cac8fed64437b826d085b0cf33aeaf8}{C\-G\-N\-U\-A\-R\-M\-Static\-Linker}, \hyperlink{classCGNUAVRExecutableLinker_ad6c7693277ecb00d550bde8e1bda0b8c}{C\-G\-N\-U\-A\-V\-R\-Executable\-Linker}, \hyperlink{classCGNUAVRDynamicLinker_ae26802d4ce8ce7c45a87a65bf7066832}{C\-G\-N\-U\-A\-V\-R\-Dynamic\-Linker}, \hyperlink{classCGNUAVRStaticLinker_ad4852b66cb610455765089ff8fdb7771}{C\-G\-N\-U\-A\-V\-R\-Static\-Linker}, \hyperlink{classCGNUExecutableLinker_a96d5c82ab5c7c26e7e9ef1542c815e94}{C\-G\-N\-U\-Executable\-Linker}, \hyperlink{classCGNUDynamicLinker_addcaa2506e1f804b4737cb564a899f6c}{C\-G\-N\-U\-Dynamic\-Linker}, \hyperlink{classCGNUStaticLinker_aa2e18f13e37d6c4fe3016d55bc67f746}{C\-G\-N\-U\-Static\-Linker}, \hyperlink{classCExecutableLinker_a457b823b737b0a78285d5ede77df827c}{C\-Executable\-Linker}, \hyperlink{classCDynamicLinker_ac71406ca5c6e8e991a6418a6307d274c}{C\-Dynamic\-Linker}, \hyperlink{classCStaticLinker_a7e626491caa847ef207032ee600625db}{C\-Static\-Linker}, and \hyperlink{classCLibraryLinker_a02b85c6bc81ad2973ee9a578412a1fa0}{C\-Library\-Linker}.
+
+\hypertarget{classCLinker_af3b1d957d4f12e01c0426b094bfc3f4b}{\index{C\-Linker@{C\-Linker}!Library\-Dir\-Switch@{Library\-Dir\-Switch}}
+\index{Library\-Dir\-Switch@{Library\-Dir\-Switch}!CLinker@{C\-Linker}}
+\subsubsection[{Library\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Linker\-::\-Library\-Dir\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_af3b1d957d4f12e01c0426b094bfc3f4b}
+\hypertarget{classCLinker_a324c41a9b833e91ec238ca0552e0a654}{\index{C\-Linker@{C\-Linker}!Library\-Extension@{Library\-Extension}}
+\index{Library\-Extension@{Library\-Extension}!CLinker@{C\-Linker}}
+\subsubsection[{Library\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Linker\-::\-Library\-Extension (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_a324c41a9b833e91ec238ca0552e0a654}
+\hypertarget{classCLinker_a0e30da82690cd233d51e644d9c3ad367}{\index{C\-Linker@{C\-Linker}!Library\-Prefix@{Library\-Prefix}}
+\index{Library\-Prefix@{Library\-Prefix}!CLinker@{C\-Linker}}
+\subsubsection[{Library\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Linker\-::\-Library\-Prefix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_a0e30da82690cd233d51e644d9c3ad367}
+\hypertarget{classCLinker_a5ed2852d1da83e08ca9006c80dd6208b}{\index{C\-Linker@{C\-Linker}!Link\-Library\-Switch@{Link\-Library\-Switch}}
+\index{Link\-Library\-Switch@{Link\-Library\-Switch}!CLinker@{C\-Linker}}
+\subsubsection[{Link\-Library\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Linker\-::\-Link\-Library\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_a5ed2852d1da83e08ca9006c80dd6208b}
+\hypertarget{classCLinker_a9c5f276b64848af6a188424b68d2fe0e}{\index{C\-Linker@{C\-Linker}!Need\-Flat\-Objects@{Need\-Flat\-Objects}}
+\index{Need\-Flat\-Objects@{Need\-Flat\-Objects}!CLinker@{C\-Linker}}
+\subsubsection[{Need\-Flat\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Linker\-::\-Need\-Flat\-Objects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_a9c5f276b64848af6a188424b68d2fe0e}
+\hypertarget{classCLinker_a5be0c19dd3df62d8c9114752ad525a7b}{\index{C\-Linker@{C\-Linker}!Need\-Library\-Extension@{Need\-Library\-Extension}}
+\index{Need\-Library\-Extension@{Need\-Library\-Extension}!CLinker@{C\-Linker}}
+\subsubsection[{Need\-Library\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Linker\-::\-Need\-Library\-Extension (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_a5be0c19dd3df62d8c9114752ad525a7b}
+\hypertarget{classCLinker_ab1681c03a2c3998087fb31f022567ba2}{\index{C\-Linker@{C\-Linker}!Need\-Library\-Prefix@{Need\-Library\-Prefix}}
+\index{Need\-Library\-Prefix@{Need\-Library\-Prefix}!CLinker@{C\-Linker}}
+\subsubsection[{Need\-Library\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Linker\-::\-Need\-Library\-Prefix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_ab1681c03a2c3998087fb31f022567ba2}
+\hypertarget{classCLinker_a368f5e7adece962a799896ca47494e8b}{\index{C\-Linker@{C\-Linker}!Object\-Extension@{Object\-Extension}}
+\index{Object\-Extension@{Object\-Extension}!CLinker@{C\-Linker}}
+\subsubsection[{Object\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Linker\-::\-Object\-Extension (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCLinker_a368f5e7adece962a799896ca47494e8b}
+\hypertarget{classCLinker_a6db5ff1a933b56855b2bfb9260f46dce}{\index{C\-Linker@{C\-Linker}!Read@{Read}}
+\index{Read@{Read}!CLinker@{C\-Linker}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Linker\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Build\-Tool\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCLinker_a6db5ff1a933b56855b2bfb9260f46dce}
+
+
+Reimplemented from \hyperlink{classCBuildTool_a299d87943c0f68dde5316318cc0838f8}{C\-Build\-Tool}.
+
+
+
+Reimplemented in \hyperlink{classCExecutableLinker_a181ea374618a85985db14f468dc63023}{C\-Executable\-Linker}.
+
+\hypertarget{classCLinker_aa2c99f02f4433dfae7cdc0654b901582}{\index{C\-Linker@{C\-Linker}!Show@{Show}}
+\index{Show@{Show}!CLinker@{C\-Linker}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Linker\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCLinker_aa2c99f02f4433dfae7cdc0654b901582}
+
+
+Reimplemented from \hyperlink{classCBuildTool_a69815d1393a61dc16b2cc2d0552cd5ac}{C\-Build\-Tool}.
+
+
+
+Reimplemented in \hyperlink{classCExecutableLinker_a01fa91b454c4cc4d154a26f0ab8da467}{C\-Executable\-Linker}.
+
+\hypertarget{classCLinker_ad2b70ef5f824d2697b4f12579415dca3}{\index{C\-Linker@{C\-Linker}!Write@{Write}}
+\index{Write@{Write}!CLinker@{C\-Linker}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Linker\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Build\-Tool\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCLinker_ad2b70ef5f824d2697b4f12579415dca3}
+
+
+Reimplemented from \hyperlink{classCBuildTool_af0331a777785bc2d15236b5c74321ed2}{C\-Build\-Tool}.
+
+
+
+Reimplemented in \hyperlink{classCExecutableLinker_a6124deba72724510423c17963f960578}{C\-Executable\-Linker}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCLinker_a8221d44b37262b0c8c6bfbf7d0f1680e}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Library\-Dir\-Switch@{m\-\_\-\-Library\-Dir\-Switch}}
+\index{m\-\_\-\-Library\-Dir\-Switch@{m\-\_\-\-Library\-Dir\-Switch}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Library\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Linker\-::m\-\_\-\-Library\-Dir\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_a8221d44b37262b0c8c6bfbf7d0f1680e}
+\hypertarget{classCLinker_af481e3e79703844fe6b7b9bc0a44d8b2}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Library\-Extension@{m\-\_\-\-Library\-Extension}}
+\index{m\-\_\-\-Library\-Extension@{m\-\_\-\-Library\-Extension}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Library\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Linker\-::m\-\_\-\-Library\-Extension\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_af481e3e79703844fe6b7b9bc0a44d8b2}
+\hypertarget{classCLinker_a701e77df0c24ca36679b98328ba509e6}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Library\-Prefix@{m\-\_\-\-Library\-Prefix}}
+\index{m\-\_\-\-Library\-Prefix@{m\-\_\-\-Library\-Prefix}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Library\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Linker\-::m\-\_\-\-Library\-Prefix\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_a701e77df0c24ca36679b98328ba509e6}
+\hypertarget{classCLinker_a2417ec61775026fc3efcfb46118c5a93}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Link\-Library\-Switch@{m\-\_\-\-Link\-Library\-Switch}}
+\index{m\-\_\-\-Link\-Library\-Switch@{m\-\_\-\-Link\-Library\-Switch}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Link\-Library\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Linker\-::m\-\_\-\-Link\-Library\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_a2417ec61775026fc3efcfb46118c5a93}
+\hypertarget{classCLinker_abf55c8a0d374129e983314f6ea492455}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Need\-Flat\-Objects@{m\-\_\-\-Need\-Flat\-Objects}}
+\index{m\-\_\-\-Need\-Flat\-Objects@{m\-\_\-\-Need\-Flat\-Objects}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Need\-Flat\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Linker\-::m\-\_\-\-Need\-Flat\-Objects\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_abf55c8a0d374129e983314f6ea492455}
+\hypertarget{classCLinker_ac699e22d086ddbb74d39a381a55f0cfb}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Need\-Library\-Extension@{m\-\_\-\-Need\-Library\-Extension}}
+\index{m\-\_\-\-Need\-Library\-Extension@{m\-\_\-\-Need\-Library\-Extension}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Need\-Library\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Linker\-::m\-\_\-\-Need\-Library\-Extension\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_ac699e22d086ddbb74d39a381a55f0cfb}
+\hypertarget{classCLinker_a2d18d1f275583edaf51929171e91189c}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Need\-Library\-Prefix@{m\-\_\-\-Need\-Library\-Prefix}}
+\index{m\-\_\-\-Need\-Library\-Prefix@{m\-\_\-\-Need\-Library\-Prefix}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Need\-Library\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Linker\-::m\-\_\-\-Need\-Library\-Prefix\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_a2d18d1f275583edaf51929171e91189c}
+\hypertarget{classCLinker_ae5945cfa69ae9ffd27fb7a41f618cbb8}{\index{C\-Linker@{C\-Linker}!m\-\_\-\-Object\-Extension@{m\-\_\-\-Object\-Extension}}
+\index{m\-\_\-\-Object\-Extension@{m\-\_\-\-Object\-Extension}!CLinker@{C\-Linker}}
+\subsubsection[{m\-\_\-\-Object\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Linker\-::m\-\_\-\-Object\-Extension\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCLinker_ae5945cfa69ae9ffd27fb7a41f618cbb8}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{buildtools_8h}{buildtools.\-h}\item 
+src/\hyperlink{buildtools_8cpp}{buildtools.\-cpp}\end{DoxyCompactItemize}

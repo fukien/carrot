@@ -1,0 +1,354 @@
+\hypertarget{classCDependencyRecord}{\section{C\-Dependency\-Record Class Reference}
+\label{classCDependencyRecord}\index{C\-Dependency\-Record@{C\-Dependency\-Record}}
+}
+
+
+Dependency record for a single build unit.  
+
+
+
+
+{\ttfamily \#include $<$depsearch.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCDependencyRecord_a2d3b62dc0a1a7625f8ac3ae2a07422e8}{Get\-Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns the file name of the build unit. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyRecord_ac2b4b51ad9a0e119076162c70106bf8b}{Set\-Name} (const \hyperlink{classCString}{C\-String} \&Name)
+\begin{DoxyCompactList}\small\item\em Changes the file name of the build unit. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{classCDependencyRecord_a256d718b856decdeed2ef53593601a3e}{Hash} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns string hash for the file name. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyRecord_a4db9b6cc951a300ad044b22c7b52b1fa}{Dependencies\-Count} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns the number of unit denpendencies. \end{DoxyCompactList}\item 
+\hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$ \hyperlink{classCDependencyRecord_aafa03b2b0ca9fe418218ba089bdbb915}{Dependency} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns dependency record with number {\itshape Index}. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyRecord_ad94b22fce77c64cc6947c8dd996ae13f}{Add\-Dependency} (const \hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$Record)
+\begin{DoxyCompactList}\small\item\em Adds new dependency for this build unit. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCDependencyRecord_a657144d47c4f627460f4073048d5eaf0}{Cross\-References\-Count} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns the number of cross references to this unit. \end{DoxyCompactList}\item 
+\hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$ \hyperlink{classCDependencyRecord_ae5d73b29a04dda4aa5731ee825d9ebdd}{Cross\-Reference} (const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns cross reference with number {\itshape Index}. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyRecord_a55d06b597f47774630d2e99638eeab30}{Add\-Cross\-Reference} (const \hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$Record)
+\begin{DoxyCompactList}\small\item\em Adds new cross reference for this build unit. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCDependencyRecord_af986b04041c71bd0b81d31c37cd606fb}{Dependencies\-Complete} (void)
+\begin{DoxyCompactList}\small\item\em Indicates that the list of dependencies is fully gathered. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCDependencyRecord_af2196e55e8edbb4adceef4732a785ca8}{Cross\-References\-Complete} (void)
+\begin{DoxyCompactList}\small\item\em Indicates that the list of cross-\/references is fully gathered. \end{DoxyCompactList}\item 
+int \& \hyperlink{classCDependencyRecord_a9e1e363a381f344201b3f952e2e838fc}{Marker} (void)
+\begin{DoxyCompactList}\small\item\em Indicates that this unit was already walked through by a dependency unwinding process to avoid infinite loops. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyRecord_ac8150a2fea903df7ddfbf08bb4e5a08f}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets a dependency record to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCDependencyRecord_a7b79c94758324474032dfb940b61bc20}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the build unit dependecy record contents to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCDependencyRecord_afef100de03173b459446a48bfeb87c03}{C\-Dependency\-Record} (void)
+\begin{DoxyCompactList}\small\item\em Creates dependency record. \end{DoxyCompactList}\item 
+\hyperlink{classCDependencyRecord_aaec37dc53c3bb3e299fd1334fe213a53}{$\sim$\-C\-Dependency\-Record} (void)
+\begin{DoxyCompactList}\small\item\em Destroys dependency record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCDependencyRecord_a1eb617707168568e4d2c503150354f09}{m\-\_\-\-Name}
+\begin{DoxyCompactList}\small\item\em File name of the build unit. \end{DoxyCompactList}\item 
+\hyperlink{stringhash_8h_a488906826f8aaf7e850c35889d560089}{hash\-\_\-t} \hyperlink{classCDependencyRecord_a4431e94dbd98487fcd0e9852b7cffa57}{m\-\_\-\-Hash}
+\begin{DoxyCompactList}\small\item\em String hash of the unit name \hyperlink{classCDependencyRecord_a1eb617707168568e4d2c503150354f09}{C\-Dependency\-Record\-::m\-\_\-\-Name}. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$ $>$ \hyperlink{classCDependencyRecord_a169a19e632aa59249d667ef45e2b2560}{m\-\_\-\-Dependencies}
+\begin{DoxyCompactList}\small\item\em List of units that this unit depends on. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCDependencyRecord}{C\-Dependency\-Record} $\ast$ $>$ \hyperlink{classCDependencyRecord_ab9ce653ee88189e3aaf964a8dc65b606}{m\-\_\-\-Cross\-References}
+\begin{DoxyCompactList}\small\item\em List of units that depend on this unit. \end{DoxyCompactList}\item 
+bool \hyperlink{classCDependencyRecord_af5ddb7b517658fd95a80c04d94f555dd}{m\-\_\-\-Dependencies\-Complete}
+\begin{DoxyCompactList}\small\item\em Indicates that the list of dependencies is fully gathered. \end{DoxyCompactList}\item 
+bool \hyperlink{classCDependencyRecord_a831a0a5935519f39e1c100fd8a65224f}{m\-\_\-\-Cross\-References\-Complete}
+\begin{DoxyCompactList}\small\item\em Indicates that the list of cross-\/references is fully gathered. \end{DoxyCompactList}\item 
+int \hyperlink{classCDependencyRecord_a0327e854ac8b0bc48eefe3155a84475e}{m\-\_\-\-Marker}
+\begin{DoxyCompactList}\small\item\em Indicates that this unit was already walked through by a dependency unwinding process to avoid infinite loops. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dependency record for a single build unit. 
+
+Contains a list of units (pointers to other \hyperlink{classCDependencyRecord}{C\-Dependency\-Record} objects) that this unit depends on and a list of cross-\/references to this unit. This class is used by \hyperlink{classCDependencyInfo}{C\-Dependency\-Info} to store information about every single build unit. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCDependencyRecord_afef100de03173b459446a48bfeb87c03}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!C\-Dependency\-Record@{C\-Dependency\-Record}}
+\index{C\-Dependency\-Record@{C\-Dependency\-Record}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{C\-Dependency\-Record}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-C\-Dependency\-Record (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_afef100de03173b459446a48bfeb87c03}
+
+
+Creates dependency record. 
+
+\hypertarget{classCDependencyRecord_aaec37dc53c3bb3e299fd1334fe213a53}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!$\sim$\-C\-Dependency\-Record@{$\sim$\-C\-Dependency\-Record}}
+\index{$\sim$\-C\-Dependency\-Record@{$\sim$\-C\-Dependency\-Record}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{$\sim$\-C\-Dependency\-Record}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::$\sim$\-C\-Dependency\-Record (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_aaec37dc53c3bb3e299fd1334fe213a53}
+
+
+Destroys dependency record. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCDependencyRecord_a55d06b597f47774630d2e99638eeab30}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Add\-Cross\-Reference@{Add\-Cross\-Reference}}
+\index{Add\-Cross\-Reference@{Add\-Cross\-Reference}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Add\-Cross\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Add\-Cross\-Reference (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Dependency\-Record} $\ast$}]{Record}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_a55d06b597f47774630d2e99638eeab30}
+
+
+Adds new cross reference for this build unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Record} & dependency record of another build unit.\\
+\hline
+\end{DoxyParams}
+Adding a cross reference means telling that another build unit depends on this build unit. \hypertarget{classCDependencyRecord_ad94b22fce77c64cc6947c8dd996ae13f}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Add\-Dependency@{Add\-Dependency}}
+\index{Add\-Dependency@{Add\-Dependency}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Add\-Dependency}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Add\-Dependency (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Dependency\-Record} $\ast$}]{Record}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_ad94b22fce77c64cc6947c8dd996ae13f}
+
+
+Adds new dependency for this build unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Record} & dependency record of another build unit.\\
+\hline
+\end{DoxyParams}
+Adding a dependency means telling that this build unit depends on another build unit. \hypertarget{classCDependencyRecord_ac8150a2fea903df7ddfbf08bb4e5a08f}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Clear@{Clear}}
+\index{Clear@{Clear}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_ac8150a2fea903df7ddfbf08bb4e5a08f}
+
+
+Resets a dependency record to the initial state. 
+
+\hypertarget{classCDependencyRecord_ae5d73b29a04dda4aa5731ee825d9ebdd}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Cross\-Reference@{Cross\-Reference}}
+\index{Cross\-Reference@{Cross\-Reference}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Cross\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Cross\-Reference (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyRecord_ae5d73b29a04dda4aa5731ee825d9ebdd}
+
+
+Returns cross reference with number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a cross reference.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cross reference. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_af2196e55e8edbb4adceef4732a785ca8}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Cross\-References\-Complete@{Cross\-References\-Complete}}
+\index{Cross\-References\-Complete@{Cross\-References\-Complete}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Cross\-References\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Cross\-References\-Complete (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCDependencyRecord_af2196e55e8edbb4adceef4732a785ca8}
+
+
+Indicates that the list of cross-\/references is fully gathered. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCDependencyRecord_a831a0a5935519f39e1c100fd8a65224f}{C\-Dependency\-Record\-::m\-\_\-\-Cross\-References\-Complete}. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_a657144d47c4f627460f4073048d5eaf0}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Cross\-References\-Count@{Cross\-References\-Count}}
+\index{Cross\-References\-Count@{Cross\-References\-Count}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Cross\-References\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Cross\-References\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyRecord_a657144d47c4f627460f4073048d5eaf0}
+
+
+Returns the number of cross references to this unit. 
+
+\begin{DoxyReturn}{Returns}
+cross references count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_af986b04041c71bd0b81d31c37cd606fb}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Dependencies\-Complete@{Dependencies\-Complete}}
+\index{Dependencies\-Complete@{Dependencies\-Complete}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Dependencies\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Dependencies\-Complete (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCDependencyRecord_af986b04041c71bd0b81d31c37cd606fb}
+
+
+Indicates that the list of dependencies is fully gathered. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCDependencyRecord_af5ddb7b517658fd95a80c04d94f555dd}{C\-Dependency\-Record\-::m\-\_\-\-Dependencies\-Complete}. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_a4db9b6cc951a300ad044b22c7b52b1fa}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Dependencies\-Count@{Dependencies\-Count}}
+\index{Dependencies\-Count@{Dependencies\-Count}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Dependencies\-Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Dependencies\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyRecord_a4db9b6cc951a300ad044b22c7b52b1fa}
+
+
+Returns the number of unit denpendencies. 
+
+\begin{DoxyReturn}{Returns}
+denpendencies count. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_aafa03b2b0ca9fe418218ba089bdbb915}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Dependency@{Dependency}}
+\index{Dependency@{Dependency}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Dependency}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Dependency (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCDependencyRecord_aafa03b2b0ca9fe418218ba089bdbb915}
+
+
+Returns dependency record with number {\itshape Index}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & number of a dependency.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dependency record. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_a2d3b62dc0a1a7625f8ac3ae2a07422e8}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCDependencyRecord_a2d3b62dc0a1a7625f8ac3ae2a07422e8}
+
+
+Returns the file name of the build unit. 
+
+\begin{DoxyReturn}{Returns}
+name of the build unit. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_a256d718b856decdeed2ef53593601a3e}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Hash@{Hash}}
+\index{Hash@{Hash}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Hash}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Hash (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCDependencyRecord_a256d718b856decdeed2ef53593601a3e}
+
+
+Returns string hash for the file name. 
+
+\hypertarget{classCDependencyRecord_a9e1e363a381f344201b3f952e2e838fc}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Marker@{Marker}}
+\index{Marker@{Marker}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Marker}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Marker (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCDependencyRecord_a9e1e363a381f344201b3f952e2e838fc}
+
+
+Indicates that this unit was already walked through by a dependency unwinding process to avoid infinite loops. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCDependencyRecord_a0327e854ac8b0bc48eefe3155a84475e}{C\-Dependency\-Record\-::m\-\_\-\-Marker}. 
+\end{DoxyReturn}
+\hypertarget{classCDependencyRecord_ac2b4b51ad9a0e119076162c70106bf8b}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Set\-Name@{Set\-Name}}
+\index{Set\-Name@{Set\-Name}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Set\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_ac2b4b51ad9a0e119076162c70106bf8b}
+
+
+Changes the file name of the build unit. 
+
+\hypertarget{classCDependencyRecord_a7b79c94758324474032dfb940b61bc20}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!Show@{Show}}
+\index{Show@{Show}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCDependencyRecord_a7b79c94758324474032dfb940b61bc20}
+
+
+Prints the build unit dependecy record contents to the standard output. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCDependencyRecord_ab9ce653ee88189e3aaf964a8dc65b606}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Cross\-References@{m\-\_\-\-Cross\-References}}
+\index{m\-\_\-\-Cross\-References@{m\-\_\-\-Cross\-References}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Cross\-References}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Cross\-References\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_ab9ce653ee88189e3aaf964a8dc65b606}
+
+
+List of units that depend on this unit. 
+
+\hypertarget{classCDependencyRecord_a831a0a5935519f39e1c100fd8a65224f}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Cross\-References\-Complete@{m\-\_\-\-Cross\-References\-Complete}}
+\index{m\-\_\-\-Cross\-References\-Complete@{m\-\_\-\-Cross\-References\-Complete}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Cross\-References\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Cross\-References\-Complete\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_a831a0a5935519f39e1c100fd8a65224f}
+
+
+Indicates that the list of cross-\/references is fully gathered. 
+
+\hypertarget{classCDependencyRecord_a169a19e632aa59249d667ef45e2b2560}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Dependencies@{m\-\_\-\-Dependencies}}
+\index{m\-\_\-\-Dependencies@{m\-\_\-\-Dependencies}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Dependencies\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_a169a19e632aa59249d667ef45e2b2560}
+
+
+List of units that this unit depends on. 
+
+\hypertarget{classCDependencyRecord_af5ddb7b517658fd95a80c04d94f555dd}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Dependencies\-Complete@{m\-\_\-\-Dependencies\-Complete}}
+\index{m\-\_\-\-Dependencies\-Complete@{m\-\_\-\-Dependencies\-Complete}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Dependencies\-Complete}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Dependencies\-Complete\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_af5ddb7b517658fd95a80c04d94f555dd}
+
+
+Indicates that the list of dependencies is fully gathered. 
+
+\hypertarget{classCDependencyRecord_a4431e94dbd98487fcd0e9852b7cffa57}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Hash@{m\-\_\-\-Hash}}
+\index{m\-\_\-\-Hash@{m\-\_\-\-Hash}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Hash}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Hash\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_a4431e94dbd98487fcd0e9852b7cffa57}
+
+
+String hash of the unit name \hyperlink{classCDependencyRecord_a1eb617707168568e4d2c503150354f09}{C\-Dependency\-Record\-::m\-\_\-\-Name}. 
+
+\hypertarget{classCDependencyRecord_a0327e854ac8b0bc48eefe3155a84475e}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Marker@{m\-\_\-\-Marker}}
+\index{m\-\_\-\-Marker@{m\-\_\-\-Marker}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Marker}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Marker\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_a0327e854ac8b0bc48eefe3155a84475e}
+
+
+Indicates that this unit was already walked through by a dependency unwinding process to avoid infinite loops. 
+
+\hypertarget{classCDependencyRecord_a1eb617707168568e4d2c503150354f09}{\index{C\-Dependency\-Record@{C\-Dependency\-Record}!m\-\_\-\-Name@{m\-\_\-\-Name}}
+\index{m\-\_\-\-Name@{m\-\_\-\-Name}!CDependencyRecord@{C\-Dependency\-Record}}
+\subsubsection[{m\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Dependency\-Record\-::m\-\_\-\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classCDependencyRecord_a1eb617707168568e4d2c503150354f09}
+
+
+File name of the build unit. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{depsearch_8h}{depsearch.\-h}\item 
+src/\hyperlink{depsearch_8cpp}{depsearch.\-cpp}\item 
+src/doc/\hyperlink{depsearch_8dox}{depsearch.\-dox}\end{DoxyCompactItemize}

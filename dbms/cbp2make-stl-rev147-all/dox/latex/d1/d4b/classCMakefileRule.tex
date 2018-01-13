@@ -1,0 +1,207 @@
+\hypertarget{classCMakefileRule}{\section{C\-Makefile\-Rule Class Reference}
+\label{classCMakefileRule}\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}}
+}
+
+
+Makefile rule definition.  
+
+
+
+
+{\ttfamily \#include $<$makefile.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCMakefileRule_af48330075190cc4fe5ff898b74ca01b6}{Target} (void)
+\begin{DoxyCompactList}\small\item\em Name of a makefile target. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCMakefileRule_af8474737e835958d4e2ab625ae39cadf}{Dependencies} (void)
+\begin{DoxyCompactList}\small\item\em A list of dependencies (prerequirements) for the target. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCMakefileRule_a1ac8c0575edeff1217c07a80f9b2b4c1}{Commands} (void)
+\begin{DoxyCompactList}\small\item\em A list of commands to be executed to build the target. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCMakefileRule_a089b52392be36d009142f8207a8fdef2}{Multiline} (void)
+\begin{DoxyCompactList}\small\item\em Allows line-\/wrapping of the list of dependencies. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCMakefileRule_a5b6ffee5272a8fd46661f95f17adde73}{Join\-Dependencies} (void)
+\begin{DoxyCompactList}\small\item\em Returns dependencies as a single string. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileRule_ae4d474fd54ac9c902c31ddb2aebf721e}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the makefile rule to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileRule_afb306c6ae36395c3552e76e341567646}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the makefile rule properties to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileRule_a443464a547ab7f3f5a2c5df8cd0ac466}{C\-Makefile\-Rule} (void)
+\begin{DoxyCompactList}\small\item\em Creates makefile rule. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileRule_af2285fe40026ea3874e2cb02a651b097}{$\sim$\-C\-Makefile\-Rule} (void)
+\begin{DoxyCompactList}\small\item\em Destroys makefile rule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCMakefileRule_ad951eb8f2f582b95e8fff72d77296233}{m\-\_\-\-Target}
+\begin{DoxyCompactList}\small\item\em Name of a makefile target. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCMakefileRule_a8c5b1f8e55ba7d7421feb84a02a96e75}{m\-\_\-\-Dependencies}
+\begin{DoxyCompactList}\small\item\em A list of dependencies (prerequirements) for the target. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCMakefileRule_a99fec9b4ba99c02b59c71b6fff71e863}{m\-\_\-\-Commands}
+\begin{DoxyCompactList}\small\item\em A list of commands to be executed to build the target. \end{DoxyCompactList}\item 
+bool \hyperlink{classCMakefileRule_a9a2e0ba695a307f15e2f3329b3b198c4}{m\-\_\-\-Multiline}
+\begin{DoxyCompactList}\small\item\em Allows line-\/wrapping of the list of dependencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Makefile rule definition. 
+
+Manages makefile rule properties and generates its text representation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCMakefileRule_a443464a547ab7f3f5a2c5df8cd0ac466}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!C\-Makefile\-Rule@{C\-Makefile\-Rule}}
+\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{C\-Makefile\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::\-C\-Makefile\-Rule (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileRule_a443464a547ab7f3f5a2c5df8cd0ac466}
+
+
+Creates makefile rule. 
+
+\hypertarget{classCMakefileRule_af2285fe40026ea3874e2cb02a651b097}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!$\sim$\-C\-Makefile\-Rule@{$\sim$\-C\-Makefile\-Rule}}
+\index{$\sim$\-C\-Makefile\-Rule@{$\sim$\-C\-Makefile\-Rule}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{$\sim$\-C\-Makefile\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::$\sim$\-C\-Makefile\-Rule (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileRule_af2285fe40026ea3874e2cb02a651b097}
+
+
+Destroys makefile rule. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCMakefileRule_ae4d474fd54ac9c902c31ddb2aebf721e}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Clear@{Clear}}
+\index{Clear@{Clear}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Rule\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileRule_ae4d474fd54ac9c902c31ddb2aebf721e}
+
+
+Resets the makefile rule to the initial state. 
+
+\hypertarget{classCMakefileRule_a1ac8c0575edeff1217c07a80f9b2b4c1}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Commands@{Commands}}
+\index{Commands@{Commands}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Commands}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::\-Commands (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileRule_a1ac8c0575edeff1217c07a80f9b2b4c1}
+
+
+A list of commands to be executed to build the target. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileRule_a99fec9b4ba99c02b59c71b6fff71e863}{C\-Makefile\-Rule\-::m\-\_\-\-Commands}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileRule_af8474737e835958d4e2ab625ae39cadf}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileRule_af8474737e835958d4e2ab625ae39cadf}
+
+
+A list of dependencies (prerequirements) for the target. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileRule_a8c5b1f8e55ba7d7421feb84a02a96e75}{C\-Makefile\-Rule\-::m\-\_\-\-Dependencies}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileRule_a5b6ffee5272a8fd46661f95f17adde73}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Join\-Dependencies@{Join\-Dependencies}}
+\index{Join\-Dependencies@{Join\-Dependencies}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Join\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Makefile\-Rule\-::\-Join\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileRule_a5b6ffee5272a8fd46661f95f17adde73}
+
+
+Returns dependencies as a single string. 
+
+\begin{DoxyReturn}{Returns}
+concatenation of \hyperlink{classCMakefileRule_a8c5b1f8e55ba7d7421feb84a02a96e75}{C\-Makefile\-Rule\-::m\-\_\-\-Dependencies} strings.
+\end{DoxyReturn}
+Strings of \hyperlink{classCMakefileRule_a8c5b1f8e55ba7d7421feb84a02a96e75}{C\-Makefile\-Rule\-::m\-\_\-\-Dependencies} are joined with space character if multiline mode is disabled or with {\ttfamily ' \textbackslash{}\textbackslash{}\textbackslash{}n\textbackslash{}t'} (space backslash eol tab) sequence otherwise. \hypertarget{classCMakefileRule_a089b52392be36d009142f8207a8fdef2}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Multiline@{Multiline}}
+\index{Multiline@{Multiline}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Multiline}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::\-Multiline (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileRule_a089b52392be36d009142f8207a8fdef2}
+
+
+Allows line-\/wrapping of the list of dependencies. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileRule_a9a2e0ba695a307f15e2f3329b3b198c4}{C\-Makefile\-Rule\-::m\-\_\-\-Multiline}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileRule_afb306c6ae36395c3552e76e341567646}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Show@{Show}}
+\index{Show@{Show}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Rule\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileRule_afb306c6ae36395c3552e76e341567646}
+
+
+Prints the makefile rule properties to the standard output. 
+
+\hypertarget{classCMakefileRule_af48330075190cc4fe5ff898b74ca01b6}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!Target@{Target}}
+\index{Target@{Target}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{Target}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::\-Target (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileRule_af48330075190cc4fe5ff898b74ca01b6}
+
+
+Name of a makefile target. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileRule_ad951eb8f2f582b95e8fff72d77296233}{C\-Makefile\-Rule\-::m\-\_\-\-Target}. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCMakefileRule_a99fec9b4ba99c02b59c71b6fff71e863}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!m\-\_\-\-Commands@{m\-\_\-\-Commands}}
+\index{m\-\_\-\-Commands@{m\-\_\-\-Commands}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{m\-\_\-\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::m\-\_\-\-Commands\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileRule_a99fec9b4ba99c02b59c71b6fff71e863}
+
+
+A list of commands to be executed to build the target. 
+
+\hypertarget{classCMakefileRule_a8c5b1f8e55ba7d7421feb84a02a96e75}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!m\-\_\-\-Dependencies@{m\-\_\-\-Dependencies}}
+\index{m\-\_\-\-Dependencies@{m\-\_\-\-Dependencies}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{m\-\_\-\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::m\-\_\-\-Dependencies\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileRule_a8c5b1f8e55ba7d7421feb84a02a96e75}
+
+
+A list of dependencies (prerequirements) for the target. 
+
+Dependencies should be names of other makefile targets or file names. \hypertarget{classCMakefileRule_a9a2e0ba695a307f15e2f3329b3b198c4}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!m\-\_\-\-Multiline@{m\-\_\-\-Multiline}}
+\index{m\-\_\-\-Multiline@{m\-\_\-\-Multiline}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{m\-\_\-\-Multiline}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::m\-\_\-\-Multiline\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileRule_a9a2e0ba695a307f15e2f3329b3b198c4}
+
+
+Allows line-\/wrapping of the list of dependencies. 
+
+\hypertarget{classCMakefileRule_ad951eb8f2f582b95e8fff72d77296233}{\index{C\-Makefile\-Rule@{C\-Makefile\-Rule}!m\-\_\-\-Target@{m\-\_\-\-Target}}
+\index{m\-\_\-\-Target@{m\-\_\-\-Target}!CMakefileRule@{C\-Makefile\-Rule}}
+\subsubsection[{m\-\_\-\-Target}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Rule\-::m\-\_\-\-Target\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileRule_ad951eb8f2f582b95e8fff72d77296233}
+
+
+Name of a makefile target. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{makefile_8h}{makefile.\-h}\item 
+src/doc/\hyperlink{makefile_8dox}{makefile.\-dox}\item 
+src/\hyperlink{makefile_8cpp}{makefile.\-cpp}\end{DoxyCompactItemize}

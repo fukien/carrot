@@ -1,0 +1,380 @@
+\hypertarget{classCGenericProcessingMachine}{\section{C\-Generic\-Processing\-Machine Class Reference}
+\label{classCGenericProcessingMachine}\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}}
+}
+
+
+{\ttfamily \#include $<$stlgpm.\-h$>$}
+
+Inheritance diagram for C\-Generic\-Processing\-Machine\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/dad/classCGenericProcessingMachine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_afc235cd3526341dd66bca63c8407dc3c}{Initialize} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_a832d5bca8017ae54ee14512d191a0f98}{Initialize} (const \hyperlink{classCParameterString}{C\-Parameter\-String} \&Parameters)
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_a220ce336197f41945ed37456b93096bc}{Display\-Help\-Message} (void)
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_acfda68ec21cce38d4e43f97e8767da86}{Create\-Configuration} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCGenericProcessingMachine_aacfb22cb01d6483a4766907b26decf9b}{Default\-Configuration\-Name} (void)
+\item 
+virtual \hyperlink{classCString}{C\-String} \hyperlink{classCGenericProcessingMachine_a9f87aeb8f9d4385b054517df3fc4f461}{Configuration\-Name} (void)
+\item 
+virtual bool \hyperlink{classCGenericProcessingMachine_ab349d35ea588dc0f553906007fdb896b}{Configure} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+int \hyperlink{classCGenericProcessingMachine_a0fe668211df305ffdab90db502ef97b2}{Get\-File\-Name\-Length} (void) const 
+\item 
+int \hyperlink{classCGenericProcessingMachine_a7fb9272fc6bc3f370874085800f2b8ce}{Set\-File\-Name\-Length} (const int File\-Name\-Length)
+\item 
+int \hyperlink{classCGenericProcessingMachine_a74b58c6d076c0e523e619182df8845b9}{File\-Index} (void) const 
+\item 
+virtual \hyperlink{classCString}{C\-String} \hyperlink{classCGenericProcessingMachine_a175b8fd621b712a354a6455ab9a6970f}{Target\-Name} (const int \hyperlink{classCGenericProcessingMachine_a74b58c6d076c0e523e619182df8845b9}{File\-Index}, const \hyperlink{classCString}{C\-String} \&Source\-File\-Name)
+\item 
+virtual bool \hyperlink{classCGenericProcessingMachine_aac8fae89b58e1051355eb37a4ef9fac2}{Process\-File} (const \hyperlink{classCString}{C\-String} \&Source\-File\-Name, \hyperlink{classCString}{C\-String} \&Target\-File\-Name)
+\item 
+virtual bool \hyperlink{classCGenericProcessingMachine_a041a02c6755571a3586f29726ec5d7ae}{Pre\-Process} (void)
+\item 
+virtual bool \hyperlink{classCGenericProcessingMachine_ae54e3b9192076c54731df813bdaf0d9f}{Run} (void)
+\item 
+virtual bool \hyperlink{classCGenericProcessingMachine_a7b3538bad706f116660406c6f69356bc}{Post\-Process} (void)
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_ad27835c0cd8f90b8cc896684e764b90c}{Finalize} (void)
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_af4f22c7d76e2b9c47f7be9bfd42ce816}{Print} (std\-::ostream \&out)
+\item 
+bool \& \hyperlink{classCGenericProcessingMachine_a0c90babd4ce87888b7210644d9298ca0}{Aliases\-Enabled} (void)
+\item 
+bool \& \hyperlink{classCGenericProcessingMachine_a557e9ed9621032fd0cc95ff0ac12a633}{Be\-Verbose} (void)
+\item 
+bool \& \hyperlink{classCGenericProcessingMachine_ac4995f4884dded47c39a8b104b2bee6f}{Be\-Quiet} (void)
+\item 
+bool \& \hyperlink{classCGenericProcessingMachine_a8ff379a124172def9369c94567877ca4}{Do\-Show\-Help} (void)
+\item 
+\hyperlink{classCConfiguration}{C\-Configuration} \& \hyperlink{classCGenericProcessingMachine_a3bfdbdc5634a9d87310670e006e37f14}{C\-F\-G} (void)
+\item 
+\hyperlink{classCParameterStringConfiguration}{C\-Parameter\-String\-Configuration} \& \hyperlink{classCGenericProcessingMachine_af52c4160fe3a92b36faf42050094dfa6}{P\-S\-C} (void)
+\item 
+\hyperlink{classCParameterString}{C\-Parameter\-String} \& \hyperlink{classCGenericProcessingMachine_a37e5ee4de1dfd674d7bcd00c23824e6e}{P\-S} (void)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCGenericProcessingMachine_a2edb03a498a4ea859ddf3c96fa6d1c46}{I\-L\-S\-T} (void)
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCGenericProcessingMachine_aa7c84522a453d2cf8d7405e88df0ea97}{O\-L\-S\-T} (void)
+\item 
+\hyperlink{classCGenericProcessingMachine_a77a8cb7b5509acef5db5d2b5b5f5b7f2}{C\-Generic\-Processing\-Machine} (void)
+\item 
+virtual \hyperlink{classCGenericProcessingMachine_aeb89f8b8fbfca4f8de1e72db9a31f9bd}{$\sim$\-C\-Generic\-Processing\-Machine} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCGenericProcessingMachine_aa1b7cd72fef2ed2d89494cba6fd7fb71}{Initialize} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCConfiguration}{C\-Configuration} \hyperlink{classCGenericProcessingMachine_aec120317f954ed9cd4194de815648fce}{m\-\_\-\-File\-Configuration}
+\item 
+\hyperlink{classCParameterStringConfiguration}{C\-Parameter\-String\-Configuration} \hyperlink{classCGenericProcessingMachine_a1f8069a91ee5ee1f418400ad1c902bba}{m\-\_\-\-Parameter\-String\-Configuration}
+\item 
+\hyperlink{classCParameterString}{C\-Parameter\-String} \hyperlink{classCGenericProcessingMachine_a567850641ce85513bfb28527986805e8}{m\-\_\-\-Parameter\-String}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCGenericProcessingMachine_a690c963f0c095ac81be430d688595c73}{m\-\_\-\-Input\-File\-List}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCGenericProcessingMachine_ac81ef6205c02d2d3c91f351f72ce701f}{m\-\_\-\-Output\-File\-List}
+\item 
+int \hyperlink{classCGenericProcessingMachine_a40b137418bef4dd847d4769ec83a9502}{m\-\_\-\-File\-Index}
+\item 
+bool \hyperlink{classCGenericProcessingMachine_a76422740416ac078b9999d9d6516739a}{m\-\_\-\-Aliases\-Enabled}
+\item 
+int \hyperlink{classCGenericProcessingMachine_a8ebb6c2d1f889af806135a862fa27831}{m\-\_\-\-File\-Name\-Length}
+\item 
+bool \hyperlink{classCGenericProcessingMachine_a81a35f50e9afa57d1d915bccc3276b1b}{m\-\_\-\-Verbose\-Mode}
+\item 
+bool \hyperlink{classCGenericProcessingMachine_aa4f21388a42eec363818933f10b587c1}{m\-\_\-\-Quiet\-Mode}
+\item 
+bool \hyperlink{classCGenericProcessingMachine_a1563fdca94661ae2e99a58516f795b88}{m\-\_\-\-Help\-Mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCGenericProcessingMachine_a77a8cb7b5509acef5db5d2b5b5f5b7f2}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}}
+\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{C\-Generic\-Processing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}C\-Generic\-Processing\-Machine\-::\-C\-Generic\-Processing\-Machine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGenericProcessingMachine_a77a8cb7b5509acef5db5d2b5b5f5b7f2}
+\hypertarget{classCGenericProcessingMachine_aeb89f8b8fbfca4f8de1e72db9a31f9bd}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!$\sim$\-C\-Generic\-Processing\-Machine@{$\sim$\-C\-Generic\-Processing\-Machine}}
+\index{$\sim$\-C\-Generic\-Processing\-Machine@{$\sim$\-C\-Generic\-Processing\-Machine}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{$\sim$\-C\-Generic\-Processing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}C\-Generic\-Processing\-Machine\-::$\sim$\-C\-Generic\-Processing\-Machine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_aeb89f8b8fbfca4f8de1e72db9a31f9bd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCGenericProcessingMachine_a0c90babd4ce87888b7210644d9298ca0}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Aliases\-Enabled@{Aliases\-Enabled}}
+\index{Aliases\-Enabled@{Aliases\-Enabled}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Aliases\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Generic\-Processing\-Machine\-::\-Aliases\-Enabled (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a0c90babd4ce87888b7210644d9298ca0}
+\hypertarget{classCGenericProcessingMachine_ac4995f4884dded47c39a8b104b2bee6f}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Be\-Quiet@{Be\-Quiet}}
+\index{Be\-Quiet@{Be\-Quiet}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Be\-Quiet}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Generic\-Processing\-Machine\-::\-Be\-Quiet (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_ac4995f4884dded47c39a8b104b2bee6f}
+\hypertarget{classCGenericProcessingMachine_a557e9ed9621032fd0cc95ff0ac12a633}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Be\-Verbose@{Be\-Verbose}}
+\index{Be\-Verbose@{Be\-Verbose}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Be\-Verbose}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Generic\-Processing\-Machine\-::\-Be\-Verbose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a557e9ed9621032fd0cc95ff0ac12a633}
+\hypertarget{classCGenericProcessingMachine_a3bfdbdc5634a9d87310670e006e37f14}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!C\-F\-G@{C\-F\-G}}
+\index{C\-F\-G@{C\-F\-G}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{C\-F\-G}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Configuration}\& C\-Generic\-Processing\-Machine\-::\-C\-F\-G (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a3bfdbdc5634a9d87310670e006e37f14}
+\hypertarget{classCGenericProcessingMachine_a9f87aeb8f9d4385b054517df3fc4f461}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Configuration\-Name@{Configuration\-Name}}
+\index{Configuration\-Name@{Configuration\-Name}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Configuration\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Generic\-Processing\-Machine\-::\-Configuration\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_a9f87aeb8f9d4385b054517df3fc4f461}
+
+
+Reimplemented in \hyperlink{classCProcessingMachine_a0f9a7ee8fdd8f08c8c013f626fe2257a}{C\-Processing\-Machine}.
+
+\hypertarget{classCGenericProcessingMachine_ab349d35ea588dc0f553906007fdb896b}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Configure@{Configure}}
+\index{Configure@{Configure}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Configure}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::\-Configure (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_ab349d35ea588dc0f553906007fdb896b}
+
+
+Reimplemented in \hyperlink{classCProcessingMachine_a590641d57df9f3126a6fb206e6245466}{C\-Processing\-Machine}.
+
+\hypertarget{classCGenericProcessingMachine_acfda68ec21cce38d4e43f97e8767da86}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Create\-Configuration@{Create\-Configuration}}
+\index{Create\-Configuration@{Create\-Configuration}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Create\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Generic\-Processing\-Machine\-::\-Create\-Configuration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_acfda68ec21cce38d4e43f97e8767da86}
+
+
+Reimplemented in \hyperlink{classCProcessingMachine_af2bd8a2f21742763cf6fb2de69af3091}{C\-Processing\-Machine}.
+
+\hypertarget{classCGenericProcessingMachine_aacfb22cb01d6483a4766907b26decf9b}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Default\-Configuration\-Name@{Default\-Configuration\-Name}}
+\index{Default\-Configuration\-Name@{Default\-Configuration\-Name}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Default\-Configuration\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Generic\-Processing\-Machine\-::\-Default\-Configuration\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGenericProcessingMachine_aacfb22cb01d6483a4766907b26decf9b}
+\hypertarget{classCGenericProcessingMachine_a220ce336197f41945ed37456b93096bc}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Display\-Help\-Message@{Display\-Help\-Message}}
+\index{Display\-Help\-Message@{Display\-Help\-Message}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Display\-Help\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Generic\-Processing\-Machine\-::\-Display\-Help\-Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_a220ce336197f41945ed37456b93096bc}
+
+
+Reimplemented in \hyperlink{classCProcessingMachine_a8c84206419dbd0cee2d22b5b36de0f37}{C\-Processing\-Machine}.
+
+\hypertarget{classCGenericProcessingMachine_a8ff379a124172def9369c94567877ca4}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Do\-Show\-Help@{Do\-Show\-Help}}
+\index{Do\-Show\-Help@{Do\-Show\-Help}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Do\-Show\-Help}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Generic\-Processing\-Machine\-::\-Do\-Show\-Help (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a8ff379a124172def9369c94567877ca4}
+\hypertarget{classCGenericProcessingMachine_a74b58c6d076c0e523e619182df8845b9}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!File\-Index@{File\-Index}}
+\index{File\-Index@{File\-Index}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{File\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Generic\-Processing\-Machine\-::\-File\-Index (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a74b58c6d076c0e523e619182df8845b9}
+\hypertarget{classCGenericProcessingMachine_ad27835c0cd8f90b8cc896684e764b90c}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Finalize}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Generic\-Processing\-Machine\-::\-Finalize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_ad27835c0cd8f90b8cc896684e764b90c}
+\hypertarget{classCGenericProcessingMachine_a0fe668211df305ffdab90db502ef97b2}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Get\-File\-Name\-Length@{Get\-File\-Name\-Length}}
+\index{Get\-File\-Name\-Length@{Get\-File\-Name\-Length}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Get\-File\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Generic\-Processing\-Machine\-::\-Get\-File\-Name\-Length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a0fe668211df305ffdab90db502ef97b2}
+\hypertarget{classCGenericProcessingMachine_a2edb03a498a4ea859ddf3c96fa6d1c46}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!I\-L\-S\-T@{I\-L\-S\-T}}
+\index{I\-L\-S\-T@{I\-L\-S\-T}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{I\-L\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List}\& C\-Generic\-Processing\-Machine\-::\-I\-L\-S\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a2edb03a498a4ea859ddf3c96fa6d1c46}
+\hypertarget{classCGenericProcessingMachine_aa1b7cd72fef2ed2d89494cba6fd7fb71}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Generic\-Processing\-Machine\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_aa1b7cd72fef2ed2d89494cba6fd7fb71}
+\hypertarget{classCGenericProcessingMachine_afc235cd3526341dd66bca63c8407dc3c}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Generic\-Processing\-Machine\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_afc235cd3526341dd66bca63c8407dc3c}
+\hypertarget{classCGenericProcessingMachine_a832d5bca8017ae54ee14512d191a0f98}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Generic\-Processing\-Machine\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Parameter\-String} \&}]{Parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_a832d5bca8017ae54ee14512d191a0f98}
+\hypertarget{classCGenericProcessingMachine_aa7c84522a453d2cf8d7405e88df0ea97}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!O\-L\-S\-T@{O\-L\-S\-T}}
+\index{O\-L\-S\-T@{O\-L\-S\-T}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{O\-L\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List}\& C\-Generic\-Processing\-Machine\-::\-O\-L\-S\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_aa7c84522a453d2cf8d7405e88df0ea97}
+\hypertarget{classCGenericProcessingMachine_a7b3538bad706f116660406c6f69356bc}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Post\-Process@{Post\-Process}}
+\index{Post\-Process@{Post\-Process}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Post\-Process}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::\-Post\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_a7b3538bad706f116660406c6f69356bc}
+\hypertarget{classCGenericProcessingMachine_a041a02c6755571a3586f29726ec5d7ae}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Pre\-Process@{Pre\-Process}}
+\index{Pre\-Process@{Pre\-Process}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Pre\-Process}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::\-Pre\-Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_a041a02c6755571a3586f29726ec5d7ae}
+\hypertarget{classCGenericProcessingMachine_af4f22c7d76e2b9c47f7be9bfd42ce816}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Print@{Print}}
+\index{Print@{Print}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}virtual void C\-Generic\-Processing\-Machine\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_af4f22c7d76e2b9c47f7be9bfd42ce816}
+\hypertarget{classCGenericProcessingMachine_aac8fae89b58e1051355eb37a4ef9fac2}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Process\-File@{Process\-File}}
+\index{Process\-File@{Process\-File}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Process\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::\-Process\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Source\-File\-Name, }
+\item[{{\bf C\-String} \&}]{Target\-File\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_aac8fae89b58e1051355eb37a4ef9fac2}
+
+
+Reimplemented in \hyperlink{classCProcessingMachine_ad41546723da5e0a79d8a1700909cb6a3}{C\-Processing\-Machine}.
+
+\hypertarget{classCGenericProcessingMachine_a37e5ee4de1dfd674d7bcd00c23824e6e}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!P\-S@{P\-S}}
+\index{P\-S@{P\-S}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{P\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Parameter\-String}\& C\-Generic\-Processing\-Machine\-::\-P\-S (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_a37e5ee4de1dfd674d7bcd00c23824e6e}
+\hypertarget{classCGenericProcessingMachine_af52c4160fe3a92b36faf42050094dfa6}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!P\-S\-C@{P\-S\-C}}
+\index{P\-S\-C@{P\-S\-C}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{P\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Parameter\-String\-Configuration}\& C\-Generic\-Processing\-Machine\-::\-P\-S\-C (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGenericProcessingMachine_af52c4160fe3a92b36faf42050094dfa6}
+\hypertarget{classCGenericProcessingMachine_ae54e3b9192076c54731df813bdaf0d9f}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Run@{Run}}
+\index{Run@{Run}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::\-Run (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_ae54e3b9192076c54731df813bdaf0d9f}
+\hypertarget{classCGenericProcessingMachine_a7fb9272fc6bc3f370874085800f2b8ce}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Set\-File\-Name\-Length@{Set\-File\-Name\-Length}}
+\index{Set\-File\-Name\-Length@{Set\-File\-Name\-Length}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Set\-File\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Generic\-Processing\-Machine\-::\-Set\-File\-Name\-Length (
+\begin{DoxyParamCaption}
+\item[{const int}]{File\-Name\-Length}
+\end{DoxyParamCaption}
+)}}\label{classCGenericProcessingMachine_a7fb9272fc6bc3f370874085800f2b8ce}
+\hypertarget{classCGenericProcessingMachine_a175b8fd621b712a354a6455ab9a6970f}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!Target\-Name@{Target\-Name}}
+\index{Target\-Name@{Target\-Name}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{Target\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Generic\-Processing\-Machine\-::\-Target\-Name (
+\begin{DoxyParamCaption}
+\item[{const int}]{File\-Index, }
+\item[{const {\bf C\-String} \&}]{Source\-File\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCGenericProcessingMachine_a175b8fd621b712a354a6455ab9a6970f}
+
+
+Reimplemented in \hyperlink{classCProcessingMachine_a15ce1425dad6ee9eeb6970dad733632d}{C\-Processing\-Machine}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCGenericProcessingMachine_a76422740416ac078b9999d9d6516739a}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Aliases\-Enabled@{m\-\_\-\-Aliases\-Enabled}}
+\index{m\-\_\-\-Aliases\-Enabled@{m\-\_\-\-Aliases\-Enabled}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Aliases\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::m\-\_\-\-Aliases\-Enabled\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a76422740416ac078b9999d9d6516739a}
+\hypertarget{classCGenericProcessingMachine_aec120317f954ed9cd4194de815648fce}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-File\-Configuration@{m\-\_\-\-File\-Configuration}}
+\index{m\-\_\-\-File\-Configuration@{m\-\_\-\-File\-Configuration}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-File\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Configuration} C\-Generic\-Processing\-Machine\-::m\-\_\-\-File\-Configuration\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_aec120317f954ed9cd4194de815648fce}
+\hypertarget{classCGenericProcessingMachine_a40b137418bef4dd847d4769ec83a9502}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-File\-Index@{m\-\_\-\-File\-Index}}
+\index{m\-\_\-\-File\-Index@{m\-\_\-\-File\-Index}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-File\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Generic\-Processing\-Machine\-::m\-\_\-\-File\-Index\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a40b137418bef4dd847d4769ec83a9502}
+\hypertarget{classCGenericProcessingMachine_a8ebb6c2d1f889af806135a862fa27831}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-File\-Name\-Length@{m\-\_\-\-File\-Name\-Length}}
+\index{m\-\_\-\-File\-Name\-Length@{m\-\_\-\-File\-Name\-Length}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-File\-Name\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Generic\-Processing\-Machine\-::m\-\_\-\-File\-Name\-Length\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a8ebb6c2d1f889af806135a862fa27831}
+\hypertarget{classCGenericProcessingMachine_a1563fdca94661ae2e99a58516f795b88}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Help\-Mode@{m\-\_\-\-Help\-Mode}}
+\index{m\-\_\-\-Help\-Mode@{m\-\_\-\-Help\-Mode}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Help\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::m\-\_\-\-Help\-Mode\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a1563fdca94661ae2e99a58516f795b88}
+\hypertarget{classCGenericProcessingMachine_a690c963f0c095ac81be430d688595c73}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Input\-File\-List@{m\-\_\-\-Input\-File\-List}}
+\index{m\-\_\-\-Input\-File\-List@{m\-\_\-\-Input\-File\-List}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Input\-File\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Generic\-Processing\-Machine\-::m\-\_\-\-Input\-File\-List\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a690c963f0c095ac81be430d688595c73}
+\hypertarget{classCGenericProcessingMachine_ac81ef6205c02d2d3c91f351f72ce701f}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Output\-File\-List@{m\-\_\-\-Output\-File\-List}}
+\index{m\-\_\-\-Output\-File\-List@{m\-\_\-\-Output\-File\-List}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Output\-File\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Generic\-Processing\-Machine\-::m\-\_\-\-Output\-File\-List\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_ac81ef6205c02d2d3c91f351f72ce701f}
+\hypertarget{classCGenericProcessingMachine_a567850641ce85513bfb28527986805e8}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Parameter\-String@{m\-\_\-\-Parameter\-String}}
+\index{m\-\_\-\-Parameter\-String@{m\-\_\-\-Parameter\-String}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Parameter\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Parameter\-String} C\-Generic\-Processing\-Machine\-::m\-\_\-\-Parameter\-String\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a567850641ce85513bfb28527986805e8}
+\hypertarget{classCGenericProcessingMachine_a1f8069a91ee5ee1f418400ad1c902bba}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Parameter\-String\-Configuration@{m\-\_\-\-Parameter\-String\-Configuration}}
+\index{m\-\_\-\-Parameter\-String\-Configuration@{m\-\_\-\-Parameter\-String\-Configuration}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Parameter\-String\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Parameter\-String\-Configuration} C\-Generic\-Processing\-Machine\-::m\-\_\-\-Parameter\-String\-Configuration\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a1f8069a91ee5ee1f418400ad1c902bba}
+\hypertarget{classCGenericProcessingMachine_aa4f21388a42eec363818933f10b587c1}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Quiet\-Mode@{m\-\_\-\-Quiet\-Mode}}
+\index{m\-\_\-\-Quiet\-Mode@{m\-\_\-\-Quiet\-Mode}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Quiet\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::m\-\_\-\-Quiet\-Mode\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_aa4f21388a42eec363818933f10b587c1}
+\hypertarget{classCGenericProcessingMachine_a81a35f50e9afa57d1d915bccc3276b1b}{\index{C\-Generic\-Processing\-Machine@{C\-Generic\-Processing\-Machine}!m\-\_\-\-Verbose\-Mode@{m\-\_\-\-Verbose\-Mode}}
+\index{m\-\_\-\-Verbose\-Mode@{m\-\_\-\-Verbose\-Mode}!CGenericProcessingMachine@{C\-Generic\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Verbose\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Generic\-Processing\-Machine\-::m\-\_\-\-Verbose\-Mode\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCGenericProcessingMachine_a81a35f50e9afa57d1d915bccc3276b1b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{stlgpm_8h}{stlgpm.\-h}\item 
+lib/\hyperlink{stlgpm_8cpp}{stlgpm.\-cpp}\end{DoxyCompactItemize}

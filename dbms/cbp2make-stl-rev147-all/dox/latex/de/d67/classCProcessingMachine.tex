@@ -1,0 +1,162 @@
+\hypertarget{classCProcessingMachine}{\section{C\-Processing\-Machine Class Reference}
+\label{classCProcessingMachine}\index{C\-Processing\-Machine@{C\-Processing\-Machine}}
+}
+Inheritance diagram for C\-Processing\-Machine\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/d67/classCProcessingMachine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCProcessingMachine_a8c84206419dbd0cee2d22b5b36de0f37}{Display\-Help\-Message} (void)
+\item 
+virtual void \hyperlink{classCProcessingMachine_af2bd8a2f21742763cf6fb2de69af3091}{Create\-Configuration} (void)
+\item 
+virtual \hyperlink{classCString}{C\-String} \hyperlink{classCProcessingMachine_a0f9a7ee8fdd8f08c8c013f626fe2257a}{Configuration\-Name} (void)
+\item 
+virtual bool \hyperlink{classCProcessingMachine_a590641d57df9f3126a6fb206e6245466}{Configure} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\item 
+virtual \hyperlink{classCString}{C\-String} \hyperlink{classCProcessingMachine_a15ce1425dad6ee9eeb6970dad733632d}{Target\-Name} (const int \hyperlink{classCGenericProcessingMachine_a74b58c6d076c0e523e619182df8845b9}{File\-Index}, const \hyperlink{classCString}{C\-String} \&Source\-File\-Name)
+\item 
+virtual bool \hyperlink{classCProcessingMachine_ad41546723da5e0a79d8a1700909cb6a3}{Process\-File} (const \hyperlink{classCString}{C\-String} \&Source\-File\-Name, \hyperlink{classCString}{C\-String} \&Target\-File\-Name)
+\item 
+\hyperlink{classCProcessingMachine_a353ebe5b773308babda2ab0b8c3efaed}{C\-Processing\-Machine} (void)
+\item 
+\hyperlink{classCProcessingMachine_a03fb5228a1f555431c37e315ad7a931c}{$\sim$\-C\-Processing\-Machine} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCProcessingMachine_ad02c48691791890fd51d4d3213c264b5}{Configure\-Toolchain} (\hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$Tool\-Chain)
+\item 
+void \hyperlink{classCProcessingMachine_a93e863bd0c7e4dbdb36ae67f8705ec30}{Configure\-Build\-Tool} (\hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$Build\-Tool)
+\item 
+void \hyperlink{classCProcessingMachine_a6357b319f9fdebb9a96cd2296d1d5d17}{Configure\-Platform} (\hyperlink{classCPlatform}{C\-Platform} $\ast$Platform)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCCodeBlocksBuildManager}{C\-Code\-Blocks\-Build\-Manager} \hyperlink{classCProcessingMachine_a187c1e135672d8bf61111bec078c6176}{m\-\_\-\-Build\-Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCProcessingMachine_a353ebe5b773308babda2ab0b8c3efaed}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!C\-Processing\-Machine@{C\-Processing\-Machine}}
+\index{C\-Processing\-Machine@{C\-Processing\-Machine}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{C\-Processing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}C\-Processing\-Machine\-::\-C\-Processing\-Machine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCProcessingMachine_a353ebe5b773308babda2ab0b8c3efaed}
+\hypertarget{classCProcessingMachine_a03fb5228a1f555431c37e315ad7a931c}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!$\sim$\-C\-Processing\-Machine@{$\sim$\-C\-Processing\-Machine}}
+\index{$\sim$\-C\-Processing\-Machine@{$\sim$\-C\-Processing\-Machine}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{$\sim$\-C\-Processing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}C\-Processing\-Machine\-::$\sim$\-C\-Processing\-Machine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCProcessingMachine_a03fb5228a1f555431c37e315ad7a931c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCProcessingMachine_a0f9a7ee8fdd8f08c8c013f626fe2257a}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Configuration\-Name@{Configuration\-Name}}
+\index{Configuration\-Name@{Configuration\-Name}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Configuration\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Processing\-Machine\-::\-Configuration\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCProcessingMachine_a0f9a7ee8fdd8f08c8c013f626fe2257a}
+
+
+Reimplemented from \hyperlink{classCGenericProcessingMachine_a9f87aeb8f9d4385b054517df3fc4f461}{C\-Generic\-Processing\-Machine}.
+
+\hypertarget{classCProcessingMachine_a590641d57df9f3126a6fb206e6245466}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Configure@{Configure}}
+\index{Configure@{Configure}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Configure}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Processing\-Machine\-::\-Configure (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCProcessingMachine_a590641d57df9f3126a6fb206e6245466}
+
+
+Reimplemented from \hyperlink{classCGenericProcessingMachine_ab349d35ea588dc0f553906007fdb896b}{C\-Generic\-Processing\-Machine}.
+
+\hypertarget{classCProcessingMachine_a93e863bd0c7e4dbdb36ae67f8705ec30}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Configure\-Build\-Tool@{Configure\-Build\-Tool}}
+\index{Configure\-Build\-Tool@{Configure\-Build\-Tool}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Configure\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Processing\-Machine\-::\-Configure\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Build\-Tool} $\ast$}]{Build\-Tool}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCProcessingMachine_a93e863bd0c7e4dbdb36ae67f8705ec30}
+\hypertarget{classCProcessingMachine_a6357b319f9fdebb9a96cd2296d1d5d17}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Configure\-Platform@{Configure\-Platform}}
+\index{Configure\-Platform@{Configure\-Platform}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Configure\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Processing\-Machine\-::\-Configure\-Platform (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Platform} $\ast$}]{Platform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCProcessingMachine_a6357b319f9fdebb9a96cd2296d1d5d17}
+\hypertarget{classCProcessingMachine_ad02c48691791890fd51d4d3213c264b5}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Configure\-Toolchain@{Configure\-Toolchain}}
+\index{Configure\-Toolchain@{Configure\-Toolchain}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Configure\-Toolchain}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Processing\-Machine\-::\-Configure\-Toolchain (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Tool\-Chain} $\ast$}]{Tool\-Chain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCProcessingMachine_ad02c48691791890fd51d4d3213c264b5}
+\hypertarget{classCProcessingMachine_af2bd8a2f21742763cf6fb2de69af3091}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Create\-Configuration@{Create\-Configuration}}
+\index{Create\-Configuration@{Create\-Configuration}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Create\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Processing\-Machine\-::\-Create\-Configuration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCProcessingMachine_af2bd8a2f21742763cf6fb2de69af3091}
+
+
+Reimplemented from \hyperlink{classCGenericProcessingMachine_acfda68ec21cce38d4e43f97e8767da86}{C\-Generic\-Processing\-Machine}.
+
+\hypertarget{classCProcessingMachine_a8c84206419dbd0cee2d22b5b36de0f37}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Display\-Help\-Message@{Display\-Help\-Message}}
+\index{Display\-Help\-Message@{Display\-Help\-Message}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Display\-Help\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Processing\-Machine\-::\-Display\-Help\-Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCProcessingMachine_a8c84206419dbd0cee2d22b5b36de0f37}
+
+
+Reimplemented from \hyperlink{classCGenericProcessingMachine_a220ce336197f41945ed37456b93096bc}{C\-Generic\-Processing\-Machine}.
+
+\hypertarget{classCProcessingMachine_ad41546723da5e0a79d8a1700909cb6a3}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Process\-File@{Process\-File}}
+\index{Process\-File@{Process\-File}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Process\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Processing\-Machine\-::\-Process\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Source\-File\-Name, }
+\item[{{\bf C\-String} \&}]{Target\-File\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCProcessingMachine_ad41546723da5e0a79d8a1700909cb6a3}
+
+
+Reimplemented from \hyperlink{classCGenericProcessingMachine_aac8fae89b58e1051355eb37a4ef9fac2}{C\-Generic\-Processing\-Machine}.
+
+\hypertarget{classCProcessingMachine_a15ce1425dad6ee9eeb6970dad733632d}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!Target\-Name@{Target\-Name}}
+\index{Target\-Name@{Target\-Name}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{Target\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Processing\-Machine\-::\-Target\-Name (
+\begin{DoxyParamCaption}
+\item[{const int}]{File\-Index, }
+\item[{const {\bf C\-String} \&}]{Source\-File\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCProcessingMachine_a15ce1425dad6ee9eeb6970dad733632d}
+
+
+Reimplemented from \hyperlink{classCGenericProcessingMachine_a175b8fd621b712a354a6455ab9a6970f}{C\-Generic\-Processing\-Machine}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCProcessingMachine_a187c1e135672d8bf61111bec078c6176}{\index{C\-Processing\-Machine@{C\-Processing\-Machine}!m\-\_\-\-Build\-Manager@{m\-\_\-\-Build\-Manager}}
+\index{m\-\_\-\-Build\-Manager@{m\-\_\-\-Build\-Manager}!CProcessingMachine@{C\-Processing\-Machine}}
+\subsubsection[{m\-\_\-\-Build\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Code\-Blocks\-Build\-Manager} C\-Processing\-Machine\-::m\-\_\-\-Build\-Manager\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCProcessingMachine_a187c1e135672d8bf61111bec078c6176}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbp2make_8cpp}{cbp2make.\-cpp}\end{DoxyCompactItemize}
