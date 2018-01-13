@@ -13,9 +13,16 @@ We recommand to build the project on Ubuntu(Version >= 16.04). There is what tin
 sudo apt install flex bison build-essential
 ```
 
-### Installing
-
 ### Usage
+We support following SQL:
+  create table (create table XXX())
+  drop table (drop table XXX)
+  insert (insert into XXX values())
+  delete (delete * from XXX;  delete from XXX where)
+  update (update XXX set where )
+  select 
+  multiple table join
+
 
 ### Authors
 
