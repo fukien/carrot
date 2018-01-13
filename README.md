@@ -14,14 +14,14 @@ sudo apt install flex bison build-essential
 ```
 
 ### Usage
-We support following SQL:
-  create table (create table XXX())
-  drop table (drop table XXX)
-  insert (insert into XXX values())
-  delete (delete * from XXX;  delete from XXX where)
-  update (update XXX set where )
-  select 
-  multiple table join
+We support following SQL:  
+  create table (create table XXX())  
+  drop table (drop table XXX)  
+  insert (insert into XXX values())  
+  delete (delete * from XXX;  delete from XXX where)  
+  update (update XXX set where )  
+  select   
+  multiple table join  
 
 
 ### Authors
