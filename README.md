@@ -15,7 +15,7 @@ sudo apt install flex bison build-essential
 
 ### Usage
 To run CarrotSQL, you need to change directory to bin/Debug/,  
-&#8194　run the command ./dbms.  
+&emsp;run the command ./dbms.  
 We support following SQL:  
 &emspcreate table (create table XXX())  
 &emspdrop table (drop table XXX)  
