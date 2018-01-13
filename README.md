@@ -15,15 +15,15 @@ sudo apt install flex bison build-essential
 
 ### Usage
 To run CarrotSQL, you need to change directory to bin/Debug/,  
-\trun the command ./dbms.  
+&emsprun the command ./dbms.  
 We support following SQL:  
-  \tcreate table (create table XXX())  
-  \tdrop table (drop table XXX)  
-  \tinsert (insert into XXX values())  
-  \tdelete (delete * from XXX;  delete from XXX where)  
-  \tupdate (update XXX set where )  
-  \tselect   
-  \tmultiple table join  
+&emspcreate table (create table XXX())  
+&emspdrop table (drop table XXX)  
+&emspinsert (insert into XXX values())  
+&emspdelete (delete * from XXX;  delete from XXX where)  
+&emspupdate (update XXX set where )  
+&emspselect   
+&emspmultiple table join  
 P.S. select count(\*) and limit are supported.   
 
 
