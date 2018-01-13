@@ -100,6 +100,11 @@ void sqlp_bool(struct psql_state *pstate, int val)
 void sqlp_call(struct psql_state *pstate, int n_args, const char *name)
 {
 	printf("exec CALL %d %s\n", n_args, name);
+	if(strcmp(name, "COUNTALL") == 0)
+    {
+        sw.isCount = 1;
+        jw.isCount = 1;
+    }
 }
 
 void sqlp_call_date(struct psql_state *pstate, int n_args, enum sqlp_expr_ops op)

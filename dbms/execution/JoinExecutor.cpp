@@ -318,20 +318,30 @@ void JoinExecutor::selectAll()
         SPJItem * item1 = pspj->buildSPJItem();
         pspj->getFirst(item1);
 
-        for(int i = 0; i< allColumn; i++)
+        if(jw.isCount == 0)
         {
-            cout<<"|\t"<<item1->fieldName[i]<<"\t|";
+                for(int i = 0; i< allColumn; i++)
+                {
+                    cout<<"|\t"<<item1->fieldName[i]<<"\t|";
+                }
+                    cout<<endl;
         }
-        cout<<endl;
+
             while(item1->use!=0)
         {
             char *str = new char[1000];
-            for(int i =0; i< allColumn &&  item1->use != 0; i ++)
+
+            if(jw.isCount == 0)
                 {
-                    DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
-                    printf("|\t%s\t|", str);
+                            for(int i =0; i< allColumn &&  item1->use != 0; i ++)
+                            {
+                                DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
+                                printf("|\t%s\t|", str);
+                            }
+                                printf("\n");
+
                 }
-            printf("\n");
+
             cnt1 ++;
             if(jw.isLimit == 1)
             {
@@ -439,20 +449,29 @@ int JoinExecutor::execute(query_tree qt)
         int cnt1 = 0;
         SPJItem * item1 = pspj->buildSPJItem();
         pspj->getFirst(item1);
-        for(int i = 0; i< jw.fieldNum; i++)
+        if(jw.isCount == 0)
         {
-            cout<<"|\t"<<item1->fieldName[i]<<"\t|";
+               for(int i = 0; i< jw.fieldNum; i++)
+                {
+                    cout<<"|\t"<<item1->fieldName[i]<<"\t|";
+                }
+                    cout<<endl;
         }
-        cout<<endl;
+
             while(item1->use!=0)
         {
             char *str = new char[1000];
-            for(int i =0; i< jw.fieldNum &&  item1->use != 0; i ++)
-                {
-                    DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
-                    printf("|\t%s\t|", str);
-                }
-            printf("\n");
+
+            if( jw.isCount  == 0)
+            {
+                    for(int i =0; i< jw.fieldNum &&  item1->use != 0; i ++)
+                        {
+                            DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
+                            printf("|\t%s\t|", str);
+                        }
+                        printf("\n");
+
+            }
             cnt1 ++;
             if(jw.isLimit == 1)
                 {
@@ -582,22 +601,31 @@ void JoinExecutor::selectAllM()
             int cnt1 = 0;
             SPJItem * item1 = pspj ->buildSPJItem();
             pspj->getFirst(item1);
-            for(int i =0; i < allColumn; i++)
+
+            if(jw.isCount == 0)
+            {
+               for(int i =0; i < allColumn; i++)
                 {
                     cout<<"|\t"<<item1->fieldName[i]<<"\t|";
                 }
                  cout<<endl;
+
+            }
                  while(item1->use!=0)
                     {
                     char *str = new char[1000];
-                    for(int i =0; i< allColumn &&  item1->use != 0; i ++)
+
+                    if(jw.isCount == 0)
+                    {
+                            for(int i =0; i< allColumn &&  item1->use != 0; i ++)
                         {
                             DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
                             printf("|\t%s\t|", str);
                         }
-                    printf("\n");
-                    cnt1 ++;
+                            printf("\n");
 
+                    }
+                    cnt1 ++;
                     if(jw.isLimit == 1)
                     {
                        if(cnt1 >= jw.limit)
@@ -724,20 +752,30 @@ int JoinExecutor::executeM(query_tree qt)
         int cnt1 = 0;
             SPJItem * item1 = pspj ->buildSPJItem();
             pspj->getFirst(item1);
-            for(int i =0; i < jw.fieldNum; i++)
+
+            if(jw.isCount == 0)
+            {
+                for(int i =0; i < jw.fieldNum; i++)
                 {
                     cout<<"|\t"<<item1->fieldName[i]<<"\t|";
                 }
-                 cout<<endl;
+                    cout<<endl;
+            }
+
                  while(item1->use!=0)
                     {
                     char *str = new char[1000];
-                    for(int i =0; i< jw.fieldNum &&  item1->use != 0; i ++)
-                        {
-                            DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
-                            printf("|\t%s\t|", str);
-                        }
-                    printf("\n");
+                    if(jw.isCount == 0)
+                    {
+                            for(int i =0; i< jw.fieldNum &&  item1->use != 0; i ++)
+                                {
+                                    DataUtil::toString(str,item1->data[i],  item1->dataType[i]);
+                                    printf("|\t%s\t|", str);
+                                }
+                                    printf("\n");
+
+                    }
+
                     cnt1 ++;
 
                     if(jw.isLimit == 1)
