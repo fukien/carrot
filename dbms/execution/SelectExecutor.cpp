@@ -246,20 +246,30 @@ void SelectExecutor::selectAll()
     int cnt = 0;
     SPJItem * item = proj->buildSPJItem();
     proj->getFirst(item);
-    for(int i = 0; i < item->fieldNum; i++)
+
+    if(sw.isCount == 0)
+    {
+        for(int i = 0; i < item->fieldNum; i++)
         {
             cout<<"|\t"<<item->fieldName[i]<<"\t|";
         }
-    cout<<endl;
+            cout<<endl;
+    }
+
     while(item->use!=0)
         {
             char *str = new char[1000];
-            for(int i =0; i< item->fieldNum &&  item->use != 0; i ++)
+
+            if (sw.isCount == 0)
+            {
+                for(int i =0; i< item->fieldNum &&  item->use != 0; i ++)
                 {
                     DataUtil::toString(str,item->data[i],  item->dataType[i]);
                     printf("|\t%s\t|", str);
                 }
-                printf("\n");
+                    printf("\n");
+            }
+
             cnt ++;
             if(sw.isLimit == 1)
             {
@@ -269,6 +279,7 @@ void SelectExecutor::selectAll()
             proj->getNext(item);
             delete str;
         }
+
     if(cnt == 0)
         {
                 setStatus(-12);
@@ -346,22 +357,29 @@ int SelectExecutor::execute(query_tree qt)
     SPJItem * item = proj->buildSPJItem();
     proj->getFirst(item);
 
-    for(int i = 0; i< sw.fieldNum; i++)
-        {
-            cout<<"|\t"<<item->fieldName[i]<<"\t|";
-        }
+    if (sw.isCount == 0)
+    {
+            for(int i = 0; i< sw.fieldNum; i++)
+                {
+                    cout<<"|\t"<<item->fieldName[i]<<"\t|";
+                }
 
-    cout<<endl;
+            cout<<endl;
+    }
 
     while(item->use!=0)
         {
             char *str = new char[1000];
-            for(int i =0; i< sw.fieldNum &&  item->use != 0; i ++)
+            if (sw.isCount == 0)
                 {
-                    DataUtil::toString(str,item->data[i],  item->dataType[i]);
-                    printf("|\t%s\t|", str);
+                        for(int i =0; i< sw.fieldNum &&  item->use != 0; i ++)
+                        {
+                            DataUtil::toString(str,item->data[i],  item->dataType[i]);
+                            printf("|\t%s\t|", str);
+                        }
+                        printf("\n");
                 }
-            printf("\n");
+
             cnt ++;
             if(sw.isLimit == 1)
             {

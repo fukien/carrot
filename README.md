@@ -13,9 +13,19 @@ We recommand to build the project on Ubuntu(Version >= 16.04). There is what tin
 sudo apt install flex bison build-essential
 ```
 
-### Installing
-
 ### Usage
+To run CarrotSQL, you need to change directory to bin/Debug/,  
+&emsp;run the command ./dbms.  
+We support following SQL:  
+&emsp;create table (create table XXX())  
+&emsp;drop table (drop table XXX)  
+&emsp;insert (insert into XXX values())  
+&emsp;delete (delete * from XXX;  delete from XXX where)  
+&emsp;update (update XXX set where )  
+&emsp;select   
+&emsp;multiple table join  
+P.S. select count(\*) and limit are supported.   
+
 
 ### Authors
 

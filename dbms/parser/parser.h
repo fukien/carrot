@@ -129,6 +129,8 @@ typedef struct selectWhere{
     int whereCursor;//where子句的游标
     int isAll; //0 not, 1 -all, if projects all columns
 
+    int isCount; // 0 not count, 1 count
+
     char fieldList[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
     int fieldNum;
     int isProj; // 0-not finished projection, 1-finished projection
@@ -148,6 +150,8 @@ typedef struct joinWhere{
     char where[MAX_WHERE_ITEM_NUM][MAX_WHERE_ITEM_LENGTH];
     int type[MAX_WHERE_ITEM_LENGTH];
     int whereCursor;
+
+    int isCount; // 0 not count, 1 count
 
     int isAll; //0 not, 1 -all, if projects all columns
     int isProj; // 0-not finished projection, 1-finished projection
