@@ -20,12 +20,19 @@ To run CarrotSQL, you need to change directory to bin/Debug/,
 We support following SQL:  
   
 &emsp;create table (create table XXX())  
+
 &emsp;drop table (drop table XXX)  
+
 &emsp;insert (insert into XXX values())  
+
 &emsp;delete (delete * from XXX;  delete from XXX where)  
+
 &emsp;update (update XXX set where )  
+
 &emsp;select   
+
 &emsp;multiple table join  
+
 P.S. select count(\*) and limit are supported.   
 
 
