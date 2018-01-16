@@ -8,7 +8,7 @@ Recommended debuging the code on Linux and code::blocks16.01.
 
 ### Prerequisites
 
-We recommand to build the project on Ubuntu(Version >= 16.04). There is what tings you need to install:
+We recommand to build the project on Ubuntu(Version >= 16.04). This is what you need to install:
 ```
 sudo apt install flex bison build-essential
 ```
