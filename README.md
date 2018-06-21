@@ -38,7 +38,7 @@ P.S. select count(\*) and limit are supported.
 
 ### Authors
 
-- [Huang Wentao](https://github.com/huangwentao0831)
+- [Huang Wentao](https://github.com/fukien)
 - [Han Han](https://github.com/hagen666)
 - [Guan Hua](https://github.com/GH1995)
 - [Shao Mingrui](https://github.com/crazyxuehu)
