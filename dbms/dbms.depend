@@ -1514,14 +1514,14 @@
 1558697760 source:/home/huangwentao/workspace/CarrotSQL/util/Thread.cpp
 	"Thread.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/buffer/BufferManager.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/buffer/BufferManager.cpp
 	<queue>
 	<map>
 	"BufferManager.h"
 	<cstdlib>
 	<cstdio>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/buffer/BufferManager.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/buffer/BufferManager.h
 	<queue>
 	<map>
 	<set>
@@ -1530,16 +1530,16 @@
 	"../storage/PageUtil.h"
 	"../util/Thread.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/common.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/common.h
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/storage/DBFile.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/storage/DBFile.h
 	<unistd.h>
 	<sys/types.h>
 	<sys/stat.h>
 	<fcntl.h>
 	"../common.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/storage/PageUtil.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/storage/PageUtil.h
 	<map>
 	<queue>
 	<cstring>
@@ -1547,32 +1547,32 @@
 	"DBFile.h"
 	"FreeBuffer.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/storage/FreeBuffer.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/storage/FreeBuffer.h
 	"../common.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/util/Thread.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/util/Thread.h
 	<stdint.h>
 	<unistd.h>
 	<time.h>
 	<pthread.h>
 	<sys/time.h>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/buffer/ClockFIFOStrategy.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/buffer/ClockFIFOStrategy.cpp
 	"ClockFIFOStrategy.h"
 	<cstdlib>
 	<cstdio>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/buffer/ClockFIFOStrategy.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/buffer/ClockFIFOStrategy.h
 	"BufferManager.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/dataInput/input.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/dataInput/input.cpp
 	"inputer.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/dataInput/inputer.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/dataInput/inputer.h
 	<cstdio>
 	"../common.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/dataload/dataload.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/dataload/dataload.cpp
 	<cstdlib>
 	<cstdio>
 	<climits>
@@ -1600,39 +1600,39 @@
 	"../SPJ/Selection.h"
 	"../SPJ/Join.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/segment/Segment.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/segment/Segment.h
 	"../common.h"
 	"../buffer/BufferManager.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/segment/DirectorySegment.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/segment/DirectorySegment.h
 	<map>
 	"../common.h"
 	"Segment.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/segment/MetaDataSegment.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/segment/MetaDataSegment.h
 	"../common.h"
 	"../buffer/BufferManager.h"
 	"DirectorySegment.h"
 	"../table/meta.h"
 	"../table/TableUtil.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/table/meta.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/table/meta.h
 	"../common.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/table/TableUtil.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/table/TableUtil.h
 	<cstring>
 	"../common.h"
 	"meta.h"
 	"../storage/PageUtil.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/segment/DataSegment.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/segment/DataSegment.h
 	"../common.h"
 	"../buffer/BufferManager.h"
 	"../table/meta.h"
 	"DirectorySegment.h"
 	"../table/TableUtil.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/table/Table.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/table/Table.h
 	"../common.h"
 	"../buffer/BufferManager.h"
 	"../buffer/ClockFIFOStrategy.h"
@@ -1642,7 +1642,7 @@
 	"../segment/DataSegment.h"
 	"../segment/IndexSegment.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/segment/IndexSegment.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/segment/IndexSegment.h
 	<map>
 	"../common.h"
 	"../buffer/BufferManager.h"
@@ -1653,13 +1653,13 @@
 	"DataSegment.h"
 	"../index/Index.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/index/Index.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/index/Index.h
 	"../common.h"
 	"../table/meta.h"
 	"../segment/DataSegment.h"
 	"../segment/MetaDataSegment.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/test/test.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/test/test.h
 	<string>
 	<vector>
 	<fstream>
@@ -1667,14 +1667,14 @@
 	"meta.h"
 	"../storage/PageUtil.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/util/DataUtil.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/util/DataUtil.h
 	<stdlib.h>
 	<cstdio>
 	"../common.h"
 	"../table/meta.h"
 	"../table/TableUtil.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/index/PrimaryHashIndex.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/index/PrimaryHashIndex.h
 	"../common.h"
 	"../table/meta.h"
 	"../segment/DataSegment.h"
@@ -1684,7 +1684,7 @@
 	<map>
 	"Index.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/SPJ/SPJ.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/SPJ/SPJ.h
 	"../common.h"
 	"../buffer/BufferManager.h"
 	"../table/meta.h"
@@ -1694,31 +1694,31 @@
 	"../index/Index.h"
 	<string>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/SPJ/Projection.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/SPJ/Projection.h
 	"SPJ.h"
 	<string>
 	<map>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/SPJ/Selection.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/SPJ/Selection.h
 	"SPJ.h"
 	"../util/DataUtil.h"
 	<string>
 	<map>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/SPJ/Join.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/SPJ/Join.h
 	"SPJ.h"
 	"Selection.h"
 	<string>
 	<map>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/CreateExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/CreateExecutor.cpp
 	"CreateExecutor.h"
 	<memory.h>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/CreateExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/CreateExecutor.h
 	"QueryExecutor.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/QueryExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/QueryExecutor.h
 	<map>
 	"../common.h"
 	"../parser/parser.h"
@@ -1730,72 +1730,73 @@
 	"../SPJ/Join.h"
 	"../SPJ/Projection.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/parser/parser.h
+1558787437 /home/huangwentao/workspace/carrot/dbms/parser/parser.h
 	"../common.h"
+	<stdio.h>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/DeleteExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/DeleteExecutor.cpp
 	"DeleteExecutor.h"
 	<iostream>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/DeleteExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/DeleteExecutor.h
 	"QueryExecutor.h"
 	<stack>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/DropExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/DropExecutor.cpp
 	"DropExecutor.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/DropExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/DropExecutor.h
 	"QueryExecutor.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/InsertExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/InsertExecutor.cpp
 	"InsertExecutor.h"
 	<iostream>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/InsertExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/InsertExecutor.h
 	"QueryExecutor.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/JoinExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/JoinExecutor.cpp
 	"JoinExecutor.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/JoinExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/JoinExecutor.h
 	"QueryExecutor.h"
 	<stack>
 	<iostream>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/QueryExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/QueryExecutor.cpp
 	"QueryExecutor.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/SelectExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/SelectExecutor.cpp
 	"SelectExecutor.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/SelectExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/SelectExecutor.h
 	"QueryExecutor.h"
 	<stack>
 	<iostream>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/execution/UpdateExecutor.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/execution/UpdateExecutor.cpp
 	"UpdateExecutor.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/execution/UpdateExecutor.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/execution/UpdateExecutor.h
 	"QueryExecutor.h"
 	<stack>
 	<iostream>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/index/BPTree.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/index/BPTree.cpp
 	"BPTree.h"
 	"../segment/IndexSegment.h"
 	"../util/DataUtil.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/index/BPTree.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/index/BPTree.h
 	<queue>
 	"../common.h"
 	"Index.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/index/Index.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/index/Index.cpp
 	"Index.h"
 	"../segment/IndexSegment.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/index/PrimaryHashIndex.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/index/PrimaryHashIndex.cpp
 	"PrimaryHashIndex.h"
 	"../segment/IndexSegment.h"
 	<cstdio>
@@ -1803,7 +1804,7 @@
 	<cmath>
 	<algorithm>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/main.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/main.cpp
 	<iostream>
 	<cstdio>
 	<cstdlib>
@@ -1824,11 +1825,11 @@
 	"parser/sql.tab.h"
 	"parser/sql-parser.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/parser/sql.tab.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/parser/sql.tab.h
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/parser/sql-parser.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/parser/sql-parser.h
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/parser/exec.c
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/parser/exec.c
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
@@ -1839,11 +1840,11 @@
 	"../global.h"
 	"../common.h"
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/global.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/global.h
 	<stdio.h>
 	"parser/parser.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/parser/sql.c
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/parser/sql.c
 	<stdio.h>
 	<string.h>
 	<errno.h>
@@ -1855,7 +1856,7 @@
 	"sql-parser.h"
 	<unistd.h>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/parser/sql.tab.c
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/parser/sql.tab.c
 	<stdlib.h>
 	<stdarg.h>
 	<string.h>
@@ -1869,7 +1870,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1558784022 /home/huangwentao/workspace/carrot/dbms/parser/sql.lex.h
+1558787220 /home/huangwentao/workspace/carrot/dbms/parser/sql.lex.h
 	<stdio.h>
 	<string.h>
 	<errno.h>
@@ -1877,64 +1878,64 @@
 	<inttypes.h>
 	<unistd.h>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/segment/DataSegment.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/segment/DataSegment.cpp
 	"DataSegment.h"
 	<cstdlib>
 	<cstdio>
 	<cstdlib>
 	<cstdio>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/segment/DirectorySegment.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/segment/DirectorySegment.cpp
 	"DirectorySegment.h"
 	<cstdlib>
 	<cstdio>
 	<cstdlib>
 	<cstdio>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/segment/IndexSegment.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/segment/IndexSegment.cpp
 	"IndexSegment.h"
 	"../index/BPTree.h"
 	"../index/PrimaryHashIndex.h"
 	<cstdio>
 	<cstdlib>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/segment/MetaDataSegment.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/segment/MetaDataSegment.cpp
 	"MetaDataSegment.h"
 	<cstdlib>
 	<cstdio>
 	"../table/TableUtil.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/segment/Segment.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/segment/Segment.cpp
 	"Segment.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/SPJ/Join.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/SPJ/Join.cpp
 	"Join.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/SPJ/Projection.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/SPJ/Projection.cpp
 	"Projection.h"
 	<cstdio>
 	<iostream>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/SPJ/Selection.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/SPJ/Selection.cpp
 	"Selection.h"
 	<cstdio>
 	<limits>
 	<iostream>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/SPJ/SPJ.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/SPJ/SPJ.cpp
 	"SPJ.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/storage/DBFile.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/storage/DBFile.cpp
 	"DBFile.h"
 	<cstdlib>
 	<cstdio>
 	<cstdlib>
 	<cstdio>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/storage/FreeBuffer.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/storage/FreeBuffer.cpp
 	"FreeBuffer.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/storage/main1.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/storage/main1.cpp
 	<cstdlib>
 	<cstdio>
 	<climits>
@@ -1962,7 +1963,7 @@
 	"../SPJ/Selection.h"
 	"../SPJ/Join.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/storage/main2.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/storage/main2.cpp
 	<cstdlib>
 	<cstdio>
 	<climits>
@@ -1985,24 +1986,24 @@
 	"../index/Index.h"
 	"../index/BPTree.h"
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/storage/PageUtil.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/storage/PageUtil.cpp
 	"PageUtil.h"
 	<cstdio>
 	<cstdlib>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/table/MemoryTable.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/table/MemoryTable.cpp
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/table/Table.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/table/Table.cpp
 	"Table.h"
 	<cstdio>
 	<cstdlib>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/table/TableUtil.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/table/TableUtil.cpp
 	"TableUtil.h"
 	<cstdlib>
 	<cstdio>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/test/dataLoad.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/test/dataLoad.cpp
 	"test.h"
 	<iostream>
 	<string>
@@ -2010,12 +2011,12 @@
 	<sstream>
 	<vector>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/util/DataUtil.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/util/DataUtil.cpp
 	"DataUtil.h"
 	"../table/meta.h"
 	<cstdlib>
 	<cstdio>
 
-1558784022 source:/home/huangwentao/workspace/carrot/dbms/util/Thread.cpp
+1558787220 source:/home/huangwentao/workspace/carrot/dbms/util/Thread.cpp
 	"Thread.h"
 

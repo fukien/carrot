@@ -11,6 +11,7 @@
 #define MAX_CHAR_VARCHAR_LENGTH 64
 #define MAX_WHERE_ITEM_NUM 64
 #define MAX_WHERE_ITEM_LENGTH 64
+#include<stdio.h>
 /*
 typedef struct create_drop_select{
     int status;

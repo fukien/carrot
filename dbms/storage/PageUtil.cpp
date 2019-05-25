@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <cstdlib>
 #endif
+#include<stdio.h>
 
 Addr PageUtil::buildNewPage(Page& page)
 {
