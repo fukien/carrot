@@ -2,22 +2,25 @@
 
 A simple implementation of database system.
 
-Recommended debuging the code on Linux and code::blocks16.01.
+Recommended code debugging on Linux and Code::Blocks-16.01.
 
 ## Getting Started
 
-### Prerequisites
+### Requirements
 
-We recommand to build the project on Ubuntu(Version >= 16.04). This is what you need to install:
+We recommand to build the project on Ubuntu(Version >= 16.04) with Code::Blocks-16.01. You may also need to install the following tools:
 ```
 sudo apt install flex bison build-essential
+sudo apt install glibc-doc
+sudo apt install manpages-posix-dev
 ```
 
 ### Usage
-To run CarrotSQL, you need to change directory to bin/Debug/,  
-&emsp;run the command ```./dbms```  
+To run CarrotSQL, you need to change directory to dbms/, and make new directory as a workspace for the project (e.g., mkdir workspace).
+
+Open the project in Code::Blocks
   
-We support following SQL:  
+We support following SQL operations:  
   
 &emsp;create table (create table XXX())  
 
@@ -31,15 +34,15 @@ We support following SQL:
 
 &emsp;select   
 
-&emsp;multiple table join  
+&emsp;multiple tables join  
 
 P.S. select count(\*) and limit are supported.   
 
 
 ### Authors
 
-- [Huang Wentao](https://github.com/fukien)
+- [Wentao Huang](https://github.com/fukien)
 - [Han Han](https://github.com/hagen666)
-- [Guan Hua](https://github.com/GH1995)
-- [Shao Mingrui](https://github.com/crazyxuehu)
-- [Han Xueran](https://github.com/lemontreehxr)
+- [Mingrui Shao](https://github.com/crazyxuehu)
+- [Hua Guan](https://github.com/GH1995)
+- [Xueran Han](https://github.com/lemontreehxr)
