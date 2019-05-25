@@ -1,0 +1,61 @@
+\hypertarget{macros_8h}{\section{lib/macros.h File Reference}
+\label{macros_8h}\index{lib/macros.\-h@{lib/macros.\-h}}
+}
+
+
+Base definitions and macros.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacestd}{std}
+\begin{DoxyCompactList}\small\item\em Namespace of C++ standard library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacestd}{std}
+\begin{DoxyCompactList}\small\item\em Namespace of C++ standard library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_a2682d177c2a329a69e2b6c8a15108734}{O\-S\-\_\-\-U\-N\-I\-X}
+\begin{DoxyCompactList}\small\item\em This macro is set if at compile-\/time the platform is U\-N\-I\-X-\/like (G\-N\-U/\-Linux etc). \end{DoxyCompactList}\item 
+\#define \hyperlink{macros_8h_abaa126366e4c10c75028e091cc44d826}{S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E}
+\begin{DoxyCompactList}\small\item\em Allows compact style for verbose message output. \end{DoxyCompactList}\item 
+\#define \hyperlink{macros_8h_a9f918755b601cf4bffca775992e6fb90}{N\-O\-M\-I\-N\-M\-A\-X}
+\begin{DoxyCompactList}\small\item\em Indicates that standard \hyperlink{namespacestd_ae1c3321f3dd2ab3e5551e8ff48aa0513}{min()} and \hyperlink{namespacestd_a4ea598d92b76d5d7d37fae772203043a}{max()} template functions are declared. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\T1 const \& \hyperlink{namespacestd_ae1c3321f3dd2ab3e5551e8ff48aa0513}{std\-::min} (T1 const \&a, T2 const \&b)
+\begin{DoxyCompactList}\small\item\em Returns minimal of two arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\T1 const \& \hyperlink{namespacestd_a4ea598d92b76d5d7d37fae772203043a}{std\-::max} (T1 const \&a, T2 const \&b)
+\begin{DoxyCompactList}\small\item\em Returns maximal of two arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base definitions and macros. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{macros_8h_a9f918755b601cf4bffca775992e6fb90}{\index{macros.\-h@{macros.\-h}!N\-O\-M\-I\-N\-M\-A\-X@{N\-O\-M\-I\-N\-M\-A\-X}}
+\index{N\-O\-M\-I\-N\-M\-A\-X@{N\-O\-M\-I\-N\-M\-A\-X}!macros.h@{macros.\-h}}
+\subsubsection[{N\-O\-M\-I\-N\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-M\-I\-N\-M\-A\-X}}\label{macros_8h_a9f918755b601cf4bffca775992e6fb90}
+
+
+Indicates that standard \hyperlink{namespacestd_ae1c3321f3dd2ab3e5551e8ff48aa0513}{min()} and \hyperlink{namespacestd_a4ea598d92b76d5d7d37fae772203043a}{max()} template functions are declared. 
+
+\hypertarget{macros_8h_a2682d177c2a329a69e2b6c8a15108734}{\index{macros.\-h@{macros.\-h}!O\-S\-\_\-\-U\-N\-I\-X@{O\-S\-\_\-\-U\-N\-I\-X}}
+\index{O\-S\-\_\-\-U\-N\-I\-X@{O\-S\-\_\-\-U\-N\-I\-X}!macros.h@{macros.\-h}}
+\subsubsection[{O\-S\-\_\-\-U\-N\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-S\-\_\-\-U\-N\-I\-X}}\label{macros_8h_a2682d177c2a329a69e2b6c8a15108734}
+
+
+This macro is set if at compile-\/time the platform is U\-N\-I\-X-\/like (G\-N\-U/\-Linux etc). 
+
+\hypertarget{macros_8h_abaa126366e4c10c75028e091cc44d826}{\index{macros.\-h@{macros.\-h}!S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E@{S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E}}
+\index{S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E@{S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E}!macros.h@{macros.\-h}}
+\subsubsection[{S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-H\-O\-W\-\_\-\-M\-O\-D\-E\-\_\-\-O\-N\-E\-L\-I\-N\-E}}\label{macros_8h_abaa126366e4c10c75028e091cc44d826}
+
+
+Allows compact style for verbose message output. 
+

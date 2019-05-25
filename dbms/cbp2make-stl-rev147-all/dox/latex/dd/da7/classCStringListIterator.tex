@@ -1,0 +1,216 @@
+\hypertarget{classCStringListIterator}{\section{C\-String\-List\-Iterator Class Reference}
+\label{classCStringListIterator}\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}}
+}
+
+
+{\ttfamily \#include $<$stlstrings.\-h$>$}
+
+Inheritance diagram for C\-String\-List\-Iterator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dd/da7/classCStringListIterator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classCStringListIterator_a0bde6983a18673bebfe0eed958231083}{First\-Position} (void)
+\item 
+virtual int \hyperlink{classCStringListIterator_a369446781e7b62abc79311f73bd9c54a}{This\-Position} (void)
+\item 
+virtual int \hyperlink{classCStringListIterator_afc5a0d463ea6783767dad416211318fc}{Last\-Position} (void)
+\item 
+virtual char \& \hyperlink{classCStringListIterator_aa127fde2929398c344504f500849fcb1}{First} (void)
+\item 
+virtual char \& \hyperlink{classCStringListIterator_a8b82110c52fedd6cb18660526c63f8ef}{Prev} (void)
+\item 
+virtual char \& \hyperlink{classCStringListIterator_ab163a0cda37b05ce985f876245bc8cd2}{This} (void)
+\item 
+virtual char \& \hyperlink{classCStringListIterator_aa4625f7dc1225aaae83f9154d44aec38}{Next} (void)
+\item 
+virtual char \& \hyperlink{classCStringListIterator_a2801731076eae0d85a8037aa746b0e3b}{Last} (void)
+\item 
+virtual void \hyperlink{classCStringListIterator_af3d67cf68505a00289ffd271215d1254}{Reset} (void)
+\item 
+virtual bool \hyperlink{classCStringListIterator_a42f9aed958e2d8217ac672e80b488f0a}{Match} (const \hyperlink{classCString}{C\-String} \&Pattern, const bool Move=false)
+\item 
+\hyperlink{classCStringListIterator_a784f10d3d80f27e00dea7ebe0e17672a}{C\-String\-List\-Iterator} (void)
+\item 
+\hyperlink{classCStringListIterator_acfe03967e4eeceed33f28ec4c01cc2f9}{C\-String\-List\-Iterator} (const \hyperlink{classCStringList}{C\-String\-List} $\ast$A\-String\-List)
+\item 
+\hyperlink{classCStringListIterator_ab2b2941f176109e6e026a129b5b472ad}{C\-String\-List\-Iterator} (const \hyperlink{classCStringListIterator}{C\-String\-List\-Iterator} \&A\-String\-List\-Iterator)
+\item 
+virtual \hyperlink{classCStringListIterator_a7101825fbd3350c03d2776f5d681251e}{$\sim$\-C\-String\-List\-Iterator} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} $\ast$ \hyperlink{classCStringListIterator_ad0f2e00e0d0a89c8465b4e5aa0f717b9}{m\-\_\-\-String\-List}
+\item 
+int \hyperlink{classCStringListIterator_adc98c30b44daa3d0b2e632a894269535}{m\-\_\-\-Line}
+\item 
+int \hyperlink{classCStringListIterator_a6d205aacb48beb07889cf6f5a74176a9}{m\-\_\-\-Position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCStringListIterator_a784f10d3d80f27e00dea7ebe0e17672a}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!C\-String\-List\-Iterator@{C\-String\-List\-Iterator}}
+\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{C\-String\-List\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}C\-String\-List\-Iterator\-::\-C\-String\-List\-Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCStringListIterator_a784f10d3d80f27e00dea7ebe0e17672a}
+\hypertarget{classCStringListIterator_acfe03967e4eeceed33f28ec4c01cc2f9}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!C\-String\-List\-Iterator@{C\-String\-List\-Iterator}}
+\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{C\-String\-List\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}C\-String\-List\-Iterator\-::\-C\-String\-List\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} $\ast$}]{A\-String\-List}
+\end{DoxyParamCaption}
+)}}\label{classCStringListIterator_acfe03967e4eeceed33f28ec4c01cc2f9}
+\hypertarget{classCStringListIterator_ab2b2941f176109e6e026a129b5b472ad}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!C\-String\-List\-Iterator@{C\-String\-List\-Iterator}}
+\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{C\-String\-List\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}C\-String\-List\-Iterator\-::\-C\-String\-List\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List\-Iterator} \&}]{A\-String\-List\-Iterator}
+\end{DoxyParamCaption}
+)}}\label{classCStringListIterator_ab2b2941f176109e6e026a129b5b472ad}
+\hypertarget{classCStringListIterator_a7101825fbd3350c03d2776f5d681251e}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!$\sim$\-C\-String\-List\-Iterator@{$\sim$\-C\-String\-List\-Iterator}}
+\index{$\sim$\-C\-String\-List\-Iterator@{$\sim$\-C\-String\-List\-Iterator}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{$\sim$\-C\-String\-List\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual C\-String\-List\-Iterator\-::$\sim$\-C\-String\-List\-Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classCStringListIterator_a7101825fbd3350c03d2776f5d681251e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCStringListIterator_aa127fde2929398c344504f500849fcb1}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!First@{First}}
+\index{First@{First}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{First}]{\setlength{\rightskip}{0pt plus 5cm}char \& C\-String\-List\-Iterator\-::\-First (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_aa127fde2929398c344504f500849fcb1}
+
+
+Reimplemented from \hyperlink{classCCharIterator_abc3cf59a2d2e08cf9dc472fc3586fe1d}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_a0bde6983a18673bebfe0eed958231083}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!First\-Position@{First\-Position}}
+\index{First\-Position@{First\-Position}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{First\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-Iterator\-::\-First\-Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_a0bde6983a18673bebfe0eed958231083}
+
+
+Reimplemented from \hyperlink{classCCharIterator_af76726073a2c137b42031206da3fd077}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_a2801731076eae0d85a8037aa746b0e3b}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!Last@{Last}}
+\index{Last@{Last}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{Last}]{\setlength{\rightskip}{0pt plus 5cm}char \& C\-String\-List\-Iterator\-::\-Last (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_a2801731076eae0d85a8037aa746b0e3b}
+
+
+Reimplemented from \hyperlink{classCCharIterator_a41a44b4c83aca6b35dd1ebd6d27e4fbb}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_afc5a0d463ea6783767dad416211318fc}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!Last\-Position@{Last\-Position}}
+\index{Last\-Position@{Last\-Position}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{Last\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-Iterator\-::\-Last\-Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_afc5a0d463ea6783767dad416211318fc}
+
+
+Reimplemented from \hyperlink{classCCharIterator_a8c8c9299de7a6f743f038a8eff713331}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_a42f9aed958e2d8217ac672e80b488f0a}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!Match@{Match}}
+\index{Match@{Match}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-String\-List\-Iterator\-::\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Pattern, }
+\item[{const bool}]{Move = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_a42f9aed958e2d8217ac672e80b488f0a}
+
+
+Reimplemented from \hyperlink{classCCharIterator_a41cb29bdf53b99947a8f2a8c7894c7fe}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_aa4625f7dc1225aaae83f9154d44aec38}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!Next@{Next}}
+\index{Next@{Next}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}char \& C\-String\-List\-Iterator\-::\-Next (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_aa4625f7dc1225aaae83f9154d44aec38}
+
+
+Reimplemented from \hyperlink{classCCharIterator_aa432eb048079b39a13d6147d8d977a0d}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_a8b82110c52fedd6cb18660526c63f8ef}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!Prev@{Prev}}
+\index{Prev@{Prev}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{Prev}]{\setlength{\rightskip}{0pt plus 5cm}char \& C\-String\-List\-Iterator\-::\-Prev (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_a8b82110c52fedd6cb18660526c63f8ef}
+
+
+Reimplemented from \hyperlink{classCCharIterator_a84808ea6da1bff06b9528068c3b67eb6}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_af3d67cf68505a00289ffd271215d1254}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!Reset@{Reset}}
+\index{Reset@{Reset}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void C\-String\-List\-Iterator\-::\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_af3d67cf68505a00289ffd271215d1254}
+
+
+Reimplemented from \hyperlink{classCCharIterator_ac72db043fb84594bddf6fade20b906de}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_ab163a0cda37b05ce985f876245bc8cd2}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!This@{This}}
+\index{This@{This}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{This}]{\setlength{\rightskip}{0pt plus 5cm}char \& C\-String\-List\-Iterator\-::\-This (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_ab163a0cda37b05ce985f876245bc8cd2}
+
+
+Reimplemented from \hyperlink{classCCharIterator_ab7ccc7e2891c3cd4ed9b08aef30f1a17}{C\-Char\-Iterator}.
+
+\hypertarget{classCStringListIterator_a369446781e7b62abc79311f73bd9c54a}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!This\-Position@{This\-Position}}
+\index{This\-Position@{This\-Position}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{This\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-Iterator\-::\-This\-Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCStringListIterator_a369446781e7b62abc79311f73bd9c54a}
+
+
+Reimplemented from \hyperlink{classCCharIterator_a0bb27af4d399d1104a0ac630dad15551}{C\-Char\-Iterator}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCStringListIterator_adc98c30b44daa3d0b2e632a894269535}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!m\-\_\-\-Line@{m\-\_\-\-Line}}
+\index{m\-\_\-\-Line@{m\-\_\-\-Line}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{m\-\_\-\-Line}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-Iterator\-::m\-\_\-\-Line\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCStringListIterator_adc98c30b44daa3d0b2e632a894269535}
+\hypertarget{classCStringListIterator_a6d205aacb48beb07889cf6f5a74176a9}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!m\-\_\-\-Position@{m\-\_\-\-Position}}
+\index{m\-\_\-\-Position@{m\-\_\-\-Position}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{m\-\_\-\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int C\-String\-List\-Iterator\-::m\-\_\-\-Position\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCStringListIterator_a6d205aacb48beb07889cf6f5a74176a9}
+\hypertarget{classCStringListIterator_ad0f2e00e0d0a89c8465b4e5aa0f717b9}{\index{C\-String\-List\-Iterator@{C\-String\-List\-Iterator}!m\-\_\-\-String\-List@{m\-\_\-\-String\-List}}
+\index{m\-\_\-\-String\-List@{m\-\_\-\-String\-List}!CStringListIterator@{C\-String\-List\-Iterator}}
+\subsubsection[{m\-\_\-\-String\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List}$\ast$ C\-String\-List\-Iterator\-::m\-\_\-\-String\-List\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCStringListIterator_ad0f2e00e0d0a89c8465b4e5aa0f717b9}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{stlstrings_8h}{stlstrings.\-h}\item 
+lib/\hyperlink{stlstrings_8cpp}{stlstrings.\-cpp}\end{DoxyCompactItemize}

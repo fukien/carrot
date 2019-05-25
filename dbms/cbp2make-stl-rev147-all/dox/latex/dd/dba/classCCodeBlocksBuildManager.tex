@@ -1,0 +1,223 @@
+\hypertarget{classCCodeBlocksBuildManager}{\section{C\-Code\-Blocks\-Build\-Manager Class Reference}
+\label{classCCodeBlocksBuildManager}\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}}
+}
+
+
+Build manager for Code\-::\-Blocks projects.  
+
+
+
+
+{\ttfamily \#include $<$cbbuildmgr.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatformSet}{C\-Platform\-Set} \& \hyperlink{classCCodeBlocksBuildManager_acaeb1798ff6294c2b9300b686d677d5e}{Platforms} (void)
+\begin{DoxyCompactList}\small\item\em Returns reference to the set of platforms in build configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChainSet}{C\-Tool\-Chain\-Set} \& \hyperlink{classCCodeBlocksBuildManager_aeba3ee360b7989935296b0e4199d62ef}{Tool\-Chains} (void)
+\begin{DoxyCompactList}\small\item\em Returns reference to the set of toolchains in build configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \& \hyperlink{classCCodeBlocksBuildManager_a0dac91d06d68b934520a54989ff2fb71}{Config} (void)
+\begin{DoxyCompactList}\small\item\em Returns reference to the build configuration. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksBuildManager_a21431e3db6667b349a9a25e02a59c47a}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets build manager to the initial state. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildManager_a8f8b8006d89c5ec7b93fa76c6b57a9ff}{Load\-Project\-Or\-Workspace} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Loads a workspace or a project file whichever specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksBuildManager_a034a2188dd52d4cbe3300e396aef41c4}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints project or workspace contents to standard output. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksBuildManager_ae755f758024134bfc2d123d78f647391}{Generate\-Makefile} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Generates makefile text and writes it to the file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksBuildManager_a6699fe49e0787e4bb04876b42a2e2ddd}{C\-Code\-Blocks\-Build\-Manager} (void)
+\begin{DoxyCompactList}\small\item\em Creates build manager. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksBuildManager_adfff912964320d1e282d06687fae5120}{$\sim$\-C\-Code\-Blocks\-Build\-Manager} (void)
+\begin{DoxyCompactList}\small\item\em Destroys build manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCCodeBlocksWorkspace}{C\-Code\-Blocks\-Workspace} \hyperlink{classCCodeBlocksBuildManager_a7affd9de7002a93d1682986cd9236b6b}{m\-\_\-\-Workspace}
+\begin{DoxyCompactList}\small\item\em Code\-::\-Blocks workspace object. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project} \hyperlink{classCCodeBlocksBuildManager_a70ffda777a7fda5cd18a1a97ad7871b7}{m\-\_\-\-Project}
+\begin{DoxyCompactList}\small\item\em Code\-::\-Blocks project object. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \hyperlink{classCCodeBlocksBuildManager_abda268cd01673d4a1fec14a73c4f8914}{m\-\_\-\-Config}
+\begin{DoxyCompactList}\small\item\em Build configuration. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildManager_a347f43f610f53350c6721b3613bfa68b}{m\-\_\-\-Project\-Loaded}
+\begin{DoxyCompactList}\small\item\em Indicated that a Code\-::\-Blocks project was loaded. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildManager_ac85e500d80e44926bf0471466d21ad6c}{m\-\_\-\-Workspace\-Loaded}
+\begin{DoxyCompactList}\small\item\em Indicates that a Code\-::\-Blocks workspace was loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Build manager for Code\-::\-Blocks projects. 
+
+Manages workspace and project settings and starts makefile generation process. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCodeBlocksBuildManager_a6699fe49e0787e4bb04876b42a2e2ddd}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}}
+\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{C\-Code\-Blocks\-Build\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-C\-Code\-Blocks\-Build\-Manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildManager_a6699fe49e0787e4bb04876b42a2e2ddd}
+
+
+Creates build manager. 
+
+\hypertarget{classCCodeBlocksBuildManager_adfff912964320d1e282d06687fae5120}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!$\sim$\-C\-Code\-Blocks\-Build\-Manager@{$\sim$\-C\-Code\-Blocks\-Build\-Manager}}
+\index{$\sim$\-C\-Code\-Blocks\-Build\-Manager@{$\sim$\-C\-Code\-Blocks\-Build\-Manager}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{$\sim$\-C\-Code\-Blocks\-Build\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::$\sim$\-C\-Code\-Blocks\-Build\-Manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildManager_adfff912964320d1e282d06687fae5120}
+
+
+Destroys build manager. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCodeBlocksBuildManager_a21431e3db6667b349a9a25e02a59c47a}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Clear@{Clear}}
+\index{Clear@{Clear}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildManager_a21431e3db6667b349a9a25e02a59c47a}
+
+
+Resets build manager to the initial state. 
+
+\hypertarget{classCCodeBlocksBuildManager_a0dac91d06d68b934520a54989ff2fb71}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Config@{Config}}
+\index{Config@{Config}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildManager_a0dac91d06d68b934520a54989ff2fb71}
+
+
+Returns reference to the build configuration. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildManager_abda268cd01673d4a1fec14a73c4f8914}{C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Config}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildManager_ae755f758024134bfc2d123d78f647391}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Generate\-Makefile@{Generate\-Makefile}}
+\index{Generate\-Makefile@{Generate\-Makefile}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Generate\-Makefile}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Generate\-Makefile (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildManager_ae755f758024134bfc2d123d78f647391}
+
+
+Generates makefile text and writes it to the file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a file name for makefile.\\
+\hline
+\end{DoxyParams}
+Build manager does not generate makefile text by itself, makefile for workspace is generated by \hyperlink{classCCodeBlocksWorkspace}{C\-Code\-Blocks\-Workspace} and makefiles for individual projects in a workspace are generated by \hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project}. \hypertarget{classCCodeBlocksBuildManager_a8f8b8006d89c5ec7b93fa76c6b57a9ff}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Load\-Project\-Or\-Workspace@{Load\-Project\-Or\-Workspace}}
+\index{Load\-Project\-Or\-Workspace@{Load\-Project\-Or\-Workspace}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Load\-Project\-Or\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Load\-Project\-Or\-Workspace (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildManager_a8f8b8006d89c5ec7b93fa76c6b57a9ff}
+
+
+Loads a workspace or a project file whichever specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a file name of a project or workspace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if the project or workspace is successfully loaded, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildManager_acaeb1798ff6294c2b9300b686d677d5e}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Platforms@{Platforms}}
+\index{Platforms@{Platforms}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Platforms}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Platforms (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildManager_acaeb1798ff6294c2b9300b686d677d5e}
+
+
+Returns reference to the set of platforms in build configuration. 
+
+\begin{DoxyReturn}{Returns}
+reference to C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Platforms. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildManager_a034a2188dd52d4cbe3300e396aef41c4}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Show@{Show}}
+\index{Show@{Show}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildManager_a034a2188dd52d4cbe3300e396aef41c4}
+
+
+Prints project or workspace contents to standard output. 
+
+\hypertarget{classCCodeBlocksBuildManager_aeba3ee360b7989935296b0e4199d62ef}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!Tool\-Chains@{Tool\-Chains}}
+\index{Tool\-Chains@{Tool\-Chains}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{Tool\-Chains}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::\-Tool\-Chains (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildManager_aeba3ee360b7989935296b0e4199d62ef}
+
+
+Returns reference to the set of toolchains in build configuration. 
+
+\begin{DoxyReturn}{Returns}
+reference to C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Tool\-Chains. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCodeBlocksBuildManager_abda268cd01673d4a1fec14a73c4f8914}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!m\-\_\-\-Config@{m\-\_\-\-Config}}
+\index{m\-\_\-\-Config@{m\-\_\-\-Config}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{m\-\_\-\-Config}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Config\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildManager_abda268cd01673d4a1fec14a73c4f8914}
+
+
+Build configuration. 
+
+Includes installation-\/specific parametes such as compilers, toolchains and global variables. \hypertarget{classCCodeBlocksBuildManager_a70ffda777a7fda5cd18a1a97ad7871b7}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!m\-\_\-\-Project@{m\-\_\-\-Project}}
+\index{m\-\_\-\-Project@{m\-\_\-\-Project}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{m\-\_\-\-Project}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Project\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildManager_a70ffda777a7fda5cd18a1a97ad7871b7}
+
+
+Code\-::\-Blocks project object. 
+
+\hypertarget{classCCodeBlocksBuildManager_a347f43f610f53350c6721b3613bfa68b}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!m\-\_\-\-Project\-Loaded@{m\-\_\-\-Project\-Loaded}}
+\index{m\-\_\-\-Project\-Loaded@{m\-\_\-\-Project\-Loaded}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{m\-\_\-\-Project\-Loaded}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Project\-Loaded\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildManager_a347f43f610f53350c6721b3613bfa68b}
+
+
+Indicated that a Code\-::\-Blocks project was loaded. 
+
+Build manager \hyperlink{classCCodeBlocksBuildManager}{C\-Code\-Blocks\-Build\-Manager} can load both Code\-::\-Blocks workspace (.workspace) and Code\-::\-Blocks project (.cbp) files. A flag is required to tell if a file is loaded and what kind of file it is. \hypertarget{classCCodeBlocksBuildManager_a7affd9de7002a93d1682986cd9236b6b}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!m\-\_\-\-Workspace@{m\-\_\-\-Workspace}}
+\index{m\-\_\-\-Workspace@{m\-\_\-\-Workspace}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{m\-\_\-\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Workspace\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildManager_a7affd9de7002a93d1682986cd9236b6b}
+
+
+Code\-::\-Blocks workspace object. 
+
+\hypertarget{classCCodeBlocksBuildManager_ac85e500d80e44926bf0471466d21ad6c}{\index{C\-Code\-Blocks\-Build\-Manager@{C\-Code\-Blocks\-Build\-Manager}!m\-\_\-\-Workspace\-Loaded@{m\-\_\-\-Workspace\-Loaded}}
+\index{m\-\_\-\-Workspace\-Loaded@{m\-\_\-\-Workspace\-Loaded}!CCodeBlocksBuildManager@{C\-Code\-Blocks\-Build\-Manager}}
+\subsubsection[{m\-\_\-\-Workspace\-Loaded}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Manager\-::m\-\_\-\-Workspace\-Loaded\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildManager_ac85e500d80e44926bf0471466d21ad6c}
+
+
+Indicates that a Code\-::\-Blocks workspace was loaded. 
+
+Build manager \hyperlink{classCCodeBlocksBuildManager}{C\-Code\-Blocks\-Build\-Manager} can load both Code\-::\-Blocks workspace (.workspace) and Code\-::\-Blocks project (.cbp) files. A flag is required to tell if a file is loaded and what kind of file it is. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbbuildmgr_8h}{cbbuildmgr.\-h}\item 
+src/\hyperlink{cbbuildmgr_8cpp}{cbbuildmgr.\-cpp}\item 
+src/doc/\hyperlink{cbbuildmgr_8dox}{cbbuildmgr.\-dox}\end{DoxyCompactItemize}

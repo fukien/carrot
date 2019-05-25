@@ -1,0 +1,1136 @@
+\hypertarget{classCPlatform}{\section{C\-Platform Class Reference}
+\label{classCPlatform}\index{C\-Platform@{C\-Platform}}
+}
+
+
+Contains platform-\/specific settings and generates commands from templates.  
+
+
+
+
+{\ttfamily \#include $<$platforms.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{O\-S\-\_\-\-Type} \{ \\*
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535a46c8caab43a05219980b2429a14ed464}{O\-S\-\_\-\-Other}, 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535acb733abbbf865ee0c639e423ce88c445}{O\-S\-\_\-\-Unix}, 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535acd2c66cea48c61e7bcd49987d6cbf8a0}{O\-S\-\_\-\-Windows}, 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535ab3d15e3dfe0489aa251e0727858c3066}{O\-S\-\_\-\-Mac}, 
+\\*
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535a615f7cf356da8d62358aa9fc92c1f9ad}{O\-S\-\_\-\-Count}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of Operating System for a platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \& \hyperlink{classCPlatform_a3504a726ad54051123c9fa0726c51f5b}{Active} (void)
+\begin{DoxyCompactList}\small\item\em Indicates that this platform is used by a build target. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{O\-S\-\_\-\-Type} \hyperlink{classCPlatform_a376856da6b46b0a8af92abd700afa032}{O\-S} (void) const 
+\begin{DoxyCompactList}\small\item\em Type of operating system for this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a781b6dcd1fcf2adaaebf85058551a0f0}{Name} (void)
+\begin{DoxyCompactList}\small\item\em Returns the name of this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a61d3eb5a7d3e3a10d3a7c54bf3ddf79c}{Cmd\-\_\-\-Copy} (void)
+\begin{DoxyCompactList}\small\item\em File copying command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a1674df6dc1d3874b73c140c7b4ecadad}{Cmd\-\_\-\-Move} (void)
+\begin{DoxyCompactList}\small\item\em File moving command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a1fe21080da611298e20e3e37a8eebd45}{Cmd\-\_\-\-Make} (void)
+\begin{DoxyCompactList}\small\item\em Make tool invocation template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a01f2a00985d75daa19d87859a30b63e1}{Tool\-\_\-\-Make} (void)
+\begin{DoxyCompactList}\small\item\em File name of the 'make' tool. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a220f5f069b35102e0509c30cfd90ef86}{Cmd\-\_\-\-Remove\-File} (void)
+\begin{DoxyCompactList}\small\item\em File removing (deleting) command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_ab4544b784ceef356c3fe8ab7ff93e6fb}{Cmd\-\_\-\-Force\-Remove\-File} (void)
+\begin{DoxyCompactList}\small\item\em Forced file removing command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a0a3dfe8621dd6379863b25683fb8d4dc}{Cmd\-\_\-\-Make\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Directory creation command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a80dc4b4e4697c9880db18a60fb059c2e}{Cmd\-\_\-\-Test\-Make\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Directory existence checking and creation command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a2a7cecad4a781345729f0b6c02973f2f}{Cmd\-\_\-\-Force\-Make\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Forced directory creation (including parent directories) command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a6a674c8d4dc36d7d80dab6debffb0d8a}{Cmd\-\_\-\-Remove\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Directory removing command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a16319c4d98b155cbcfd0764bda060eff}{Cmd\-\_\-\-Print\-Work\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Template of command to print working directory. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_ab841978e1990b99bfefa87b8b298b9a1}{Cmd\-\_\-\-Eval\-Work\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Template of command that evaluates working directory to assign it to a variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCPlatform_a9fbeaca441315fd74d68f62f843ac9b0}{Cmd\-\_\-\-Change\-Dir} (void)
+\begin{DoxyCompactList}\small\item\em Current directory changing command template. \end{DoxyCompactList}\item 
+char \hyperlink{classCPlatform_a3c452f002bcb854cb4cefc95d78afd8e}{Pd} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns path delimiter (separator) for this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ad426cac5b320bda610d218c5dfd41d3a}{Pd} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Converts path separators in given path to valid for this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ab8e092160f0f6621abbb9996d800cfa9}{Special\-Chars} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ae929073866753a81da1a256b70db4ce8}{Protect\-Path} (const \hyperlink{classCString}{C\-String} \&Path, const int Quote\-Mode=\hyperlink{cbhelper_8h_ab266b1b0a34471e2b2638bb70312662d}{Q\-U\-O\-T\-E\-\_\-\-A\-U\-T\-O})
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_af505ad7b98c2dabffa5a5ae0e551ee38}{Copy} (const \hyperlink{classCString}{C\-String} \&Source, const \hyperlink{classCString}{C\-String} \&Destination) const 
+\begin{DoxyCompactList}\small\item\em Generates file copying command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a6e873836070cf09aefcdc94840e78108}{Move} (const \hyperlink{classCString}{C\-String} \&Source, const \hyperlink{classCString}{C\-String} \&Destination) const 
+\begin{DoxyCompactList}\small\item\em Generates file moving command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ad008cab9685a9b7b7df3a6de4f38ceba}{Make} (const \hyperlink{classCString}{C\-String} \&Options, const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates command to invoke make tool from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_add0052fcc1e98d057d080234b5f25407}{Remove\-File} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates file removing command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a6a57e3c731c705f1395b712c58fed853}{Force\-Remove\-File} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates forced file removing command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a914fe20e0c5da8987c58dbc34e6f0298}{Make\-Dir} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates directory creation command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a0a30cf91f3d95f95d4a6950a1f2838e1}{Test\-Make\-Dir} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates conditional (by existence) directory creation command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ab35ff6674109cf60162891407faa3648}{Force\-Make\-Dir} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates forced directory creation command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a492f16d41d38ad73ca4dc9b08c6d7db8}{Remove\-Dir} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates directory removing command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a5ad6b69255e929cbbf4369c59aed79d5}{Print\-Work\-Dir} (void) const 
+\begin{DoxyCompactList}\small\item\em Generates command to print current working directory from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a0f459cbcbfe475f209224dfa277fa9a9}{Eval\-Work\-Dir} (void) const 
+\begin{DoxyCompactList}\small\item\em Generates command to evaluate working directory value from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a623d7e98d0da8b225e011332a8b9f301}{Change\-Dir} (const \hyperlink{classCString}{C\-String} \&Path) const 
+\begin{DoxyCompactList}\small\item\em Generates current directory changing command from template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_afb719a9e70c8052940830e4ccedf894c}{Makefile\-Cmd} (const \hyperlink{classCString}{C\-String} \&Command) const 
+\begin{DoxyCompactList}\small\item\em Converts raw command text to makefile-\/compatible form. \end{DoxyCompactList}\item 
+bool \hyperlink{classCPlatform_a82f431a315ea566a34849340227ed636}{Is\-Static\-Library\-Extension} (const \hyperlink{classCString}{C\-String} \&Ext) const 
+\item 
+bool \hyperlink{classCPlatform_a1fd9daffce365c9072cf039bb7bb7c3e}{Is\-Dynamic\-Library\-Extension} (const \hyperlink{classCString}{C\-String} \&Ext) const 
+\item 
+void \hyperlink{classCPlatform_acaae2d317fff41a8aee9af83565faff4}{Assign} (const \hyperlink{classCPlatform}{C\-Platform} \&Platform)
+\begin{DoxyCompactList}\small\item\em Copies another platform to this platform. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatform_a556e7c94af3e2102c136d19ce2db6722}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the platform to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatform_a5303b45d02f2893c321d07d7cb9c7e31}{Reset} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} \hyperlink{classCPlatform_a5483e58aaa1fb254f18d04310d2b5901}{O\-S})
+\begin{DoxyCompactList}\small\item\em Resets the platform to default settings for specified O\-S. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatform_ab77735d189e48facffdd70e3ab302566}{Read} (const Ti\-Xml\-Element $\ast$Platform\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the platform settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatform_afd86e8855cfdd6423fdbdde40b5adc73}{Write} (Ti\-Xml\-Element $\ast$Platform\-Root)
+\begin{DoxyCompactList}\small\item\em Writes the platform settings to an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatform_a5b06661996b93902f8bcdd9121b1cae4}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the platform settings to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform}{C\-Platform} \& \hyperlink{classCPlatform_a9015888e50ea357dd59e63ae4e42b7bb}{operator=} (const \hyperlink{classCPlatform}{C\-Platform} \&Platform)
+\begin{DoxyCompactList}\small\item\em Copies another platform to this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform_a36f6a24d6b25cbbe87e021c099871afd}{C\-Platform} (void)
+\begin{DoxyCompactList}\small\item\em Creates platform description. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform_ae5238b66d09bc955ec5f1668771846ad}{C\-Platform} (const \hyperlink{classCPlatform}{C\-Platform} \&Platform)
+\begin{DoxyCompactList}\small\item\em Copies another platform to this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform_ab6c7863f2ad73b2d6176531c5c7aef23}{$\sim$\-C\-Platform} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_aaafbc804cfe1a921cfb8e6eccad1572f}{Name} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{O\-S\-\_\-\-Type} Platform\-O\-S)
+\begin{DoxyCompactList}\small\item\em Returns name of platform for type {\itshape Platform\-O\-S}. \end{DoxyCompactList}\item 
+static \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{O\-S\-\_\-\-Type} \hyperlink{classCPlatform_a5483e58aaa1fb254f18d04310d2b5901}{O\-S} (\hyperlink{classCString}{C\-String} \&Platform\-Name)
+\begin{DoxyCompactList}\small\item\em Returns platform type for name {\itshape Platform\-Name}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCPlatform_a534ebff7f33e81d4f0c0b94b81c3cf39}{Read} (const Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&\hyperlink{classCPlatform_aaafbc804cfe1a921cfb8e6eccad1572f}{Name}, \hyperlink{classCString}{C\-String} \&Value)
+\begin{DoxyCompactList}\small\item\em Reads template of command {\itshape Name} to {\itshape Value} from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCPlatform_a9e61b1818a32e9851ae141fdedcae2b5}{Write} (Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&\hyperlink{classCPlatform_aaafbc804cfe1a921cfb8e6eccad1572f}{Name}, const \hyperlink{classCString}{C\-String} \&Value)
+\begin{DoxyCompactList}\small\item\em Writes template of command {\itshape Name} to {\itshape Value} from an X\-M\-L document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classCPlatform_aa2d970af453e1e55b857e149c03f2d4e}{m\-\_\-\-Active}
+\begin{DoxyCompactList}\small\item\em Indicates that this platform is used by a build target. \end{DoxyCompactList}\item 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{O\-S\-\_\-\-Type} \hyperlink{classCPlatform_a7ca30334ae5baa1adf6b77ffc1e7daac}{m\-\_\-\-O\-S\-\_\-\-Type}
+\begin{DoxyCompactList}\small\item\em Type of operating system for this platform. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_afb66cacc7cfde738d92ff375111ed4af}{m\-\_\-\-Cmd\-\_\-\-Null}
+\begin{DoxyCompactList}\small\item\em Name of the N\-U\-L\-L device (/dev/null etc). \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_af87b0091e9dcee0e979d88ce2e236c3e}{m\-\_\-\-Cmd\-\_\-\-Copy}
+\begin{DoxyCompactList}\small\item\em File copying command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a97a7eacf6ecb3b7ccfa23cd5d3ef315a}{m\-\_\-\-Cmd\-\_\-\-Move}
+\begin{DoxyCompactList}\small\item\em File moving command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_aff4c666f1118e9bf8988eb5e0e57c47e}{m\-\_\-\-Cmd\-\_\-\-Make}
+\begin{DoxyCompactList}\small\item\em Make tool invocation template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a136a456b5a0293f11605917c177ca271}{m\-\_\-\-Tool\-\_\-\-Make}
+\begin{DoxyCompactList}\small\item\em File name of the make tool. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a40f2310f005d8bece4137fb54d7dffcd}{m\-\_\-\-Cmd\-\_\-\-Remove\-File}
+\begin{DoxyCompactList}\small\item\em File removing (deleting) command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a7e9d60712f9a6cb191322f82fe16d6d1}{m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File}
+\begin{DoxyCompactList}\small\item\em Forced file removing command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ad6fb2ef3b64ef90dab2c024dbf1370a5}{m\-\_\-\-Cmd\-\_\-\-Make\-Dir}
+\begin{DoxyCompactList}\small\item\em Directory creation command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_abac12f91f09a69d46f3851317429185c}{m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir}
+\begin{DoxyCompactList}\small\item\em Directory existence checking and creation command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a741615f88717233a4f78600b7588415b}{m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir}
+\begin{DoxyCompactList}\small\item\em Forced directory creation (including parent directories) command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a842c6d884c42744de75eefca15d887e3}{m\-\_\-\-Cmd\-\_\-\-Remove\-Dir}
+\begin{DoxyCompactList}\small\item\em Directory removing command template. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_ac73a69c8dd13152763b4020d37270f2e}{m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir}
+\begin{DoxyCompactList}\small\item\em Template of command to print working directory. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_a3e29909e2f0126abea8612a574e94f87}{m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir}
+\begin{DoxyCompactList}\small\item\em Template of command that evaluates working directory to assign it to a variable. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCPlatform_afcc41e3bc120c775f353df881ddde397}{m\-\_\-\-Cmd\-\_\-\-Change\-Dir}
+\begin{DoxyCompactList}\small\item\em Current directory changing command template. \end{DoxyCompactList}\item 
+char \hyperlink{classCPlatform_a9f8da12c0ef92a1660218fe7e33beced}{m\-\_\-\-Path\-Delimiter}
+\begin{DoxyCompactList}\small\item\em File system path delimiter (separator). \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCPlatform_a7ad50b7535d0a1518ef26619d4804700}{m\-\_\-\-Static\-Library\-Extensions}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCPlatform_a5a8d28621cc908b51fa19284899e4374}{m\-\_\-\-Dynamic\-Library\-Extensions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains platform-\/specific settings and generates commands from templates. 
+
+Command templates use few special macros that should be substituted to get a working command\-:
+
+\begin{DoxyItemize}
+\item {\itshape \$src} for source file or directory name. \item {\itshape \$dst} for destination file or directory name. \item {\itshape \$opts} for command options \item {\itshape \$file} for file name \item {\itshape \$dir} for directory name\end{DoxyItemize}
+A command template looks like this\-: {\ttfamily \char`\"{}make \$opts -\/f \$file\char`\"{}} (make tool invocation). 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{\index{C\-Platform@{C\-Platform}!O\-S\-\_\-\-Type@{O\-S\-\_\-\-Type}}
+\index{O\-S\-\_\-\-Type@{O\-S\-\_\-\-Type}!CPlatform@{C\-Platform}}
+\subsubsection[{O\-S\-\_\-\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}}\label{classCPlatform_a2fb735c63c53052f79629e338bb0f535}
+
+
+Type of Operating System for a platform. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\-S\-\_\-\-Other@{O\-S\-\_\-\-Other}!C\-Platform@{C\-Platform}}\index{C\-Platform@{C\-Platform}!O\-S\-\_\-\-Other@{O\-S\-\_\-\-Other}}\item[{\em 
+\hypertarget{classCPlatform_a2fb735c63c53052f79629e338bb0f535a46c8caab43a05219980b2429a14ed464}{O\-S\-\_\-\-Other}\label{classCPlatform_a2fb735c63c53052f79629e338bb0f535a46c8caab43a05219980b2429a14ed464}
+}]Type for undefined or unknown O\-S. \index{O\-S\-\_\-\-Unix@{O\-S\-\_\-\-Unix}!C\-Platform@{C\-Platform}}\index{C\-Platform@{C\-Platform}!O\-S\-\_\-\-Unix@{O\-S\-\_\-\-Unix}}\item[{\em 
+\hypertarget{classCPlatform_a2fb735c63c53052f79629e338bb0f535acb733abbbf865ee0c639e423ce88c445}{O\-S\-\_\-\-Unix}\label{classCPlatform_a2fb735c63c53052f79629e338bb0f535acb733abbbf865ee0c639e423ce88c445}
+}]Type for U\-N\-I\-X-\/like O\-S. \index{O\-S\-\_\-\-Windows@{O\-S\-\_\-\-Windows}!C\-Platform@{C\-Platform}}\index{C\-Platform@{C\-Platform}!O\-S\-\_\-\-Windows@{O\-S\-\_\-\-Windows}}\item[{\em 
+\hypertarget{classCPlatform_a2fb735c63c53052f79629e338bb0f535acd2c66cea48c61e7bcd49987d6cbf8a0}{O\-S\-\_\-\-Windows}\label{classCPlatform_a2fb735c63c53052f79629e338bb0f535acd2c66cea48c61e7bcd49987d6cbf8a0}
+}]Type for O\-S Windows. \index{O\-S\-\_\-\-Mac@{O\-S\-\_\-\-Mac}!C\-Platform@{C\-Platform}}\index{C\-Platform@{C\-Platform}!O\-S\-\_\-\-Mac@{O\-S\-\_\-\-Mac}}\item[{\em 
+\hypertarget{classCPlatform_a2fb735c63c53052f79629e338bb0f535ab3d15e3dfe0489aa251e0727858c3066}{O\-S\-\_\-\-Mac}\label{classCPlatform_a2fb735c63c53052f79629e338bb0f535ab3d15e3dfe0489aa251e0727858c3066}
+}]Type for Mac\-O\-S. \index{O\-S\-\_\-\-Count@{O\-S\-\_\-\-Count}!C\-Platform@{C\-Platform}}\index{C\-Platform@{C\-Platform}!O\-S\-\_\-\-Count@{O\-S\-\_\-\-Count}}\item[{\em 
+\hypertarget{classCPlatform_a2fb735c63c53052f79629e338bb0f535a615f7cf356da8d62358aa9fc92c1f9ad}{O\-S\-\_\-\-Count}\label{classCPlatform_a2fb735c63c53052f79629e338bb0f535a615f7cf356da8d62358aa9fc92c1f9ad}
+}]Number of O\-S types. \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlatform_a36f6a24d6b25cbbe87e021c099871afd}{\index{C\-Platform@{C\-Platform}!C\-Platform@{C\-Platform}}
+\index{C\-Platform@{C\-Platform}!CPlatform@{C\-Platform}}
+\subsubsection[{C\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-C\-Platform (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_a36f6a24d6b25cbbe87e021c099871afd}
+
+
+Creates platform description. 
+
+\hypertarget{classCPlatform_ae5238b66d09bc955ec5f1668771846ad}{\index{C\-Platform@{C\-Platform}!C\-Platform@{C\-Platform}}
+\index{C\-Platform@{C\-Platform}!CPlatform@{C\-Platform}}
+\subsubsection[{C\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-C\-Platform (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform} \&}]{Platform}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_ae5238b66d09bc955ec5f1668771846ad}
+
+
+Copies another platform to this platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform} & another platform. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatform_ab6c7863f2ad73b2d6176531c5c7aef23}{\index{C\-Platform@{C\-Platform}!$\sim$\-C\-Platform@{$\sim$\-C\-Platform}}
+\index{$\sim$\-C\-Platform@{$\sim$\-C\-Platform}!CPlatform@{C\-Platform}}
+\subsubsection[{$\sim$\-C\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::$\sim$\-C\-Platform (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_ab6c7863f2ad73b2d6176531c5c7aef23}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlatform_a3504a726ad54051123c9fa0726c51f5b}{\index{C\-Platform@{C\-Platform}!Active@{Active}}
+\index{Active@{Active}!CPlatform@{C\-Platform}}
+\subsubsection[{Active}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Active (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a3504a726ad54051123c9fa0726c51f5b}
+
+
+Indicates that this platform is used by a build target. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_aa2d970af453e1e55b857e149c03f2d4e}{C\-Platform\-::m\-\_\-\-Active}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_acaae2d317fff41a8aee9af83565faff4}{\index{C\-Platform@{C\-Platform}!Assign@{Assign}}
+\index{Assign@{Assign}!CPlatform@{C\-Platform}}
+\subsubsection[{Assign}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform} \&}]{Platform}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_acaae2d317fff41a8aee9af83565faff4}
+
+
+Copies another platform to this platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform} & another platform. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatform_a623d7e98d0da8b225e011332a8b9f301}{\index{C\-Platform@{C\-Platform}!Change\-Dir@{Change\-Dir}}
+\index{Change\-Dir@{Change\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Change\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a623d7e98d0da8b225e011332a8b9f301}
+
+
+Generates current directory changing command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current directory changing command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a9fbeaca441315fd74d68f62f843ac9b0}{C\-Platform\-::\-Cmd\-\_\-\-Change\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a556e7c94af3e2102c136d19ce2db6722}{\index{C\-Platform@{C\-Platform}!Clear@{Clear}}
+\index{Clear@{Clear}!CPlatform@{C\-Platform}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_a556e7c94af3e2102c136d19ce2db6722}
+
+
+Resets the platform to the initial state. 
+
+\hypertarget{classCPlatform_a9fbeaca441315fd74d68f62f843ac9b0}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Change\-Dir@{Cmd\-\_\-\-Change\-Dir}}
+\index{Cmd\-\_\-\-Change\-Dir@{Cmd\-\_\-\-Change\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Change\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a9fbeaca441315fd74d68f62f843ac9b0}
+
+
+Current directory changing command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_afcc41e3bc120c775f353df881ddde397}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Change\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a61d3eb5a7d3e3a10d3a7c54bf3ddf79c}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Copy@{Cmd\-\_\-\-Copy}}
+\index{Cmd\-\_\-\-Copy@{Cmd\-\_\-\-Copy}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Copy}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Copy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a61d3eb5a7d3e3a10d3a7c54bf3ddf79c}
+
+
+File copying command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_af87b0091e9dcee0e979d88ce2e236c3e}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Copy}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_ab841978e1990b99bfefa87b8b298b9a1}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Eval\-Work\-Dir@{Cmd\-\_\-\-Eval\-Work\-Dir}}
+\index{Cmd\-\_\-\-Eval\-Work\-Dir@{Cmd\-\_\-\-Eval\-Work\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Eval\-Work\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Eval\-Work\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_ab841978e1990b99bfefa87b8b298b9a1}
+
+
+Template of command that evaluates working directory to assign it to a variable. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a3e29909e2f0126abea8612a574e94f87}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a2a7cecad4a781345729f0b6c02973f2f}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Force\-Make\-Dir@{Cmd\-\_\-\-Force\-Make\-Dir}}
+\index{Cmd\-\_\-\-Force\-Make\-Dir@{Cmd\-\_\-\-Force\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Force\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Force\-Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a2a7cecad4a781345729f0b6c02973f2f}
+
+
+Forced directory creation (including parent directories) command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a741615f88717233a4f78600b7588415b}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_ab4544b784ceef356c3fe8ab7ff93e6fb}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Force\-Remove\-File@{Cmd\-\_\-\-Force\-Remove\-File}}
+\index{Cmd\-\_\-\-Force\-Remove\-File@{Cmd\-\_\-\-Force\-Remove\-File}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Force\-Remove\-File}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Force\-Remove\-File (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_ab4544b784ceef356c3fe8ab7ff93e6fb}
+
+
+Forced file removing command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a7e9d60712f9a6cb191322f82fe16d6d1}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a1fe21080da611298e20e3e37a8eebd45}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Make@{Cmd\-\_\-\-Make}}
+\index{Cmd\-\_\-\-Make@{Cmd\-\_\-\-Make}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Make}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Make (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a1fe21080da611298e20e3e37a8eebd45}
+
+
+Make tool invocation template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_aff4c666f1118e9bf8988eb5e0e57c47e}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Make}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a0a3dfe8621dd6379863b25683fb8d4dc}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Make\-Dir@{Cmd\-\_\-\-Make\-Dir}}
+\index{Cmd\-\_\-\-Make\-Dir@{Cmd\-\_\-\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a0a3dfe8621dd6379863b25683fb8d4dc}
+
+
+Directory creation command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a741615f88717233a4f78600b7588415b}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a1674df6dc1d3874b73c140c7b4ecadad}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Move@{Cmd\-\_\-\-Move}}
+\index{Cmd\-\_\-\-Move@{Cmd\-\_\-\-Move}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Move}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Move (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a1674df6dc1d3874b73c140c7b4ecadad}
+
+
+File moving command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a97a7eacf6ecb3b7ccfa23cd5d3ef315a}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Move}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a16319c4d98b155cbcfd0764bda060eff}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Print\-Work\-Dir@{Cmd\-\_\-\-Print\-Work\-Dir}}
+\index{Cmd\-\_\-\-Print\-Work\-Dir@{Cmd\-\_\-\-Print\-Work\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Print\-Work\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Print\-Work\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a16319c4d98b155cbcfd0764bda060eff}
+
+
+Template of command to print working directory. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_ac73a69c8dd13152763b4020d37270f2e}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a6a674c8d4dc36d7d80dab6debffb0d8a}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Remove\-Dir@{Cmd\-\_\-\-Remove\-Dir}}
+\index{Cmd\-\_\-\-Remove\-Dir@{Cmd\-\_\-\-Remove\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Remove\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Remove\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a6a674c8d4dc36d7d80dab6debffb0d8a}
+
+
+Directory removing command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a842c6d884c42744de75eefca15d887e3}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Remove\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a220f5f069b35102e0509c30cfd90ef86}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Remove\-File@{Cmd\-\_\-\-Remove\-File}}
+\index{Cmd\-\_\-\-Remove\-File@{Cmd\-\_\-\-Remove\-File}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Remove\-File}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Remove\-File (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a220f5f069b35102e0509c30cfd90ef86}
+
+
+File removing (deleting) command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a40f2310f005d8bece4137fb54d7dffcd}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Remove\-File}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a80dc4b4e4697c9880db18a60fb059c2e}{\index{C\-Platform@{C\-Platform}!Cmd\-\_\-\-Test\-Make\-Dir@{Cmd\-\_\-\-Test\-Make\-Dir}}
+\index{Cmd\-\_\-\-Test\-Make\-Dir@{Cmd\-\_\-\-Test\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Cmd\-\_\-\-Test\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Cmd\-\_\-\-Test\-Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a80dc4b4e4697c9880db18a60fb059c2e}
+
+
+Directory existence checking and creation command template. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_abac12f91f09a69d46f3851317429185c}{C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_af505ad7b98c2dabffa5a5ae0e551ee38}{\index{C\-Platform@{C\-Platform}!Copy@{Copy}}
+\index{Copy@{Copy}!CPlatform@{C\-Platform}}
+\subsubsection[{Copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Copy (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Source, }
+\item[{const {\bf C\-String} \&}]{Destination}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_af505ad7b98c2dabffa5a5ae0e551ee38}
+
+
+Generates file copying command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & source file. \\
+\hline
+{\em Destination} & target file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file copying command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a61d3eb5a7d3e3a10d3a7c54bf3ddf79c}{C\-Platform\-::\-Cmd\-\_\-\-Copy()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a0f459cbcbfe475f209224dfa277fa9a9}{\index{C\-Platform@{C\-Platform}!Eval\-Work\-Dir@{Eval\-Work\-Dir}}
+\index{Eval\-Work\-Dir@{Eval\-Work\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Eval\-Work\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Eval\-Work\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a0f459cbcbfe475f209224dfa277fa9a9}
+
+
+Generates command to evaluate working directory value from template. 
+
+\begin{DoxyReturn}{Returns}
+working directory expression for assignment to a variable.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_ab841978e1990b99bfefa87b8b298b9a1}{C\-Platform\-::\-Cmd\-\_\-\-Eval\-Work\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_ab35ff6674109cf60162891407faa3648}{\index{C\-Platform@{C\-Platform}!Force\-Make\-Dir@{Force\-Make\-Dir}}
+\index{Force\-Make\-Dir@{Force\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Force\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Force\-Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_ab35ff6674109cf60162891407faa3648}
+
+
+Generates forced directory creation command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+forced directory creation command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a2a7cecad4a781345729f0b6c02973f2f}{C\-Platform\-::\-Cmd\-\_\-\-Force\-Make\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a6a57e3c731c705f1395b712c58fed853}{\index{C\-Platform@{C\-Platform}!Force\-Remove\-File@{Force\-Remove\-File}}
+\index{Force\-Remove\-File@{Force\-Remove\-File}!CPlatform@{C\-Platform}}
+\subsubsection[{Force\-Remove\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Force\-Remove\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a6a57e3c731c705f1395b712c58fed853}
+
+
+Generates forced file removing command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+forced file removing command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_ab4544b784ceef356c3fe8ab7ff93e6fb}{C\-Platform\-::\-Cmd\-\_\-\-Force\-Remove\-File()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a1fd9daffce365c9072cf039bb7bb7c3e}{\index{C\-Platform@{C\-Platform}!Is\-Dynamic\-Library\-Extension@{Is\-Dynamic\-Library\-Extension}}
+\index{Is\-Dynamic\-Library\-Extension@{Is\-Dynamic\-Library\-Extension}!CPlatform@{C\-Platform}}
+\subsubsection[{Is\-Dynamic\-Library\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Platform\-::\-Is\-Dynamic\-Library\-Extension (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Ext}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a1fd9daffce365c9072cf039bb7bb7c3e}
+\hypertarget{classCPlatform_a82f431a315ea566a34849340227ed636}{\index{C\-Platform@{C\-Platform}!Is\-Static\-Library\-Extension@{Is\-Static\-Library\-Extension}}
+\index{Is\-Static\-Library\-Extension@{Is\-Static\-Library\-Extension}!CPlatform@{C\-Platform}}
+\subsubsection[{Is\-Static\-Library\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Platform\-::\-Is\-Static\-Library\-Extension (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Ext}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a82f431a315ea566a34849340227ed636}
+\hypertarget{classCPlatform_ad008cab9685a9b7b7df3a6de4f38ceba}{\index{C\-Platform@{C\-Platform}!Make@{Make}}
+\index{Make@{Make}!CPlatform@{C\-Platform}}
+\subsubsection[{Make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Make (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Options, }
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_ad008cab9685a9b7b7df3a6de4f38ceba}
+
+
+Generates command to invoke make tool from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Options} & make tool options. \\
+\hline
+{\em Path} & path to a makefile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+make tool invocation command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a1fe21080da611298e20e3e37a8eebd45}{C\-Platform\-::\-Cmd\-\_\-\-Make()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a914fe20e0c5da8987c58dbc34e6f0298}{\index{C\-Platform@{C\-Platform}!Make\-Dir@{Make\-Dir}}
+\index{Make\-Dir@{Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a914fe20e0c5da8987c58dbc34e6f0298}
+
+
+Generates directory creation command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+directory creation command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a0a3dfe8621dd6379863b25683fb8d4dc}{C\-Platform\-::\-Cmd\-\_\-\-Make\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_afb719a9e70c8052940830e4ccedf894c}{\index{C\-Platform@{C\-Platform}!Makefile\-Cmd@{Makefile\-Cmd}}
+\index{Makefile\-Cmd@{Makefile\-Cmd}!CPlatform@{C\-Platform}}
+\subsubsection[{Makefile\-Cmd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Makefile\-Cmd (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Command}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_afb719a9e70c8052940830e4ccedf894c}
+
+
+Converts raw command text to makefile-\/compatible form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Command} & a command text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+makefile-\/compatible command.
+\end{DoxyReturn}
+In Windows, it is required to prepend commands with \char`\"{}cmd /c\char`\"{} in order to make them work as intended from the makefile, while in U\-N\-I\-X is is not required to change commands anyhow. This function is invented to deal with compatibility issues for other platforms as well. \hypertarget{classCPlatform_a6e873836070cf09aefcdc94840e78108}{\index{C\-Platform@{C\-Platform}!Move@{Move}}
+\index{Move@{Move}!CPlatform@{C\-Platform}}
+\subsubsection[{Move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Move (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Source, }
+\item[{const {\bf C\-String} \&}]{Destination}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a6e873836070cf09aefcdc94840e78108}
+
+
+Generates file moving command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & source file. \\
+\hline
+{\em Destination} & target file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file moving command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a1674df6dc1d3874b73c140c7b4ecadad}{C\-Platform\-::\-Cmd\-\_\-\-Move()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_aaafbc804cfe1a921cfb8e6eccad1572f}{\index{C\-Platform@{C\-Platform}!Name@{Name}}
+\index{Name@{Name}!CPlatform@{C\-Platform}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf O\-S\-\_\-\-Type}}]{Platform\-O\-S}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCPlatform_aaafbc804cfe1a921cfb8e6eccad1572f}
+
+
+Returns name of platform for type {\itshape Platform\-O\-S}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform\-O\-S} & a platform / operating system type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name of platform. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a781b6dcd1fcf2adaaebf85058551a0f0}{\index{C\-Platform@{C\-Platform}!Name@{Name}}
+\index{Name@{Name}!CPlatform@{C\-Platform}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_a781b6dcd1fcf2adaaebf85058551a0f0}
+
+
+Returns the name of this platform. 
+
+\begin{DoxyReturn}{Returns}
+name of this platform. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a9015888e50ea357dd59e63ae4e42b7bb}{\index{C\-Platform@{C\-Platform}!operator=@{operator=}}
+\index{operator=@{operator=}!CPlatform@{C\-Platform}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Platform} \& C\-Platform\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform} \&}]{Platform}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_a9015888e50ea357dd59e63ae4e42b7bb}
+
+
+Copies another platform to this platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform} & another platform. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this platform. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a5483e58aaa1fb254f18d04310d2b5901}{\index{C\-Platform@{C\-Platform}!O\-S@{O\-S}}
+\index{O\-S@{O\-S}!CPlatform@{C\-Platform}}
+\subsubsection[{O\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Platform\-::\-O\-S\-\_\-\-Type} C\-Platform\-::\-O\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-String} \&}]{Platform\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCPlatform_a5483e58aaa1fb254f18d04310d2b5901}
+
+
+Returns platform type for name {\itshape Platform\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform\-Name} & a name of platform / operating system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type of platform. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a376856da6b46b0a8af92abd700afa032}{\index{C\-Platform@{C\-Platform}!O\-S@{O\-S}}
+\index{O\-S@{O\-S}!CPlatform@{C\-Platform}}
+\subsubsection[{O\-S}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-O\-S (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a376856da6b46b0a8af92abd700afa032}
+
+
+Type of operating system for this platform. 
+
+\begin{DoxyReturn}{Returns}
+value of \hyperlink{classCPlatform_a7ca30334ae5baa1adf6b77ffc1e7daac}{C\-Platform\-::m\-\_\-\-O\-S\-\_\-\-Type}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a3c452f002bcb854cb4cefc95d78afd8e}{\index{C\-Platform@{C\-Platform}!Pd@{Pd}}
+\index{Pd@{Pd}!CPlatform@{C\-Platform}}
+\subsubsection[{Pd}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Pd (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a3c452f002bcb854cb4cefc95d78afd8e}
+
+
+Returns path delimiter (separator) for this platform. 
+
+\begin{DoxyReturn}{Returns}
+path delimiter (separator) for this platform. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_ad426cac5b320bda610d218c5dfd41d3a}{\index{C\-Platform@{C\-Platform}!Pd@{Pd}}
+\index{Pd@{Pd}!CPlatform@{C\-Platform}}
+\subsubsection[{Pd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Pd (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_ad426cac5b320bda610d218c5dfd41d3a}
+
+
+Converts path separators in given path to valid for this platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file path with valid separators. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a5ad6b69255e929cbbf4369c59aed79d5}{\index{C\-Platform@{C\-Platform}!Print\-Work\-Dir@{Print\-Work\-Dir}}
+\index{Print\-Work\-Dir@{Print\-Work\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Print\-Work\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Print\-Work\-Dir (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a5ad6b69255e929cbbf4369c59aed79d5}
+
+
+Generates command to print current working directory from template. 
+
+\begin{DoxyReturn}{Returns}
+command to print current working directory.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a16319c4d98b155cbcfd0764bda060eff}{C\-Platform\-::\-Cmd\-\_\-\-Print\-Work\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_ae929073866753a81da1a256b70db4ce8}{\index{C\-Platform@{C\-Platform}!Protect\-Path@{Protect\-Path}}
+\index{Protect\-Path@{Protect\-Path}!CPlatform@{C\-Platform}}
+\subsubsection[{Protect\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Protect\-Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path, }
+\item[{const int}]{Quote\-Mode = {\ttfamily {\bf Q\-U\-O\-T\-E\-\_\-\-A\-U\-T\-O}}}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_ae929073866753a81da1a256b70db4ce8}
+\hypertarget{classCPlatform_a534ebff7f33e81d4f0c0b94b81c3cf39}{\index{C\-Platform@{C\-Platform}!Read@{Read}}
+\index{Read@{Read}!CPlatform@{C\-Platform}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{{\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a534ebff7f33e81d4f0c0b94b81c3cf39}
+
+
+Reads template of command {\itshape Name} to {\itshape Value} from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Root} & an element of an X\-M\-L document. \\
+\hline
+{\em Name} & name of a command. \\
+\hline
+{\em Value} & command template. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatform_ab77735d189e48facffdd70e3ab302566}{\index{C\-Platform@{C\-Platform}!Read@{Read}}
+\index{Read@{Read}!CPlatform@{C\-Platform}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Platform\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_ab77735d189e48facffdd70e3ab302566}
+
+
+Reads the platform settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform\-Root} & an element of an X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatform_a492f16d41d38ad73ca4dc9b08c6d7db8}{\index{C\-Platform@{C\-Platform}!Remove\-Dir@{Remove\-Dir}}
+\index{Remove\-Dir@{Remove\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Remove\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Remove\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a492f16d41d38ad73ca4dc9b08c6d7db8}
+
+
+Generates directory removing command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+directory removing command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a6a674c8d4dc36d7d80dab6debffb0d8a}{C\-Platform\-::\-Cmd\-\_\-\-Remove\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_add0052fcc1e98d057d080234b5f25407}{\index{C\-Platform@{C\-Platform}!Remove\-File@{Remove\-File}}
+\index{Remove\-File@{Remove\-File}!CPlatform@{C\-Platform}}
+\subsubsection[{Remove\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Remove\-File (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_add0052fcc1e98d057d080234b5f25407}
+
+
+Generates file removing command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file removing command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a220f5f069b35102e0509c30cfd90ef86}{C\-Platform\-::\-Cmd\-\_\-\-Remove\-File()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a5303b45d02f2893c321d07d7cb9c7e31}{\index{C\-Platform@{C\-Platform}!Reset@{Reset}}
+\index{Reset@{Reset}!CPlatform@{C\-Platform}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Reset (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_a5303b45d02f2893c321d07d7cb9c7e31}
+
+
+Resets the platform to default settings for specified O\-S. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em O\-S} & operating system type. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatform_a5b06661996b93902f8bcdd9121b1cae4}{\index{C\-Platform@{C\-Platform}!Show@{Show}}
+\index{Show@{Show}!CPlatform@{C\-Platform}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_a5b06661996b93902f8bcdd9121b1cae4}
+
+
+Prints the platform settings to the standard output. 
+
+\hypertarget{classCPlatform_ab8e092160f0f6621abbb9996d800cfa9}{\index{C\-Platform@{C\-Platform}!Special\-Chars@{Special\-Chars}}
+\index{Special\-Chars@{Special\-Chars}!CPlatform@{C\-Platform}}
+\subsubsection[{Special\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Special\-Chars (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_ab8e092160f0f6621abbb9996d800cfa9}
+\hypertarget{classCPlatform_a0a30cf91f3d95f95d4a6950a1f2838e1}{\index{C\-Platform@{C\-Platform}!Test\-Make\-Dir@{Test\-Make\-Dir}}
+\index{Test\-Make\-Dir@{Test\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{Test\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Platform\-::\-Test\-Make\-Dir (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Path}
+\end{DoxyParamCaption}
+) const}}\label{classCPlatform_a0a30cf91f3d95f95d4a6950a1f2838e1}
+
+
+Generates conditional (by existence) directory creation command from template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Path} & a directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+conditional directory creation command.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatform_a80dc4b4e4697c9880db18a60fb059c2e}{C\-Platform\-::\-Cmd\-\_\-\-Test\-Make\-Dir()}. 
+\end{DoxySeeAlso}
+\hypertarget{classCPlatform_a01f2a00985d75daa19d87859a30b63e1}{\index{C\-Platform@{C\-Platform}!Tool\-\_\-\-Make@{Tool\-\_\-\-Make}}
+\index{Tool\-\_\-\-Make@{Tool\-\_\-\-Make}!CPlatform@{C\-Platform}}
+\subsubsection[{Tool\-\_\-\-Make}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::\-Tool\-\_\-\-Make (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCPlatform_a01f2a00985d75daa19d87859a30b63e1}
+
+
+File name of the 'make' tool. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCPlatform_a136a456b5a0293f11605917c177ca271}{C\-Platform\-::m\-\_\-\-Tool\-\_\-\-Make}. 
+\end{DoxyReturn}
+\hypertarget{classCPlatform_a9e61b1818a32e9851ae141fdedcae2b5}{\index{C\-Platform@{C\-Platform}!Write@{Write}}
+\index{Write@{Write}!CPlatform@{C\-Platform}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a9e61b1818a32e9851ae141fdedcae2b5}
+
+
+Writes template of command {\itshape Name} to {\itshape Value} from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Root} & an element of an X\-M\-L document. \\
+\hline
+{\em Name} & name of a command. \\
+\hline
+{\em Value} & command template. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCPlatform_afd86e8855cfdd6423fdbdde40b5adc73}{\index{C\-Platform@{C\-Platform}!Write@{Write}}
+\index{Write@{Write}!CPlatform@{C\-Platform}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Platform\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Platform\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCPlatform_afd86e8855cfdd6423fdbdde40b5adc73}
+
+
+Writes the platform settings to an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform\-Root} & an element of an X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlatform_aa2d970af453e1e55b857e149c03f2d4e}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Active@{m\-\_\-\-Active}}
+\index{m\-\_\-\-Active@{m\-\_\-\-Active}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Active}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Active\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_aa2d970af453e1e55b857e149c03f2d4e}
+
+
+Indicates that this platform is used by a build target. 
+
+This property is modified by \hyperlink{classCCodeBlocksProject}{C\-Code\-Blocks\-Project} during makefile creation. \hypertarget{classCPlatform_afcc41e3bc120c775f353df881ddde397}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Change\-Dir@{m\-\_\-\-Cmd\-\_\-\-Change\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Change\-Dir@{m\-\_\-\-Cmd\-\_\-\-Change\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Change\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Change\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_afcc41e3bc120c775f353df881ddde397}
+
+
+Current directory changing command template. 
+
+\hypertarget{classCPlatform_af87b0091e9dcee0e979d88ce2e236c3e}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Copy@{m\-\_\-\-Cmd\-\_\-\-Copy}}
+\index{m\-\_\-\-Cmd\-\_\-\-Copy@{m\-\_\-\-Cmd\-\_\-\-Copy}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Copy}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Copy\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_af87b0091e9dcee0e979d88ce2e236c3e}
+
+
+File copying command template. 
+
+\hypertarget{classCPlatform_a3e29909e2f0126abea8612a574e94f87}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir@{m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir@{m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Eval\-Work\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a3e29909e2f0126abea8612a574e94f87}
+
+
+Template of command that evaluates working directory to assign it to a variable. 
+
+\hypertarget{classCPlatform_a741615f88717233a4f78600b7588415b}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir@{m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir@{m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Force\-Make\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a741615f88717233a4f78600b7588415b}
+
+
+Forced directory creation (including parent directories) command template. 
+
+\hypertarget{classCPlatform_a7e9d60712f9a6cb191322f82fe16d6d1}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File@{m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File}}
+\index{m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File@{m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Force\-Remove\-File\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a7e9d60712f9a6cb191322f82fe16d6d1}
+
+
+Forced file removing command template. 
+
+\hypertarget{classCPlatform_aff4c666f1118e9bf8988eb5e0e57c47e}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Make@{m\-\_\-\-Cmd\-\_\-\-Make}}
+\index{m\-\_\-\-Cmd\-\_\-\-Make@{m\-\_\-\-Cmd\-\_\-\-Make}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Make}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Make\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_aff4c666f1118e9bf8988eb5e0e57c47e}
+
+
+Make tool invocation template. 
+
+\hypertarget{classCPlatform_ad6fb2ef3b64ef90dab2c024dbf1370a5}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Make\-Dir@{m\-\_\-\-Cmd\-\_\-\-Make\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Make\-Dir@{m\-\_\-\-Cmd\-\_\-\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Make\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_ad6fb2ef3b64ef90dab2c024dbf1370a5}
+
+
+Directory creation command template. 
+
+\hypertarget{classCPlatform_a97a7eacf6ecb3b7ccfa23cd5d3ef315a}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Move@{m\-\_\-\-Cmd\-\_\-\-Move}}
+\index{m\-\_\-\-Cmd\-\_\-\-Move@{m\-\_\-\-Cmd\-\_\-\-Move}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Move}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Move\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a97a7eacf6ecb3b7ccfa23cd5d3ef315a}
+
+
+File moving command template. 
+
+\hypertarget{classCPlatform_afb66cacc7cfde738d92ff375111ed4af}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Null@{m\-\_\-\-Cmd\-\_\-\-Null}}
+\index{m\-\_\-\-Cmd\-\_\-\-Null@{m\-\_\-\-Cmd\-\_\-\-Null}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Null}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Null\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_afb66cacc7cfde738d92ff375111ed4af}
+
+
+Name of the N\-U\-L\-L device (/dev/null etc). 
+
+\hypertarget{classCPlatform_ac73a69c8dd13152763b4020d37270f2e}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir@{m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir@{m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Print\-Work\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_ac73a69c8dd13152763b4020d37270f2e}
+
+
+Template of command to print working directory. 
+
+\hypertarget{classCPlatform_a842c6d884c42744de75eefca15d887e3}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Remove\-Dir@{m\-\_\-\-Cmd\-\_\-\-Remove\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Remove\-Dir@{m\-\_\-\-Cmd\-\_\-\-Remove\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Remove\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Remove\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a842c6d884c42744de75eefca15d887e3}
+
+
+Directory removing command template. 
+
+\hypertarget{classCPlatform_a40f2310f005d8bece4137fb54d7dffcd}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Remove\-File@{m\-\_\-\-Cmd\-\_\-\-Remove\-File}}
+\index{m\-\_\-\-Cmd\-\_\-\-Remove\-File@{m\-\_\-\-Cmd\-\_\-\-Remove\-File}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Remove\-File}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Remove\-File\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a40f2310f005d8bece4137fb54d7dffcd}
+
+
+File removing (deleting) command template. 
+
+\hypertarget{classCPlatform_abac12f91f09a69d46f3851317429185c}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir@{m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir}}
+\index{m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir@{m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Cmd\-\_\-\-Test\-Make\-Dir\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_abac12f91f09a69d46f3851317429185c}
+
+
+Directory existence checking and creation command template. 
+
+\hypertarget{classCPlatform_a5a8d28621cc908b51fa19284899e4374}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Dynamic\-Library\-Extensions@{m\-\_\-\-Dynamic\-Library\-Extensions}}
+\index{m\-\_\-\-Dynamic\-Library\-Extensions@{m\-\_\-\-Dynamic\-Library\-Extensions}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Dynamic\-Library\-Extensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Platform\-::m\-\_\-\-Dynamic\-Library\-Extensions\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a5a8d28621cc908b51fa19284899e4374}
+\hypertarget{classCPlatform_a7ca30334ae5baa1adf6b77ffc1e7daac}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-O\-S\-\_\-\-Type@{m\-\_\-\-O\-S\-\_\-\-Type}}
+\index{m\-\_\-\-O\-S\-\_\-\-Type@{m\-\_\-\-O\-S\-\_\-\-Type}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-O\-S\-\_\-\-Type}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-O\-S\-\_\-\-Type\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a7ca30334ae5baa1adf6b77ffc1e7daac}
+
+
+Type of operating system for this platform. 
+
+\hypertarget{classCPlatform_a9f8da12c0ef92a1660218fe7e33beced}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Path\-Delimiter@{m\-\_\-\-Path\-Delimiter}}
+\index{m\-\_\-\-Path\-Delimiter@{m\-\_\-\-Path\-Delimiter}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Path\-Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Path\-Delimiter\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a9f8da12c0ef92a1660218fe7e33beced}
+
+
+File system path delimiter (separator). 
+
+\hypertarget{classCPlatform_a7ad50b7535d0a1518ef26619d4804700}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Static\-Library\-Extensions@{m\-\_\-\-Static\-Library\-Extensions}}
+\index{m\-\_\-\-Static\-Library\-Extensions@{m\-\_\-\-Static\-Library\-Extensions}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Static\-Library\-Extensions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Platform\-::m\-\_\-\-Static\-Library\-Extensions\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a7ad50b7535d0a1518ef26619d4804700}
+\hypertarget{classCPlatform_a136a456b5a0293f11605917c177ca271}{\index{C\-Platform@{C\-Platform}!m\-\_\-\-Tool\-\_\-\-Make@{m\-\_\-\-Tool\-\_\-\-Make}}
+\index{m\-\_\-\-Tool\-\_\-\-Make@{m\-\_\-\-Tool\-\_\-\-Make}!CPlatform@{C\-Platform}}
+\subsubsection[{m\-\_\-\-Tool\-\_\-\-Make}]{\setlength{\rightskip}{0pt plus 5cm}C\-Platform\-::m\-\_\-\-Tool\-\_\-\-Make\hspace{0.3cm}{\ttfamily [private]}}}\label{classCPlatform_a136a456b5a0293f11605917c177ca271}
+
+
+File name of the make tool. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{platforms_8h}{platforms.\-h}\item 
+src/doc/\hyperlink{platforms_8dox}{platforms.\-dox}\item 
+src/\hyperlink{platforms_8cpp}{platforms.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,548 @@
+\hypertarget{classCCodeBlocksProject}{\section{C\-Code\-Blocks\-Project Class Reference}
+\label{classCCodeBlocksProject}\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}}
+}
+
+
+Project description.  
+
+
+
+
+{\ttfamily \#include $<$cbproject.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCCodeBlocksProject_ab1422bff653b1894ef763b22995b8b8f}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the project to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksProject_ab5c3f6e2fa243705752c027d5e7858aa}{Read} (const Ti\-Xml\-Element $\ast$Project\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the project settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksProject_a0df219255e8a7831c44556c82799ca2d}{Load\-Project} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Loads a project from a file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksProject_ab0d9eceef6233737ccf8c1c5ecedb6fc}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the project contents to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksProject_af5f6a96460accd69dbaf8e7d7530b0db}{Tool\-Chain\-Suffix} (const int Tool\-Chain\-Index, \hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \&Config)
+\item 
+bool \hyperlink{classCCodeBlocksProject_aa2b01dbf48f2a193a0bc426bc50ce77b}{Generate\-Makefile} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \&Config)
+\begin{DoxyCompactList}\small\item\em Generates makefile text and writes it to the file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksProject_acf5f2c8a4d1d363de6fe514df5a426bf}{C\-Code\-Blocks\-Project} (void)
+\begin{DoxyCompactList}\small\item\em Creates project. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksProject_a937f0e40e914faee4f0d327d17de8f29}{$\sim$\-C\-Code\-Blocks\-Project} (void)
+\begin{DoxyCompactList}\small\item\em Destroys project. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksProject_a356c8c5bdee3f2e32a779f6f13883921}{Decorate\-Variable\-Name} (const \hyperlink{classCString}{C\-String} \&Variable\-Name, const int Case=0)
+\begin{DoxyCompactList}\small\item\em Makes a makefile-\/compatible macro variable name from the given name. \end{DoxyCompactList}\item 
+static \hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksProject_a92c3e6ad2c255b0760d3e2e906d044d8}{Decorate\-Target\-Name} (const \hyperlink{classCString}{C\-String} \&Target\-Name, const int Case=2)
+\begin{DoxyCompactList}\small\item\em Makes a makefile-\/compatible build target name from the given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCCodeBlocksProject_a276e2738b070a798ed2503612f077c48}{Sort\-Units\-By\-Weight} (void)
+\begin{DoxyCompactList}\small\item\em Sorts project units by weight in ascending order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCCodeBlocksProject_a0456bbc2433f541b3409aa0722c9e19c}{Update\-Platform\-Index} (const size\-\_\-t Platform, \hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \&Config)
+\begin{DoxyCompactList}\small\item\em Updates lists of build targets, virtual build targets and toolchains. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksProject_a78eda21e8436e55c5a36deb6519378eb}{Update\-Target\-Index} (const int Target, \hyperlink{classCCodeBlocksBuildConfig}{C\-Code\-Blocks\-Build\-Config} \&Config)
+\begin{DoxyCompactList}\small\item\em Updates list of build units. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCCodeBlocksProject_ae7e3e490aaf03a97711cdbb02ec0a374}{m\-\_\-\-Version\-Major}
+\begin{DoxyCompactList}\small\item\em Major version number. \end{DoxyCompactList}\item 
+int \hyperlink{classCCodeBlocksProject_a619d9f24d56855a95bd5b04d76f9a5fe}{m\-\_\-\-Version\-Minor}
+\begin{DoxyCompactList}\small\item\em Minor version number. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksProject_ae0e87353b071ae8106b039e580e74db4}{m\-\_\-\-Title}
+\begin{DoxyCompactList}\small\item\em Title of the project. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksProject_abab92dc143ab33631209cdd4fde96535}{m\-\_\-\-Default\-Target}
+\begin{DoxyCompactList}\small\item\em Name of the default build target of the project. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksProject_a5a814ce2b3e1d40d77920b3c65873af0}{m\-\_\-\-Compiler}
+\begin{DoxyCompactList}\small\item\em Name (alias) of the default toolchain for the project. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksProject_a7c318cc658b910db00e35e4b835a3246}{m\-\_\-\-Extended\-Object\-Names}
+\begin{DoxyCompactList}\small\item\em Controls how object files are named. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_a2ed56871685ed16b5bda3c4ce2b0f4c3}{m\-\_\-\-Compiler\-Options}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of compiler options. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_a64dfc22099c2b4456d401627bb7d23ee}{m\-\_\-\-Compiler\-Directories}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of search directories for compiler(s). \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_a0267339a7092c081a8a4f953a44f488e}{m\-\_\-\-Linker\-Options}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of linker options. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_af731d75a45cfe7adf484cd1033c5940d}{m\-\_\-\-Linker\-Libraries}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of libraries to link with the project. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_a16cac351f48df53ca7c1e5c072983e3a}{m\-\_\-\-Linker\-Directories}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of search directories for linker. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_aebc2c851c4ee0779cbeefff19a723b07}{m\-\_\-\-Resource\-Compiler\-Directories}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of search directories for resource compiler. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_aefda434d2b3f3b58ae91041e5832f9d0}{m\-\_\-\-Before\-Build\-Commands}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of commands that should be executed prior to starting the build process. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_a8ab245f49e6a9c903873054f36fc3131}{m\-\_\-\-After\-Build\-Commands}
+\begin{DoxyCompactList}\small\item\em Project-\/wide list of commands that should be executed after the build process is finished. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksProject_a42c6e9a55bf442874867b2ae3b6bdbbd}{m\-\_\-\-Force\-Before\-Build\-Commands}
+\begin{DoxyCompactList}\small\item\em Makes the execution of the project-\/wide before-\/build commands unconditional. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksProject_aab5e897056f92e3c44fffa1e1d433def}{m\-\_\-\-Force\-After\-Build\-Commands}
+\begin{DoxyCompactList}\small\item\em Makes the execution of the project-\/wide after-\/build commands unconditional. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCBuildTarget}{C\-Build\-Target} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_a52d04e025e60af9d48f9e2f09cb02ab9}{m\-\_\-\-Build\-Targets}
+\begin{DoxyCompactList}\small\item\em List of build targets of the project. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCVirtualTarget}{C\-Virtual\-Target} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_aad946890adbdb724f9ae4fd882f07b91}{m\-\_\-\-Virtual\-Targets}
+\begin{DoxyCompactList}\small\item\em List of virtual build targets of the project. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCBuildUnit}{C\-Build\-Unit} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_a7497caf84019495f7a31a259db36f74f}{m\-\_\-\-Units}
+\begin{DoxyCompactList}\small\item\em List of build units of the project. \end{DoxyCompactList}\item 
+\hyperlink{classCConfiguration}{C\-Configuration} \hyperlink{classCCodeBlocksProject_a2abc20327d98c940a5a6315e2b6278cf}{m\-\_\-\-Environment}
+\begin{DoxyCompactList}\small\item\em Symbol table for environment variables. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksProject_a02182ff5699ad56dec022a0061a883b8}{m\-\_\-\-Platforms}
+\begin{DoxyCompactList}\small\item\em List of platforms used in the project. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksProject_ae22325c0669ffa1e9a6c3db15135a7b1}{m\-\_\-\-Single\-Platform}
+\begin{DoxyCompactList}\small\item\em Indicates that makefile should be generated only for one platform. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCBuildTarget}{C\-Build\-Target} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_a7fc0903a694170fb8d3de2e62a788097}{m\-\_\-\-Build\-Target\-Index}
+\begin{DoxyCompactList}\small\item\em List of build targets valid for a platform. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCVirtualTarget}{C\-Virtual\-Target} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_accfc0de789f0443a8bc5ec4dc8a409bd}{m\-\_\-\-Virtual\-Target\-Index}
+\begin{DoxyCompactList}\small\item\em List of virtual build targets valid for a platform. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCBuildUnit}{C\-Build\-Unit} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_a40ff58ecb0e82fcd2778053321323fbe}{m\-\_\-\-Unit\-Index}
+\begin{DoxyCompactList}\small\item\em List of build units valid for a build target. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$ $>$ \hyperlink{classCCodeBlocksProject_a90848c1fb72d0e0f15ec3e402f7d64ff}{m\-\_\-\-Tool\-Chain\-Index}
+\begin{DoxyCompactList}\small\item\em List of toolchains valid for a platform. \end{DoxyCompactList}\item 
+std\-::vector$<$ int $>$ \hyperlink{classCCodeBlocksProject_a40ff4f9f33157540d3e46e25e8cd278f}{m\-\_\-\-Target\-Tool\-Chain\-Index}
+\item 
+\hyperlink{classCDependencyInfo}{C\-Dependency\-Info} \hyperlink{classCCodeBlocksProject_a060c4ae622786abceb80d462d233922d}{m\-\_\-\-Dependencies}
+\begin{DoxyCompactList}\small\item\em Stores dependencies of build units. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefile}{C\-Makefile} \hyperlink{classCCodeBlocksProject_afc80f4ccaa90f3aeef908877606ac861}{m\-\_\-\-Makefile}
+\begin{DoxyCompactList}\small\item\em Contains object-\/based description of makefile for the project. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Project description. 
+
+Contains properties of a project and generates makefiles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCodeBlocksProject_acf5f2c8a4d1d363de6fe514df5a426bf}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}}
+\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{C\-Code\-Blocks\-Project}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-C\-Code\-Blocks\-Project (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_acf5f2c8a4d1d363de6fe514df5a426bf}
+
+
+Creates project. 
+
+\hypertarget{classCCodeBlocksProject_a937f0e40e914faee4f0d327d17de8f29}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!$\sim$\-C\-Code\-Blocks\-Project@{$\sim$\-C\-Code\-Blocks\-Project}}
+\index{$\sim$\-C\-Code\-Blocks\-Project@{$\sim$\-C\-Code\-Blocks\-Project}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{$\sim$\-C\-Code\-Blocks\-Project}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::$\sim$\-C\-Code\-Blocks\-Project (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_a937f0e40e914faee4f0d327d17de8f29}
+
+
+Destroys project. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCodeBlocksProject_ab1422bff653b1894ef763b22995b8b8f}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Clear@{Clear}}
+\index{Clear@{Clear}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_ab1422bff653b1894ef763b22995b8b8f}
+
+
+Resets the project to the initial state. 
+
+\hypertarget{classCCodeBlocksProject_a92c3e6ad2c255b0760d3e2e906d044d8}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Decorate\-Target\-Name@{Decorate\-Target\-Name}}
+\index{Decorate\-Target\-Name@{Decorate\-Target\-Name}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Decorate\-Target\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Decorate\-Target\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Target\-Name, }
+\item[{const int}]{Case = {\ttfamily 2}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCCodeBlocksProject_a92c3e6ad2c255b0760d3e2e906d044d8}
+
+
+Makes a makefile-\/compatible build target name from the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\-Name} & an unprepared build target name. \\
+\hline
+{\em Case} & casing of the variable name\-: \begin{DoxyItemize}
+\item 0 -\/ don't change existing case \item 1 -\/ make all characters lower case \item 2 -\/ make all characters upper case (default)\end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+makefile-\/compatible build target name.
+\end{DoxyReturn}
+This function uses \hyperlink{cbhelper_8h_a8df51fe5d5c5bd6edc8d8992dbf47a75}{Makefile\-Friendly(const C\-String\& A\-String)} for the job. \hypertarget{classCCodeBlocksProject_a356c8c5bdee3f2e32a779f6f13883921}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Decorate\-Variable\-Name@{Decorate\-Variable\-Name}}
+\index{Decorate\-Variable\-Name@{Decorate\-Variable\-Name}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Decorate\-Variable\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Decorate\-Variable\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Variable\-Name, }
+\item[{const int}]{Case = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classCCodeBlocksProject_a356c8c5bdee3f2e32a779f6f13883921}
+
+
+Makes a makefile-\/compatible macro variable name from the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Variable\-Name} & an unprepared macro variable name. \\
+\hline
+{\em Case} & casing of the variable name\-: \begin{DoxyItemize}
+\item 0 -\/ don't change existing case (default) \item 1 -\/ make all characters lower case \item 2 -\/ make all characters upper case\end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+makefile-\/compatible macro variable name.
+\end{DoxyReturn}
+This function uses \hyperlink{cbhelper_8h_a8df51fe5d5c5bd6edc8d8992dbf47a75}{Makefile\-Friendly(const C\-String\& A\-String)} for the job. \hypertarget{classCCodeBlocksProject_aa2b01dbf48f2a193a0bc426bc50ce77b}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Generate\-Makefile@{Generate\-Makefile}}
+\index{Generate\-Makefile@{Generate\-Makefile}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Generate\-Makefile}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Generate\-Makefile (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-Code\-Blocks\-Build\-Config} \&}]{Config}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_aa2b01dbf48f2a193a0bc426bc50ce77b}
+
+
+Generates makefile text and writes it to the file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a file name for makefile of the project.\\
+\hline
+{\em Config} & build configuration.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if makefile was successfully generated, {\itshape false} otherwise.
+\end{DoxyReturn}
+This function uses intermediate object-\/based makefile description \hyperlink{classCCodeBlocksProject_afc80f4ccaa90f3aeef908877606ac861}{C\-Code\-Blocks\-Project\-::m\-\_\-\-Makefile} to generate plain text makefile. \hypertarget{classCCodeBlocksProject_a0df219255e8a7831c44556c82799ca2d}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Load\-Project@{Load\-Project}}
+\index{Load\-Project@{Load\-Project}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Load\-Project}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Load\-Project (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_a0df219255e8a7831c44556c82799ca2d}
+
+
+Loads a project from a file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & name of Code\-::\-Blocks project file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if specified project is successfully loaded, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksProject_ab5c3f6e2fa243705752c027d5e7858aa}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Read@{Read}}
+\index{Read@{Read}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Project\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_ab5c3f6e2fa243705752c027d5e7858aa}
+
+
+Reads the project settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Project\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCCodeBlocksProject_ab0d9eceef6233737ccf8c1c5ecedb6fc}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Show@{Show}}
+\index{Show@{Show}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_ab0d9eceef6233737ccf8c1c5ecedb6fc}
+
+
+Prints the project contents to standard output. 
+
+\hypertarget{classCCodeBlocksProject_a276e2738b070a798ed2503612f077c48}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Sort\-Units\-By\-Weight@{Sort\-Units\-By\-Weight}}
+\index{Sort\-Units\-By\-Weight@{Sort\-Units\-By\-Weight}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Sort\-Units\-By\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Sort\-Units\-By\-Weight (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCodeBlocksProject_a276e2738b070a798ed2503612f077c48}
+
+
+Sorts project units by weight in ascending order. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCBuildUnit_aae6c75ed4d916241e1daf249425b5dc5}{C\-Build\-Unit\-::m\-\_\-\-Weight}. 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksProject_af5f6a96460accd69dbaf8e7d7530b0db}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Tool\-Chain\-Suffix@{Tool\-Chain\-Suffix}}
+\index{Tool\-Chain\-Suffix@{Tool\-Chain\-Suffix}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Tool\-Chain\-Suffix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Code\-Blocks\-Project\-::\-Tool\-Chain\-Suffix (
+\begin{DoxyParamCaption}
+\item[{const int}]{Tool\-Chain\-Index, }
+\item[{{\bf C\-Code\-Blocks\-Build\-Config} \&}]{Config}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksProject_af5f6a96460accd69dbaf8e7d7530b0db}
+\hypertarget{classCCodeBlocksProject_a0456bbc2433f541b3409aa0722c9e19c}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Update\-Platform\-Index@{Update\-Platform\-Index}}
+\index{Update\-Platform\-Index@{Update\-Platform\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Update\-Platform\-Index}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Update\-Platform\-Index (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Platform, }
+\item[{{\bf C\-Code\-Blocks\-Build\-Config} \&}]{Config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a0456bbc2433f541b3409aa0722c9e19c}
+
+
+Updates lists of build targets, virtual build targets and toolchains. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Platform} & index of a platform in the build configuration.\\
+\hline
+{\em Config} & build configuration.\\
+\hline
+\end{DoxyParams}
+Refreshes \hyperlink{classCCodeBlocksProject_a7fc0903a694170fb8d3de2e62a788097}{C\-Code\-Blocks\-Project\-::m\-\_\-\-Build\-Target\-Index}, \hyperlink{classCCodeBlocksProject_accfc0de789f0443a8bc5ec4dc8a409bd}{C\-Code\-Blocks\-Project\-::m\-\_\-\-Virtual\-Target\-Index} and \hyperlink{classCCodeBlocksProject_a90848c1fb72d0e0f15ec3e402f7d64ff}{C\-Code\-Blocks\-Project\-::m\-\_\-\-Tool\-Chain\-Index} by selecting only items valid for the specified platform. \hypertarget{classCCodeBlocksProject_a78eda21e8436e55c5a36deb6519378eb}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!Update\-Target\-Index@{Update\-Target\-Index}}
+\index{Update\-Target\-Index@{Update\-Target\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{Update\-Target\-Index}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::\-Update\-Target\-Index (
+\begin{DoxyParamCaption}
+\item[{const int}]{Target, }
+\item[{{\bf C\-Code\-Blocks\-Build\-Config} \&}]{Config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a78eda21e8436e55c5a36deb6519378eb}
+
+
+Updates list of build units. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target} & index of a target in the build configuration.\\
+\hline
+{\em Config} & build configuration.\\
+\hline
+\end{DoxyParams}
+Refreshes \hyperlink{classCCodeBlocksProject_a40ff58ecb0e82fcd2778053321323fbe}{C\-Code\-Blocks\-Project\-::m\-\_\-\-Unit\-Index} by selecting only units valid for the specified build target. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCodeBlocksProject_a8ab245f49e6a9c903873054f36fc3131}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-After\-Build\-Commands@{m\-\_\-\-After\-Build\-Commands}}
+\index{m\-\_\-\-After\-Build\-Commands@{m\-\_\-\-After\-Build\-Commands}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-After\-Build\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-After\-Build\-Commands\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a8ab245f49e6a9c903873054f36fc3131}
+
+
+Project-\/wide list of commands that should be executed after the build process is finished. 
+
+\hypertarget{classCCodeBlocksProject_aefda434d2b3f3b58ae91041e5832f9d0}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Before\-Build\-Commands@{m\-\_\-\-Before\-Build\-Commands}}
+\index{m\-\_\-\-Before\-Build\-Commands@{m\-\_\-\-Before\-Build\-Commands}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Before\-Build\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Before\-Build\-Commands\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_aefda434d2b3f3b58ae91041e5832f9d0}
+
+
+Project-\/wide list of commands that should be executed prior to starting the build process. 
+
+\hypertarget{classCCodeBlocksProject_a7fc0903a694170fb8d3de2e62a788097}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Build\-Target\-Index@{m\-\_\-\-Build\-Target\-Index}}
+\index{m\-\_\-\-Build\-Target\-Index@{m\-\_\-\-Build\-Target\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Build\-Target\-Index}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Build\-Target\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a7fc0903a694170fb8d3de2e62a788097}
+
+
+List of build targets valid for a platform. 
+
+Contains pointers to \hyperlink{classCBuildTarget}{C\-Build\-Target} objects but does not own them (i.\-e. objects sould not be destroyed before the list is cleared). This property is automatically refreshed by \hyperlink{classCCodeBlocksProject_a0456bbc2433f541b3409aa0722c9e19c}{C\-Code\-Blocks\-Project\-::\-Update\-Platform\-Index(const size\-\_\-t Platform, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksProject_a52d04e025e60af9d48f9e2f09cb02ab9}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Build\-Targets@{m\-\_\-\-Build\-Targets}}
+\index{m\-\_\-\-Build\-Targets@{m\-\_\-\-Build\-Targets}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Build\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Build\-Targets\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a52d04e025e60af9d48f9e2f09cb02ab9}
+
+
+List of build targets of the project. 
+
+Contains pointers to \hyperlink{classCBuildTarget}{C\-Build\-Target} objects and owns them (i.\-e. objects sould be destroyed before the list is cleared). \hypertarget{classCCodeBlocksProject_a5a814ce2b3e1d40d77920b3c65873af0}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Compiler@{m\-\_\-\-Compiler}}
+\index{m\-\_\-\-Compiler@{m\-\_\-\-Compiler}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Compiler}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Compiler\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a5a814ce2b3e1d40d77920b3c65873af0}
+
+
+Name (alias) of the default toolchain for the project. 
+
+\hypertarget{classCCodeBlocksProject_a64dfc22099c2b4456d401627bb7d23ee}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Compiler\-Directories@{m\-\_\-\-Compiler\-Directories}}
+\index{m\-\_\-\-Compiler\-Directories@{m\-\_\-\-Compiler\-Directories}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Compiler\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Compiler\-Directories\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a64dfc22099c2b4456d401627bb7d23ee}
+
+
+Project-\/wide list of search directories for compiler(s). 
+
+\hypertarget{classCCodeBlocksProject_a2ed56871685ed16b5bda3c4ce2b0f4c3}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Compiler\-Options@{m\-\_\-\-Compiler\-Options}}
+\index{m\-\_\-\-Compiler\-Options@{m\-\_\-\-Compiler\-Options}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Compiler\-Options}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Compiler\-Options\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a2ed56871685ed16b5bda3c4ce2b0f4c3}
+
+
+Project-\/wide list of compiler options. 
+
+\hypertarget{classCCodeBlocksProject_abab92dc143ab33631209cdd4fde96535}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Default\-Target@{m\-\_\-\-Default\-Target}}
+\index{m\-\_\-\-Default\-Target@{m\-\_\-\-Default\-Target}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Default\-Target}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Default\-Target\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_abab92dc143ab33631209cdd4fde96535}
+
+
+Name of the default build target of the project. 
+
+\hypertarget{classCCodeBlocksProject_a060c4ae622786abceb80d462d233922d}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Dependencies@{m\-\_\-\-Dependencies}}
+\index{m\-\_\-\-Dependencies@{m\-\_\-\-Dependencies}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Dependencies\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a060c4ae622786abceb80d462d233922d}
+
+
+Stores dependencies of build units. 
+
+\hyperlink{classCDependencyInfo}{C\-Dependency\-Info} is used to store information about relationship between build units in order to generate makefule rules for unit dependencies.
+
+See \hyperlink{depsearch_8h}{depsearch.\-h} for additional information on gathering unit dependencies. \hypertarget{classCCodeBlocksProject_a2abc20327d98c940a5a6315e2b6278cf}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Environment@{m\-\_\-\-Environment}}
+\index{m\-\_\-\-Environment@{m\-\_\-\-Environment}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Environment}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Environment\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a2abc20327d98c940a5a6315e2b6278cf}
+
+
+Symbol table for environment variables. 
+
+\hypertarget{classCCodeBlocksProject_a7c318cc658b910db00e35e4b835a3246}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Extended\-Object\-Names@{m\-\_\-\-Extended\-Object\-Names}}
+\index{m\-\_\-\-Extended\-Object\-Names@{m\-\_\-\-Extended\-Object\-Names}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Extended\-Object\-Names}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Extended\-Object\-Names\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a7c318cc658b910db00e35e4b835a3246}
+
+
+Controls how object files are named. 
+
+When set to {\itshape true}, an object file extension (e.\-g. \char`\"{}.\-o\char`\"{} or \char`\"{}.\-obj\char`\"{}) is appended to a build unit file name (e.\-g. \char`\"{}unit.\-cpp\char`\"{} becomes \char`\"{}unit.\-cpp.\-o\char`\"{}), otherwise, when set to {\itshape false}, a build unit file extension is replaced by an object file extension (e.\-g. \char`\"{}unit.\-cpp\char`\"{} becomes \char`\"{}unit.\-o\char`\"{}). \hypertarget{classCCodeBlocksProject_aab5e897056f92e3c44fffa1e1d433def}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Force\-After\-Build\-Commands@{m\-\_\-\-Force\-After\-Build\-Commands}}
+\index{m\-\_\-\-Force\-After\-Build\-Commands@{m\-\_\-\-Force\-After\-Build\-Commands}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Force\-After\-Build\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Force\-After\-Build\-Commands\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_aab5e897056f92e3c44fffa1e1d433def}
+
+
+Makes the execution of the project-\/wide after-\/build commands unconditional. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCCodeBlocksProject_a8ab245f49e6a9c903873054f36fc3131}{C\-Code\-Blocks\-Project\-::m\-\_\-\-After\-Build\-Commands} 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksProject_a42c6e9a55bf442874867b2ae3b6bdbbd}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Force\-Before\-Build\-Commands@{m\-\_\-\-Force\-Before\-Build\-Commands}}
+\index{m\-\_\-\-Force\-Before\-Build\-Commands@{m\-\_\-\-Force\-Before\-Build\-Commands}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Force\-Before\-Build\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Force\-Before\-Build\-Commands\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a42c6e9a55bf442874867b2ae3b6bdbbd}
+
+
+Makes the execution of the project-\/wide before-\/build commands unconditional. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCCodeBlocksProject_aefda434d2b3f3b58ae91041e5832f9d0}{C\-Code\-Blocks\-Project\-::m\-\_\-\-Before\-Build\-Commands} 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksProject_a16cac351f48df53ca7c1e5c072983e3a}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Linker\-Directories@{m\-\_\-\-Linker\-Directories}}
+\index{m\-\_\-\-Linker\-Directories@{m\-\_\-\-Linker\-Directories}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Linker\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Linker\-Directories\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a16cac351f48df53ca7c1e5c072983e3a}
+
+
+Project-\/wide list of search directories for linker. 
+
+\hypertarget{classCCodeBlocksProject_af731d75a45cfe7adf484cd1033c5940d}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Linker\-Libraries@{m\-\_\-\-Linker\-Libraries}}
+\index{m\-\_\-\-Linker\-Libraries@{m\-\_\-\-Linker\-Libraries}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Linker\-Libraries}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Linker\-Libraries\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_af731d75a45cfe7adf484cd1033c5940d}
+
+
+Project-\/wide list of libraries to link with the project. 
+
+\hypertarget{classCCodeBlocksProject_a0267339a7092c081a8a4f953a44f488e}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Linker\-Options@{m\-\_\-\-Linker\-Options}}
+\index{m\-\_\-\-Linker\-Options@{m\-\_\-\-Linker\-Options}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Linker\-Options}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Linker\-Options\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a0267339a7092c081a8a4f953a44f488e}
+
+
+Project-\/wide list of linker options. 
+
+\hypertarget{classCCodeBlocksProject_afc80f4ccaa90f3aeef908877606ac861}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Makefile@{m\-\_\-\-Makefile}}
+\index{m\-\_\-\-Makefile@{m\-\_\-\-Makefile}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Makefile}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Makefile\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_afc80f4ccaa90f3aeef908877606ac861}
+
+
+Contains object-\/based description of makefile for the project. 
+
+Contents of makefile are generated by \hyperlink{classCCodeBlocksProject_aa2b01dbf48f2a193a0bc426bc50ce77b}{C\-Code\-Blocks\-Project\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)} before saving to a file. \hypertarget{classCCodeBlocksProject_a02182ff5699ad56dec022a0061a883b8}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Platforms@{m\-\_\-\-Platforms}}
+\index{m\-\_\-\-Platforms@{m\-\_\-\-Platforms}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Platforms}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Platforms\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a02182ff5699ad56dec022a0061a883b8}
+
+
+List of platforms used in the project. 
+
+Contains pointers to \hyperlink{classCPlatform}{C\-Platform} objects and owns them (i.\-e. objects sould be destroyed before the list is cleared). \hypertarget{classCCodeBlocksProject_aebc2c851c4ee0779cbeefff19a723b07}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Resource\-Compiler\-Directories@{m\-\_\-\-Resource\-Compiler\-Directories}}
+\index{m\-\_\-\-Resource\-Compiler\-Directories@{m\-\_\-\-Resource\-Compiler\-Directories}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Resource\-Compiler\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Resource\-Compiler\-Directories\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_aebc2c851c4ee0779cbeefff19a723b07}
+
+
+Project-\/wide list of search directories for resource compiler. 
+
+\hypertarget{classCCodeBlocksProject_ae22325c0669ffa1e9a6c3db15135a7b1}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Single\-Platform@{m\-\_\-\-Single\-Platform}}
+\index{m\-\_\-\-Single\-Platform@{m\-\_\-\-Single\-Platform}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Single\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Single\-Platform\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_ae22325c0669ffa1e9a6c3db15135a7b1}
+
+
+Indicates that makefile should be generated only for one platform. 
+
+This property is automatically refreshed by C\-Code\-Blocks\-Project\-::\-Generate\-Makefile\-Text(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config) or \hyperlink{classCCodeBlocksProject_aa2b01dbf48f2a193a0bc426bc50ce77b}{C\-Code\-Blocks\-Project\-::\-Generate\-Makefile(const C\-String\& File\-Name, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksProject_a40ff4f9f33157540d3e46e25e8cd278f}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Target\-Tool\-Chain\-Index@{m\-\_\-\-Target\-Tool\-Chain\-Index}}
+\index{m\-\_\-\-Target\-Tool\-Chain\-Index@{m\-\_\-\-Target\-Tool\-Chain\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Target\-Tool\-Chain\-Index}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$int$>$ C\-Code\-Blocks\-Project\-::m\-\_\-\-Target\-Tool\-Chain\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a40ff4f9f33157540d3e46e25e8cd278f}
+\hypertarget{classCCodeBlocksProject_ae0e87353b071ae8106b039e580e74db4}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Title@{m\-\_\-\-Title}}
+\index{m\-\_\-\-Title@{m\-\_\-\-Title}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Title}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Title\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_ae0e87353b071ae8106b039e580e74db4}
+
+
+Title of the project. 
+
+\hypertarget{classCCodeBlocksProject_a90848c1fb72d0e0f15ec3e402f7d64ff}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Tool\-Chain\-Index@{m\-\_\-\-Tool\-Chain\-Index}}
+\index{m\-\_\-\-Tool\-Chain\-Index@{m\-\_\-\-Tool\-Chain\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Tool\-Chain\-Index}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Tool\-Chain\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a90848c1fb72d0e0f15ec3e402f7d64ff}
+
+
+List of toolchains valid for a platform. 
+
+Contains pointers to \hyperlink{classCPlatform}{C\-Platform} objects but does not own them (i.\-e. objects sould not be destroyed before the list is cleared). This property is automatically refreshed by \hyperlink{classCCodeBlocksProject_a0456bbc2433f541b3409aa0722c9e19c}{C\-Code\-Blocks\-Project\-::\-Update\-Platform\-Index(const size\-\_\-t Platform, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksProject_a40ff58ecb0e82fcd2778053321323fbe}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Unit\-Index@{m\-\_\-\-Unit\-Index}}
+\index{m\-\_\-\-Unit\-Index@{m\-\_\-\-Unit\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Unit\-Index}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Unit\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a40ff58ecb0e82fcd2778053321323fbe}
+
+
+List of build units valid for a build target. 
+
+Contains pointers to \hyperlink{classCBuildUnit}{C\-Build\-Unit} objects but does not own them (i.\-e. objects sould not be destroyed before the list is cleared). This property is automatically refreshed by \hyperlink{classCCodeBlocksProject_a78eda21e8436e55c5a36deb6519378eb}{C\-Code\-Blocks\-Project\-::\-Update\-Target\-Index(const int Target, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksProject_a7497caf84019495f7a31a259db36f74f}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Units@{m\-\_\-\-Units}}
+\index{m\-\_\-\-Units@{m\-\_\-\-Units}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Units}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Units\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a7497caf84019495f7a31a259db36f74f}
+
+
+List of build units of the project. 
+
+Contains pointers to \hyperlink{classCBuildUnit}{C\-Build\-Unit} objects and owns them (i.\-e. objects sould be destroyed before the list is cleared). \hypertarget{classCCodeBlocksProject_ae7e3e490aaf03a97711cdbb02ec0a374}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Version\-Major@{m\-\_\-\-Version\-Major}}
+\index{m\-\_\-\-Version\-Major@{m\-\_\-\-Version\-Major}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Version\-Major}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Version\-Major\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_ae7e3e490aaf03a97711cdbb02ec0a374}
+
+
+Major version number. 
+
+\hypertarget{classCCodeBlocksProject_a619d9f24d56855a95bd5b04d76f9a5fe}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Version\-Minor@{m\-\_\-\-Version\-Minor}}
+\index{m\-\_\-\-Version\-Minor@{m\-\_\-\-Version\-Minor}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Version\-Minor}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Version\-Minor\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_a619d9f24d56855a95bd5b04d76f9a5fe}
+
+
+Minor version number. 
+
+\hypertarget{classCCodeBlocksProject_accfc0de789f0443a8bc5ec4dc8a409bd}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Virtual\-Target\-Index@{m\-\_\-\-Virtual\-Target\-Index}}
+\index{m\-\_\-\-Virtual\-Target\-Index@{m\-\_\-\-Virtual\-Target\-Index}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Virtual\-Target\-Index}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Virtual\-Target\-Index\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_accfc0de789f0443a8bc5ec4dc8a409bd}
+
+
+List of virtual build targets valid for a platform. 
+
+Contains pointers to \hyperlink{classCVirtualTarget}{C\-Virtual\-Target} objects but does not own them (i.\-e. objects sould not be destroyed before the list is cleared). This property is automatically refreshed by \hyperlink{classCCodeBlocksProject_a0456bbc2433f541b3409aa0722c9e19c}{C\-Code\-Blocks\-Project\-::\-Update\-Platform\-Index(const size\-\_\-t Platform, C\-Code\-Blocks\-Build\-Config\& Config)}. \hypertarget{classCCodeBlocksProject_aad946890adbdb724f9ae4fd882f07b91}{\index{C\-Code\-Blocks\-Project@{C\-Code\-Blocks\-Project}!m\-\_\-\-Virtual\-Targets@{m\-\_\-\-Virtual\-Targets}}
+\index{m\-\_\-\-Virtual\-Targets@{m\-\_\-\-Virtual\-Targets}!CCodeBlocksProject@{C\-Code\-Blocks\-Project}}
+\subsubsection[{m\-\_\-\-Virtual\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Project\-::m\-\_\-\-Virtual\-Targets\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksProject_aad946890adbdb724f9ae4fd882f07b91}
+
+
+List of virtual build targets of the project. 
+
+Contains pointers to \hyperlink{classCVirtualTarget}{C\-Virtual\-Target} objects and owns them (i.\-e. objects sould be destroyed before the list is cleared). 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbproject_8h}{cbproject.\-h}\item 
+src/\hyperlink{cbproject_8cpp}{cbproject.\-cpp}\item 
+src/doc/\hyperlink{cbproject_8dox}{cbproject.\-dox}\end{DoxyCompactItemize}

@@ -1,0 +1,540 @@
+\hypertarget{classCToolChain}{\section{C\-Tool\-Chain Class Reference}
+\label{classCToolChain}\index{C\-Tool\-Chain@{C\-Tool\-Chain}}
+}
+
+
+Toolchain description.  
+
+
+
+
+{\ttfamily \#include $<$toolchains.\-h$>$}
+
+Inheritance diagram for C\-Tool\-Chain\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d5e/classCToolChain}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} \hyperlink{classCToolChain_abe4054d9081351e099163e2c53b260f8}{O\-S} (void) const 
+\begin{DoxyCompactList}\small\item\em Platform (operating system) to which this toolchain belongs. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_a81b15f66df2066155de40f6fb975a613}{Alias} (void) const 
+\begin{DoxyCompactList}\small\item\em Name (alias) of the toolchain. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCToolChain_a6b812fe8db4d55267fd7c7ad0b065abe}{Generic\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCToolChain_a06e6e1f342bff69990fc3b473111ff42}{Define\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCToolChain_abd38643780c937a6526e493b01ccff17}{Include\-Dir\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCToolChain_a10c552862de661ff3fd768d26bc97e47}{Library\-Dir\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCToolChain_afe2b0bc1fb442f1da7b2803a1e1b175a}{Link\-Library\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_af61058748b7566ead7a40827f79a8b31}{sw} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_a9cc4b8a255a8dc420be52368d2a6f5bf}{sw} (const \hyperlink{classCString}{C\-String} \&A\-Switch) const 
+\item 
+\hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ \hyperlink{classCToolChain_af93b3ff256aa8e9c6962c286d353370e}{Create\-Build\-Tool} (const \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{C\-Build\-Tool\-::\-Tool\-Type} Type=\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}{C\-Build\-Tool\-::bt\-Other})
+\item 
+virtual void \hyperlink{classCToolChain_a79b9c93c470439d3d6fb7409664d7704}{Assign} (const \hyperlink{classCToolChain}{C\-Tool\-Chain} \&Tool\-Chain)
+\item 
+virtual \hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$ \hyperlink{classCToolChain_aa6765d5197d898efb01d032ac73b7764}{Create\-Instance} (void) const 
+\item 
+virtual void \hyperlink{classCToolChain_af623550203ec26d297e9366abfa2462e}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the toolchain to the initial state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classCToolChain_a3b48ddb23b898b3b6eaa356a2ed6fbf8}{Reset} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} \hyperlink{classCToolChain_abe4054d9081351e099163e2c53b260f8}{O\-S})
+\item 
+virtual bool \hyperlink{classCToolChain_a9e4b747dc5aa2e06e7e14c0f41970c16}{Supports} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} \hyperlink{classCToolChain_abe4054d9081351e099163e2c53b260f8}{O\-S}) const 
+\item 
+virtual void \hyperlink{classCToolChain_adcd4022b4155c9166c297c5109574d71}{Read} (const Ti\-Xml\-Element $\ast$Tool\-Chain\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the toolchain settings from an X\-M\-L document. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classCToolChain_a463cb9af1c861ee1524e98cbb638493d}{Write} (Ti\-Xml\-Element $\ast$Tool\-Chain\-Root)
+\begin{DoxyCompactList}\small\item\em Writes the toolchain settings to an X\-M\-L document. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classCToolChain_aa173b49ddd8bde7ff18142821e667212}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the toolchain contents to standard output.. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCToolChain_a6d44d3281af9719ba887ccfb33456f32}{Tools\-Count} (const \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{C\-Build\-Tool\-::\-Tool\-Type} Type=\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}{C\-Build\-Tool\-::bt\-Other})
+\item 
+\hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ \hyperlink{classCToolChain_a9f391198b3f31a501021525a41b2c944}{Get\-Build\-Tool} (const size\-\_\-t index, const \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{C\-Build\-Tool\-::\-Tool\-Type} Type=\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}{C\-Build\-Tool\-::bt\-Other})
+\item 
+\hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ \hyperlink{classCToolChain_a2e7a34d130a32c3eb6db21200235bc1b}{Find\-Build\-Tool\-By\-Name} (const \hyperlink{classCString}{C\-String} \&Tool\-Name)
+\item 
+\hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ \hyperlink{classCToolChain_aec2ff2acf6ec411df7795611778b85bb}{Find\-Build\-Tool} (const \hyperlink{classCString}{C\-String} \&File\-Extension)
+\item 
+\hyperlink{classCAssembler}{C\-Assembler} $\ast$ \hyperlink{classCToolChain_a314020139dad9011c865fb13d7204c00}{Find\-Assembler} (const \hyperlink{classCString}{C\-String} \&File\-Extension)
+\item 
+\hyperlink{classCCompiler}{C\-Compiler} $\ast$ \hyperlink{classCToolChain_ae8fa3698c5800900e7d18eafd5db2c96}{Find\-Compiler} (const \hyperlink{classCString}{C\-String} \&File\-Extension)
+\item 
+bool \hyperlink{classCToolChain_a6342cf88cd592baf106b35120d6fc38d}{Remove\-Tool\-By\-Name} (const \hyperlink{classCString}{C\-String} \&Tool\-Name)
+\item 
+\hyperlink{classCToolChain_aaf2bebe7f6d5e60d7fad029886d401b2}{C\-Tool\-Chain} (const \hyperlink{classCString}{C\-String} \&\hyperlink{classCToolChain_a81b15f66df2066155de40f6fb975a613}{Alias})
+\item 
+\hyperlink{classCToolChain_ac479aa7f0a485f023e711f5362354531}{C\-Tool\-Chain} (const \hyperlink{classCToolChain}{C\-Tool\-Chain} \&Tool\-Chain)
+\item 
+virtual \hyperlink{classCToolChain_ac2e68e41307160ce099ccc9b993fdb97}{$\sim$\-C\-Tool\-Chain} (void)
+\begin{DoxyCompactList}\small\item\em Destroys toolchain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCToolChain_aefdda06e5809ed3cb495e702012a22c5}{Gather\-Build\-Tools} (std\-::vector$<$ \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ $>$ \&Source, std\-::vector$<$ \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ $>$ \&Target)
+\item 
+void \hyperlink{classCToolChain_ab6abdc5bf1c18fb31fcd4c61ddf6c83e}{Gather\-Build\-Tools} (void)
+\item 
+\hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ \hyperlink{classCToolChain_a428c84f93d609a49f44e3593be267219}{Find\-Build\-Tool} (const \hyperlink{classCString}{C\-String} \&File\-Extension, const std\-::vector$<$ \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ $>$ \&Tools)
+\item 
+std\-::vector$<$ \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ $>$ \& \hyperlink{classCToolChain_a5c82d30a1c4b3d03224bd1b99d868460}{Get\-Tools} (const \hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6d}{C\-Build\-Tool\-::\-Tool\-Type} Type=\hyperlink{classCBuildTool_a1a622843617ddf9b0ebb1c09c3437e6dab1bafc4d8b635a113d8aa8df402db376}{C\-Build\-Tool\-::bt\-Other})
+\item 
+void \hyperlink{classCToolChain_ae306d261e825581979e8c04b07b3ff6a}{Remove\-Tool} (const \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$Build\-Tool, std\-::vector$<$ \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ $>$ \&Tools)
+\item 
+void \hyperlink{classCToolChain_a9231aa02f75e69ff41cc1393175c712d}{Remove\-Tool} (const \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$Build\-Tool)
+\item 
+void \hyperlink{classCToolChain_a0b8d6c7d661dbcc554e07ade2454d019}{Read} (const Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, \hyperlink{classCString}{C\-String} \&Value)
+\item 
+void \hyperlink{classCToolChain_a1b3a1ec652c21646a617223df8603154}{Read} (const Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, bool \&Value)
+\item 
+void \hyperlink{classCToolChain_a424d78b439daac76767e205e2c2ee068}{Write} (Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, const \hyperlink{classCString}{C\-String} \&Value)
+\item 
+void \hyperlink{classCToolChain_acd131e3b623c6fc123ffe4b9d8e62bc0}{Write} (Ti\-Xml\-Element $\ast$Root, const \hyperlink{classCString}{C\-String} \&Name, const bool Value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_a90d8c8aa754db91b35742c8dc57449a9}{m\-\_\-\-Generic\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_a271a979b37f483a3cf68f9fe767e9762}{m\-\_\-\-Define\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_a68481b8a599878126efe6a1cf5437b7e}{m\-\_\-\-Include\-Dir\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_adb2c560044c351ca28ae63f185d08d7f}{m\-\_\-\-Library\-Dir\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_af99b4228bcf5c250f358f2e8a2977f56}{m\-\_\-\-Link\-Library\-Switch}
+\item 
+std\-::vector$<$ \hyperlink{classCBuildTool}{C\-Build\-Tool} $\ast$ $>$ \hyperlink{classCToolChain_adf1e742673c39f8e11d3f03d693ecdd1}{m\-\_\-\-Build\-Tools}
+\item 
+std\-::vector$<$ \hyperlink{classCPreprocessor}{C\-Preprocessor} $\ast$ $>$ \hyperlink{classCToolChain_a1e8742d7819e4518f0703b3400711530}{m\-\_\-\-Preprocessors}
+\item 
+std\-::vector$<$ \hyperlink{classCAssembler}{C\-Assembler} $\ast$ $>$ \hyperlink{classCToolChain_ab445e06beddaf4236b604f0db7b7ae7e}{m\-\_\-\-Assemblers}
+\item 
+std\-::vector$<$ \hyperlink{classCCompiler}{C\-Compiler} $\ast$ $>$ \hyperlink{classCToolChain_a27d13f0c812a8498d320d71b1de8f387}{m\-\_\-\-Compilers}
+\item 
+std\-::vector$<$ \hyperlink{classCResourceCompiler}{C\-Resource\-Compiler} $\ast$ $>$ \hyperlink{classCToolChain_a3e599d8c68f4a561cbbe8291ff1a3471}{m\-\_\-\-Resource\-Compilers}
+\item 
+std\-::vector$<$ \hyperlink{classCStaticLinker}{C\-Static\-Linker} $\ast$ $>$ \hyperlink{classCToolChain_a1e20a20e78789bb05ee38b8da4ab6b3e}{m\-\_\-\-Static\-Linkers}
+\item 
+std\-::vector$<$ \hyperlink{classCDynamicLinker}{C\-Dynamic\-Linker} $\ast$ $>$ \hyperlink{classCToolChain_a034986cbece7eb5331c42d8842923ade}{m\-\_\-\-Dynamic\-Linkers}
+\item 
+std\-::vector$<$ \hyperlink{classCExecutableLinker}{C\-Executable\-Linker} $\ast$ $>$ \hyperlink{classCToolChain_a52a9b2773fc8c1ae4a31d31e3a595dda}{m\-\_\-\-Executable\-Linkers}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} \hyperlink{classCToolChain_a438936ebbad439c162dc30d55d540fae}{m\-\_\-\-Platform}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCToolChain_afda7f2ac3cb9b3d6a761ce31e52b9b6b}{m\-\_\-\-Alias}
+\begin{DoxyCompactList}\small\item\em Name (alias) of the toolchain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Toolchain description. 
+
+Contains properties of a toolchain (a set of build tools). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCToolChain_aaf2bebe7f6d5e60d7fad029886d401b2}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!C\-Tool\-Chain@{C\-Tool\-Chain}}
+\index{C\-Tool\-Chain@{C\-Tool\-Chain}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{C\-Tool\-Chain}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-::\-C\-Tool\-Chain (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Alias}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classCToolChain_aaf2bebe7f6d5e60d7fad029886d401b2}
+\hypertarget{classCToolChain_ac479aa7f0a485f023e711f5362354531}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!C\-Tool\-Chain@{C\-Tool\-Chain}}
+\index{C\-Tool\-Chain@{C\-Tool\-Chain}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{C\-Tool\-Chain}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-::\-C\-Tool\-Chain (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Tool\-Chain} \&}]{Tool\-Chain}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_ac479aa7f0a485f023e711f5362354531}
+\hypertarget{classCToolChain_ac2e68e41307160ce099ccc9b993fdb97}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!$\sim$\-C\-Tool\-Chain@{$\sim$\-C\-Tool\-Chain}}
+\index{$\sim$\-C\-Tool\-Chain@{$\sim$\-C\-Tool\-Chain}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{$\sim$\-C\-Tool\-Chain}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-::$\sim$\-C\-Tool\-Chain (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_ac2e68e41307160ce099ccc9b993fdb97}
+
+
+Destroys toolchain. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCToolChain_a81b15f66df2066155de40f6fb975a613}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Alias@{Alias}}
+\index{Alias@{Alias}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Alias}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-::\-Alias (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_a81b15f66df2066155de40f6fb975a613}
+
+
+Name (alias) of the toolchain. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCToolChain_afda7f2ac3cb9b3d6a761ce31e52b9b6b}{C\-Tool\-Chain\-::m\-\_\-\-Alias}. 
+\end{DoxyReturn}
+\hypertarget{classCToolChain_a79b9c93c470439d3d6fb7409664d7704}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Assign@{Assign}}
+\index{Assign@{Assign}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Assign}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Tool\-Chain} \&}]{Tool\-Chain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_a79b9c93c470439d3d6fb7409664d7704}
+\hypertarget{classCToolChain_af623550203ec26d297e9366abfa2462e}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Clear@{Clear}}
+\index{Clear@{Clear}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_af623550203ec26d297e9366abfa2462e}
+
+
+Resets the toolchain to the initial state. 
+
+\hypertarget{classCToolChain_af93b3ff256aa8e9c6962c286d353370e}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Create\-Build\-Tool@{Create\-Build\-Tool}}
+\index{Create\-Build\-Tool@{Create\-Build\-Tool}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Create\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool} $\ast$ C\-Tool\-Chain\-::\-Create\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Build\-Tool\-::\-Tool\-Type}}]{Type = {\ttfamily {\bf C\-Build\-Tool\-::bt\-Other}}}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_af93b3ff256aa8e9c6962c286d353370e}
+\hypertarget{classCToolChain_aa6765d5197d898efb01d032ac73b7764}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Create\-Instance@{Create\-Instance}}
+\index{Create\-Instance@{Create\-Instance}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Create\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Tool\-Chain} $\ast$ C\-Tool\-Chain\-::\-Create\-Instance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_aa6765d5197d898efb01d032ac73b7764}
+
+
+Reimplemented in \hyperlink{classCMSVCToolChain_a8291a8e4bf5895300d58de8b3140016e}{C\-M\-S\-V\-C\-Tool\-Chain}, \hyperlink{classCIntelToolChain_a75365a2d8de5733f902e47d07a93fe45}{C\-Intel\-Tool\-Chain}, \hyperlink{classCBorlandToolChain_ae761316ad1cd0f7a4f8cdc6fa33163b0}{C\-Borland\-Tool\-Chain}, and \hyperlink{classCGNUToolChain_a54793a226b09c673cce92a210d7fa471}{C\-G\-N\-U\-Tool\-Chain}.
+
+\hypertarget{classCToolChain_a06e6e1f342bff69990fc3b473111ff42}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Define\-Switch@{Define\-Switch}}
+\index{Define\-Switch@{Define\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Define\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Tool\-Chain\-::\-Define\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_a06e6e1f342bff69990fc3b473111ff42}
+\hypertarget{classCToolChain_a314020139dad9011c865fb13d7204c00}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Find\-Assembler@{Find\-Assembler}}
+\index{Find\-Assembler@{Find\-Assembler}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Find\-Assembler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Assembler} $\ast$ C\-Tool\-Chain\-::\-Find\-Assembler (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Extension}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_a314020139dad9011c865fb13d7204c00}
+\hypertarget{classCToolChain_a428c84f93d609a49f44e3593be267219}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Find\-Build\-Tool@{Find\-Build\-Tool}}
+\index{Find\-Build\-Tool@{Find\-Build\-Tool}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Find\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool} $\ast$ C\-Tool\-Chain\-::\-Find\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Extension, }
+\item[{const std\-::vector$<$ {\bf C\-Build\-Tool} $\ast$ $>$ \&}]{Tools}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a428c84f93d609a49f44e3593be267219}
+\hypertarget{classCToolChain_aec2ff2acf6ec411df7795611778b85bb}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Find\-Build\-Tool@{Find\-Build\-Tool}}
+\index{Find\-Build\-Tool@{Find\-Build\-Tool}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Find\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool} $\ast$ C\-Tool\-Chain\-::\-Find\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Extension}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_aec2ff2acf6ec411df7795611778b85bb}
+\hypertarget{classCToolChain_a2e7a34d130a32c3eb6db21200235bc1b}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Find\-Build\-Tool\-By\-Name@{Find\-Build\-Tool\-By\-Name}}
+\index{Find\-Build\-Tool\-By\-Name@{Find\-Build\-Tool\-By\-Name}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Find\-Build\-Tool\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool} $\ast$ C\-Tool\-Chain\-::\-Find\-Build\-Tool\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Tool\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_a2e7a34d130a32c3eb6db21200235bc1b}
+\hypertarget{classCToolChain_ae8fa3698c5800900e7d18eafd5db2c96}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Find\-Compiler@{Find\-Compiler}}
+\index{Find\-Compiler@{Find\-Compiler}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Find\-Compiler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Compiler} $\ast$ C\-Tool\-Chain\-::\-Find\-Compiler (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Extension}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_ae8fa3698c5800900e7d18eafd5db2c96}
+\hypertarget{classCToolChain_aefdda06e5809ed3cb495e702012a22c5}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Gather\-Build\-Tools@{Gather\-Build\-Tools}}
+\index{Gather\-Build\-Tools@{Gather\-Build\-Tools}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Gather\-Build\-Tools}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Gather\-Build\-Tools (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf C\-Build\-Tool} $\ast$ $>$ \&}]{Source, }
+\item[{std\-::vector$<$ {\bf C\-Build\-Tool} $\ast$ $>$ \&}]{Target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_aefdda06e5809ed3cb495e702012a22c5}
+\hypertarget{classCToolChain_ab6abdc5bf1c18fb31fcd4c61ddf6c83e}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Gather\-Build\-Tools@{Gather\-Build\-Tools}}
+\index{Gather\-Build\-Tools@{Gather\-Build\-Tools}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Gather\-Build\-Tools}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Gather\-Build\-Tools (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_ab6abdc5bf1c18fb31fcd4c61ddf6c83e}
+\hypertarget{classCToolChain_a6b812fe8db4d55267fd7c7ad0b065abe}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Generic\-Switch@{Generic\-Switch}}
+\index{Generic\-Switch@{Generic\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Generic\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Tool\-Chain\-::\-Generic\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_a6b812fe8db4d55267fd7c7ad0b065abe}
+\hypertarget{classCToolChain_a9f391198b3f31a501021525a41b2c944}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Get\-Build\-Tool@{Get\-Build\-Tool}}
+\index{Get\-Build\-Tool@{Get\-Build\-Tool}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Get\-Build\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Build\-Tool} $\ast$ C\-Tool\-Chain\-::\-Get\-Build\-Tool (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{index, }
+\item[{const {\bf C\-Build\-Tool\-::\-Tool\-Type}}]{Type = {\ttfamily {\bf C\-Build\-Tool\-::bt\-Other}}}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_a9f391198b3f31a501021525a41b2c944}
+\hypertarget{classCToolChain_a5c82d30a1c4b3d03224bd1b99d868460}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Get\-Tools@{Get\-Tools}}
+\index{Get\-Tools@{Get\-Tools}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Get\-Tools}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf C\-Build\-Tool} $\ast$ $>$ \& C\-Tool\-Chain\-::\-Get\-Tools (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Build\-Tool\-::\-Tool\-Type}}]{Type = {\ttfamily {\bf C\-Build\-Tool\-::bt\-Other}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a5c82d30a1c4b3d03224bd1b99d868460}
+\hypertarget{classCToolChain_abd38643780c937a6526e493b01ccff17}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Include\-Dir\-Switch@{Include\-Dir\-Switch}}
+\index{Include\-Dir\-Switch@{Include\-Dir\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Include\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Tool\-Chain\-::\-Include\-Dir\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_abd38643780c937a6526e493b01ccff17}
+\hypertarget{classCToolChain_a10c552862de661ff3fd768d26bc97e47}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Library\-Dir\-Switch@{Library\-Dir\-Switch}}
+\index{Library\-Dir\-Switch@{Library\-Dir\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Library\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Tool\-Chain\-::\-Library\-Dir\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_a10c552862de661ff3fd768d26bc97e47}
+\hypertarget{classCToolChain_afe2b0bc1fb442f1da7b2803a1e1b175a}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Link\-Library\-Switch@{Link\-Library\-Switch}}
+\index{Link\-Library\-Switch@{Link\-Library\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Link\-Library\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Tool\-Chain\-::\-Link\-Library\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_afe2b0bc1fb442f1da7b2803a1e1b175a}
+\hypertarget{classCToolChain_abe4054d9081351e099163e2c53b260f8}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!O\-S@{O\-S}}
+\index{O\-S@{O\-S}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{O\-S}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-::\-O\-S (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_abe4054d9081351e099163e2c53b260f8}
+
+
+Platform (operating system) to which this toolchain belongs. 
+
+\begin{DoxyReturn}{Returns}
+reference to C\-Tool\-Chain\-::m\-\_\-\-O\-S\-\_\-\-Type. 
+\end{DoxyReturn}
+\hypertarget{classCToolChain_a0b8d6c7d661dbcc554e07ade2454d019}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Read@{Read}}
+\index{Read@{Read}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{{\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a0b8d6c7d661dbcc554e07ade2454d019}
+\hypertarget{classCToolChain_a1b3a1ec652c21646a617223df8603154}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Read@{Read}}
+\index{Read@{Read}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{bool \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a1b3a1ec652c21646a617223df8603154}
+\hypertarget{classCToolChain_adcd4022b4155c9166c297c5109574d71}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Read@{Read}}
+\index{Read@{Read}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Tool\-Chain\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_adcd4022b4155c9166c297c5109574d71}
+
+
+Reads the toolchain settings from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tool\-Chain\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCToolChain_ae306d261e825581979e8c04b07b3ff6a}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Remove\-Tool@{Remove\-Tool}}
+\index{Remove\-Tool@{Remove\-Tool}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Remove\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Remove\-Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Build\-Tool} $\ast$}]{Build\-Tool, }
+\item[{std\-::vector$<$ {\bf C\-Build\-Tool} $\ast$ $>$ \&}]{Tools}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_ae306d261e825581979e8c04b07b3ff6a}
+\hypertarget{classCToolChain_a9231aa02f75e69ff41cc1393175c712d}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Remove\-Tool@{Remove\-Tool}}
+\index{Remove\-Tool@{Remove\-Tool}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Remove\-Tool}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Remove\-Tool (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Build\-Tool} $\ast$}]{Build\-Tool}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a9231aa02f75e69ff41cc1393175c712d}
+\hypertarget{classCToolChain_a6342cf88cd592baf106b35120d6fc38d}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Remove\-Tool\-By\-Name@{Remove\-Tool\-By\-Name}}
+\index{Remove\-Tool\-By\-Name@{Remove\-Tool\-By\-Name}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Remove\-Tool\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Tool\-Chain\-::\-Remove\-Tool\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Tool\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_a6342cf88cd592baf106b35120d6fc38d}
+\hypertarget{classCToolChain_a3b48ddb23b898b3b6eaa356a2ed6fbf8}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Reset@{Reset}}
+\index{Reset@{Reset}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Reset (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_a3b48ddb23b898b3b6eaa356a2ed6fbf8}
+
+
+Reimplemented in \hyperlink{classCMSVCToolChain_a11d29b3e4e3ac6e16b96adb29687d079}{C\-M\-S\-V\-C\-Tool\-Chain}, \hyperlink{classCIntelToolChain_a96bed03faaf53341c0b046c7163c9705}{C\-Intel\-Tool\-Chain}, \hyperlink{classCBorlandToolChain_a25c0228c4c57d8abf968e0fb32031a55}{C\-Borland\-Tool\-Chain}, and \hyperlink{classCGNUToolChain_ab989eae8567194074277acefff8eee2c}{C\-G\-N\-U\-Tool\-Chain}.
+
+\hypertarget{classCToolChain_aa173b49ddd8bde7ff18142821e667212}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Show@{Show}}
+\index{Show@{Show}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_aa173b49ddd8bde7ff18142821e667212}
+
+
+Prints the toolchain contents to standard output.. 
+
+\hypertarget{classCToolChain_a9e4b747dc5aa2e06e7e14c0f41970c16}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Supports@{Supports}}
+\index{Supports@{Supports}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Supports}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Tool\-Chain\-::\-Supports (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_a9e4b747dc5aa2e06e7e14c0f41970c16}
+
+
+Reimplemented in \hyperlink{classCMSVCToolChain_ae9dba3a4fc567e5f5618e372153fea62}{C\-M\-S\-V\-C\-Tool\-Chain}.
+
+\hypertarget{classCToolChain_af61058748b7566ead7a40827f79a8b31}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!sw@{sw}}
+\index{sw@{sw}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{sw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::sw (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCToolChain_af61058748b7566ead7a40827f79a8b31}
+\hypertarget{classCToolChain_a9cc4b8a255a8dc420be52368d2a6f5bf}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!sw@{sw}}
+\index{sw@{sw}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{sw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::sw (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-Switch}
+\end{DoxyParamCaption}
+) const}}\label{classCToolChain_a9cc4b8a255a8dc420be52368d2a6f5bf}
+\hypertarget{classCToolChain_a6d44d3281af9719ba887ccfb33456f32}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Tools\-Count@{Tools\-Count}}
+\index{Tools\-Count@{Tools\-Count}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Tools\-Count}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t C\-Tool\-Chain\-::\-Tools\-Count (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Build\-Tool\-::\-Tool\-Type}}]{Type = {\ttfamily {\bf C\-Build\-Tool\-::bt\-Other}}}
+\end{DoxyParamCaption}
+)}}\label{classCToolChain_a6d44d3281af9719ba887ccfb33456f32}
+\hypertarget{classCToolChain_a424d78b439daac76767e205e2c2ee068}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Write@{Write}}
+\index{Write@{Write}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const {\bf C\-String} \&}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a424d78b439daac76767e205e2c2ee068}
+\hypertarget{classCToolChain_acd131e3b623c6fc123ffe4b9d8e62bc0}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Write@{Write}}
+\index{Write@{Write}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Root, }
+\item[{const {\bf C\-String} \&}]{Name, }
+\item[{const bool}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_acd131e3b623c6fc123ffe4b9d8e62bc0}
+\hypertarget{classCToolChain_a463cb9af1c861ee1524e98cbb638493d}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!Write@{Write}}
+\index{Write@{Write}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Tool\-Chain\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCToolChain_a463cb9af1c861ee1524e98cbb638493d}
+
+
+Writes the toolchain settings to an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tool\-Chain\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCToolChain_afda7f2ac3cb9b3d6a761ce31e52b9b6b}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Alias@{m\-\_\-\-Alias}}
+\index{m\-\_\-\-Alias@{m\-\_\-\-Alias}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Alias}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-::m\-\_\-\-Alias\hspace{0.3cm}{\ttfamily [private]}}}\label{classCToolChain_afda7f2ac3cb9b3d6a761ce31e52b9b6b}
+
+
+Name (alias) of the toolchain. 
+
+Alias identifies the toolchain and primarily used for toolchain lookup. \hypertarget{classCToolChain_ab445e06beddaf4236b604f0db7b7ae7e}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Assemblers@{m\-\_\-\-Assemblers}}
+\index{m\-\_\-\-Assemblers@{m\-\_\-\-Assemblers}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Assemblers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Assembler} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Assemblers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_ab445e06beddaf4236b604f0db7b7ae7e}
+\hypertarget{classCToolChain_adf1e742673c39f8e11d3f03d693ecdd1}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Build\-Tools@{m\-\_\-\-Build\-Tools}}
+\index{m\-\_\-\-Build\-Tools@{m\-\_\-\-Build\-Tools}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Build\-Tools}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Build\-Tool} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Build\-Tools\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_adf1e742673c39f8e11d3f03d693ecdd1}
+\hypertarget{classCToolChain_a27d13f0c812a8498d320d71b1de8f387}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Compilers@{m\-\_\-\-Compilers}}
+\index{m\-\_\-\-Compilers@{m\-\_\-\-Compilers}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Compilers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Compiler} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Compilers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a27d13f0c812a8498d320d71b1de8f387}
+\hypertarget{classCToolChain_a271a979b37f483a3cf68f9fe767e9762}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Define\-Switch@{m\-\_\-\-Define\-Switch}}
+\index{m\-\_\-\-Define\-Switch@{m\-\_\-\-Define\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Define\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::m\-\_\-\-Define\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a271a979b37f483a3cf68f9fe767e9762}
+\hypertarget{classCToolChain_a034986cbece7eb5331c42d8842923ade}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Dynamic\-Linkers@{m\-\_\-\-Dynamic\-Linkers}}
+\index{m\-\_\-\-Dynamic\-Linkers@{m\-\_\-\-Dynamic\-Linkers}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Dynamic\-Linkers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Dynamic\-Linker} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Dynamic\-Linkers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a034986cbece7eb5331c42d8842923ade}
+\hypertarget{classCToolChain_a52a9b2773fc8c1ae4a31d31e3a595dda}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Executable\-Linkers@{m\-\_\-\-Executable\-Linkers}}
+\index{m\-\_\-\-Executable\-Linkers@{m\-\_\-\-Executable\-Linkers}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Executable\-Linkers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Executable\-Linker} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Executable\-Linkers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a52a9b2773fc8c1ae4a31d31e3a595dda}
+\hypertarget{classCToolChain_a90d8c8aa754db91b35742c8dc57449a9}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Generic\-Switch@{m\-\_\-\-Generic\-Switch}}
+\index{m\-\_\-\-Generic\-Switch@{m\-\_\-\-Generic\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Generic\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::m\-\_\-\-Generic\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a90d8c8aa754db91b35742c8dc57449a9}
+\hypertarget{classCToolChain_a68481b8a599878126efe6a1cf5437b7e}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Include\-Dir\-Switch@{m\-\_\-\-Include\-Dir\-Switch}}
+\index{m\-\_\-\-Include\-Dir\-Switch@{m\-\_\-\-Include\-Dir\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Include\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::m\-\_\-\-Include\-Dir\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a68481b8a599878126efe6a1cf5437b7e}
+\hypertarget{classCToolChain_adb2c560044c351ca28ae63f185d08d7f}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Library\-Dir\-Switch@{m\-\_\-\-Library\-Dir\-Switch}}
+\index{m\-\_\-\-Library\-Dir\-Switch@{m\-\_\-\-Library\-Dir\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Library\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::m\-\_\-\-Library\-Dir\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_adb2c560044c351ca28ae63f185d08d7f}
+\hypertarget{classCToolChain_af99b4228bcf5c250f358f2e8a2977f56}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Link\-Library\-Switch@{m\-\_\-\-Link\-Library\-Switch}}
+\index{m\-\_\-\-Link\-Library\-Switch@{m\-\_\-\-Link\-Library\-Switch}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Link\-Library\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Tool\-Chain\-::m\-\_\-\-Link\-Library\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_af99b4228bcf5c250f358f2e8a2977f56}
+\hypertarget{classCToolChain_a438936ebbad439c162dc30d55d540fae}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Platform@{m\-\_\-\-Platform}}
+\index{m\-\_\-\-Platform@{m\-\_\-\-Platform}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Platform\-::\-O\-S\-\_\-\-Type} C\-Tool\-Chain\-::m\-\_\-\-Platform\hspace{0.3cm}{\ttfamily [private]}}}\label{classCToolChain_a438936ebbad439c162dc30d55d540fae}
+\hypertarget{classCToolChain_a1e8742d7819e4518f0703b3400711530}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Preprocessors@{m\-\_\-\-Preprocessors}}
+\index{m\-\_\-\-Preprocessors@{m\-\_\-\-Preprocessors}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Preprocessors}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Preprocessor} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Preprocessors\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a1e8742d7819e4518f0703b3400711530}
+\hypertarget{classCToolChain_a3e599d8c68f4a561cbbe8291ff1a3471}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Resource\-Compilers@{m\-\_\-\-Resource\-Compilers}}
+\index{m\-\_\-\-Resource\-Compilers@{m\-\_\-\-Resource\-Compilers}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Resource\-Compilers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Resource\-Compiler} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Resource\-Compilers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a3e599d8c68f4a561cbbe8291ff1a3471}
+\hypertarget{classCToolChain_a1e20a20e78789bb05ee38b8da4ab6b3e}{\index{C\-Tool\-Chain@{C\-Tool\-Chain}!m\-\_\-\-Static\-Linkers@{m\-\_\-\-Static\-Linkers}}
+\index{m\-\_\-\-Static\-Linkers@{m\-\_\-\-Static\-Linkers}!CToolChain@{C\-Tool\-Chain}}
+\subsubsection[{m\-\_\-\-Static\-Linkers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf C\-Static\-Linker} $\ast$$>$ C\-Tool\-Chain\-::m\-\_\-\-Static\-Linkers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChain_a1e20a20e78789bb05ee38b8da4ab6b3e}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{toolchains_8h}{toolchains.\-h}\item 
+src/doc/\hyperlink{toolchains_8dox}{toolchains.\-dox}\item 
+src/\hyperlink{toolchains_8cpp}{toolchains.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,242 @@
+\hypertarget{classCMakefileVariable}{\section{C\-Makefile\-Variable Class Reference}
+\label{classCMakefileVariable}\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}}
+}
+
+
+Makefile macro variable definition.  
+
+
+
+
+{\ttfamily \#include $<$makefile.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCMakefileVariable_aa8b16026f63f5293f70d03cb3b2a3f44}{Name} (void)
+\begin{DoxyCompactList}\small\item\em Returns the name of the macro variable. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCMakefileVariable_afd4cc467a611ed20b71cc3751b6af6f6}{Values} (void)
+\begin{DoxyCompactList}\small\item\em Returns the value of the macro variable as a list of strings. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCMakefileVariable_a142ae75dbbb66bc8cc8ff022191588bd}{Get\-Value} (const int Index=0)
+\begin{DoxyCompactList}\small\item\em Returns a string number {\itshape Index} from the value strings. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileVariable_a447d1ace1f70fc69da0bb5f5fc214b21}{Set\-Value} (const \hyperlink{classCString}{C\-String} \&New\-Value, const int Index=0)
+\begin{DoxyCompactList}\small\item\em Replaces a string number {\itshape Index} in the value strings with the {\itshape New\-Value} string. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileVariable_ab6da5ff7718f4f72c62c7f788bd89688}{Add\-Value} (const \hyperlink{classCString}{C\-String} \&New\-Value)
+\begin{DoxyCompactList}\small\item\em Appends a list of value strings with the {\itshape New\-Value} string. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCMakefileVariable_a59addb2aafefc582adea0282f6345855}{Multiline} (void)
+\begin{DoxyCompactList}\small\item\em Allows line-\/wrapping of variable's value text. \end{DoxyCompactList}\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCMakefileVariable_a627138c1aed54cb0c94dba4d89c06a4f}{Join\-Values} (void)
+\begin{DoxyCompactList}\small\item\em Returns the variable value as a single string. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileVariable_a2443c9fd387bc8e35bf3410363c8efcd}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the macro variable to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classCMakefileVariable_a52aee3c1d3fc4c93392188ec3ec8a642}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints properties of the macro variable to the standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileVariable_a28e3a72b6a57eb5770f1977d5f80c8b7}{C\-Makefile\-Variable} (void)
+\begin{DoxyCompactList}\small\item\em Creates macro variable. \end{DoxyCompactList}\item 
+\hyperlink{classCMakefileVariable_ad61d15738e7073a5fd00e58d13d17ab9}{$\sim$\-C\-Makefile\-Variable} (void)
+\begin{DoxyCompactList}\small\item\em Destroys macro variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCMakefileVariable_af46c1f28a1592a7ae46def219ba676ba}{m\-\_\-\-Name}
+\begin{DoxyCompactList}\small\item\em Name of the makefile macro variable. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCMakefileVariable_a73a07150ed0c365061d5436a40959e33}{m\-\_\-\-Values}
+\begin{DoxyCompactList}\small\item\em A list of strings which concatenation gives the actual value of the macro variable. \end{DoxyCompactList}\item 
+bool \hyperlink{classCMakefileVariable_adf528f9e7b68a9d9846d82b75266bc2b}{m\-\_\-\-Multiline}
+\begin{DoxyCompactList}\small\item\em Allows line-\/wrapping of variable's value text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Makefile macro variable definition. 
+
+Manages variable properties and generates its text representation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCMakefileVariable_a28e3a72b6a57eb5770f1977d5f80c8b7}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!C\-Makefile\-Variable@{C\-Makefile\-Variable}}
+\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{C\-Makefile\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::\-C\-Makefile\-Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_a28e3a72b6a57eb5770f1977d5f80c8b7}
+
+
+Creates macro variable. 
+
+\hypertarget{classCMakefileVariable_ad61d15738e7073a5fd00e58d13d17ab9}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!$\sim$\-C\-Makefile\-Variable@{$\sim$\-C\-Makefile\-Variable}}
+\index{$\sim$\-C\-Makefile\-Variable@{$\sim$\-C\-Makefile\-Variable}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{$\sim$\-C\-Makefile\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::$\sim$\-C\-Makefile\-Variable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_ad61d15738e7073a5fd00e58d13d17ab9}
+
+
+Destroys macro variable. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCMakefileVariable_ab6da5ff7718f4f72c62c7f788bd89688}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Add\-Value@{Add\-Value}}
+\index{Add\-Value@{Add\-Value}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Add\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Variable\-::\-Add\-Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{New\-Value}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_ab6da5ff7718f4f72c62c7f788bd89688}
+
+
+Appends a list of value strings with the {\itshape New\-Value} string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\-Value} & a new value string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCMakefileVariable_a2443c9fd387bc8e35bf3410363c8efcd}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Clear@{Clear}}
+\index{Clear@{Clear}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Variable\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_a2443c9fd387bc8e35bf3410363c8efcd}
+
+
+Resets the macro variable to the initial state. 
+
+\hypertarget{classCMakefileVariable_a142ae75dbbb66bc8cc8ff022191588bd}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Get\-Value@{Get\-Value}}
+\index{Get\-Value@{Get\-Value}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Makefile\-Variable\-::\-Get\-Value (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_a142ae75dbbb66bc8cc8ff022191588bd}
+
+
+Returns a string number {\itshape Index} from the value strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & a number of the value string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a value string or an empty string. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileVariable_a627138c1aed54cb0c94dba4d89c06a4f}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Join\-Values@{Join\-Values}}
+\index{Join\-Values@{Join\-Values}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Join\-Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Makefile\-Variable\-::\-Join\-Values (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_a627138c1aed54cb0c94dba4d89c06a4f}
+
+
+Returns the variable value as a single string. 
+
+\begin{DoxyReturn}{Returns}
+concatenation of value strings.
+\end{DoxyReturn}
+The value strings \hyperlink{classCMakefileVariable_a73a07150ed0c365061d5436a40959e33}{C\-Makefile\-Variable\-::m\-\_\-\-Values} are joined with space character if multiline mode is disabled or with {\ttfamily ' \textbackslash{}\textbackslash{}\textbackslash{}n\textbackslash{}t'} (space backslash eol tab) sequence otherwise. \hypertarget{classCMakefileVariable_a59addb2aafefc582adea0282f6345855}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Multiline@{Multiline}}
+\index{Multiline@{Multiline}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Multiline}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::\-Multiline (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileVariable_a59addb2aafefc582adea0282f6345855}
+
+
+Allows line-\/wrapping of variable's value text. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileVariable_adf528f9e7b68a9d9846d82b75266bc2b}{C\-Makefile\-Variable\-::m\-\_\-\-Multiline}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileVariable_aa8b16026f63f5293f70d03cb3b2a3f44}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Name@{Name}}
+\index{Name@{Name}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileVariable_aa8b16026f63f5293f70d03cb3b2a3f44}
+
+
+Returns the name of the macro variable. 
+
+\begin{DoxyReturn}{Returns}
+referece to \hyperlink{classCMakefileVariable_af46c1f28a1592a7ae46def219ba676ba}{C\-Makefile\-Variable\-::m\-\_\-\-Name}. 
+\end{DoxyReturn}
+\hypertarget{classCMakefileVariable_a447d1ace1f70fc69da0bb5f5fc214b21}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Set\-Value@{Set\-Value}}
+\index{Set\-Value@{Set\-Value}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Set\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Variable\-::\-Set\-Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{New\-Value, }
+\item[{const int}]{Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_a447d1ace1f70fc69da0bb5f5fc214b21}
+
+
+Replaces a string number {\itshape Index} in the value strings with the {\itshape New\-Value} string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\-Value} & a new value of the value string. \\
+\hline
+{\em Index} & a number of the value string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCMakefileVariable_a52aee3c1d3fc4c93392188ec3ec8a642}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Show@{Show}}
+\index{Show@{Show}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Makefile\-Variable\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCMakefileVariable_a52aee3c1d3fc4c93392188ec3ec8a642}
+
+
+Prints properties of the macro variable to the standard output. 
+
+\hypertarget{classCMakefileVariable_afd4cc467a611ed20b71cc3751b6af6f6}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!Values@{Values}}
+\index{Values@{Values}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{Values}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::\-Values (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCMakefileVariable_afd4cc467a611ed20b71cc3751b6af6f6}
+
+
+Returns the value of the macro variable as a list of strings. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCMakefileVariable_a73a07150ed0c365061d5436a40959e33}{C\-Makefile\-Variable\-::m\-\_\-\-Values}. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCMakefileVariable_adf528f9e7b68a9d9846d82b75266bc2b}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!m\-\_\-\-Multiline@{m\-\_\-\-Multiline}}
+\index{m\-\_\-\-Multiline@{m\-\_\-\-Multiline}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{m\-\_\-\-Multiline}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::m\-\_\-\-Multiline\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileVariable_adf528f9e7b68a9d9846d82b75266bc2b}
+
+
+Allows line-\/wrapping of variable's value text. 
+
+\hypertarget{classCMakefileVariable_af46c1f28a1592a7ae46def219ba676ba}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!m\-\_\-\-Name@{m\-\_\-\-Name}}
+\index{m\-\_\-\-Name@{m\-\_\-\-Name}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{m\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::m\-\_\-\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileVariable_af46c1f28a1592a7ae46def219ba676ba}
+
+
+Name of the makefile macro variable. 
+
+\hypertarget{classCMakefileVariable_a73a07150ed0c365061d5436a40959e33}{\index{C\-Makefile\-Variable@{C\-Makefile\-Variable}!m\-\_\-\-Values@{m\-\_\-\-Values}}
+\index{m\-\_\-\-Values@{m\-\_\-\-Values}!CMakefileVariable@{C\-Makefile\-Variable}}
+\subsubsection[{m\-\_\-\-Values}]{\setlength{\rightskip}{0pt plus 5cm}C\-Makefile\-Variable\-::m\-\_\-\-Values\hspace{0.3cm}{\ttfamily [private]}}}\label{classCMakefileVariable_a73a07150ed0c365061d5436a40959e33}
+
+
+A list of strings which concatenation gives the actual value of the macro variable. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{makefile_8h}{makefile.\-h}\item 
+src/doc/\hyperlink{makefile_8dox}{makefile.\-dox}\item 
+src/\hyperlink{makefile_8cpp}{makefile.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,173 @@
+\hypertarget{classCCompiler}{\section{C\-Compiler Class Reference}
+\label{classCCompiler}\index{C\-Compiler@{C\-Compiler}}
+}
+
+
+{\ttfamily \#include $<$buildtools.\-h$>$}
+
+Inheritance diagram for C\-Compiler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{d6/d5a/classCCompiler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCCompiler_a717ce85599a42b1477a3fce3a34459ba}{Include\-Dir\-Switch} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCCompiler_a3919ec93f4e95f23c617c3cc377a9201}{Define\-Switch} (void)
+\item 
+bool \& \hyperlink{classCCompiler_a8c93f10399942769018a0717bba38ea6}{Need\-Dependencies} (void)
+\item 
+virtual \hyperlink{classCIncludeSearchFilter}{C\-Include\-Search\-Filter} $\ast$ \hyperlink{classCCompiler_a1dc477f47e953ddd4c653f3ba85c5468}{Include\-Search\-Filter} (void) const 
+\item 
+virtual \hyperlink{classCCompiler}{C\-Compiler} $\ast$ \hyperlink{classCCompiler_a3d4aaaf69e1ba6070c729fd042d90012}{Create\-Instance} (void)
+\item 
+virtual void \hyperlink{classCCompiler_ac842b165479db817bb86d56367988b10}{Read} (const Ti\-Xml\-Element $\ast$Build\-Tool\-Root)
+\item 
+virtual void \hyperlink{classCCompiler_a25f64fb47c532b5261c44aca09b34cfa}{Write} (Ti\-Xml\-Element $\ast$Build\-Tool\-Root)
+\item 
+virtual void \hyperlink{classCCompiler_a07a1bbfb0fc606cf74bccc1ab64a64e8}{Show} (void)
+\item 
+\hyperlink{classCCompiler_ab6af9b8296df0390fc4b3d21374a0546}{C\-Compiler} (void)
+\item 
+\hyperlink{classCCompiler_acf3d4756541ce4cf3872de266313dc01}{C\-Compiler} (const \hyperlink{classCCompiler}{C\-Compiler} \&Compiler)
+\item 
+virtual \hyperlink{classCCompiler_ac305ef10b09c43a81f14389e482f07f8}{$\sim$\-C\-Compiler} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCompiler_a68e5d39931d7dcaabe9fe019a3838ed4}{m\-\_\-\-Include\-Dir\-Switch}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCompiler_aec5b354b2fa305ca95696cb2fb7d8e79}{m\-\_\-\-Define\-Switch}
+\item 
+bool \hyperlink{classCCompiler_a8fb628e8ffdab42f6d562229e4e9d2ed}{m\-\_\-\-Need\-Dependencies}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCompiler_ab6af9b8296df0390fc4b3d21374a0546}{\index{C\-Compiler@{C\-Compiler}!C\-Compiler@{C\-Compiler}}
+\index{C\-Compiler@{C\-Compiler}!CCompiler@{C\-Compiler}}
+\subsubsection[{C\-Compiler}]{\setlength{\rightskip}{0pt plus 5cm}C\-Compiler\-::\-C\-Compiler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCompiler_ab6af9b8296df0390fc4b3d21374a0546}
+\hypertarget{classCCompiler_acf3d4756541ce4cf3872de266313dc01}{\index{C\-Compiler@{C\-Compiler}!C\-Compiler@{C\-Compiler}}
+\index{C\-Compiler@{C\-Compiler}!CCompiler@{C\-Compiler}}
+\subsubsection[{C\-Compiler}]{\setlength{\rightskip}{0pt plus 5cm}C\-Compiler\-::\-C\-Compiler (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Compiler} \&}]{Compiler}
+\end{DoxyParamCaption}
+)}}\label{classCCompiler_acf3d4756541ce4cf3872de266313dc01}
+\hypertarget{classCCompiler_ac305ef10b09c43a81f14389e482f07f8}{\index{C\-Compiler@{C\-Compiler}!$\sim$\-C\-Compiler@{$\sim$\-C\-Compiler}}
+\index{$\sim$\-C\-Compiler@{$\sim$\-C\-Compiler}!CCompiler@{C\-Compiler}}
+\subsubsection[{$\sim$\-C\-Compiler}]{\setlength{\rightskip}{0pt plus 5cm}C\-Compiler\-::$\sim$\-C\-Compiler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCompiler_ac305ef10b09c43a81f14389e482f07f8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCompiler_a3d4aaaf69e1ba6070c729fd042d90012}{\index{C\-Compiler@{C\-Compiler}!Create\-Instance@{Create\-Instance}}
+\index{Create\-Instance@{Create\-Instance}!CCompiler@{C\-Compiler}}
+\subsubsection[{Create\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Compiler} $\ast$ C\-Compiler\-::\-Create\-Instance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCompiler_a3d4aaaf69e1ba6070c729fd042d90012}
+
+
+Reimplemented from \hyperlink{classCBuildTool_aa7f0e7c0bd7f75c71d37df066bcb581e}{C\-Build\-Tool}.
+
+
+
+Reimplemented in \hyperlink{classCMSVCResourceCompiler_aabd1683b76c181322754107af65ed8e0}{C\-M\-S\-V\-C\-Resource\-Compiler}, \hyperlink{classCMSVCppCompiler_ace8c0f315b83286474cdf8c8b41db75a}{C\-M\-S\-V\-Cpp\-Compiler}, \hyperlink{classCMSVCCompiler_a00dec77c231cace2f66fe45fccb25c7e}{C\-M\-S\-V\-C\-Compiler}, \hyperlink{classCIntelCppCompiler_a2e75b0ac5a7860128f25f29698f51509}{C\-Intel\-Cpp\-Compiler}, \hyperlink{classCIntelCCompiler_a4f259da4011feabc53b1ebf9a26bd2de}{C\-Intel\-C\-Compiler}, \hyperlink{classCBorlandResourceCompiler_a5c6aeef4fa07fb9693feb860a70729e0}{C\-Borland\-Resource\-Compiler}, \hyperlink{classCBorlandCppCompiler_a49178aa21245a1400f38c71631b7fa78}{C\-Borland\-Cpp\-Compiler}, \hyperlink{classCGNUARMWindowsResourceCompiler_a8da0eff0b561e69f2e2178965cd69253}{C\-G\-N\-U\-A\-R\-M\-Windows\-Resource\-Compiler}, \hyperlink{classCGNUARMCppCompiler_ae61a4db30f31a36bc46341da83ac9c63}{C\-G\-N\-U\-A\-R\-M\-Cpp\-Compiler}, \hyperlink{classCGNUARMCCompiler_a3e102dcc65d172a098282c5554e79302}{C\-G\-N\-U\-A\-R\-M\-C\-Compiler}, \hyperlink{classCGNUAVRCppCompiler_ac38cdc207e9dce42f53fef90ebaa3b87}{C\-G\-N\-U\-A\-V\-R\-Cpp\-Compiler}, \hyperlink{classCGNUAVRCCompiler_ad5630a463e0a41b5ecf28295f2c16e2f}{C\-G\-N\-U\-A\-V\-R\-C\-Compiler}, \hyperlink{classCGNUWindowsResourceCompiler_a295b322f12aa797537c0ef38bed0a9a5}{C\-G\-N\-U\-Windows\-Resource\-Compiler}, \hyperlink{classCGNUFortran90Compiler_a40bbc9c4d1417331e65990ed6f402d24}{C\-G\-N\-U\-Fortran90\-Compiler}, \hyperlink{classCGNUFortran77Compiler_ac9303b9366e63a08983cabcdfcb5cf06}{C\-G\-N\-U\-Fortran77\-Compiler}, \hyperlink{classCGNUCppCompiler_a0e6856b3906b6b32951f9796fba16316}{C\-G\-N\-U\-Cpp\-Compiler}, \hyperlink{classCGNUCCompiler_ae69827132a9bc1170f2073bf4ded88bc}{C\-G\-N\-U\-C\-Compiler}, \hyperlink{classCResourceCompiler_a4f46ae1558a0096b040eb593d28a810c}{C\-Resource\-Compiler}, and \hyperlink{classCAssembler_abc4ab373b93fc0980c204764afa73306}{C\-Assembler}.
+
+\hypertarget{classCCompiler_a3919ec93f4e95f23c617c3cc377a9201}{\index{C\-Compiler@{C\-Compiler}!Define\-Switch@{Define\-Switch}}
+\index{Define\-Switch@{Define\-Switch}!CCompiler@{C\-Compiler}}
+\subsubsection[{Define\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Compiler\-::\-Define\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCompiler_a3919ec93f4e95f23c617c3cc377a9201}
+\hypertarget{classCCompiler_a717ce85599a42b1477a3fce3a34459ba}{\index{C\-Compiler@{C\-Compiler}!Include\-Dir\-Switch@{Include\-Dir\-Switch}}
+\index{Include\-Dir\-Switch@{Include\-Dir\-Switch}!CCompiler@{C\-Compiler}}
+\subsubsection[{Include\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Compiler\-::\-Include\-Dir\-Switch (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCompiler_a717ce85599a42b1477a3fce3a34459ba}
+\hypertarget{classCCompiler_a1dc477f47e953ddd4c653f3ba85c5468}{\index{C\-Compiler@{C\-Compiler}!Include\-Search\-Filter@{Include\-Search\-Filter}}
+\index{Include\-Search\-Filter@{Include\-Search\-Filter}!CCompiler@{C\-Compiler}}
+\subsubsection[{Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf C\-Include\-Search\-Filter}$\ast$ C\-Compiler\-::\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classCCompiler_a1dc477f47e953ddd4c653f3ba85c5468}
+
+
+Reimplemented in \hyperlink{classCMSVCppCompiler_a67117b6e7c193f8d7357f32b868252cd}{C\-M\-S\-V\-Cpp\-Compiler}, \hyperlink{classCMSVCCompiler_a0ae941f148de8e1cbfefa8361034aeec}{C\-M\-S\-V\-C\-Compiler}, \hyperlink{classCIntelCppCompiler_a7937ce18c293da16161f14e51d873b5a}{C\-Intel\-Cpp\-Compiler}, \hyperlink{classCIntelCCompiler_a1864ae37aea1eecddfcec8ab456dc8a3}{C\-Intel\-C\-Compiler}, \hyperlink{classCBorlandCppCompiler_a9619772f500bb2f06d4a07349b08d05d}{C\-Borland\-Cpp\-Compiler}, \hyperlink{classCGNUARMCppCompiler_a061d65ad921d3856be6e2b8f80976106}{C\-G\-N\-U\-A\-R\-M\-Cpp\-Compiler}, \hyperlink{classCGNUARMCCompiler_a455c9c55a802d6a2e7e6d5146e252554}{C\-G\-N\-U\-A\-R\-M\-C\-Compiler}, \hyperlink{classCGNUAVRCppCompiler_aae41e83908ef6be8ae274f75fb6a1cbe}{C\-G\-N\-U\-A\-V\-R\-Cpp\-Compiler}, \hyperlink{classCGNUAVRCCompiler_a278ccc28910fb9cb8a20587bd966cf55}{C\-G\-N\-U\-A\-V\-R\-C\-Compiler}, \hyperlink{classCGNUCppCompiler_a70e0a0d27cded35b66807d8e2804ade8}{C\-G\-N\-U\-Cpp\-Compiler}, and \hyperlink{classCGNUCCompiler_a1dc37484a88684465d9bbfed8ee335e2}{C\-G\-N\-U\-C\-Compiler}.
+
+\hypertarget{classCCompiler_a8c93f10399942769018a0717bba38ea6}{\index{C\-Compiler@{C\-Compiler}!Need\-Dependencies@{Need\-Dependencies}}
+\index{Need\-Dependencies@{Need\-Dependencies}!CCompiler@{C\-Compiler}}
+\subsubsection[{Need\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Compiler\-::\-Need\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCompiler_a8c93f10399942769018a0717bba38ea6}
+\hypertarget{classCCompiler_ac842b165479db817bb86d56367988b10}{\index{C\-Compiler@{C\-Compiler}!Read@{Read}}
+\index{Read@{Read}!CCompiler@{C\-Compiler}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Compiler\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Build\-Tool\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCompiler_ac842b165479db817bb86d56367988b10}
+
+
+Reimplemented from \hyperlink{classCBuildTool_a299d87943c0f68dde5316318cc0838f8}{C\-Build\-Tool}.
+
+\hypertarget{classCCompiler_a07a1bbfb0fc606cf74bccc1ab64a64e8}{\index{C\-Compiler@{C\-Compiler}!Show@{Show}}
+\index{Show@{Show}!CCompiler@{C\-Compiler}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Compiler\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCompiler_a07a1bbfb0fc606cf74bccc1ab64a64e8}
+
+
+Reimplemented from \hyperlink{classCBuildTool_a69815d1393a61dc16b2cc2d0552cd5ac}{C\-Build\-Tool}.
+
+\hypertarget{classCCompiler_a25f64fb47c532b5261c44aca09b34cfa}{\index{C\-Compiler@{C\-Compiler}!Write@{Write}}
+\index{Write@{Write}!CCompiler@{C\-Compiler}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Compiler\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Build\-Tool\-Root}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCompiler_a25f64fb47c532b5261c44aca09b34cfa}
+
+
+Reimplemented from \hyperlink{classCBuildTool_af0331a777785bc2d15236b5c74321ed2}{C\-Build\-Tool}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCompiler_aec5b354b2fa305ca95696cb2fb7d8e79}{\index{C\-Compiler@{C\-Compiler}!m\-\_\-\-Define\-Switch@{m\-\_\-\-Define\-Switch}}
+\index{m\-\_\-\-Define\-Switch@{m\-\_\-\-Define\-Switch}!CCompiler@{C\-Compiler}}
+\subsubsection[{m\-\_\-\-Define\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Compiler\-::m\-\_\-\-Define\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCompiler_aec5b354b2fa305ca95696cb2fb7d8e79}
+\hypertarget{classCCompiler_a68e5d39931d7dcaabe9fe019a3838ed4}{\index{C\-Compiler@{C\-Compiler}!m\-\_\-\-Include\-Dir\-Switch@{m\-\_\-\-Include\-Dir\-Switch}}
+\index{m\-\_\-\-Include\-Dir\-Switch@{m\-\_\-\-Include\-Dir\-Switch}!CCompiler@{C\-Compiler}}
+\subsubsection[{m\-\_\-\-Include\-Dir\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Compiler\-::m\-\_\-\-Include\-Dir\-Switch\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCompiler_a68e5d39931d7dcaabe9fe019a3838ed4}
+\hypertarget{classCCompiler_a8fb628e8ffdab42f6d562229e4e9d2ed}{\index{C\-Compiler@{C\-Compiler}!m\-\_\-\-Need\-Dependencies@{m\-\_\-\-Need\-Dependencies}}
+\index{m\-\_\-\-Need\-Dependencies@{m\-\_\-\-Need\-Dependencies}!CCompiler@{C\-Compiler}}
+\subsubsection[{m\-\_\-\-Need\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Compiler\-::m\-\_\-\-Need\-Dependencies\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCCompiler_a8fb628e8ffdab42f6d562229e4e9d2ed}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{buildtools_8h}{buildtools.\-h}\item 
+src/\hyperlink{buildtools_8cpp}{buildtools.\-cpp}\end{DoxyCompactItemize}

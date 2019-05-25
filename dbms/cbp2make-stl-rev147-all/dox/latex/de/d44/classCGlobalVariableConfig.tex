@@ -1,0 +1,246 @@
+\hypertarget{classCGlobalVariableConfig}{\section{C\-Global\-Variable\-Config Class Reference}
+\label{classCGlobalVariableConfig}\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}}
+}
+
+
+Manages global compiler variables configuration.  
+
+
+
+
+{\ttfamily \#include $<$cbglobalvar.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCGlobalVariableConfig_a025623c448640d52acf1e54b2d5ea351}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the configuration to the initial state. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCGlobalVariableConfig_a825f60c73564353fa46bea8a5db44a81}{Count} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns the number of variable sets in configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableSet}{C\-Global\-Variable\-Set} $\ast$ \hyperlink{classCGlobalVariableConfig_a19cdea45eda20720b16ea953de9b4f96}{Get} (const size\-\_\-t Index)
+\begin{DoxyCompactList}\small\item\em Returns a set of variables by index. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableSet}{C\-Global\-Variable\-Set} $\ast$ \hyperlink{classCGlobalVariableConfig_a7f25689ffb6f29407d5036284eb2d3b2}{Find} (const \hyperlink{classCString}{C\-String} \&Name)
+\begin{DoxyCompactList}\small\item\em Returns a set of variables by name. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableSet}{C\-Global\-Variable\-Set} $\ast$ \hyperlink{classCGlobalVariableConfig_a19cb59443e659ede0e870a156519c1eb}{Add} (const \hyperlink{classCString}{C\-String} \&Name)
+\begin{DoxyCompactList}\small\item\em Adds new set of global compiler variables. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariableConfig_a5e35aeefba0d66385508454896a274fb}{Add\-Default} (void)
+\begin{DoxyCompactList}\small\item\em Adds the 'default' set of variables. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariableConfig_a1ccd44e97ef79a815e9409ea6b7eb2cd}{Remove} (const \hyperlink{classCString}{C\-String} \&Name)
+\begin{DoxyCompactList}\small\item\em Removes a set of variables. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariableConfig_a090f07dc4c04440e0c2179806ea11550}{Read} (const Ti\-Xml\-Element $\ast$Global\-Variable\-Config\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the global compiler variable configuration from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariableConfig_a0d2b06679de9b11ed462d6d7ca5fd0c3}{Write} (Ti\-Xml\-Element $\ast$Global\-Variable\-Config\-Root)
+\begin{DoxyCompactList}\small\item\em Writes the global compiler variable configuration to an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCGlobalVariableConfig_a4c969184dff8036ffb7f4d3064807de0}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints the global compiler variable configuration contents to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableConfig_a1b2d3082e5c01f53abe7ad0d98a587e6}{C\-Global\-Variable\-Config} (void)
+\begin{DoxyCompactList}\small\item\em Creates global compiler variable configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableConfig_af745031486e56f2c599fe629097e5de1}{$\sim$\-C\-Global\-Variable\-Config} (void)
+\begin{DoxyCompactList}\small\item\em Destroys global compiler variable configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classCGlobalVariableSet}{C\-Global\-Variable\-Set} $\ast$ $>$ \hyperlink{classCGlobalVariableConfig_a19fe97fb18fa079b3f8398fd9c75e46e}{m\-\_\-\-Variable\-Sets}
+\begin{DoxyCompactList}\small\item\em List of variable sets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages global compiler variables configuration. 
+
+Configuration consists of a number of sets of variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCGlobalVariableConfig_a1b2d3082e5c01f53abe7ad0d98a587e6}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}}
+\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{C\-Global\-Variable\-Config}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-C\-Global\-Variable\-Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a1b2d3082e5c01f53abe7ad0d98a587e6}
+
+
+Creates global compiler variable configuration. 
+
+\hypertarget{classCGlobalVariableConfig_af745031486e56f2c599fe629097e5de1}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!$\sim$\-C\-Global\-Variable\-Config@{$\sim$\-C\-Global\-Variable\-Config}}
+\index{$\sim$\-C\-Global\-Variable\-Config@{$\sim$\-C\-Global\-Variable\-Config}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{$\sim$\-C\-Global\-Variable\-Config}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::$\sim$\-C\-Global\-Variable\-Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_af745031486e56f2c599fe629097e5de1}
+
+
+Destroys global compiler variable configuration. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCGlobalVariableConfig_a19cb59443e659ede0e870a156519c1eb}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Add@{Add}}
+\index{Add@{Add}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a19cb59443e659ede0e870a156519c1eb}
+
+
+Adds new set of global compiler variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of the set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the set of variables.
+\end{DoxyReturn}
+If a variable set with name {\itshape Name} already exists, new variable set will not be created. \hypertarget{classCGlobalVariableConfig_a5e35aeefba0d66385508454896a274fb}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Add\-Default@{Add\-Default}}
+\index{Add\-Default@{Add\-Default}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Add\-Default}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Add\-Default (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a5e35aeefba0d66385508454896a274fb}
+
+
+Adds the 'default' set of variables. 
+
+The default set cannot be removed. However, it can be cleared by a call {\itshape Remove(\char`\"{}default\char`\"{})} which removes the existing default set and creates an empty default set again right away. \hypertarget{classCGlobalVariableConfig_a025623c448640d52acf1e54b2d5ea351}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Clear@{Clear}}
+\index{Clear@{Clear}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a025623c448640d52acf1e54b2d5ea351}
+
+
+Resets the configuration to the initial state. 
+
+\hypertarget{classCGlobalVariableConfig_a825f60c73564353fa46bea8a5db44a81}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Count@{Count}}
+\index{Count@{Count}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Count}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCGlobalVariableConfig_a825f60c73564353fa46bea8a5db44a81}
+
+
+Returns the number of variable sets in configuration. 
+
+\begin{DoxyReturn}{Returns}
+number of sets. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariableConfig_a7f25689ffb6f29407d5036284eb2d3b2}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Find@{Find}}
+\index{Find@{Find}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Find (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a7f25689ffb6f29407d5036284eb2d3b2}
+
+
+Returns a set of variables by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of a set of variables. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to a set of variables or {\itshape N\-U\-L\-L} if a set with name {\itshape Name} does not exist. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariableConfig_a19cdea45eda20720b16ea953de9b4f96}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Get@{Get}}
+\index{Get@{Get}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Get (
+\begin{DoxyParamCaption}
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a19cdea45eda20720b16ea953de9b4f96}
+
+
+Returns a set of variables by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & index of a set of variables. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to a set of variables or {\itshape N\-U\-L\-L} if a set with index {\itshape Index} does not exist. 
+\end{DoxyReturn}
+\hypertarget{classCGlobalVariableConfig_a090f07dc4c04440e0c2179806ea11550}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Read@{Read}}
+\index{Read@{Read}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Global\-Variable\-Config\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a090f07dc4c04440e0c2179806ea11550}
+
+
+Reads the global compiler variable configuration from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Global\-Variable\-Config\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCGlobalVariableConfig_a1ccd44e97ef79a815e9409ea6b7eb2cd}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Remove@{Remove}}
+\index{Remove@{Remove}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Name}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a1ccd44e97ef79a815e9409ea6b7eb2cd}
+
+
+Removes a set of variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & name of set of global compiler variables. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCGlobalVariableConfig_a4c969184dff8036ffb7f4d3064807de0}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Show@{Show}}
+\index{Show@{Show}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a4c969184dff8036ffb7f4d3064807de0}
+
+
+Prints the global compiler variable configuration contents to standard output. 
+
+\hypertarget{classCGlobalVariableConfig_a0d2b06679de9b11ed462d6d7ca5fd0c3}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!Write@{Write}}
+\index{Write@{Write}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Global\-Variable\-Config\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCGlobalVariableConfig_a0d2b06679de9b11ed462d6d7ca5fd0c3}
+
+
+Writes the global compiler variable configuration to an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Global\-Variable\-Config\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCGlobalVariableConfig_a19fe97fb18fa079b3f8398fd9c75e46e}{\index{C\-Global\-Variable\-Config@{C\-Global\-Variable\-Config}!m\-\_\-\-Variable\-Sets@{m\-\_\-\-Variable\-Sets}}
+\index{m\-\_\-\-Variable\-Sets@{m\-\_\-\-Variable\-Sets}!CGlobalVariableConfig@{C\-Global\-Variable\-Config}}
+\subsubsection[{m\-\_\-\-Variable\-Sets}]{\setlength{\rightskip}{0pt plus 5cm}C\-Global\-Variable\-Config\-::m\-\_\-\-Variable\-Sets\hspace{0.3cm}{\ttfamily [private]}}}\label{classCGlobalVariableConfig_a19fe97fb18fa079b3f8398fd9c75e46e}
+
+
+List of variable sets. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbglobalvar_8h}{cbglobalvar.\-h}\item 
+src/\hyperlink{cbglobalvar_8cpp}{cbglobalvar.\-cpp}\item 
+src/doc/\hyperlink{cbglobalvar_8dox}{cbglobalvar.\-dox}\end{DoxyCompactItemize}

@@ -1,0 +1,488 @@
+\hypertarget{stlstrings_8cpp}{\section{lib/stlstrings.cpp File Reference}
+\label{stlstrings_8cpp}\index{lib/stlstrings.\-cpp@{lib/stlstrings.\-cpp}}
+}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}stlstrings.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stlconvert.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a29a94f3688882478a37f07a1b5fb6ae6}{String\-Of\-Chars} (const char A\-Char, const int Count)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a9543f6b246be18cd8d0cf8b6cbb61d94}{Fill\-Str} (const \hyperlink{classCString}{C\-String} \&Prefix, const char A\-Char, const \hyperlink{classCString}{C\-String} \&Suffix, const int Length)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_acefa22919402e7a7ad5321e41418cb4a}{Enum\-Str} (const \hyperlink{classCString}{C\-String} \&Prefix, const int Counter, const \hyperlink{classCString}{C\-String} \&Suffix, const unsigned int Length)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a15f6dc67930c23ad414678f8cbc4d7c3}{Sign\-Str} (const int Signature)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_aa75688004932e4d5e525d47744f423a3}{Sub\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int First\-Pos, const int Last\-Pos)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_af23c268b8c45982996507592a992d23a}{Shift\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Shift)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_af469adad7802154ad8795994910ebe84}{Left\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Position)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_aa5955377228d1eb00b9f3ea7b024dccf}{Right\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Position)
+\item 
+void \hyperlink{stlstrings_8cpp_a3ca14a6dd21433d614d5ac0c495cac7f}{Split\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Position, \hyperlink{classCString}{C\-String} \&L\-String, \hyperlink{classCString}{C\-String} \&R\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a3b4eb786bb5a8da8f8d9c8002c477605}{Join\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&B\-String, const char Separator)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a7679cba9dbc1da4db83d5f617a4e1f37}{Filter\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCCharset}{C\-Charset} \&Valid\-Chars, const \hyperlink{classCCharset}{C\-Charset} \&Invalid\-Chars, const bool Validate\-Undefined)
+\item 
+int \hyperlink{stlstrings_8cpp_a9adc6b5852963c2cefebdbc7bff837be}{Count\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+int \hyperlink{stlstrings_8cpp_a3e4e8197607102a4b255f77c65edb35d}{Next\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char, const int Position)
+\item 
+int \hyperlink{stlstrings_8cpp_ae0795a0d3fa228b883510b60647f237b}{Prev\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char, const int Position)
+\item 
+int \hyperlink{stlstrings_8cpp_abf3fd94ee0cb7077ca11ca6a1b78c259}{First\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+int \hyperlink{stlstrings_8cpp_a7e74dc3f887a829b645c359b0aff530d}{Last\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a430b3a478db257122abcd48c01812c77}{Trim\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a9f0e552bd5ae80f63b32931c650f928b}{Lead\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const unsigned int R\-Length)
+\item 
+void \hyperlink{stlstrings_8cpp_a71ce898627cc0c37e72b9e1884b4cf59}{Parse\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Delimiters, \hyperlink{classCStringList}{C\-String\-List} \&Sub\-Strings)
+\item 
+void \hyperlink{stlstrings_8cpp_a62eefcc6b6ee78d4231fa7f654371b7c}{Parse\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const char Delimiter, \hyperlink{classCStringList}{C\-String\-List} \&Sub\-Strings)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_af956adf4b75c922e88e0447e6d25f7e3}{Collect\-Str} (const \hyperlink{classCStringList}{C\-String\-List} \&Sub\-Strings, const \hyperlink{classCString}{C\-String} \&Delimiters)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_ae4663b47bf5a95907261113eb3713268}{Strip\-Dup\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_adc496b105f23b4b8b0e23a960177e6c0}{Strip\-Dup\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_ae5cbe9b372d9468f3e7c475b648cda2e}{Check\-First\-Char} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_ab00be2dd4dee1dcfd41043f640f84512}{Check\-Last\-Char} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+int \hyperlink{stlstrings_8cpp_a392ffad515a6a3dba1f6562c5a4b93cf}{Find\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a99274ed63940ab0526f1372b49a82cfc}{Find\-Replace\-Char} (const \hyperlink{classCString}{C\-String} \&A\-String, const char Search\-Char, const char Replace\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a66da46d39aa6f47913fae039eaa18e20}{Find\-Replace\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Search\-String, const \hyperlink{classCString}{C\-String} \&Replace\-String)
+\item 
+int \hyperlink{stlstrings_8cpp_a15e78c7188f87c9f83fc1e562a13b692}{Parse\-Mem\-Size\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, int \&Unit\-Size, char \&Unit\-Char)
+\item 
+int \hyperlink{stlstrings_8cpp_a1d66b7df4bb9d82f4b8e0de86216ac6d}{Parse\-Mem\-Size\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+long long int \hyperlink{stlstrings_8cpp_ac76f0fa0200851712283e09c74722ac0}{Parse\-Mem\-Size\-Str64} (const \hyperlink{classCString}{C\-String} \&A\-String, long long int \&Unit\-Size, char \&Unit\-Char)
+\item 
+long long int \hyperlink{stlstrings_8cpp_a90462bcda52896276e49d65be67580bc}{Parse\-Mem\-Size\-Str64} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+int \hyperlink{stlstrings_8cpp_a823d44c627154463f81f67269afb3f76}{Guess\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCStringList}{C\-String\-List} \&Variants, \hyperlink{classCString}{C\-String} \&Guessed, const bool Try\-Fuzzy)
+\item 
+int \hyperlink{stlstrings_8cpp_a94709b92ffbae69be4ad3813b7e36b6d}{Guess\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Variants, \hyperlink{classCString}{C\-String} \&Guessed, const bool Try\-Fuzzy)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_ac35fba0b45a35f20fb9e05d5fc064132}{Variant\-Str} (const int Index, const \hyperlink{classCString}{C\-String} \&Variants, const char Delimiter)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a4dc0c80dcd0ae51502658fd3929223ec}{Mem\-Size\-Str} (const long long int Value, long long int \&Unit\-Size, \hyperlink{classCString}{C\-String} \&Unit\-Suffix)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_aec00233b723d96c81f530aa9a0ff43a6}{Mem\-Size\-Str} (const long long int Value)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a491d7c2ee4357ff93204a0efbba8a3b5}{S\-I\-\_\-\-Unit\-Str} (const double Value, double \&Unit\-Size, \hyperlink{classCString}{C\-String} \&Unit\-Prefix, \hyperlink{classCString}{C\-String} \&Unit\-Symbol)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a2ed40abfb646adbd0059ba77918f1e35}{S\-I\-\_\-\-Unit\-Str} (const double Value)
+\item 
+bool \hyperlink{stlstrings_8cpp_a25bd198f0b5af8fc7dd3ec0e4becf865}{Is\-Quoted} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_af9b0455c4b6d1fc7379ef3daed28cc5d}{Quote\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_ad4c27203cea948f9ddff85ab2910723c}{Unquote\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a399308de80c0fefc75abf9e1aa4826ba}{Shield\-Spaces} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_af3ee57ea66eafd1e41df7f65a2c02ea8}{Unshield\-Spaces} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_ae3b8468df4e18b6f5e0816bd1a60f6c8}{Shield\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Chars)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8cpp_a55393cbaf76ea2d55eaee12c32d02151}{Unshield\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Chars)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{stlstrings_8cpp_ae5cbe9b372d9468f3e7c475b648cda2e}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Check\-First\-Char@{Check\-First\-Char}}
+\index{Check\-First\-Char@{Check\-First\-Char}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Check\-First\-Char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Check\-First\-Char (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ae5cbe9b372d9468f3e7c475b648cda2e}
+\hypertarget{stlstrings_8cpp_ab00be2dd4dee1dcfd41043f640f84512}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Check\-Last\-Char@{Check\-Last\-Char}}
+\index{Check\-Last\-Char@{Check\-Last\-Char}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Check\-Last\-Char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Check\-Last\-Char (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ab00be2dd4dee1dcfd41043f640f84512}
+\hypertarget{stlstrings_8cpp_af956adf4b75c922e88e0447e6d25f7e3}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Collect\-Str@{Collect\-Str}}
+\index{Collect\-Str@{Collect\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Collect\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Collect\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{Sub\-Strings, }
+\item[{const {\bf C\-String} \&}]{Delimiters}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_af956adf4b75c922e88e0447e6d25f7e3}
+\hypertarget{stlstrings_8cpp_a9adc6b5852963c2cefebdbc7bff837be}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Count\-Chars@{Count\-Chars}}
+\index{Count\-Chars@{Count\-Chars}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Count\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}int Count\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a9adc6b5852963c2cefebdbc7bff837be}
+\hypertarget{stlstrings_8cpp_acefa22919402e7a7ad5321e41418cb4a}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Enum\-Str@{Enum\-Str}}
+\index{Enum\-Str@{Enum\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Enum\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Enum\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Prefix, }
+\item[{const int}]{Counter, }
+\item[{const {\bf C\-String} \&}]{Suffix, }
+\item[{const unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_acefa22919402e7a7ad5321e41418cb4a}
+\hypertarget{stlstrings_8cpp_a9543f6b246be18cd8d0cf8b6cbb61d94}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Fill\-Str@{Fill\-Str}}
+\index{Fill\-Str@{Fill\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Fill\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Fill\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Prefix, }
+\item[{const char}]{A\-Char, }
+\item[{const {\bf C\-String} \&}]{Suffix, }
+\item[{const int}]{Length}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a9543f6b246be18cd8d0cf8b6cbb61d94}
+\hypertarget{stlstrings_8cpp_a7679cba9dbc1da4db83d5f617a4e1f37}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Filter\-Str@{Filter\-Str}}
+\index{Filter\-Str@{Filter\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Filter\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Filter\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-Charset} \&}]{Valid\-Chars, }
+\item[{const {\bf C\-Charset} \&}]{Invalid\-Chars, }
+\item[{const bool}]{Validate\-Undefined}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a7679cba9dbc1da4db83d5f617a4e1f37}
+\hypertarget{stlstrings_8cpp_a99274ed63940ab0526f1372b49a82cfc}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Find\-Replace\-Char@{Find\-Replace\-Char}}
+\index{Find\-Replace\-Char@{Find\-Replace\-Char}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Find\-Replace\-Char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Find\-Replace\-Char (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{Search\-Char, }
+\item[{const char}]{Replace\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a99274ed63940ab0526f1372b49a82cfc}
+\hypertarget{stlstrings_8cpp_a66da46d39aa6f47913fae039eaa18e20}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Find\-Replace\-Str@{Find\-Replace\-Str}}
+\index{Find\-Replace\-Str@{Find\-Replace\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Find\-Replace\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Find\-Replace\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Search\-String, }
+\item[{const {\bf C\-String} \&}]{Replace\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a66da46d39aa6f47913fae039eaa18e20}
+\hypertarget{stlstrings_8cpp_a392ffad515a6a3dba1f6562c5a4b93cf}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Find\-Str@{Find\-Str}}
+\index{Find\-Str@{Find\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Find\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Find\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a392ffad515a6a3dba1f6562c5a4b93cf}
+\hypertarget{stlstrings_8cpp_abf3fd94ee0cb7077ca11ca6a1b78c259}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!First\-Char\-Pos@{First\-Char\-Pos}}
+\index{First\-Char\-Pos@{First\-Char\-Pos}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{First\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int First\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_abf3fd94ee0cb7077ca11ca6a1b78c259}
+\hypertarget{stlstrings_8cpp_a823d44c627154463f81f67269afb3f76}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Guess\-Str@{Guess\-Str}}
+\index{Guess\-Str@{Guess\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Guess\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Guess\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String\-List} \&}]{Variants, }
+\item[{{\bf C\-String} \&}]{Guessed, }
+\item[{const bool}]{Try\-Fuzzy}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a823d44c627154463f81f67269afb3f76}
+\hypertarget{stlstrings_8cpp_a94709b92ffbae69be4ad3813b7e36b6d}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Guess\-Str@{Guess\-Str}}
+\index{Guess\-Str@{Guess\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Guess\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Guess\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Variants, }
+\item[{{\bf C\-String} \&}]{Guessed, }
+\item[{const bool}]{Try\-Fuzzy}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a94709b92ffbae69be4ad3813b7e36b6d}
+\hypertarget{stlstrings_8cpp_a25bd198f0b5af8fc7dd3ec0e4becf865}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Is\-Quoted@{Is\-Quoted}}
+\index{Is\-Quoted@{Is\-Quoted}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Is\-Quoted}]{\setlength{\rightskip}{0pt plus 5cm}bool Is\-Quoted (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a25bd198f0b5af8fc7dd3ec0e4becf865}
+\hypertarget{stlstrings_8cpp_a3b4eb786bb5a8da8f8d9c8002c477605}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Join\-Str@{Join\-Str}}
+\index{Join\-Str@{Join\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Join\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Join\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{B\-String, }
+\item[{const char}]{Separator}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a3b4eb786bb5a8da8f8d9c8002c477605}
+\hypertarget{stlstrings_8cpp_a7e74dc3f887a829b645c359b0aff530d}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Last\-Char\-Pos@{Last\-Char\-Pos}}
+\index{Last\-Char\-Pos@{Last\-Char\-Pos}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Last\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int Last\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a7e74dc3f887a829b645c359b0aff530d}
+\hypertarget{stlstrings_8cpp_a9f0e552bd5ae80f63b32931c650f928b}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Lead\-Str@{Lead\-Str}}
+\index{Lead\-Str@{Lead\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Lead\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Lead\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const unsigned int}]{R\-Length}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a9f0e552bd5ae80f63b32931c650f928b}
+\hypertarget{stlstrings_8cpp_af469adad7802154ad8795994910ebe84}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Left\-Str@{Left\-Str}}
+\index{Left\-Str@{Left\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Left\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Left\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_af469adad7802154ad8795994910ebe84}
+\hypertarget{stlstrings_8cpp_a4dc0c80dcd0ae51502658fd3929223ec}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Mem\-Size\-Str@{Mem\-Size\-Str}}
+\index{Mem\-Size\-Str@{Mem\-Size\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const long long int}]{Value, }
+\item[{long long int \&}]{Unit\-Size, }
+\item[{{\bf C\-String} \&}]{Unit\-Suffix}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a4dc0c80dcd0ae51502658fd3929223ec}
+\hypertarget{stlstrings_8cpp_aec00233b723d96c81f530aa9a0ff43a6}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Mem\-Size\-Str@{Mem\-Size\-Str}}
+\index{Mem\-Size\-Str@{Mem\-Size\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const long long int}]{Value}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_aec00233b723d96c81f530aa9a0ff43a6}
+\hypertarget{stlstrings_8cpp_a3e4e8197607102a4b255f77c65edb35d}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Next\-Char\-Pos@{Next\-Char\-Pos}}
+\index{Next\-Char\-Pos@{Next\-Char\-Pos}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Next\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int Next\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a3e4e8197607102a4b255f77c65edb35d}
+\hypertarget{stlstrings_8cpp_a15e78c7188f87c9f83fc1e562a13b692}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}}
+\index{Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Parse\-Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Parse\-Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{int \&}]{Unit\-Size, }
+\item[{char \&}]{Unit\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a15e78c7188f87c9f83fc1e562a13b692}
+\hypertarget{stlstrings_8cpp_a1d66b7df4bb9d82f4b8e0de86216ac6d}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}}
+\index{Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Parse\-Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Parse\-Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a1d66b7df4bb9d82f4b8e0de86216ac6d}
+\hypertarget{stlstrings_8cpp_ac76f0fa0200851712283e09c74722ac0}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}}
+\index{Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Parse\-Mem\-Size\-Str64}]{\setlength{\rightskip}{0pt plus 5cm}long long int Parse\-Mem\-Size\-Str64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{long long int \&}]{Unit\-Size, }
+\item[{char \&}]{Unit\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ac76f0fa0200851712283e09c74722ac0}
+\hypertarget{stlstrings_8cpp_a90462bcda52896276e49d65be67580bc}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}}
+\index{Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Parse\-Mem\-Size\-Str64}]{\setlength{\rightskip}{0pt plus 5cm}long long int Parse\-Mem\-Size\-Str64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a90462bcda52896276e49d65be67580bc}
+\hypertarget{stlstrings_8cpp_a71ce898627cc0c37e72b9e1884b4cf59}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Parse\-Str@{Parse\-Str}}
+\index{Parse\-Str@{Parse\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Parse\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Delimiters, }
+\item[{{\bf C\-String\-List} \&}]{Sub\-Strings}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a71ce898627cc0c37e72b9e1884b4cf59}
+\hypertarget{stlstrings_8cpp_a62eefcc6b6ee78d4231fa7f654371b7c}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Parse\-Str@{Parse\-Str}}
+\index{Parse\-Str@{Parse\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Parse\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{Delimiter, }
+\item[{{\bf C\-String\-List} \&}]{Sub\-Strings}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a62eefcc6b6ee78d4231fa7f654371b7c}
+\hypertarget{stlstrings_8cpp_ae0795a0d3fa228b883510b60647f237b}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Prev\-Char\-Pos@{Prev\-Char\-Pos}}
+\index{Prev\-Char\-Pos@{Prev\-Char\-Pos}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Prev\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int Prev\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ae0795a0d3fa228b883510b60647f237b}
+\hypertarget{stlstrings_8cpp_af9b0455c4b6d1fc7379ef3daed28cc5d}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Quote\-Str@{Quote\-Str}}
+\index{Quote\-Str@{Quote\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Quote\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Quote\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_af9b0455c4b6d1fc7379ef3daed28cc5d}
+\hypertarget{stlstrings_8cpp_aa5955377228d1eb00b9f3ea7b024dccf}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Right\-Str@{Right\-Str}}
+\index{Right\-Str@{Right\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Right\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Right\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_aa5955377228d1eb00b9f3ea7b024dccf}
+\hypertarget{stlstrings_8cpp_ae3b8468df4e18b6f5e0816bd1a60f6c8}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Shield\-Chars@{Shield\-Chars}}
+\index{Shield\-Chars@{Shield\-Chars}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Shield\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Shield\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Chars}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ae3b8468df4e18b6f5e0816bd1a60f6c8}
+\hypertarget{stlstrings_8cpp_a399308de80c0fefc75abf9e1aa4826ba}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Shield\-Spaces@{Shield\-Spaces}}
+\index{Shield\-Spaces@{Shield\-Spaces}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Shield\-Spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Shield\-Spaces (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a399308de80c0fefc75abf9e1aa4826ba}
+\hypertarget{stlstrings_8cpp_af23c268b8c45982996507592a992d23a}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Shift\-Str@{Shift\-Str}}
+\index{Shift\-Str@{Shift\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Shift\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Shift\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Shift}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_af23c268b8c45982996507592a992d23a}
+\hypertarget{stlstrings_8cpp_a491d7c2ee4357ff93204a0efbba8a3b5}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}}
+\index{S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{S\-I\-\_\-\-Unit\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} S\-I\-\_\-\-Unit\-Str (
+\begin{DoxyParamCaption}
+\item[{const double}]{Value, }
+\item[{double \&}]{Unit\-Size, }
+\item[{{\bf C\-String} \&}]{Unit\-Prefix, }
+\item[{{\bf C\-String} \&}]{Unit\-Symbol}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a491d7c2ee4357ff93204a0efbba8a3b5}
+\hypertarget{stlstrings_8cpp_a2ed40abfb646adbd0059ba77918f1e35}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}}
+\index{S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{S\-I\-\_\-\-Unit\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} S\-I\-\_\-\-Unit\-Str (
+\begin{DoxyParamCaption}
+\item[{const double}]{Value}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a2ed40abfb646adbd0059ba77918f1e35}
+\hypertarget{stlstrings_8cpp_a15f6dc67930c23ad414678f8cbc4d7c3}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Sign\-Str@{Sign\-Str}}
+\index{Sign\-Str@{Sign\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Sign\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Sign\-Str (
+\begin{DoxyParamCaption}
+\item[{const int}]{Signature}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a15f6dc67930c23ad414678f8cbc4d7c3}
+\hypertarget{stlstrings_8cpp_a3ca14a6dd21433d614d5ac0c495cac7f}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Split\-Str@{Split\-Str}}
+\index{Split\-Str@{Split\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Split\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Split\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Position, }
+\item[{{\bf C\-String} \&}]{L\-String, }
+\item[{{\bf C\-String} \&}]{R\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a3ca14a6dd21433d614d5ac0c495cac7f}
+\hypertarget{stlstrings_8cpp_a29a94f3688882478a37f07a1b5fb6ae6}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!String\-Of\-Chars@{String\-Of\-Chars}}
+\index{String\-Of\-Chars@{String\-Of\-Chars}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{String\-Of\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} String\-Of\-Chars (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char, }
+\item[{const int}]{Count}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a29a94f3688882478a37f07a1b5fb6ae6}
+\hypertarget{stlstrings_8cpp_ae4663b47bf5a95907261113eb3713268}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Strip\-Dup\-Chars@{Strip\-Dup\-Chars}}
+\index{Strip\-Dup\-Chars@{Strip\-Dup\-Chars}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Strip\-Dup\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Strip\-Dup\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ae4663b47bf5a95907261113eb3713268}
+\hypertarget{stlstrings_8cpp_adc496b105f23b4b8b0e23a960177e6c0}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Strip\-Dup\-Chars@{Strip\-Dup\-Chars}}
+\index{Strip\-Dup\-Chars@{Strip\-Dup\-Chars}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Strip\-Dup\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Strip\-Dup\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_adc496b105f23b4b8b0e23a960177e6c0}
+\hypertarget{stlstrings_8cpp_aa75688004932e4d5e525d47744f423a3}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Sub\-Str@{Sub\-Str}}
+\index{Sub\-Str@{Sub\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Sub\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Sub\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{First\-Pos, }
+\item[{const int}]{Last\-Pos}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_aa75688004932e4d5e525d47744f423a3}
+\hypertarget{stlstrings_8cpp_a430b3a478db257122abcd48c01812c77}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Trim\-Str@{Trim\-Str}}
+\index{Trim\-Str@{Trim\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Trim\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Trim\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a430b3a478db257122abcd48c01812c77}
+\hypertarget{stlstrings_8cpp_ad4c27203cea948f9ddff85ab2910723c}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Unquote\-Str@{Unquote\-Str}}
+\index{Unquote\-Str@{Unquote\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Unquote\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Unquote\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ad4c27203cea948f9ddff85ab2910723c}
+\hypertarget{stlstrings_8cpp_a55393cbaf76ea2d55eaee12c32d02151}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Unshield\-Chars@{Unshield\-Chars}}
+\index{Unshield\-Chars@{Unshield\-Chars}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Unshield\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Unshield\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Chars}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_a55393cbaf76ea2d55eaee12c32d02151}
+\hypertarget{stlstrings_8cpp_af3ee57ea66eafd1e41df7f65a2c02ea8}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Unshield\-Spaces@{Unshield\-Spaces}}
+\index{Unshield\-Spaces@{Unshield\-Spaces}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Unshield\-Spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Unshield\-Spaces (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_af3ee57ea66eafd1e41df7f65a2c02ea8}
+\hypertarget{stlstrings_8cpp_ac35fba0b45a35f20fb9e05d5fc064132}{\index{stlstrings.\-cpp@{stlstrings.\-cpp}!Variant\-Str@{Variant\-Str}}
+\index{Variant\-Str@{Variant\-Str}!stlstrings.cpp@{stlstrings.\-cpp}}
+\subsubsection[{Variant\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Variant\-Str (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index, }
+\item[{const {\bf C\-String} \&}]{Variants, }
+\item[{const char}]{Delimiter}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8cpp_ac35fba0b45a35f20fb9e05d5fc064132}

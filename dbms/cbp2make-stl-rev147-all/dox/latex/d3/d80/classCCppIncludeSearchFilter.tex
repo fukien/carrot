@@ -1,0 +1,158 @@
+\hypertarget{classCCppIncludeSearchFilter}{\section{C\-Cpp\-Include\-Search\-Filter Class Reference}
+\label{classCCppIncludeSearchFilter}\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}}
+}
+
+
+Gathers build unit dependencies from C/\-C++ source files withing project into build unit dependency database.  
+
+
+
+
+{\ttfamily \#include $<$depsearch.\-h$>$}
+
+Inheritance diagram for C\-Cpp\-Include\-Search\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/d80/classCCppIncludeSearchFilter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCCppIncludeSearchFilter_a841ef5c22cdb587cc00e698312012944}{Assign} (const \hyperlink{classCCppIncludeSearchFilter}{C\-Cpp\-Include\-Search\-Filter} \&Filter)
+\begin{DoxyCompactList}\small\item\em Copies filter settings from another filter. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classCCppIncludeSearchFilter_a847f213a3ab4d7220a1ee0a095a5f42f}{Execute} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCStringList}{C\-String\-List} \&Includes)
+\begin{DoxyCompactList}\small\item\em Gathers dependencies to {\itshape Includes} string list starting from {\itshape File\-Name} file. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classCCppIncludeSearchFilter_ac37bc3584c554db6a7964c8e9de31636}{Execute} (const \hyperlink{classCString}{C\-String} \&File\-Name, \hyperlink{classCDependencyInfo}{C\-Dependency\-Info} \&Dependencies)
+\begin{DoxyCompactList}\small\item\em Gathers dependencies to {\itshape Dependencies} database starting from {\itshape File\-Name} file. \end{DoxyCompactList}\item 
+\hyperlink{classCCppIncludeSearchFilter_afc83d326ec4699a54887bad165609690}{C\-Cpp\-Include\-Search\-Filter} (void)
+\begin{DoxyCompactList}\small\item\em Creates dependency search filter. \end{DoxyCompactList}\item 
+\hyperlink{classCCppIncludeSearchFilter_a978515421bf849a4169e52e8977cdcfb}{C\-Cpp\-Include\-Search\-Filter} (const \hyperlink{classCCppIncludeSearchFilter}{C\-Cpp\-Include\-Search\-Filter} \&Filter)
+\begin{DoxyCompactList}\small\item\em Copies dependency search filter from another filter. \end{DoxyCompactList}\item 
+\hyperlink{classCCppIncludeSearchFilter_a64b222a54f46b366998decad4a953451}{$\sim$\-C\-Cpp\-Include\-Search\-Filter} (void)
+\begin{DoxyCompactList}\small\item\em Destroys dependency search filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Gathers build unit dependencies from C/\-C++ source files withing project into build unit dependency database. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCppIncludeSearchFilter_afc83d326ec4699a54887bad165609690}{\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}}
+\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!CCppIncludeSearchFilter@{C\-Cpp\-Include\-Search\-Filter}}
+\subsubsection[{C\-Cpp\-Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Cpp\-Include\-Search\-Filter\-::\-C\-Cpp\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCppIncludeSearchFilter_afc83d326ec4699a54887bad165609690}
+
+
+Creates dependency search filter. 
+
+\hypertarget{classCCppIncludeSearchFilter_a978515421bf849a4169e52e8977cdcfb}{\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}}
+\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!CCppIncludeSearchFilter@{C\-Cpp\-Include\-Search\-Filter}}
+\subsubsection[{C\-Cpp\-Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Cpp\-Include\-Search\-Filter\-::\-C\-Cpp\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Cpp\-Include\-Search\-Filter} \&}]{Filter}
+\end{DoxyParamCaption}
+)}}\label{classCCppIncludeSearchFilter_a978515421bf849a4169e52e8977cdcfb}
+
+
+Copies dependency search filter from another filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Filter} & another dependency search filter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCCppIncludeSearchFilter_a64b222a54f46b366998decad4a953451}{\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!$\sim$\-C\-Cpp\-Include\-Search\-Filter@{$\sim$\-C\-Cpp\-Include\-Search\-Filter}}
+\index{$\sim$\-C\-Cpp\-Include\-Search\-Filter@{$\sim$\-C\-Cpp\-Include\-Search\-Filter}!CCppIncludeSearchFilter@{C\-Cpp\-Include\-Search\-Filter}}
+\subsubsection[{$\sim$\-C\-Cpp\-Include\-Search\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}C\-Cpp\-Include\-Search\-Filter\-::$\sim$\-C\-Cpp\-Include\-Search\-Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCppIncludeSearchFilter_a64b222a54f46b366998decad4a953451}
+
+
+Destroys dependency search filter. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCppIncludeSearchFilter_a841ef5c22cdb587cc00e698312012944}{\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!Assign@{Assign}}
+\index{Assign@{Assign}!CCppIncludeSearchFilter@{C\-Cpp\-Include\-Search\-Filter}}
+\subsubsection[{Assign}]{\setlength{\rightskip}{0pt plus 5cm}C\-Cpp\-Include\-Search\-Filter\-::\-Assign (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Cpp\-Include\-Search\-Filter} \&}]{Filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCppIncludeSearchFilter_a841ef5c22cdb587cc00e698312012944}
+
+
+Copies filter settings from another filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Filter} & another filter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCCppIncludeSearchFilter_a847f213a3ab4d7220a1ee0a095a5f42f}{\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!Execute@{Execute}}
+\index{Execute@{Execute}!CCppIncludeSearchFilter@{C\-Cpp\-Include\-Search\-Filter}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Cpp\-Include\-Search\-Filter\-::\-Execute (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-String\-List} \&}]{Includes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCppIncludeSearchFilter_a847f213a3ab4d7220a1ee0a095a5f42f}
+
+
+Gathers dependencies to {\itshape Includes} string list starting from {\itshape File\-Name} file. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]Use \hyperlink{classCIncludeSearchFilter_aa43b2d4b8f62c9d695490d5cd072c3bc}{C\-Include\-Search\-Filter\-::\-Execute(const C\-String\& File\-Name, C\-Dependency\-Info\& Dependencies)}.\end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a build unit name. \\
+\hline
+{\em Includes} & a list of build unit names. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if dependencies were gather from at least one (starting) file, {\itshape false} otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classCIncludeSearchFilter_a2b30667171e75cd5721e97b54eeb9182}{C\-Include\-Search\-Filter}.
+
+\hypertarget{classCCppIncludeSearchFilter_ac37bc3584c554db6a7964c8e9de31636}{\index{C\-Cpp\-Include\-Search\-Filter@{C\-Cpp\-Include\-Search\-Filter}!Execute@{Execute}}
+\index{Execute@{Execute}!CCppIncludeSearchFilter@{C\-Cpp\-Include\-Search\-Filter}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Cpp\-Include\-Search\-Filter\-::\-Execute (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name, }
+\item[{{\bf C\-Dependency\-Info} \&}]{Dependencies}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCCppIncludeSearchFilter_ac37bc3584c554db6a7964c8e9de31636}
+
+
+Gathers dependencies to {\itshape Dependencies} database starting from {\itshape File\-Name} file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & a build unit name. \\
+\hline
+{\em Dependencies} & a build unit dependency database. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if dependencies were gather from at least one (starting) file, {\itshape false} otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classCIncludeSearchFilter_aa43b2d4b8f62c9d695490d5cd072c3bc}{C\-Include\-Search\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{depsearch_8h}{depsearch.\-h}\item 
+src/\hyperlink{depsearch_8cpp}{depsearch.\-cpp}\item 
+src/doc/\hyperlink{depsearch_8dox}{depsearch.\-dox}\end{DoxyCompactItemize}

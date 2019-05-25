@@ -1,0 +1,471 @@
+\hypertarget{classCCodeBlocksBuildConfig}{\section{C\-Code\-Blocks\-Build\-Config Class Reference}
+\label{classCCodeBlocksBuildConfig}\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}}
+}
+
+
+Build configuration.  
+
+
+
+
+{\ttfamily \#include $<$cbbuildcfg.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatformSet}{C\-Platform\-Set} \& \hyperlink{classCCodeBlocksBuildConfig_a6d56321c8f3b9e1305123eee8947a0c3}{Platforms} (void)
+\begin{DoxyCompactList}\small\item\em Returns reference to the set of platforms in build configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChainSet}{C\-Tool\-Chain\-Set} \& \hyperlink{classCCodeBlocksBuildConfig_a77b192d14a95e6f96468238ae06e1580}{Tool\-Chains} (void)
+\begin{DoxyCompactList}\small\item\em Returns reference to the set of toolchains in build configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableConfig}{C\-Global\-Variable\-Config} \& \hyperlink{classCCodeBlocksBuildConfig_a3d3fcc90f115088ebb9201ee1e4c204d}{Global\-Variables} (void)
+\begin{DoxyCompactList}\small\item\em Returns reference to the set of global variables in build configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \& \hyperlink{classCCodeBlocksBuildConfig_a2ff25013bd1b3eab5cfc78dc6a95c9a9}{Targets} (void)
+\item 
+\hyperlink{classCString}{C\-String} \& \hyperlink{classCCodeBlocksBuildConfig_a68eab75304c81a43f01213824de37eaa}{Default\-Options} (void)
+\item 
+int \& \hyperlink{classCCodeBlocksBuildConfig_a478b0e7a1078e2ed33bba779f492d985}{Target\-Name\-Case} (void)
+\item 
+int \& \hyperlink{classCCodeBlocksBuildConfig_ad7e8cb763dea92e8d9c9e2bc460a4f5a}{Macro\-Variable\-Case} (void)
+\item 
+int \& \hyperlink{classCCodeBlocksBuildConfig_afaecfed36bea423ccd1bc39b10e919bb}{Quote\-Path\-Mode} (void)
+\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a20ac91ad51a7c1f9b75251eaf698a1c4}{Numeric\-Toolchain\-Suffix} (void)
+\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a492ae94259ceb93383c3ac0063ff475e}{Flat\-Object\-Names} (void)
+\begin{DoxyCompactList}\small\item\em Controls the way of object file names generation. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a3213079d916d210c1c83560230457854}{Flat\-Object\-Paths} (void)
+\begin{DoxyCompactList}\small\item\em Controls the way of object file names generation. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a13d1d469d597c7724b6a1975bb00bdd5}{Multiline\-Objects} (void)
+\begin{DoxyCompactList}\small\item\em Allows generation of multi-\/line object file lists. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_adcc30cc5d53ceaf3251ce43c491dfde3}{Multiline\-Options} (void)
+\begin{DoxyCompactList}\small\item\em Allows generation of multi-\/line option lists. \end{DoxyCompactList}\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_ae0831e3b1fd82d237ad62c4d56ecaab1}{Include\-Dependencies} (void)
+\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_ac49779fefbf4487342d8dc4b611472b2}{Keep\-Object\-Directories} (void)
+\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a4f6a164fd09b1bc4e78510529919d13b}{Keep\-Output\-Directories} (void)
+\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a15e45586cfc5f38f312f3b8060c685af}{Be\-Quiet} (void)
+\item 
+bool \& \hyperlink{classCCodeBlocksBuildConfig_a4aa4dc0e201872b23f6a635dd470b55a}{Be\-Verbose} (void)
+\item 
+void \hyperlink{classCCodeBlocksBuildConfig_a409b1815a04cf2f7eda0f49776a69b37}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the build configuration to the initial state. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a3dfc04a8d01dad69d1c9f416cb8f714c}{Load} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Loads a build configuration from a file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_adfeb4a66240e14efc36eff4559567907}{Save} (const \hyperlink{classCString}{C\-String} \&File\-Name)
+\begin{DoxyCompactList}\small\item\em Saves the build configuration to a file specified by {\itshape File\-Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classCCodeBlocksBuildConfig_a326f3e278b74b930e6bf2fabacb88f62}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints build configuration contents to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksBuildConfig_a22f951d7b9ee49d6bde245cade888853}{C\-Code\-Blocks\-Build\-Config} (void)
+\begin{DoxyCompactList}\small\item\em Creates build configuration. \end{DoxyCompactList}\item 
+\hyperlink{classCCodeBlocksBuildConfig_ae5e68eaa19aeb1e5f6303f8849fed0fc}{$\sim$\-C\-Code\-Blocks\-Build\-Config} (void)
+\begin{DoxyCompactList}\small\item\em Destroys build configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlatformSet}{C\-Platform\-Set} \hyperlink{classCCodeBlocksBuildConfig_a5d1a73a8b99b2a8f7c9b8b6e68c9ee0a}{m\-\_\-\-Platforms}
+\begin{DoxyCompactList}\small\item\em Configuration of a set of platforms. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChainSet}{C\-Tool\-Chain\-Set} \hyperlink{classCCodeBlocksBuildConfig_a6228c5d7803e50f70065f6fe9e24c4be}{m\-\_\-\-Tool\-Chains}
+\begin{DoxyCompactList}\small\item\em Configuration of a set of build utilities. \end{DoxyCompactList}\item 
+\hyperlink{classCGlobalVariableConfig}{C\-Global\-Variable\-Config} \hyperlink{classCCodeBlocksBuildConfig_ac534f72effbbb05a79e9af4c04b93f4d}{m\-\_\-\-Global\-Variables}
+\begin{DoxyCompactList}\small\item\em Configuration of a set of global variables. \end{DoxyCompactList}\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCCodeBlocksBuildConfig_adf02e1f9a0346b2d25ced81343fe4d89}{m\-\_\-\-Targets}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCCodeBlocksBuildConfig_a4f4a79145c1b7bd90881901f9ae98bb5}{m\-\_\-\-Default\-Options}
+\item 
+int \hyperlink{classCCodeBlocksBuildConfig_a07127c9e222fe5fa3e2e0b7a2b6f50e4}{m\-\_\-\-Target\-Name\-Case}
+\item 
+int \hyperlink{classCCodeBlocksBuildConfig_a00d5c77aff64f3647cca2d9c0aaf37d7}{m\-\_\-\-Macro\-Variable\-Case}
+\item 
+int \hyperlink{classCCodeBlocksBuildConfig_ac52ed092d08ce6778dcb901dea2130d2}{m\-\_\-\-Quote\-Path\-Mode}
+\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_ac4e930aa6e42094e6f40d29d2f373da6}{m\-\_\-\-Numeric\-Toolchain\-Suffix}
+\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a1e3f7ffab14887951b2d8d743354e786}{m\-\_\-\-Flat\-Object\-Names}
+\begin{DoxyCompactList}\small\item\em Controls the way of object file names generation. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a0bcabddaab973e27b714855c082a2cbd}{m\-\_\-\-Flat\-Object\-Paths}
+\begin{DoxyCompactList}\small\item\em Controls the way of object file names generation. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a5290986e23b464ce386a12c809b3d531}{m\-\_\-\-Multiline\-Objects}
+\begin{DoxyCompactList}\small\item\em Allows generation of multi-\/line object file lists. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a6d3348032b885c569b5cd35955e0125d}{m\-\_\-\-Multiline\-Options}
+\begin{DoxyCompactList}\small\item\em Allows generation of multi-\/line option lists. \end{DoxyCompactList}\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a6c5a833fdccaa0e15f54985762cf903b}{m\-\_\-\-Include\-Dependencies}
+\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_af55874cd3fca990d090889ce75597a91}{m\-\_\-\-Keep\-Object\-Directories}
+\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a19eec6d82fbfb156e3939669dc9b5d94}{m\-\_\-\-Keep\-Output\-Directories}
+\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_a89e06222a6f380d708357f1cedcfac43}{m\-\_\-\-Be\-Quiet}
+\item 
+bool \hyperlink{classCCodeBlocksBuildConfig_ae5a32f86104366595bb045f809cc5d5a}{m\-\_\-\-Be\-Verbose}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Build configuration. 
+
+Contains configurations for platforms (operating systems), build utilities, i.\-e., toolchains, global compiler variables (installation-\/specefic options), makefile generation options. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCodeBlocksBuildConfig_a22f951d7b9ee49d6bde245cade888853}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}}
+\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{C\-Code\-Blocks\-Build\-Config}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-C\-Code\-Blocks\-Build\-Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildConfig_a22f951d7b9ee49d6bde245cade888853}
+
+
+Creates build configuration. 
+
+\hypertarget{classCCodeBlocksBuildConfig_ae5e68eaa19aeb1e5f6303f8849fed0fc}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!$\sim$\-C\-Code\-Blocks\-Build\-Config@{$\sim$\-C\-Code\-Blocks\-Build\-Config}}
+\index{$\sim$\-C\-Code\-Blocks\-Build\-Config@{$\sim$\-C\-Code\-Blocks\-Build\-Config}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{$\sim$\-C\-Code\-Blocks\-Build\-Config}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::$\sim$\-C\-Code\-Blocks\-Build\-Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildConfig_ae5e68eaa19aeb1e5f6303f8849fed0fc}
+
+
+Destroys build configuration. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCodeBlocksBuildConfig_a15e45586cfc5f38f312f3b8060c685af}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Be\-Quiet@{Be\-Quiet}}
+\index{Be\-Quiet@{Be\-Quiet}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Be\-Quiet}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Code\-Blocks\-Build\-Config\-::\-Be\-Quiet (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a15e45586cfc5f38f312f3b8060c685af}
+\hypertarget{classCCodeBlocksBuildConfig_a4aa4dc0e201872b23f6a635dd470b55a}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Be\-Verbose@{Be\-Verbose}}
+\index{Be\-Verbose@{Be\-Verbose}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Be\-Verbose}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Code\-Blocks\-Build\-Config\-::\-Be\-Verbose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a4aa4dc0e201872b23f6a635dd470b55a}
+\hypertarget{classCCodeBlocksBuildConfig_a409b1815a04cf2f7eda0f49776a69b37}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Clear@{Clear}}
+\index{Clear@{Clear}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildConfig_a409b1815a04cf2f7eda0f49776a69b37}
+
+
+Resets the build configuration to the initial state. 
+
+\hypertarget{classCCodeBlocksBuildConfig_a68eab75304c81a43f01213824de37eaa}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Default\-Options@{Default\-Options}}
+\index{Default\-Options@{Default\-Options}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Default\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String}\& C\-Code\-Blocks\-Build\-Config\-::\-Default\-Options (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a68eab75304c81a43f01213824de37eaa}
+\hypertarget{classCCodeBlocksBuildConfig_a492ae94259ceb93383c3ac0063ff475e}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Flat\-Object\-Names@{Flat\-Object\-Names}}
+\index{Flat\-Object\-Names@{Flat\-Object\-Names}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Flat\-Object\-Names}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Flat\-Object\-Names (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a492ae94259ceb93383c3ac0063ff475e}
+
+
+Controls the way of object file names generation. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_a1e3f7ffab14887951b2d8d743354e786}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Flat\-Object\-Names}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_a3213079d916d210c1c83560230457854}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Flat\-Object\-Paths@{Flat\-Object\-Paths}}
+\index{Flat\-Object\-Paths@{Flat\-Object\-Paths}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Flat\-Object\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Flat\-Object\-Paths (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a3213079d916d210c1c83560230457854}
+
+
+Controls the way of object file names generation. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_a0bcabddaab973e27b714855c082a2cbd}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Flat\-Object\-Paths}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_a3d3fcc90f115088ebb9201ee1e4c204d}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Global\-Variables@{Global\-Variables}}
+\index{Global\-Variables@{Global\-Variables}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Global\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Global\-Variables (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a3d3fcc90f115088ebb9201ee1e4c204d}
+
+
+Returns reference to the set of global variables in build configuration. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_ac534f72effbbb05a79e9af4c04b93f4d}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Global\-Variables}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_ae0831e3b1fd82d237ad62c4d56ecaab1}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Include\-Dependencies@{Include\-Dependencies}}
+\index{Include\-Dependencies@{Include\-Dependencies}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Include\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Code\-Blocks\-Build\-Config\-::\-Include\-Dependencies (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_ae0831e3b1fd82d237ad62c4d56ecaab1}
+\hypertarget{classCCodeBlocksBuildConfig_ac49779fefbf4487342d8dc4b611472b2}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Keep\-Object\-Directories@{Keep\-Object\-Directories}}
+\index{Keep\-Object\-Directories@{Keep\-Object\-Directories}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Keep\-Object\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Code\-Blocks\-Build\-Config\-::\-Keep\-Object\-Directories (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_ac49779fefbf4487342d8dc4b611472b2}
+\hypertarget{classCCodeBlocksBuildConfig_a4f6a164fd09b1bc4e78510529919d13b}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Keep\-Output\-Directories@{Keep\-Output\-Directories}}
+\index{Keep\-Output\-Directories@{Keep\-Output\-Directories}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Keep\-Output\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Code\-Blocks\-Build\-Config\-::\-Keep\-Output\-Directories (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a4f6a164fd09b1bc4e78510529919d13b}
+\hypertarget{classCCodeBlocksBuildConfig_a3dfc04a8d01dad69d1c9f416cb8f714c}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Load@{Load}}
+\index{Load@{Load}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Load (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildConfig_a3dfc04a8d01dad69d1c9f416cb8f714c}
+
+
+Loads a build configuration from a file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & name of build configuration file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if configuration was successfully loaded, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_ad7e8cb763dea92e8d9c9e2bc460a4f5a}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Macro\-Variable\-Case@{Macro\-Variable\-Case}}
+\index{Macro\-Variable\-Case@{Macro\-Variable\-Case}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Macro\-Variable\-Case}]{\setlength{\rightskip}{0pt plus 5cm}int\& C\-Code\-Blocks\-Build\-Config\-::\-Macro\-Variable\-Case (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_ad7e8cb763dea92e8d9c9e2bc460a4f5a}
+\hypertarget{classCCodeBlocksBuildConfig_a13d1d469d597c7724b6a1975bb00bdd5}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Multiline\-Objects@{Multiline\-Objects}}
+\index{Multiline\-Objects@{Multiline\-Objects}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Multiline\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Multiline\-Objects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a13d1d469d597c7724b6a1975bb00bdd5}
+
+
+Allows generation of multi-\/line object file lists. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_a5290986e23b464ce386a12c809b3d531}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Multiline\-Objects}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_adcc30cc5d53ceaf3251ce43c491dfde3}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Multiline\-Options@{Multiline\-Options}}
+\index{Multiline\-Options@{Multiline\-Options}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Multiline\-Options}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Multiline\-Options (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_adcc30cc5d53ceaf3251ce43c491dfde3}
+
+
+Allows generation of multi-\/line option lists. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_a6d3348032b885c569b5cd35955e0125d}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Multiline\-Options}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_a20ac91ad51a7c1f9b75251eaf698a1c4}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Numeric\-Toolchain\-Suffix@{Numeric\-Toolchain\-Suffix}}
+\index{Numeric\-Toolchain\-Suffix@{Numeric\-Toolchain\-Suffix}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Numeric\-Toolchain\-Suffix}]{\setlength{\rightskip}{0pt plus 5cm}bool\& C\-Code\-Blocks\-Build\-Config\-::\-Numeric\-Toolchain\-Suffix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a20ac91ad51a7c1f9b75251eaf698a1c4}
+\hypertarget{classCCodeBlocksBuildConfig_a6d56321c8f3b9e1305123eee8947a0c3}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Platforms@{Platforms}}
+\index{Platforms@{Platforms}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Platforms}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Platforms (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a6d56321c8f3b9e1305123eee8947a0c3}
+
+
+Returns reference to the set of platforms in build configuration. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_a5d1a73a8b99b2a8f7c9b8b6e68c9ee0a}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Platforms}. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_afaecfed36bea423ccd1bc39b10e919bb}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Quote\-Path\-Mode@{Quote\-Path\-Mode}}
+\index{Quote\-Path\-Mode@{Quote\-Path\-Mode}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Quote\-Path\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}int\& C\-Code\-Blocks\-Build\-Config\-::\-Quote\-Path\-Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_afaecfed36bea423ccd1bc39b10e919bb}
+\hypertarget{classCCodeBlocksBuildConfig_adfeb4a66240e14efc36eff4559567907}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Save@{Save}}
+\index{Save@{Save}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Save (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildConfig_adfeb4a66240e14efc36eff4559567907}
+
+
+Saves the build configuration to a file specified by {\itshape File\-Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\-Name} & name of build configuration file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if configuration was successfully saved, {\itshape false} otherwise. 
+\end{DoxyReturn}
+\hypertarget{classCCodeBlocksBuildConfig_a326f3e278b74b930e6bf2fabacb88f62}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Show@{Show}}
+\index{Show@{Show}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCCodeBlocksBuildConfig_a326f3e278b74b930e6bf2fabacb88f62}
+
+
+Prints build configuration contents to standard output. 
+
+\hypertarget{classCCodeBlocksBuildConfig_a478b0e7a1078e2ed33bba779f492d985}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Target\-Name\-Case@{Target\-Name\-Case}}
+\index{Target\-Name\-Case@{Target\-Name\-Case}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Target\-Name\-Case}]{\setlength{\rightskip}{0pt plus 5cm}int\& C\-Code\-Blocks\-Build\-Config\-::\-Target\-Name\-Case (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a478b0e7a1078e2ed33bba779f492d985}
+\hypertarget{classCCodeBlocksBuildConfig_a2ff25013bd1b3eab5cfc78dc6a95c9a9}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Targets@{Targets}}
+\index{Targets@{Targets}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Targets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List}\& C\-Code\-Blocks\-Build\-Config\-::\-Targets (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a2ff25013bd1b3eab5cfc78dc6a95c9a9}
+\hypertarget{classCCodeBlocksBuildConfig_a77b192d14a95e6f96468238ae06e1580}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!Tool\-Chains@{Tool\-Chains}}
+\index{Tool\-Chains@{Tool\-Chains}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{Tool\-Chains}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::\-Tool\-Chains (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCCodeBlocksBuildConfig_a77b192d14a95e6f96468238ae06e1580}
+
+
+Returns reference to the set of toolchains in build configuration. 
+
+\begin{DoxyReturn}{Returns}
+reference to \hyperlink{classCCodeBlocksBuildConfig_a6228c5d7803e50f70065f6fe9e24c4be}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Tool\-Chains}. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCodeBlocksBuildConfig_a89e06222a6f380d708357f1cedcfac43}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Be\-Quiet@{m\-\_\-\-Be\-Quiet}}
+\index{m\-\_\-\-Be\-Quiet@{m\-\_\-\-Be\-Quiet}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Be\-Quiet}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Be\-Quiet\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a89e06222a6f380d708357f1cedcfac43}
+\hypertarget{classCCodeBlocksBuildConfig_ae5a32f86104366595bb045f809cc5d5a}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Be\-Verbose@{m\-\_\-\-Be\-Verbose}}
+\index{m\-\_\-\-Be\-Verbose@{m\-\_\-\-Be\-Verbose}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Be\-Verbose}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Be\-Verbose\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_ae5a32f86104366595bb045f809cc5d5a}
+\hypertarget{classCCodeBlocksBuildConfig_a4f4a79145c1b7bd90881901f9ae98bb5}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Default\-Options@{m\-\_\-\-Default\-Options}}
+\index{m\-\_\-\-Default\-Options@{m\-\_\-\-Default\-Options}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Default\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Default\-Options\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a4f4a79145c1b7bd90881901f9ae98bb5}
+\hypertarget{classCCodeBlocksBuildConfig_a1e3f7ffab14887951b2d8d743354e786}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Flat\-Object\-Names@{m\-\_\-\-Flat\-Object\-Names}}
+\index{m\-\_\-\-Flat\-Object\-Names@{m\-\_\-\-Flat\-Object\-Names}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Flat\-Object\-Names}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Flat\-Object\-Names\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a1e3f7ffab14887951b2d8d743354e786}
+
+
+Controls the way of object file names generation. 
+
+When {\itshape m\-\_\-\-Flat\-Object\-Names} is set to {\itshape true}, file names of build units are processed depending on \hyperlink{classCCodeBlocksBuildConfig_a1e3f7ffab14887951b2d8d743354e786}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Flat\-Object\-Names} value. \hypertarget{classCCodeBlocksBuildConfig_a0bcabddaab973e27b714855c082a2cbd}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Flat\-Object\-Paths@{m\-\_\-\-Flat\-Object\-Paths}}
+\index{m\-\_\-\-Flat\-Object\-Paths@{m\-\_\-\-Flat\-Object\-Paths}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Flat\-Object\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Flat\-Object\-Paths\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a0bcabddaab973e27b714855c082a2cbd}
+
+
+Controls the way of object file names generation. 
+
+When {\itshape m\-\_\-\-Flat\-Object\-Paths} is set to {\itshape true}, file names of build units including file path are processed using \hyperlink{cbhelper_8h_af77c55aaae54cacd51a80bd4cb56b939}{Flat\-File\-Name(const C\-String\& File\-Name)} function, otherwise, path to build unit is not used for composing path to corresponding object file and all object files will be created in one directory. This option works only if \hyperlink{classCCodeBlocksBuildConfig_a1e3f7ffab14887951b2d8d743354e786}{C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Flat\-Object\-Names} is set to {\itshape true}. \hypertarget{classCCodeBlocksBuildConfig_ac534f72effbbb05a79e9af4c04b93f4d}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Global\-Variables@{m\-\_\-\-Global\-Variables}}
+\index{m\-\_\-\-Global\-Variables@{m\-\_\-\-Global\-Variables}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Global\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Global\-Variables\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_ac534f72effbbb05a79e9af4c04b93f4d}
+
+
+Configuration of a set of global variables. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCGlobalVariableConfig}{C\-Global\-Variable\-Config}. 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksBuildConfig_a6c5a833fdccaa0e15f54985762cf903b}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Include\-Dependencies@{m\-\_\-\-Include\-Dependencies}}
+\index{m\-\_\-\-Include\-Dependencies@{m\-\_\-\-Include\-Dependencies}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Include\-Dependencies}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Include\-Dependencies\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a6c5a833fdccaa0e15f54985762cf903b}
+\hypertarget{classCCodeBlocksBuildConfig_af55874cd3fca990d090889ce75597a91}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Keep\-Object\-Directories@{m\-\_\-\-Keep\-Object\-Directories}}
+\index{m\-\_\-\-Keep\-Object\-Directories@{m\-\_\-\-Keep\-Object\-Directories}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Keep\-Object\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Keep\-Object\-Directories\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_af55874cd3fca990d090889ce75597a91}
+\hypertarget{classCCodeBlocksBuildConfig_a19eec6d82fbfb156e3939669dc9b5d94}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Keep\-Output\-Directories@{m\-\_\-\-Keep\-Output\-Directories}}
+\index{m\-\_\-\-Keep\-Output\-Directories@{m\-\_\-\-Keep\-Output\-Directories}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Keep\-Output\-Directories}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Keep\-Output\-Directories\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a19eec6d82fbfb156e3939669dc9b5d94}
+\hypertarget{classCCodeBlocksBuildConfig_a00d5c77aff64f3647cca2d9c0aaf37d7}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Macro\-Variable\-Case@{m\-\_\-\-Macro\-Variable\-Case}}
+\index{m\-\_\-\-Macro\-Variable\-Case@{m\-\_\-\-Macro\-Variable\-Case}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Macro\-Variable\-Case}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Macro\-Variable\-Case\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a00d5c77aff64f3647cca2d9c0aaf37d7}
+\hypertarget{classCCodeBlocksBuildConfig_a5290986e23b464ce386a12c809b3d531}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Multiline\-Objects@{m\-\_\-\-Multiline\-Objects}}
+\index{m\-\_\-\-Multiline\-Objects@{m\-\_\-\-Multiline\-Objects}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Multiline\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Multiline\-Objects\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a5290986e23b464ce386a12c809b3d531}
+
+
+Allows generation of multi-\/line object file lists. 
+
+\hypertarget{classCCodeBlocksBuildConfig_a6d3348032b885c569b5cd35955e0125d}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Multiline\-Options@{m\-\_\-\-Multiline\-Options}}
+\index{m\-\_\-\-Multiline\-Options@{m\-\_\-\-Multiline\-Options}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Multiline\-Options}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Multiline\-Options\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a6d3348032b885c569b5cd35955e0125d}
+
+
+Allows generation of multi-\/line option lists. 
+
+\hypertarget{classCCodeBlocksBuildConfig_ac4e930aa6e42094e6f40d29d2f373da6}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Numeric\-Toolchain\-Suffix@{m\-\_\-\-Numeric\-Toolchain\-Suffix}}
+\index{m\-\_\-\-Numeric\-Toolchain\-Suffix@{m\-\_\-\-Numeric\-Toolchain\-Suffix}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Numeric\-Toolchain\-Suffix}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Numeric\-Toolchain\-Suffix\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_ac4e930aa6e42094e6f40d29d2f373da6}
+\hypertarget{classCCodeBlocksBuildConfig_a5d1a73a8b99b2a8f7c9b8b6e68c9ee0a}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Platforms@{m\-\_\-\-Platforms}}
+\index{m\-\_\-\-Platforms@{m\-\_\-\-Platforms}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Platforms}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Platforms\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a5d1a73a8b99b2a8f7c9b8b6e68c9ee0a}
+
+
+Configuration of a set of platforms. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCPlatformSet}{C\-Platform\-Set}. 
+\end{DoxySeeAlso}
+\hypertarget{classCCodeBlocksBuildConfig_ac52ed092d08ce6778dcb901dea2130d2}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Quote\-Path\-Mode@{m\-\_\-\-Quote\-Path\-Mode}}
+\index{m\-\_\-\-Quote\-Path\-Mode@{m\-\_\-\-Quote\-Path\-Mode}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Quote\-Path\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Quote\-Path\-Mode\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_ac52ed092d08ce6778dcb901dea2130d2}
+\hypertarget{classCCodeBlocksBuildConfig_a07127c9e222fe5fa3e2e0b7a2b6f50e4}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Target\-Name\-Case@{m\-\_\-\-Target\-Name\-Case}}
+\index{m\-\_\-\-Target\-Name\-Case@{m\-\_\-\-Target\-Name\-Case}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Target\-Name\-Case}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Target\-Name\-Case\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a07127c9e222fe5fa3e2e0b7a2b6f50e4}
+\hypertarget{classCCodeBlocksBuildConfig_adf02e1f9a0346b2d25ced81343fe4d89}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Targets@{m\-\_\-\-Targets}}
+\index{m\-\_\-\-Targets@{m\-\_\-\-Targets}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Targets\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_adf02e1f9a0346b2d25ced81343fe4d89}
+\hypertarget{classCCodeBlocksBuildConfig_a6228c5d7803e50f70065f6fe9e24c4be}{\index{C\-Code\-Blocks\-Build\-Config@{C\-Code\-Blocks\-Build\-Config}!m\-\_\-\-Tool\-Chains@{m\-\_\-\-Tool\-Chains}}
+\index{m\-\_\-\-Tool\-Chains@{m\-\_\-\-Tool\-Chains}!CCodeBlocksBuildConfig@{C\-Code\-Blocks\-Build\-Config}}
+\subsubsection[{m\-\_\-\-Tool\-Chains}]{\setlength{\rightskip}{0pt plus 5cm}C\-Code\-Blocks\-Build\-Config\-::m\-\_\-\-Tool\-Chains\hspace{0.3cm}{\ttfamily [private]}}}\label{classCCodeBlocksBuildConfig_a6228c5d7803e50f70065f6fe9e24c4be}
+
+
+Configuration of a set of build utilities. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classCToolChainSet}{C\-Tool\-Chain\-Set}. 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{cbbuildcfg_8h}{cbbuildcfg.\-h}\item 
+src/\hyperlink{cbbuildcfg_8cpp}{cbbuildcfg.\-cpp}\item 
+src/doc/\hyperlink{cbbuildcfg_8dox}{cbbuildcfg.\-dox}\end{DoxyCompactItemize}

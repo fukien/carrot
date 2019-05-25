@@ -1,0 +1,308 @@
+\hypertarget{classCToolChainSet}{\section{C\-Tool\-Chain\-Set Class Reference}
+\label{classCToolChainSet}\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}}
+}
+
+
+Manages a set of toolchains.  
+
+
+
+
+{\ttfamily \#include $<$toolchains.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCToolChainSet_a6f7c3e3755a389cc7ecb326bec26e399}{Lock} (void)
+\begin{DoxyCompactList}\small\item\em Locks the set of toolchains to prevent accidental modification. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_a09cd759de5503ee0e4f46eb72de0a146}{Unlock} (void)
+\begin{DoxyCompactList}\small\item\em Unlocks the set of toolchains to allow modifications. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_a6b563d9417242d5454248a0b502ab4cd}{Clear} (void)
+\begin{DoxyCompactList}\small\item\em Resets the set of toolchains to the initial state. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classCToolChainSet_a0afacb67fa8806056ba02f2ea6eefe75}{Get\-Count} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S) const 
+\begin{DoxyCompactList}\small\item\em Returns the number of toolchains in the set. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$ \hyperlink{classCToolChainSet_a640500708520ede89a7b28495181e9b6}{Tool\-Chain} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S, const size\-\_\-t Index) const 
+\begin{DoxyCompactList}\small\item\em Returns toolchain with number {\itshape Index} for {\itshape O\-S} platform. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$ \hyperlink{classCToolChainSet_a5ed770a59c360e8c42d5f9cdc3239013}{Find} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S, const \hyperlink{classCString}{C\-String} \&Alias)
+\begin{DoxyCompactList}\small\item\em Searches toolchain with alias {\itshape Alias} for platform {\itshape O\-S}. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_abe8058a501f776aefa64d4071f387ad7}{Add\-Default} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the default set of G\-N\-U toolchains for all known platforms. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$ \hyperlink{classCToolChainSet_ad3e4d7f5ca7269dcc684a6d457a5914c}{Add} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S, const \hyperlink{classCString}{C\-String} \&Alias)
+\begin{DoxyCompactList}\small\item\em Creates new toolchain with alias {\itshape Alias} for platform {\itshape O\-S}. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_a5276cbe9c0dba947d787cc150714ebc2}{Remove} (const \hyperlink{classCPlatform_a2fb735c63c53052f79629e338bb0f535}{C\-Platform\-::\-O\-S\-\_\-\-Type} O\-S, const \hyperlink{classCString}{C\-String} \&Alias)
+\begin{DoxyCompactList}\small\item\em Destroys a toolchain with alias {\itshape Alias} for platform {\itshape O\-S}. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_a1f1d2d4df96c26271aedbcda9190d6d4}{Read} (const Ti\-Xml\-Element $\ast$Config\-Root)
+\begin{DoxyCompactList}\small\item\em Reads the set of toolchains from an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_a461855b2af110de7ef0f74514c015689}{Write} (Ti\-Xml\-Element $\ast$Config\-Root)
+\begin{DoxyCompactList}\small\item\em Writes the set of toolchains to an X\-M\-L document. \end{DoxyCompactList}\item 
+void \hyperlink{classCToolChainSet_ad33e134b40b8a92af770f802aa5b596c}{Show} (void)
+\begin{DoxyCompactList}\small\item\em Prints contents of all toolchains to standard output. \end{DoxyCompactList}\item 
+\hyperlink{classCToolChainSet_ad767d2d75ddd9b06a13ba28946493c2a}{C\-Tool\-Chain\-Set} (void)
+\item 
+\hyperlink{classCToolChainSet_a5326442eb8b8938aee24500f4acb7c92}{$\sim$\-C\-Tool\-Chain\-Set} (void)
+\begin{DoxyCompactList}\small\item\em Destroys set of toolchains. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCToolChainSet_a723b7c2077dda03dd6e6e5419c054f6d}{Add\-Tool\-Chain} (const \hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$A\-Tool\-Chain)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::vector\\*
+$<$ \hyperlink{classCToolChain}{C\-Tool\-Chain} $\ast$ $>$ $>$ \hyperlink{classCToolChainSet_afb74ad132fb56b1fb9e4cc3baf11283a}{m\-\_\-\-Tool\-Chains}
+\begin{DoxyCompactList}\small\item\em List of toolchains. \end{DoxyCompactList}\item 
+bool \hyperlink{classCToolChainSet_ad1825a1171045260dfdcf6ce7195680a}{m\-\_\-\-Locked}
+\begin{DoxyCompactList}\small\item\em Indicates that the set of toolchains cannot be modified. \end{DoxyCompactList}\item 
+bool \hyperlink{classCToolChainSet_aff78567e6f6acc76f0ef60b7afdd5ea8}{m\-\_\-\-Have\-Defaults}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages a set of toolchains. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCToolChainSet_ad767d2d75ddd9b06a13ba28946493c2a}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}}
+\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{C\-Tool\-Chain\-Set}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-Set\-::\-C\-Tool\-Chain\-Set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_ad767d2d75ddd9b06a13ba28946493c2a}
+\hypertarget{classCToolChainSet_a5326442eb8b8938aee24500f4acb7c92}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!$\sim$\-C\-Tool\-Chain\-Set@{$\sim$\-C\-Tool\-Chain\-Set}}
+\index{$\sim$\-C\-Tool\-Chain\-Set@{$\sim$\-C\-Tool\-Chain\-Set}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{$\sim$\-C\-Tool\-Chain\-Set}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-Set\-::$\sim$\-C\-Tool\-Chain\-Set (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a5326442eb8b8938aee24500f4acb7c92}
+
+
+Destroys set of toolchains. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCToolChainSet_ad3e4d7f5ca7269dcc684a6d457a5914c}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Add@{Add}}
+\index{Add@{Add}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Tool\-Chain} $\ast$ C\-Tool\-Chain\-Set\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S, }
+\item[{const {\bf C\-String} \&}]{Alias}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_ad3e4d7f5ca7269dcc684a6d457a5914c}
+
+
+Creates new toolchain with alias {\itshape Alias} for platform {\itshape O\-S}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Alias} & toolchain name (alias). \\
+\hline
+{\em O\-S} & platform (operating system) identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{classCToolChain}{C\-Tool\-Chain}.
+\end{DoxyReturn}
+If the desired toolchain already exists, new toolchain is not created. \hypertarget{classCToolChainSet_abe8058a501f776aefa64d4071f387ad7}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Add\-Default@{Add\-Default}}
+\index{Add\-Default@{Add\-Default}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Add\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Add\-Default (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_abe8058a501f776aefa64d4071f387ad7}
+
+
+Initializes the default set of G\-N\-U toolchains for all known platforms. 
+
+\hypertarget{classCToolChainSet_a723b7c2077dda03dd6e6e5419c054f6d}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Add\-Tool\-Chain@{Add\-Tool\-Chain}}
+\index{Add\-Tool\-Chain@{Add\-Tool\-Chain}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Add\-Tool\-Chain}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Add\-Tool\-Chain (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Tool\-Chain} $\ast$}]{A\-Tool\-Chain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCToolChainSet_a723b7c2077dda03dd6e6e5419c054f6d}
+\hypertarget{classCToolChainSet_a6b563d9417242d5454248a0b502ab4cd}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Clear@{Clear}}
+\index{Clear@{Clear}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a6b563d9417242d5454248a0b502ab4cd}
+
+
+Resets the set of toolchains to the initial state. 
+
+\hypertarget{classCToolChainSet_a5ed770a59c360e8c42d5f9cdc3239013}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Find@{Find}}
+\index{Find@{Find}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Tool\-Chain} $\ast$ C\-Tool\-Chain\-Set\-::\-Find (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S, }
+\item[{const {\bf C\-String} \&}]{Alias}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a5ed770a59c360e8c42d5f9cdc3239013}
+
+
+Searches toolchain with alias {\itshape Alias} for platform {\itshape O\-S}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Alias} & toolchain name (alias). \\
+\hline
+{\em O\-S} & platform (operating system) identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{classCToolChain}{C\-Tool\-Chain}.
+\end{DoxyReturn}
+Returns {\itshape N\-U\-L\-L} if no toolchain is found. \hypertarget{classCToolChainSet_a0afacb67fa8806056ba02f2ea6eefe75}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Get\-Count@{Get\-Count}}
+\index{Get\-Count@{Get\-Count}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t C\-Tool\-Chain\-Set\-::\-Get\-Count (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S}
+\end{DoxyParamCaption}
+) const}}\label{classCToolChainSet_a0afacb67fa8806056ba02f2ea6eefe75}
+
+
+Returns the number of toolchains in the set. 
+
+\begin{DoxyReturn}{Returns}
+number of toolchains in the set. 
+\end{DoxyReturn}
+\hypertarget{classCToolChainSet_a6f7c3e3755a389cc7ecb326bec26e399}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Lock@{Lock}}
+\index{Lock@{Lock}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Lock}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Lock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a6f7c3e3755a389cc7ecb326bec26e399}
+
+
+Locks the set of toolchains to prevent accidental modification. 
+
+\hypertarget{classCToolChainSet_a1f1d2d4df96c26271aedbcda9190d6d4}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Read@{Read}}
+\index{Read@{Read}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Ti\-Xml\-Element $\ast$}]{Config\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a1f1d2d4df96c26271aedbcda9190d6d4}
+
+
+Reads the set of toolchains from an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Config\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCToolChainSet_a5276cbe9c0dba947d787cc150714ebc2}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Remove@{Remove}}
+\index{Remove@{Remove}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S, }
+\item[{const {\bf C\-String} \&}]{Alias}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a5276cbe9c0dba947d787cc150714ebc2}
+
+
+Destroys a toolchain with alias {\itshape Alias} for platform {\itshape O\-S}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Alias} & toolchain name (alias). \\
+\hline
+{\em O\-S} & platform (operating system) identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{classCToolChainSet_ad33e134b40b8a92af770f802aa5b596c}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Show@{Show}}
+\index{Show@{Show}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Show}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Show (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_ad33e134b40b8a92af770f802aa5b596c}
+
+
+Prints contents of all toolchains to standard output. 
+
+\hypertarget{classCToolChainSet_a640500708520ede89a7b28495181e9b6}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Tool\-Chain@{Tool\-Chain}}
+\index{Tool\-Chain@{Tool\-Chain}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Tool\-Chain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Tool\-Chain} $\ast$ C\-Tool\-Chain\-Set\-::\-Tool\-Chain (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Platform\-::\-O\-S\-\_\-\-Type}}]{O\-S, }
+\item[{const size\-\_\-t}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCToolChainSet_a640500708520ede89a7b28495181e9b6}
+
+
+Returns toolchain with number {\itshape Index} for {\itshape O\-S} platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Index} & toolchain number. \\
+\hline
+{\em O\-S} & platform type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to \hyperlink{classCToolChain}{C\-Tool\-Chain}.
+\end{DoxyReturn}
+Returns {\itshape N\-U\-L\-L} if a toolchain with number {\itshape Index} does not exist. \hypertarget{classCToolChainSet_a09cd759de5503ee0e4f46eb72de0a146}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Unlock@{Unlock}}
+\index{Unlock@{Unlock}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Unlock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a09cd759de5503ee0e4f46eb72de0a146}
+
+
+Unlocks the set of toolchains to allow modifications. 
+
+\hypertarget{classCToolChainSet_a461855b2af110de7ef0f74514c015689}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!Write@{Write}}
+\index{Write@{Write}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Tool\-Chain\-Set\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{Ti\-Xml\-Element $\ast$}]{Config\-Root}
+\end{DoxyParamCaption}
+)}}\label{classCToolChainSet_a461855b2af110de7ef0f74514c015689}
+
+
+Writes the set of toolchains to an X\-M\-L document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Config\-Root} & an element of X\-M\-L document. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCToolChainSet_aff78567e6f6acc76f0ef60b7afdd5ea8}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!m\-\_\-\-Have\-Defaults@{m\-\_\-\-Have\-Defaults}}
+\index{m\-\_\-\-Have\-Defaults@{m\-\_\-\-Have\-Defaults}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{m\-\_\-\-Have\-Defaults}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Tool\-Chain\-Set\-::m\-\_\-\-Have\-Defaults\hspace{0.3cm}{\ttfamily [private]}}}\label{classCToolChainSet_aff78567e6f6acc76f0ef60b7afdd5ea8}
+\hypertarget{classCToolChainSet_ad1825a1171045260dfdcf6ce7195680a}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!m\-\_\-\-Locked@{m\-\_\-\-Locked}}
+\index{m\-\_\-\-Locked@{m\-\_\-\-Locked}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{m\-\_\-\-Locked}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-Set\-::m\-\_\-\-Locked\hspace{0.3cm}{\ttfamily [private]}}}\label{classCToolChainSet_ad1825a1171045260dfdcf6ce7195680a}
+
+
+Indicates that the set of toolchains cannot be modified. 
+
+This property should be set by \hyperlink{classCToolChainSet_a6f7c3e3755a389cc7ecb326bec26e399}{C\-Tool\-Chain\-Set\-::\-Lock(void)} to prevent accidental modification and unset by \hyperlink{classCToolChainSet_a09cd759de5503ee0e4f46eb72de0a146}{C\-Tool\-Chain\-Set\-::\-Unlock(void)} to release the lock. \hypertarget{classCToolChainSet_afb74ad132fb56b1fb9e4cc3baf11283a}{\index{C\-Tool\-Chain\-Set@{C\-Tool\-Chain\-Set}!m\-\_\-\-Tool\-Chains@{m\-\_\-\-Tool\-Chains}}
+\index{m\-\_\-\-Tool\-Chains@{m\-\_\-\-Tool\-Chains}!CToolChainSet@{C\-Tool\-Chain\-Set}}
+\subsubsection[{m\-\_\-\-Tool\-Chains}]{\setlength{\rightskip}{0pt plus 5cm}C\-Tool\-Chain\-Set\-::m\-\_\-\-Tool\-Chains\hspace{0.3cm}{\ttfamily [private]}}}\label{classCToolChainSet_afb74ad132fb56b1fb9e4cc3baf11283a}
+
+
+List of toolchains. 
+
+Contains pointers to \hyperlink{classCToolChain}{C\-Tool\-Chain} objects and owns them (i.\-e. objects sould be destroyed before the list is cleared). 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{toolchains_8h}{toolchains.\-h}\item 
+src/doc/\hyperlink{toolchains_8dox}{toolchains.\-dox}\item 
+src/\hyperlink{toolchains_8cpp}{toolchains.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{classCParameterString}{\section{C\-Parameter\-String Class Reference}
+\label{classCParameterString}\index{C\-Parameter\-String@{C\-Parameter\-String}}
+}
+
+
+{\ttfamily \#include $<$stlconfig.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCParameterString_a89976a2d08971f59f0f628386c9e4f8a}{Set\-Parameters} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{classCParameterString_a17eb5d83508fef1f6bbe77eac7960769}{Set\-Parameters} (const \hyperlink{classCString}{C\-String} \&Parameters)
+\item 
+void \hyperlink{classCParameterString_a46bb74a7b8c7bf6e719999e0ed7d13ec}{Set\-Parameters} (const \hyperlink{classCParameterString}{C\-Parameter\-String} \&Parameters)
+\item 
+void \hyperlink{classCParameterString_a7e992a8912bd5cebd00499dd5c410936}{Add\-Parameters} (const \hyperlink{classCString}{C\-String} \&Parameters)
+\item 
+void \hyperlink{classCParameterString_ab605b9f8c932a0bad1cbf1d7bcd3bb8c}{Add\-Parameters} (const \hyperlink{classCParameterString}{C\-Parameter\-String} \&Parameters)
+\item 
+int \hyperlink{classCParameterString_a7424a983bd9fb0e1b7640f0fe15d6435}{Get\-Count} (void) const 
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCParameterString_a54c39848452195f3664000a73d9e8e59}{Parameter} (const int Index) const 
+\item 
+virtual void \hyperlink{classCParameterString_aa98b64225630c11f600d6e120490d4c4}{Print} (std\-::ostream \&out)
+\item 
+\hyperlink{classCParameterString_a971709de277fc4c2a1cd5f74ec90d9b4}{C\-Parameter\-String} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{classCParameterString_a903204c66252ec198d60539042ba8a89}{C\-Parameter\-String} (const \hyperlink{classCString}{C\-String} \&Parameters)
+\item 
+\hyperlink{classCParameterString_a91de2c236e00587751ce53046bde61bd}{C\-Parameter\-String} (void)
+\item 
+virtual \hyperlink{classCParameterString_ae5dedc785b5ec9716e8c690fde7bc1b4}{$\sim$\-C\-Parameter\-String} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{classCParameterString_a3c497c1eca4ef012b78d909dc992905e}{m\-\_\-\-Null\-Parameter}
+\item 
+\hyperlink{classCStringList}{C\-String\-List} \hyperlink{classCParameterString_a28c643ea16fd98a74c699a5e6f7368f4}{m\-\_\-\-Parameters}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCParameterString_a971709de277fc4c2a1cd5f74ec90d9b4}{\index{C\-Parameter\-String@{C\-Parameter\-String}!C\-Parameter\-String@{C\-Parameter\-String}}
+\index{C\-Parameter\-String@{C\-Parameter\-String}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{C\-Parameter\-String}]{\setlength{\rightskip}{0pt plus 5cm}C\-Parameter\-String\-::\-C\-Parameter\-String (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a971709de277fc4c2a1cd5f74ec90d9b4}
+\hypertarget{classCParameterString_a903204c66252ec198d60539042ba8a89}{\index{C\-Parameter\-String@{C\-Parameter\-String}!C\-Parameter\-String@{C\-Parameter\-String}}
+\index{C\-Parameter\-String@{C\-Parameter\-String}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{C\-Parameter\-String}]{\setlength{\rightskip}{0pt plus 5cm}C\-Parameter\-String\-::\-C\-Parameter\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Parameters}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a903204c66252ec198d60539042ba8a89}
+\hypertarget{classCParameterString_a91de2c236e00587751ce53046bde61bd}{\index{C\-Parameter\-String@{C\-Parameter\-String}!C\-Parameter\-String@{C\-Parameter\-String}}
+\index{C\-Parameter\-String@{C\-Parameter\-String}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{C\-Parameter\-String}]{\setlength{\rightskip}{0pt plus 5cm}C\-Parameter\-String\-::\-C\-Parameter\-String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a91de2c236e00587751ce53046bde61bd}
+\hypertarget{classCParameterString_ae5dedc785b5ec9716e8c690fde7bc1b4}{\index{C\-Parameter\-String@{C\-Parameter\-String}!$\sim$\-C\-Parameter\-String@{$\sim$\-C\-Parameter\-String}}
+\index{$\sim$\-C\-Parameter\-String@{$\sim$\-C\-Parameter\-String}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{$\sim$\-C\-Parameter\-String}]{\setlength{\rightskip}{0pt plus 5cm}C\-Parameter\-String\-::$\sim$\-C\-Parameter\-String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classCParameterString_ae5dedc785b5ec9716e8c690fde7bc1b4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCParameterString_a7e992a8912bd5cebd00499dd5c410936}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Add\-Parameters@{Add\-Parameters}}
+\index{Add\-Parameters@{Add\-Parameters}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Add\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Parameter\-String\-::\-Add\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Parameters}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a7e992a8912bd5cebd00499dd5c410936}
+\hypertarget{classCParameterString_ab605b9f8c932a0bad1cbf1d7bcd3bb8c}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Add\-Parameters@{Add\-Parameters}}
+\index{Add\-Parameters@{Add\-Parameters}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Add\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Parameter\-String\-::\-Add\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Parameter\-String} \&}]{Parameters}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_ab605b9f8c932a0bad1cbf1d7bcd3bb8c}
+\hypertarget{classCParameterString_a7424a983bd9fb0e1b7640f0fe15d6435}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Get\-Count@{Get\-Count}}
+\index{Get\-Count@{Get\-Count}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Parameter\-String\-::\-Get\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classCParameterString_a7424a983bd9fb0e1b7640f0fe15d6435}
+\hypertarget{classCParameterString_a54c39848452195f3664000a73d9e8e59}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Parameter\-String\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index}
+\end{DoxyParamCaption}
+) const}}\label{classCParameterString_a54c39848452195f3664000a73d9e8e59}
+\hypertarget{classCParameterString_aa98b64225630c11f600d6e120490d4c4}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Print@{Print}}
+\index{Print@{Print}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}virtual void C\-Parameter\-String\-::\-Print (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classCParameterString_aa98b64225630c11f600d6e120490d4c4}
+\hypertarget{classCParameterString_a89976a2d08971f59f0f628386c9e4f8a}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Set\-Parameters@{Set\-Parameters}}
+\index{Set\-Parameters@{Set\-Parameters}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Set\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Parameter\-String\-::\-Set\-Parameters (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a89976a2d08971f59f0f628386c9e4f8a}
+\hypertarget{classCParameterString_a17eb5d83508fef1f6bbe77eac7960769}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Set\-Parameters@{Set\-Parameters}}
+\index{Set\-Parameters@{Set\-Parameters}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Set\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Parameter\-String\-::\-Set\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Parameters}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a17eb5d83508fef1f6bbe77eac7960769}
+\hypertarget{classCParameterString_a46bb74a7b8c7bf6e719999e0ed7d13ec}{\index{C\-Parameter\-String@{C\-Parameter\-String}!Set\-Parameters@{Set\-Parameters}}
+\index{Set\-Parameters@{Set\-Parameters}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{Set\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Parameter\-String\-::\-Set\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Parameter\-String} \&}]{Parameters}
+\end{DoxyParamCaption}
+)}}\label{classCParameterString_a46bb74a7b8c7bf6e719999e0ed7d13ec}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCParameterString_a3c497c1eca4ef012b78d909dc992905e}{\index{C\-Parameter\-String@{C\-Parameter\-String}!m\-\_\-\-Null\-Parameter@{m\-\_\-\-Null\-Parameter}}
+\index{m\-\_\-\-Null\-Parameter@{m\-\_\-\-Null\-Parameter}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{m\-\_\-\-Null\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} C\-Parameter\-String\-::m\-\_\-\-Null\-Parameter\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCParameterString_a3c497c1eca4ef012b78d909dc992905e}
+\hypertarget{classCParameterString_a28c643ea16fd98a74c699a5e6f7368f4}{\index{C\-Parameter\-String@{C\-Parameter\-String}!m\-\_\-\-Parameters@{m\-\_\-\-Parameters}}
+\index{m\-\_\-\-Parameters@{m\-\_\-\-Parameters}!CParameterString@{C\-Parameter\-String}}
+\subsubsection[{m\-\_\-\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String\-List} C\-Parameter\-String\-::m\-\_\-\-Parameters\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCParameterString_a28c643ea16fd98a74c699a5e6f7368f4}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{stlconfig_8h}{stlconfig.\-h}\item 
+lib/\hyperlink{stlconfig_8cpp}{stlconfig.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,871 @@
+\hypertarget{stlstrings_8h}{\section{lib/stlstrings.h File Reference}
+\label{stlstrings_8h}\index{lib/stlstrings.\-h@{lib/stlstrings.\-h}}
+}
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCString}{C\-String}
+\item 
+class \hyperlink{classCStringList}{C\-String\-List}
+\item 
+class \hyperlink{classCCharset}{C\-Charset}
+\item 
+class \hyperlink{classCCharIterator}{C\-Char\-Iterator}
+\item 
+class \hyperlink{classCStringIterator}{C\-String\-Iterator}
+\item 
+class \hyperlink{classCStringListIterator}{C\-String\-List\-Iterator}
+\item 
+class \hyperlink{classCCharHistogram}{C\-Char\-Histogram}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stlstrings_8h_a4901614d5e480eb05e0f570c7d89e216}{M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H}~256
+\item 
+\#define \hyperlink{stlstrings_8h_aa96cda3dc4327fc103977fd4483aefb2}{I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X}~-\/1
+\item 
+\#define \hyperlink{stlstrings_8h_a8085b77b952d20d37d96fff6a294be34}{C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E}~(1$<$$<$(8$\ast$sizeof(char)))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a737f2c3015ee0586158f0388e6485af4}{operator+} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a3eb8efa66c56fb2e09bdb2df879909c2}{operator+} (const \hyperlink{classCString}{C\-String} \&A\-String, const char B\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a835dbc9f5e2cf0f9e66c520d2288d62e}{operator+} (const char A\-Char, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a8e55f26efff4275ba95fc6bfcfc46ad2}{operator+} (const \hyperlink{classCString}{C\-String} \&A\-String, const int B\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa7282cb24bf775c07aa411069033fc59}{operator+} (const int A\-Integer, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa64785ff0c9cf18d1329b769e09d4ac6}{operator+} (const \hyperlink{classCString}{C\-String} \&A\-String, const float B\-Float)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ab7dd3066a834768f24365fb329de358a}{operator+} (const float A\-Float, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a2c2e70b41609d42fecc4e71409bf9f49}{operator+} (const \hyperlink{classCString}{C\-String} \&A\-String, const double B\-Float)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a6aef88947417418db62e611b37c284b2}{operator+} (const double A\-Float, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a8bb0820fca4a1a89931e27b3b1989169}{operator+} (const \hyperlink{classCString}{C\-String} \&A\-String, const char $\ast$B\-C\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a44c5d1f7efc3a2e0e71e4c923db4fd9c}{operator+} (const char $\ast$A\-String, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a37d13c1036696ba6b73eaf03192d2e3d}{Upper\-Case} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a255111f06b514b327ce73ed5e58c00e6}{Lower\-Case} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+char \hyperlink{stlstrings_8h_a8cf7fb2cd56b4c251aacd20691ddc368}{hex\-Char} (const unsigned char Value)
+\item 
+char \hyperlink{stlstrings_8h_aa3a356218ff9761025109f6925f6168c}{Hex\-Char} (const unsigned char Value)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ad2047697f2d8c0ce0d4debff71cab002}{hex} (const unsigned int A\-Integer, const unsigned int Length=8)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a45e4b7fe9d4c0ddb8e01ddc0667723d5}{Hex} (const unsigned int A\-Integer, const unsigned int Length=8)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a218c8b47bcd6bd2ec73736a908bde567}{hex8} (const unsigned char A\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ace24e9a9ce6a5162e6c99ce609ff3f48}{Hex8} (const unsigned char A\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a427370e535f826bf244c985eea0edc10}{hex16} (const unsigned short int A\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a9d0b4843d9112bb4420468fc0acbb389}{Hex16} (const unsigned short int A\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa3dfb466867eacf4c899c687c7debc29}{hex32} (const unsigned int A\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_acd0420d4f8b3b2f8db50ed94b89b5411}{Hex32} (const unsigned int A\-Integer)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a9cceb1d6e86d5bff0134e242295abd43}{hex64} (const long long int A\-Integer, const unsigned int Length=16)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a98542f7e0f5c533bfadb79dee8cfdf34}{Hex64} (const long long int A\-Integer, const unsigned int Length=16)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a1d824c884e67fd0654a0cf2ca177ce4e}{hex} (const unsigned char $\ast$Buffer, const unsigned int Length=0)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aafbd4eb7898b9d02fe30a37726ce1eab}{Hex} (const unsigned char $\ast$Buffer, const unsigned int Length=0)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a29a94f3688882478a37f07a1b5fb6ae6}{String\-Of\-Chars} (const char A\-Char, const int Count)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a9543f6b246be18cd8d0cf8b6cbb61d94}{Fill\-Str} (const \hyperlink{classCString}{C\-String} \&Prefix, const char A\-Char, const \hyperlink{classCString}{C\-String} \&Suffix, const int Length)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_acefa22919402e7a7ad5321e41418cb4a}{Enum\-Str} (const \hyperlink{classCString}{C\-String} \&Prefix, const int Counter, const \hyperlink{classCString}{C\-String} \&Suffix, const unsigned int Length)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a15f6dc67930c23ad414678f8cbc4d7c3}{Sign\-Str} (const int Signature)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa75688004932e4d5e525d47744f423a3}{Sub\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int First\-Pos, const int Last\-Pos)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_af23c268b8c45982996507592a992d23a}{Shift\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Shift)
+\item 
+void \hyperlink{stlstrings_8h_a3ca14a6dd21433d614d5ac0c495cac7f}{Split\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Position, \hyperlink{classCString}{C\-String} \&L\-String, \hyperlink{classCString}{C\-String} \&R\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a3b4eb786bb5a8da8f8d9c8002c477605}{Join\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&B\-String, const char Separator)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_af469adad7802154ad8795994910ebe84}{Left\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Position)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa5955377228d1eb00b9f3ea7b024dccf}{Right\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const int Position)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a7679cba9dbc1da4db83d5f617a4e1f37}{Filter\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCCharset}{C\-Charset} \&Valid\-Chars, const \hyperlink{classCCharset}{C\-Charset} \&Invalid\-Chars, const bool Validate\-Undefined)
+\item 
+int \hyperlink{stlstrings_8h_a9adc6b5852963c2cefebdbc7bff837be}{Count\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+int \hyperlink{stlstrings_8h_a3e4e8197607102a4b255f77c65edb35d}{Next\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char, const int Position)
+\item 
+int \hyperlink{stlstrings_8h_ae0795a0d3fa228b883510b60647f237b}{Prev\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char, const int Position)
+\item 
+int \hyperlink{stlstrings_8h_abf3fd94ee0cb7077ca11ca6a1b78c259}{First\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+int \hyperlink{stlstrings_8h_a7e74dc3f887a829b645c359b0aff530d}{Last\-Char\-Pos} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a430b3a478db257122abcd48c01812c77}{Trim\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a9f0e552bd5ae80f63b32931c650f928b}{Lead\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const unsigned int R\-Length)
+\item 
+void \hyperlink{stlstrings_8h_a71ce898627cc0c37e72b9e1884b4cf59}{Parse\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Delimiters, \hyperlink{classCStringList}{C\-String\-List} \&Sub\-Strings)
+\item 
+void \hyperlink{stlstrings_8h_a62eefcc6b6ee78d4231fa7f654371b7c}{Parse\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const char Delimiter, \hyperlink{classCStringList}{C\-String\-List} \&Sub\-Strings)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_af956adf4b75c922e88e0447e6d25f7e3}{Collect\-Str} (const \hyperlink{classCStringList}{C\-String\-List} \&Sub\-Strings, const \hyperlink{classCString}{C\-String} \&Delimiters)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ae4663b47bf5a95907261113eb3713268}{Strip\-Dup\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_adc496b105f23b4b8b0e23a960177e6c0}{Strip\-Dup\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ae5cbe9b372d9468f3e7c475b648cda2e}{Check\-First\-Char} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ab00be2dd4dee1dcfd41043f640f84512}{Check\-Last\-Char} (const \hyperlink{classCString}{C\-String} \&A\-String, const char A\-Char)
+\item 
+int \hyperlink{stlstrings_8h_a392ffad515a6a3dba1f6562c5a4b93cf}{Find\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&B\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a99274ed63940ab0526f1372b49a82cfc}{Find\-Replace\-Char} (const \hyperlink{classCString}{C\-String} \&A\-String, const char Search\-Char, const char Replace\-Char)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a66da46d39aa6f47913fae039eaa18e20}{Find\-Replace\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Search\-String, const \hyperlink{classCString}{C\-String} \&Replace\-String)
+\item 
+int \hyperlink{stlstrings_8h_a15e78c7188f87c9f83fc1e562a13b692}{Parse\-Mem\-Size\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, int \&Unit\-Size, char \&Unit\-Char)
+\item 
+int \hyperlink{stlstrings_8h_a1d66b7df4bb9d82f4b8e0de86216ac6d}{Parse\-Mem\-Size\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+long long int \hyperlink{stlstrings_8h_ac76f0fa0200851712283e09c74722ac0}{Parse\-Mem\-Size\-Str64} (const \hyperlink{classCString}{C\-String} \&A\-String, long long int \&Unit\-Size, char \&Unit\-Char)
+\item 
+long long int \hyperlink{stlstrings_8h_a90462bcda52896276e49d65be67580bc}{Parse\-Mem\-Size\-Str64} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+int \hyperlink{stlstrings_8h_aef88b63a1dfd98f0795f45485ec7b9ea}{Guess\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCStringList}{C\-String\-List} \&Variants, \hyperlink{classCString}{C\-String} \&Guessed, const bool Try\-Fuzzy=false)
+\item 
+int \hyperlink{stlstrings_8h_a4d0d597c2a4deae15288ec12639eda0b}{Guess\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Variants, \hyperlink{classCString}{C\-String} \&Guessed, const bool Try\-Fuzzy=false)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ae29cc9b31e2d2780832a7183abeae672}{Variant\-Str} (const int Index, const \hyperlink{classCString}{C\-String} \&Variants, const char Delimiter= ' ')
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a4dc0c80dcd0ae51502658fd3929223ec}{Mem\-Size\-Str} (const long long int Value, long long int \&Unit\-Size, \hyperlink{classCString}{C\-String} \&Unit\-Suffix)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aec00233b723d96c81f530aa9a0ff43a6}{Mem\-Size\-Str} (const long long int Value)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a491d7c2ee4357ff93204a0efbba8a3b5}{S\-I\-\_\-\-Unit\-Str} (const double Value, double \&Unit\-Size, \hyperlink{classCString}{C\-String} \&Unit\-Prefix, \hyperlink{classCString}{C\-String} \&Unit\-Symbol)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a2ed40abfb646adbd0059ba77918f1e35}{S\-I\-\_\-\-Unit\-Str} (const double Value)
+\item 
+bool \hyperlink{stlstrings_8h_a25bd198f0b5af8fc7dd3ec0e4becf865}{Is\-Quoted} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_af9b0455c4b6d1fc7379ef3daed28cc5d}{Quote\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ad4c27203cea948f9ddff85ab2910723c}{Unquote\-Str} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a399308de80c0fefc75abf9e1aa4826ba}{Shield\-Spaces} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_af3ee57ea66eafd1e41df7f65a2c02ea8}{Unshield\-Spaces} (const \hyperlink{classCString}{C\-String} \&A\-String)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ae3b8468df4e18b6f5e0816bd1a60f6c8}{Shield\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Chars)
+\item 
+\hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a55393cbaf76ea2d55eaee12c32d02151}{Unshield\-Chars} (const \hyperlink{classCString}{C\-String} \&A\-String, const \hyperlink{classCString}{C\-String} \&Chars)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \hyperlink{stlstrings_8h_a83a1603045509300f2f86efcfb02fe4e}{M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y} = ((1$<$$<$(7$\ast$sizeof(unsigned int)))-\/1)
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a7e3f8a002e7fee6430f2b2c441100b9c}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R} = char(0x00)
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa34a9edb9433cadcaba89fbbe5c86dc6}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R} = char(0x09)
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a6f1b618170ac30fdab2d17249e5e432d}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R} = char(0x0d)
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ad951be84050208bdbd1432ab1011e0ad}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R} = char(0x0a)
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_ac4dcfbb0fe47afd8fbe2b344c4972875}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R} = \char`\"{}0123456789\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa4c846d43fc6bb4ddaff0b63d103884c}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R} = \char`\"{}+-\/0123456789\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a08f3bcc390bd9ca0c37b793b07452cae}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R} = \char`\"{}+-\/.,0123456789e\-E\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a1adcdf485b6bde67f07e68964fb5a792}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R} = \char`\"{}+-\/.,0123456789d\-D\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a728deebff070d56b358028a7fc8fb886}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R} = \char`\"{}+-\/.,0123456789e\-Ed\-D\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a4796b455c3cced3b78dabaebd622642a}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R} = \char`\"{}0123456789abcdef\-A\-B\-C\-D\-E\-F\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_aa787f6ee47699c6f9b4e50d6cf448df0}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S} = \char`\"{}\textbackslash{}'\textbackslash{}\char`\"{}\textbackslash{}?\textbackslash{}\textbackslash{}\textbackslash{}a\textbackslash{}b\textbackslash{}f\textbackslash{}n\textbackslash{}r\textbackslash{}t\textbackslash{}v\textbackslash{}0\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_a5cebd2af21f4e81b6ecdf8ff3c15ff98}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E} = \char`\"{}\textbackslash{}'\textbackslash{}\char`\"{}?\textbackslash{}\textbackslash{}abfnrtv0\char`\"{}
+\item 
+static const \hyperlink{classCString}{C\-String} \hyperlink{stlstrings_8h_abd4c35192d6aa2be30f21b082252763b}{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S} = \char`\"{} !@\#\$\%$^\wedge$\&$\ast$()\{\}\mbox{[}$\,$\mbox{]};\textbackslash{}'\textbackslash{}\char`\"{}\textbackslash{}\textbackslash{}$|$$<$$>$?\char`\"{}
+\item 
+static const char \hyperlink{stlstrings_8h_a8e3dcbffeecd1ca293bcd07fbdf8f293}{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E} \mbox{[}17\mbox{]} = \char`\"{}0123456789\-A\-B\-C\-D\-E\-F\char`\"{}
+\item 
+static const char \hyperlink{stlstrings_8h_af52881b8fdab8c2c438a770e7e8c56aa}{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E} \mbox{[}17\mbox{]} = \char`\"{}0123456789abcdef\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{stlstrings_8h_a8085b77b952d20d37d96fff6a294be34}{\index{stlstrings.\-h@{stlstrings.\-h}!C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E@{C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E}}
+\index{C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E@{C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-S\-E\-T\-\_\-\-S\-I\-Z\-E~(1$<$$<$(8$\ast$sizeof(char)))}}\label{stlstrings_8h_a8085b77b952d20d37d96fff6a294be34}
+\hypertarget{stlstrings_8h_aa96cda3dc4327fc103977fd4483aefb2}{\index{stlstrings.\-h@{stlstrings.\-h}!I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X@{I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X}}
+\index{I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X@{I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-V\-A\-L\-I\-D\-\_\-\-I\-N\-D\-E\-X~-\/1}}\label{stlstrings_8h_aa96cda3dc4327fc103977fd4483aefb2}
+\hypertarget{stlstrings_8h_a4901614d5e480eb05e0f570c7d89e216}{\index{stlstrings.\-h@{stlstrings.\-h}!M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-S\-H\-O\-R\-T\-S\-T\-R\-I\-N\-G\-\_\-\-L\-E\-N\-G\-T\-H~256}}\label{stlstrings_8h_a4901614d5e480eb05e0f570c7d89e216}
+
+
+\subsection{Function Documentation}
+\hypertarget{stlstrings_8h_ae5cbe9b372d9468f3e7c475b648cda2e}{\index{stlstrings.\-h@{stlstrings.\-h}!Check\-First\-Char@{Check\-First\-Char}}
+\index{Check\-First\-Char@{Check\-First\-Char}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Check\-First\-Char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Check\-First\-Char (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ae5cbe9b372d9468f3e7c475b648cda2e}
+\hypertarget{stlstrings_8h_ab00be2dd4dee1dcfd41043f640f84512}{\index{stlstrings.\-h@{stlstrings.\-h}!Check\-Last\-Char@{Check\-Last\-Char}}
+\index{Check\-Last\-Char@{Check\-Last\-Char}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Check\-Last\-Char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Check\-Last\-Char (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ab00be2dd4dee1dcfd41043f640f84512}
+\hypertarget{stlstrings_8h_af956adf4b75c922e88e0447e6d25f7e3}{\index{stlstrings.\-h@{stlstrings.\-h}!Collect\-Str@{Collect\-Str}}
+\index{Collect\-Str@{Collect\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Collect\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Collect\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String\-List} \&}]{Sub\-Strings, }
+\item[{const {\bf C\-String} \&}]{Delimiters}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_af956adf4b75c922e88e0447e6d25f7e3}
+\hypertarget{stlstrings_8h_a9adc6b5852963c2cefebdbc7bff837be}{\index{stlstrings.\-h@{stlstrings.\-h}!Count\-Chars@{Count\-Chars}}
+\index{Count\-Chars@{Count\-Chars}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Count\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}int Count\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a9adc6b5852963c2cefebdbc7bff837be}
+\hypertarget{stlstrings_8h_acefa22919402e7a7ad5321e41418cb4a}{\index{stlstrings.\-h@{stlstrings.\-h}!Enum\-Str@{Enum\-Str}}
+\index{Enum\-Str@{Enum\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Enum\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Enum\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Prefix, }
+\item[{const int}]{Counter, }
+\item[{const {\bf C\-String} \&}]{Suffix, }
+\item[{const unsigned int}]{Length}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_acefa22919402e7a7ad5321e41418cb4a}
+\hypertarget{stlstrings_8h_a9543f6b246be18cd8d0cf8b6cbb61d94}{\index{stlstrings.\-h@{stlstrings.\-h}!Fill\-Str@{Fill\-Str}}
+\index{Fill\-Str@{Fill\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Fill\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Fill\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{Prefix, }
+\item[{const char}]{A\-Char, }
+\item[{const {\bf C\-String} \&}]{Suffix, }
+\item[{const int}]{Length}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a9543f6b246be18cd8d0cf8b6cbb61d94}
+\hypertarget{stlstrings_8h_a7679cba9dbc1da4db83d5f617a4e1f37}{\index{stlstrings.\-h@{stlstrings.\-h}!Filter\-Str@{Filter\-Str}}
+\index{Filter\-Str@{Filter\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Filter\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Filter\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-Charset} \&}]{Valid\-Chars, }
+\item[{const {\bf C\-Charset} \&}]{Invalid\-Chars, }
+\item[{const bool}]{Validate\-Undefined}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a7679cba9dbc1da4db83d5f617a4e1f37}
+\hypertarget{stlstrings_8h_a99274ed63940ab0526f1372b49a82cfc}{\index{stlstrings.\-h@{stlstrings.\-h}!Find\-Replace\-Char@{Find\-Replace\-Char}}
+\index{Find\-Replace\-Char@{Find\-Replace\-Char}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Find\-Replace\-Char}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Find\-Replace\-Char (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{Search\-Char, }
+\item[{const char}]{Replace\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a99274ed63940ab0526f1372b49a82cfc}
+\hypertarget{stlstrings_8h_a66da46d39aa6f47913fae039eaa18e20}{\index{stlstrings.\-h@{stlstrings.\-h}!Find\-Replace\-Str@{Find\-Replace\-Str}}
+\index{Find\-Replace\-Str@{Find\-Replace\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Find\-Replace\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Find\-Replace\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Search\-String, }
+\item[{const {\bf C\-String} \&}]{Replace\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a66da46d39aa6f47913fae039eaa18e20}
+\hypertarget{stlstrings_8h_a392ffad515a6a3dba1f6562c5a4b93cf}{\index{stlstrings.\-h@{stlstrings.\-h}!Find\-Str@{Find\-Str}}
+\index{Find\-Str@{Find\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Find\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Find\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a392ffad515a6a3dba1f6562c5a4b93cf}
+\hypertarget{stlstrings_8h_abf3fd94ee0cb7077ca11ca6a1b78c259}{\index{stlstrings.\-h@{stlstrings.\-h}!First\-Char\-Pos@{First\-Char\-Pos}}
+\index{First\-Char\-Pos@{First\-Char\-Pos}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{First\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int First\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_abf3fd94ee0cb7077ca11ca6a1b78c259}
+\hypertarget{stlstrings_8h_aef88b63a1dfd98f0795f45485ec7b9ea}{\index{stlstrings.\-h@{stlstrings.\-h}!Guess\-Str@{Guess\-Str}}
+\index{Guess\-Str@{Guess\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Guess\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Guess\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String\-List} \&}]{Variants, }
+\item[{{\bf C\-String} \&}]{Guessed, }
+\item[{const bool}]{Try\-Fuzzy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_aef88b63a1dfd98f0795f45485ec7b9ea}
+\hypertarget{stlstrings_8h_a4d0d597c2a4deae15288ec12639eda0b}{\index{stlstrings.\-h@{stlstrings.\-h}!Guess\-Str@{Guess\-Str}}
+\index{Guess\-Str@{Guess\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Guess\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Guess\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Variants, }
+\item[{{\bf C\-String} \&}]{Guessed, }
+\item[{const bool}]{Try\-Fuzzy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a4d0d597c2a4deae15288ec12639eda0b}
+\hypertarget{stlstrings_8h_ad2047697f2d8c0ce0d4debff71cab002}{\index{stlstrings.\-h@{stlstrings.\-h}!hex@{hex}}
+\index{hex@{hex}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} hex (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{A\-Integer, }
+\item[{const unsigned int}]{Length = {\ttfamily 8}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_ad2047697f2d8c0ce0d4debff71cab002}
+\hypertarget{stlstrings_8h_a45e4b7fe9d4c0ddb8e01ddc0667723d5}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex@{Hex}}
+\index{Hex@{Hex}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Hex (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{A\-Integer, }
+\item[{const unsigned int}]{Length = {\ttfamily 8}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a45e4b7fe9d4c0ddb8e01ddc0667723d5}
+\hypertarget{stlstrings_8h_a1d824c884e67fd0654a0cf2ca177ce4e}{\index{stlstrings.\-h@{stlstrings.\-h}!hex@{hex}}
+\index{hex@{hex}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} hex (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{Buffer, }
+\item[{const unsigned int}]{Length = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a1d824c884e67fd0654a0cf2ca177ce4e}
+\hypertarget{stlstrings_8h_aafbd4eb7898b9d02fe30a37726ce1eab}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex@{Hex}}
+\index{Hex@{Hex}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Hex (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{Buffer, }
+\item[{const unsigned int}]{Length = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_aafbd4eb7898b9d02fe30a37726ce1eab}
+\hypertarget{stlstrings_8h_a427370e535f826bf244c985eea0edc10}{\index{stlstrings.\-h@{stlstrings.\-h}!hex16@{hex16}}
+\index{hex16@{hex16}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} hex16 (
+\begin{DoxyParamCaption}
+\item[{const unsigned short int}]{A\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a427370e535f826bf244c985eea0edc10}
+\hypertarget{stlstrings_8h_a9d0b4843d9112bb4420468fc0acbb389}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex16@{Hex16}}
+\index{Hex16@{Hex16}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Hex16 (
+\begin{DoxyParamCaption}
+\item[{const unsigned short int}]{A\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a9d0b4843d9112bb4420468fc0acbb389}
+\hypertarget{stlstrings_8h_aa3dfb466867eacf4c899c687c7debc29}{\index{stlstrings.\-h@{stlstrings.\-h}!hex32@{hex32}}
+\index{hex32@{hex32}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} hex32 (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{A\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_aa3dfb466867eacf4c899c687c7debc29}
+\hypertarget{stlstrings_8h_acd0420d4f8b3b2f8db50ed94b89b5411}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex32@{Hex32}}
+\index{Hex32@{Hex32}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Hex32 (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{A\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_acd0420d4f8b3b2f8db50ed94b89b5411}
+\hypertarget{stlstrings_8h_a9cceb1d6e86d5bff0134e242295abd43}{\index{stlstrings.\-h@{stlstrings.\-h}!hex64@{hex64}}
+\index{hex64@{hex64}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex64}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} hex64 (
+\begin{DoxyParamCaption}
+\item[{const long long int}]{A\-Integer, }
+\item[{const unsigned int}]{Length = {\ttfamily 16}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a9cceb1d6e86d5bff0134e242295abd43}
+\hypertarget{stlstrings_8h_a98542f7e0f5c533bfadb79dee8cfdf34}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex64@{Hex64}}
+\index{Hex64@{Hex64}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex64}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Hex64 (
+\begin{DoxyParamCaption}
+\item[{const long long int}]{A\-Integer, }
+\item[{const unsigned int}]{Length = {\ttfamily 16}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a98542f7e0f5c533bfadb79dee8cfdf34}
+\hypertarget{stlstrings_8h_a218c8b47bcd6bd2ec73736a908bde567}{\index{stlstrings.\-h@{stlstrings.\-h}!hex8@{hex8}}
+\index{hex8@{hex8}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex8}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} hex8 (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{A\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a218c8b47bcd6bd2ec73736a908bde567}
+\hypertarget{stlstrings_8h_ace24e9a9ce6a5162e6c99ce609ff3f48}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex8@{Hex8}}
+\index{Hex8@{Hex8}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex8}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Hex8 (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{A\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_ace24e9a9ce6a5162e6c99ce609ff3f48}
+\hypertarget{stlstrings_8h_a8cf7fb2cd56b4c251aacd20691ddc368}{\index{stlstrings.\-h@{stlstrings.\-h}!hex\-Char@{hex\-Char}}
+\index{hex\-Char@{hex\-Char}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{hex\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char hex\-Char (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a8cf7fb2cd56b4c251aacd20691ddc368}
+\hypertarget{stlstrings_8h_aa3a356218ff9761025109f6925f6168c}{\index{stlstrings.\-h@{stlstrings.\-h}!Hex\-Char@{Hex\-Char}}
+\index{Hex\-Char@{Hex\-Char}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Hex\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char Hex\-Char (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_aa3a356218ff9761025109f6925f6168c}
+\hypertarget{stlstrings_8h_a25bd198f0b5af8fc7dd3ec0e4becf865}{\index{stlstrings.\-h@{stlstrings.\-h}!Is\-Quoted@{Is\-Quoted}}
+\index{Is\-Quoted@{Is\-Quoted}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Is\-Quoted}]{\setlength{\rightskip}{0pt plus 5cm}bool Is\-Quoted (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a25bd198f0b5af8fc7dd3ec0e4becf865}
+\hypertarget{stlstrings_8h_a3b4eb786bb5a8da8f8d9c8002c477605}{\index{stlstrings.\-h@{stlstrings.\-h}!Join\-Str@{Join\-Str}}
+\index{Join\-Str@{Join\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Join\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Join\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{B\-String, }
+\item[{const char}]{Separator}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a3b4eb786bb5a8da8f8d9c8002c477605}
+\hypertarget{stlstrings_8h_a7e74dc3f887a829b645c359b0aff530d}{\index{stlstrings.\-h@{stlstrings.\-h}!Last\-Char\-Pos@{Last\-Char\-Pos}}
+\index{Last\-Char\-Pos@{Last\-Char\-Pos}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Last\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int Last\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a7e74dc3f887a829b645c359b0aff530d}
+\hypertarget{stlstrings_8h_a9f0e552bd5ae80f63b32931c650f928b}{\index{stlstrings.\-h@{stlstrings.\-h}!Lead\-Str@{Lead\-Str}}
+\index{Lead\-Str@{Lead\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Lead\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Lead\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const unsigned int}]{R\-Length}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a9f0e552bd5ae80f63b32931c650f928b}
+\hypertarget{stlstrings_8h_af469adad7802154ad8795994910ebe84}{\index{stlstrings.\-h@{stlstrings.\-h}!Left\-Str@{Left\-Str}}
+\index{Left\-Str@{Left\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Left\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Left\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_af469adad7802154ad8795994910ebe84}
+\hypertarget{stlstrings_8h_a255111f06b514b327ce73ed5e58c00e6}{\index{stlstrings.\-h@{stlstrings.\-h}!Lower\-Case@{Lower\-Case}}
+\index{Lower\-Case@{Lower\-Case}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Lower\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Lower\-Case (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a255111f06b514b327ce73ed5e58c00e6}
+\hypertarget{stlstrings_8h_a4dc0c80dcd0ae51502658fd3929223ec}{\index{stlstrings.\-h@{stlstrings.\-h}!Mem\-Size\-Str@{Mem\-Size\-Str}}
+\index{Mem\-Size\-Str@{Mem\-Size\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const long long int}]{Value, }
+\item[{long long int \&}]{Unit\-Size, }
+\item[{{\bf C\-String} \&}]{Unit\-Suffix}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a4dc0c80dcd0ae51502658fd3929223ec}
+\hypertarget{stlstrings_8h_aec00233b723d96c81f530aa9a0ff43a6}{\index{stlstrings.\-h@{stlstrings.\-h}!Mem\-Size\-Str@{Mem\-Size\-Str}}
+\index{Mem\-Size\-Str@{Mem\-Size\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const long long int}]{Value}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_aec00233b723d96c81f530aa9a0ff43a6}
+\hypertarget{stlstrings_8h_a3e4e8197607102a4b255f77c65edb35d}{\index{stlstrings.\-h@{stlstrings.\-h}!Next\-Char\-Pos@{Next\-Char\-Pos}}
+\index{Next\-Char\-Pos@{Next\-Char\-Pos}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Next\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int Next\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a3e4e8197607102a4b255f77c65edb35d}
+\hypertarget{stlstrings_8h_a737f2c3015ee0586158f0388e6485af4}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a737f2c3015ee0586158f0388e6485af4}
+\hypertarget{stlstrings_8h_a3eb8efa66c56fb2e09bdb2df879909c2}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{B\-Char}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a3eb8efa66c56fb2e09bdb2df879909c2}
+\hypertarget{stlstrings_8h_a835dbc9f5e2cf0f9e66c520d2288d62e}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a835dbc9f5e2cf0f9e66c520d2288d62e}
+\hypertarget{stlstrings_8h_a8e55f26efff4275ba95fc6bfcfc46ad2}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{B\-Integer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a8e55f26efff4275ba95fc6bfcfc46ad2}
+\hypertarget{stlstrings_8h_aa7282cb24bf775c07aa411069033fc59}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const int}]{A\-Integer, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_aa7282cb24bf775c07aa411069033fc59}
+\hypertarget{stlstrings_8h_aa64785ff0c9cf18d1329b769e09d4ac6}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const float}]{B\-Float}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_aa64785ff0c9cf18d1329b769e09d4ac6}
+\hypertarget{stlstrings_8h_ab7dd3066a834768f24365fb329de358a}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const float}]{A\-Float, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_ab7dd3066a834768f24365fb329de358a}
+\hypertarget{stlstrings_8h_a2c2e70b41609d42fecc4e71409bf9f49}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const double}]{B\-Float}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a2c2e70b41609d42fecc4e71409bf9f49}
+\hypertarget{stlstrings_8h_a6aef88947417418db62e611b37c284b2}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const double}]{A\-Float, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a6aef88947417418db62e611b37c284b2}
+\hypertarget{stlstrings_8h_a8bb0820fca4a1a89931e27b3b1989169}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char $\ast$}]{B\-C\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a8bb0820fca4a1a89931e27b3b1989169}
+\hypertarget{stlstrings_8h_a44c5d1f7efc3a2e0e71e4c923db4fd9c}{\index{stlstrings.\-h@{stlstrings.\-h}!operator+@{operator+}}
+\index{operator+@{operator+}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} operator+ (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{B\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a44c5d1f7efc3a2e0e71e4c923db4fd9c}
+\hypertarget{stlstrings_8h_a15e78c7188f87c9f83fc1e562a13b692}{\index{stlstrings.\-h@{stlstrings.\-h}!Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}}
+\index{Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Parse\-Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Parse\-Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{int \&}]{Unit\-Size, }
+\item[{char \&}]{Unit\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a15e78c7188f87c9f83fc1e562a13b692}
+\hypertarget{stlstrings_8h_a1d66b7df4bb9d82f4b8e0de86216ac6d}{\index{stlstrings.\-h@{stlstrings.\-h}!Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}}
+\index{Parse\-Mem\-Size\-Str@{Parse\-Mem\-Size\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Parse\-Mem\-Size\-Str}]{\setlength{\rightskip}{0pt plus 5cm}int Parse\-Mem\-Size\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a1d66b7df4bb9d82f4b8e0de86216ac6d}
+\hypertarget{stlstrings_8h_ac76f0fa0200851712283e09c74722ac0}{\index{stlstrings.\-h@{stlstrings.\-h}!Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}}
+\index{Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Parse\-Mem\-Size\-Str64}]{\setlength{\rightskip}{0pt plus 5cm}long long int Parse\-Mem\-Size\-Str64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{long long int \&}]{Unit\-Size, }
+\item[{char \&}]{Unit\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ac76f0fa0200851712283e09c74722ac0}
+\hypertarget{stlstrings_8h_a90462bcda52896276e49d65be67580bc}{\index{stlstrings.\-h@{stlstrings.\-h}!Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}}
+\index{Parse\-Mem\-Size\-Str64@{Parse\-Mem\-Size\-Str64}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Parse\-Mem\-Size\-Str64}]{\setlength{\rightskip}{0pt plus 5cm}long long int Parse\-Mem\-Size\-Str64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a90462bcda52896276e49d65be67580bc}
+\hypertarget{stlstrings_8h_a71ce898627cc0c37e72b9e1884b4cf59}{\index{stlstrings.\-h@{stlstrings.\-h}!Parse\-Str@{Parse\-Str}}
+\index{Parse\-Str@{Parse\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Parse\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Delimiters, }
+\item[{{\bf C\-String\-List} \&}]{Sub\-Strings}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a71ce898627cc0c37e72b9e1884b4cf59}
+\hypertarget{stlstrings_8h_a62eefcc6b6ee78d4231fa7f654371b7c}{\index{stlstrings.\-h@{stlstrings.\-h}!Parse\-Str@{Parse\-Str}}
+\index{Parse\-Str@{Parse\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Parse\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Parse\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{Delimiter, }
+\item[{{\bf C\-String\-List} \&}]{Sub\-Strings}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a62eefcc6b6ee78d4231fa7f654371b7c}
+\hypertarget{stlstrings_8h_ae0795a0d3fa228b883510b60647f237b}{\index{stlstrings.\-h@{stlstrings.\-h}!Prev\-Char\-Pos@{Prev\-Char\-Pos}}
+\index{Prev\-Char\-Pos@{Prev\-Char\-Pos}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Prev\-Char\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int Prev\-Char\-Pos (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ae0795a0d3fa228b883510b60647f237b}
+\hypertarget{stlstrings_8h_af9b0455c4b6d1fc7379ef3daed28cc5d}{\index{stlstrings.\-h@{stlstrings.\-h}!Quote\-Str@{Quote\-Str}}
+\index{Quote\-Str@{Quote\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Quote\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Quote\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_af9b0455c4b6d1fc7379ef3daed28cc5d}
+\hypertarget{stlstrings_8h_aa5955377228d1eb00b9f3ea7b024dccf}{\index{stlstrings.\-h@{stlstrings.\-h}!Right\-Str@{Right\-Str}}
+\index{Right\-Str@{Right\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Right\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Right\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Position}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_aa5955377228d1eb00b9f3ea7b024dccf}
+\hypertarget{stlstrings_8h_ae3b8468df4e18b6f5e0816bd1a60f6c8}{\index{stlstrings.\-h@{stlstrings.\-h}!Shield\-Chars@{Shield\-Chars}}
+\index{Shield\-Chars@{Shield\-Chars}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Shield\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Shield\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Chars}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ae3b8468df4e18b6f5e0816bd1a60f6c8}
+\hypertarget{stlstrings_8h_a399308de80c0fefc75abf9e1aa4826ba}{\index{stlstrings.\-h@{stlstrings.\-h}!Shield\-Spaces@{Shield\-Spaces}}
+\index{Shield\-Spaces@{Shield\-Spaces}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Shield\-Spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Shield\-Spaces (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a399308de80c0fefc75abf9e1aa4826ba}
+\hypertarget{stlstrings_8h_af23c268b8c45982996507592a992d23a}{\index{stlstrings.\-h@{stlstrings.\-h}!Shift\-Str@{Shift\-Str}}
+\index{Shift\-Str@{Shift\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Shift\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Shift\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Shift}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_af23c268b8c45982996507592a992d23a}
+\hypertarget{stlstrings_8h_a491d7c2ee4357ff93204a0efbba8a3b5}{\index{stlstrings.\-h@{stlstrings.\-h}!S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}}
+\index{S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{S\-I\-\_\-\-Unit\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} S\-I\-\_\-\-Unit\-Str (
+\begin{DoxyParamCaption}
+\item[{const double}]{Value, }
+\item[{double \&}]{Unit\-Size, }
+\item[{{\bf C\-String} \&}]{Unit\-Prefix, }
+\item[{{\bf C\-String} \&}]{Unit\-Symbol}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a491d7c2ee4357ff93204a0efbba8a3b5}
+\hypertarget{stlstrings_8h_a2ed40abfb646adbd0059ba77918f1e35}{\index{stlstrings.\-h@{stlstrings.\-h}!S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}}
+\index{S\-I\-\_\-\-Unit\-Str@{S\-I\-\_\-\-Unit\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{S\-I\-\_\-\-Unit\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} S\-I\-\_\-\-Unit\-Str (
+\begin{DoxyParamCaption}
+\item[{const double}]{Value}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a2ed40abfb646adbd0059ba77918f1e35}
+\hypertarget{stlstrings_8h_a15f6dc67930c23ad414678f8cbc4d7c3}{\index{stlstrings.\-h@{stlstrings.\-h}!Sign\-Str@{Sign\-Str}}
+\index{Sign\-Str@{Sign\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Sign\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Sign\-Str (
+\begin{DoxyParamCaption}
+\item[{const int}]{Signature}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a15f6dc67930c23ad414678f8cbc4d7c3}
+\hypertarget{stlstrings_8h_a3ca14a6dd21433d614d5ac0c495cac7f}{\index{stlstrings.\-h@{stlstrings.\-h}!Split\-Str@{Split\-Str}}
+\index{Split\-Str@{Split\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Split\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Split\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{Position, }
+\item[{{\bf C\-String} \&}]{L\-String, }
+\item[{{\bf C\-String} \&}]{R\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a3ca14a6dd21433d614d5ac0c495cac7f}
+\hypertarget{stlstrings_8h_a29a94f3688882478a37f07a1b5fb6ae6}{\index{stlstrings.\-h@{stlstrings.\-h}!String\-Of\-Chars@{String\-Of\-Chars}}
+\index{String\-Of\-Chars@{String\-Of\-Chars}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{String\-Of\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} String\-Of\-Chars (
+\begin{DoxyParamCaption}
+\item[{const char}]{A\-Char, }
+\item[{const int}]{Count}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a29a94f3688882478a37f07a1b5fb6ae6}
+\hypertarget{stlstrings_8h_ae4663b47bf5a95907261113eb3713268}{\index{stlstrings.\-h@{stlstrings.\-h}!Strip\-Dup\-Chars@{Strip\-Dup\-Chars}}
+\index{Strip\-Dup\-Chars@{Strip\-Dup\-Chars}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Strip\-Dup\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Strip\-Dup\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const char}]{A\-Char}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ae4663b47bf5a95907261113eb3713268}
+\hypertarget{stlstrings_8h_adc496b105f23b4b8b0e23a960177e6c0}{\index{stlstrings.\-h@{stlstrings.\-h}!Strip\-Dup\-Chars@{Strip\-Dup\-Chars}}
+\index{Strip\-Dup\-Chars@{Strip\-Dup\-Chars}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Strip\-Dup\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Strip\-Dup\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_adc496b105f23b4b8b0e23a960177e6c0}
+\hypertarget{stlstrings_8h_aa75688004932e4d5e525d47744f423a3}{\index{stlstrings.\-h@{stlstrings.\-h}!Sub\-Str@{Sub\-Str}}
+\index{Sub\-Str@{Sub\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Sub\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Sub\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const int}]{First\-Pos, }
+\item[{const int}]{Last\-Pos}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_aa75688004932e4d5e525d47744f423a3}
+\hypertarget{stlstrings_8h_a430b3a478db257122abcd48c01812c77}{\index{stlstrings.\-h@{stlstrings.\-h}!Trim\-Str@{Trim\-Str}}
+\index{Trim\-Str@{Trim\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Trim\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Trim\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a430b3a478db257122abcd48c01812c77}
+\hypertarget{stlstrings_8h_ad4c27203cea948f9ddff85ab2910723c}{\index{stlstrings.\-h@{stlstrings.\-h}!Unquote\-Str@{Unquote\-Str}}
+\index{Unquote\-Str@{Unquote\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Unquote\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Unquote\-Str (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ad4c27203cea948f9ddff85ab2910723c}
+\hypertarget{stlstrings_8h_a55393cbaf76ea2d55eaee12c32d02151}{\index{stlstrings.\-h@{stlstrings.\-h}!Unshield\-Chars@{Unshield\-Chars}}
+\index{Unshield\-Chars@{Unshield\-Chars}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Unshield\-Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Unshield\-Chars (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String, }
+\item[{const {\bf C\-String} \&}]{Chars}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_a55393cbaf76ea2d55eaee12c32d02151}
+\hypertarget{stlstrings_8h_af3ee57ea66eafd1e41df7f65a2c02ea8}{\index{stlstrings.\-h@{stlstrings.\-h}!Unshield\-Spaces@{Unshield\-Spaces}}
+\index{Unshield\-Spaces@{Unshield\-Spaces}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Unshield\-Spaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Unshield\-Spaces (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_af3ee57ea66eafd1e41df7f65a2c02ea8}
+\hypertarget{stlstrings_8h_a37d13c1036696ba6b73eaf03192d2e3d}{\index{stlstrings.\-h@{stlstrings.\-h}!Upper\-Case@{Upper\-Case}}
+\index{Upper\-Case@{Upper\-Case}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Upper\-Case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Upper\-Case (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-String} \&}]{A\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{stlstrings_8h_a37d13c1036696ba6b73eaf03192d2e3d}
+\hypertarget{stlstrings_8h_ae29cc9b31e2d2780832a7183abeae672}{\index{stlstrings.\-h@{stlstrings.\-h}!Variant\-Str@{Variant\-Str}}
+\index{Variant\-Str@{Variant\-Str}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{Variant\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-String} Variant\-Str (
+\begin{DoxyParamCaption}
+\item[{const int}]{Index, }
+\item[{const {\bf C\-String} \&}]{Variants, }
+\item[{const char}]{Delimiter = {\ttfamily '~'}}
+\end{DoxyParamCaption}
+)}}\label{stlstrings_8h_ae29cc9b31e2d2780832a7183abeae672}
+
+
+\subsection{Variable Documentation}
+\hypertarget{stlstrings_8h_a6f1b618170ac30fdab2d17249e5e432d}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-R\-\_\-\-C\-H\-A\-R = char(0x0d)\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a6f1b618170ac30fdab2d17249e5e432d}
+\hypertarget{stlstrings_8h_aa787f6ee47699c6f9b4e50d6cf448df0}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-C\-T\-L\-\_\-\-C\-H\-A\-R\-S = \char`\"{}\textbackslash{}'\textbackslash{}\char`\"{}\textbackslash{}?\textbackslash{}\textbackslash{}\textbackslash{}a\textbackslash{}b\textbackslash{}f\textbackslash{}n\textbackslash{}r\textbackslash{}t\textbackslash{}v\textbackslash{}0\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_aa787f6ee47699c6f9b4e50d6cf448df0}
+\hypertarget{stlstrings_8h_a1adcdf485b6bde67f07e68964fb5a792}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-N\-U\-M\-B\-E\-R = \char`\"{}+-\/.,0123456789d\-D\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a1adcdf485b6bde67f07e68964fb5a792}
+\hypertarget{stlstrings_8h_a5cebd2af21f4e81b6ecdf8ff3c15ff98}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-E\-S\-C\-\_\-\-S\-E\-Q\-U\-E\-N\-C\-E = \char`\"{}\textbackslash{}'\textbackslash{}\char`\"{}?\textbackslash{}\textbackslash{}abfnrtv0\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a5cebd2af21f4e81b6ecdf8ff3c15ff98}
+\hypertarget{stlstrings_8h_a08f3bcc390bd9ca0c37b793b07452cae}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-F\-L\-O\-A\-T\-\_\-\-N\-U\-M\-B\-E\-R = \char`\"{}+-\/.,0123456789e\-E\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a08f3bcc390bd9ca0c37b793b07452cae}
+\hypertarget{stlstrings_8h_a4796b455c3cced3b78dabaebd622642a}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-H\-E\-X\-\_\-\-N\-U\-M\-B\-E\-R = \char`\"{}0123456789abcdef\-A\-B\-C\-D\-E\-F\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a4796b455c3cced3b78dabaebd622642a}
+\hypertarget{stlstrings_8h_aa4c846d43fc6bb4ddaff0b63d103884c}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-M\-B\-E\-R = \char`\"{}+-\/0123456789\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_aa4c846d43fc6bb4ddaff0b63d103884c}
+\hypertarget{stlstrings_8h_ad951be84050208bdbd1432ab1011e0ad}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-L\-F\-\_\-\-C\-H\-A\-R = char(0x0a)\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_ad951be84050208bdbd1432ab1011e0ad}
+\hypertarget{stlstrings_8h_a7e3f8a002e7fee6430f2b2c441100b9c}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-L\-L\-\_\-\-C\-H\-A\-R = char(0x00)\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a7e3f8a002e7fee6430f2b2c441100b9c}
+\hypertarget{stlstrings_8h_ac4dcfbb0fe47afd8fbe2b344c4972875}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-N\-U\-M\-B\-E\-R = \char`\"{}0123456789\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_ac4dcfbb0fe47afd8fbe2b344c4972875}
+\hypertarget{stlstrings_8h_a728deebff070d56b358028a7fc8fb886}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-R\-E\-A\-L\-\_\-\-N\-U\-M\-B\-E\-R = \char`\"{}+-\/.,0123456789e\-Ed\-D\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a728deebff070d56b358028a7fc8fb886}
+\hypertarget{stlstrings_8h_abd4c35192d6aa2be30f21b082252763b}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-S\-H\-E\-L\-L\-\_\-\-C\-H\-A\-R\-S = \char`\"{} !@\#\$\%$^\wedge$\&$\ast$()\{\}\mbox{[}$\,$\mbox{]};\textbackslash{}'\textbackslash{}\char`\"{}\textbackslash{}\textbackslash{}$|$$<$$>$?\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_abd4c35192d6aa2be30f21b082252763b}
+\hypertarget{stlstrings_8h_aa34a9edb9433cadcaba89fbbe5c86dc6}{\index{stlstrings.\-h@{stlstrings.\-h}!A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R}}
+\index{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R@{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf C\-String} A\-L\-P\-H\-A\-B\-E\-T\-\_\-\-T\-A\-B\-\_\-\-C\-H\-A\-R = char(0x09)\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_aa34a9edb9433cadcaba89fbbe5c86dc6}
+\hypertarget{stlstrings_8h_af52881b8fdab8c2c438a770e7e8c56aa}{\index{stlstrings.\-h@{stlstrings.\-h}!H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E@{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E}}
+\index{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E@{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-L\-C\-A\-S\-E\mbox{[}17\mbox{]} = \char`\"{}0123456789abcdef\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_af52881b8fdab8c2c438a770e7e8c56aa}
+\hypertarget{stlstrings_8h_a8e3dcbffeecd1ca293bcd07fbdf8f293}{\index{stlstrings.\-h@{stlstrings.\-h}!H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E@{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E}}
+\index{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E@{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char H\-E\-X\-\_\-\-C\-H\-A\-R\-S\-\_\-\-U\-C\-A\-S\-E\mbox{[}17\mbox{]} = \char`\"{}0123456789\-A\-B\-C\-D\-E\-F\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a8e3dcbffeecd1ca293bcd07fbdf8f293}
+\hypertarget{stlstrings_8h_a83a1603045509300f2f86efcfb02fe4e}{\index{stlstrings.\-h@{stlstrings.\-h}!M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y@{M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}}
+\index{M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y@{M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}!stlstrings.h@{stlstrings.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int M\-A\-X\-\_\-\-C\-H\-A\-R\-\_\-\-F\-R\-E\-Q\-U\-E\-N\-C\-Y = ((1$<$$<$(7$\ast$sizeof(unsigned int)))-\/1)\hspace{0.3cm}{\ttfamily [static]}}}\label{stlstrings_8h_a83a1603045509300f2f86efcfb02fe4e}
