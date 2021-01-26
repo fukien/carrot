@@ -41,8 +41,8 @@ P.S. select count(\*) and limit are supported.
 
 ### Authors
 
-- [Wentao Huang](https://github.com/fukien)
+- [Huang Wentao](https://github.com/fukien)
 - [Han Han](https://github.com/hagen666)
-- [Mingrui Shao](https://github.com/crazyxuehu)
-- [Hua Guan](https://github.com/GH1995)
-- [Xueran Han](https://github.com/lemontreehxr)
+- [Shao Mingrui](https://github.com/crazyxuehu)
+- [Guan Hua](https://github.com/GH1995)
+- [Han Xueran](https://github.com/lemontreehxr)
